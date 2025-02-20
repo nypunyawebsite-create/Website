@@ -21,6 +21,7 @@ const AboutNypunya = () => {
           are provided under one roof.
         </p>
       </div>
+      
 
       <div className="flex justify-center items-center px-6 pb-24 ">
         <div className="max-w-2xl text-center">
