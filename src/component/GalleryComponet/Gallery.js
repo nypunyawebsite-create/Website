@@ -10,6 +10,7 @@ const Gallery = () => {
 
   // Function to get images based on the selected category
   const filteredImages = galleryImages[selectedCategory] || [];
+  
 
   return (
     <div className="p-8">
