@@ -1,4 +1,4 @@
-const doctors = {
+export const doctors = {
     prashantha: {
         name: "Dr. Prashantha Kesari N K",
         designation:

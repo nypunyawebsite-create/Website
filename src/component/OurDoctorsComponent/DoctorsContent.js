@@ -22,7 +22,7 @@ const ContentComponent = ({ selectedDoctor }) => {
       </div>
       
       <div className="md:w-1/2 mt-6 md:mt-0 flex justify-end">
-        <img src={doctor.image} alt={doctor.name} />
+        <img src={doctor.image} alt={doctor.name}/>
       </div>
     </div>
   );
