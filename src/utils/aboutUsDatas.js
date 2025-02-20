@@ -1,7 +1,7 @@
 
 // utils/cardData.js
 
-const cardData = [
+export const cardData = [
     {
       image: "/about-us/plastic_surgery_services.png",
       title: "Plastic Surgery Services",

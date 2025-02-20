@@ -12,6 +12,8 @@ import TestLandingpage from '../pages/TestPage/[slug]/page';
 import OurDoctors from '../pages/OurDoctors/page';
 import ContactUs from '../pages/ContactUs/ContactUs'; // Import the Contact Us page
 import NotFound from '../pages/NotFound/NotFound';
+import Blogs from '../pages/Blogs/page';
+import Gallery from '../pages/Gallery/page';
 // import PlasticSurgery from '../pages/PlasricSurgery/PlasticSurgery';
 // import Dermatology from '../pages/Dermetology/Dermetology';
 // import BreastEnhancement from '../pages/BreastEnhancement/BreastEnhancement'; // Import Breast Enhancement
@@ -46,6 +48,8 @@ function AppRoutes() {
 
                 { path: "our-doctors", element: <OurDoctors /> },
                 { path: "contact-us", element: <ContactUs /> }, // Add the route for Contact Us page
+                { path: "blogs", element: <Blogs />},
+                { path: "gallery", element: <Gallery />},
 
                 // { path: "contact-us", element: <ContactUs /> },
                 // { path: "blog", element: <BlogPosts /> },
