@@ -10,7 +10,7 @@ import TestLandingpage from '../pages/TestPage/[slug]/page';
 
 // import OurDoctors from '../pages/OurTeam/OurTeam';
 import OurDoctors from '../pages/OurDoctors/page';
-import ContactUs from '../pages/ContactUs/ContactUs'; // Import the Contact Us page
+import ContactUs from '../pages/ContactUs/page'; // Import the Contact Us page
 import NotFound from '../pages/NotFound/NotFound';
 import Blogs from '../pages/Blogs/page';
 import Gallery from '../pages/Gallery/page';

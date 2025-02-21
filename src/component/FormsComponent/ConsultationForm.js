@@ -8,7 +8,7 @@ const ConsultationForm = () => {
     const [time, setTime] = useState(null);
 
     return (
-        <div className="flex justify-center items-center bg-[#0A0A47] px-4 py-10">
+        <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
             <div className="w-full px-20 text-white p-8 rounded-lg">
                 <h2 className="text-center text-xl md:text-2xl mb-6">
                     BOOK YOUR FREE CONSULTATION
