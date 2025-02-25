@@ -9,7 +9,7 @@ const ConsultationForm = () => {
 
     return (
         <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
-            <div className="w-full px-20 text-white p-8 rounded-lg">
+            <div className="w-full md:px-20 text-white md:p-8 p-4 rounded-lg">
                 <h2 className="text-center text-xl md:text-2xl mb-6">
                     BOOK YOUR FREE CONSULTATION
                 </h2>
@@ -120,7 +120,7 @@ const ConsultationForm = () => {
                     <div className="md:col-span-3 flex justify-center">
                         <button
                             type="submit"
-                            className="bg-custom-green text-black px-8 w-[30%] py-2 rounded-full font-semibold hover:bg-[#8ccdc9] transition"
+                            className="bg-custom-green text-black px-8 md:w-[30%] py-2 rounded-full font-semibold hover:bg-[#8ccdc9] transition"
                         >
                             SUBMIT
                         </button>

@@ -3,32 +3,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { galleryImages } from "../../../utils/ServiceDatas/BreastData/breastData";// Importing images
+
+// Custom Arrows with React Icons
+const PrevArrow = ({ onClick }) => (
+    <button
+        className="absolute top-1/2 left-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
+        onClick={onClick}
+    >
+        <FiArrowLeftCircle size={35} />
+    </button>
+);
+
+const NextArrow = ({ onClick }) => (
+    <button
+        className="absolute top-1/2 right-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
+        onClick={onClick}
+    >
+        <FiArrowRightCircle size={35} />
+    </button>
+);
 
 const GalleryComponent = () => {
-    const images = [
-        "/services/gallery_img_1.png",
-        "/services/gallery_img_1.png",
-    ];
-
-    // Custom Arrows with React Icons
-    const PrevArrow = ({ onClick }) => (
-        <button
-            className="absolute top-1/2 left-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
-            onClick={onClick}
-        >
-            <FiArrowLeftCircle size={35} />
-        </button>
-    );
-
-    const NextArrow = ({ onClick }) => (
-        <button
-            className="absolute top-1/2 right-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
-            onClick={onClick}
-        >
-            <FiArrowRightCircle size={35} />
-        </button>
-    );
-
     const settings = {
         dots: false,
         infinite: true,
@@ -36,17 +32,15 @@ const GalleryComponent = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />,
     };
 
     return (
         <>
-            <div className="w-full mx-auto py-10 px-4 relative">
+            <div className="w-full mx-auto pb-10 px-4 relative container">
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
-                <div className="relative w-[80%] mx-auto">
-                    <Slider {...settings}>
-                        {images.map((img, index) => (
+                <div className="relative md:w-[90%] mx-auto">
+                    <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />}>
+                        {galleryImages.map((img, index) => (
                             <div key={index} className="w-full">
                                 <img
                                     src={img}
