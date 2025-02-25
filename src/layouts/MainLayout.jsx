@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react';
 import { Outlet } from "react-router-dom";
-// import Header from '../components/Header/NavBar';
-// import Footer from '../components/Footer/Footer';
+import Header from '../component/Shared/Header';
+import Footer from '../component/Shared/Footer';
 // import ScrollToTop from '../utils/ScrollToTop';
 
 const MainLayout = () => {
@@ -21,7 +21,7 @@ const MainLayout = () => {
 
     return (
         <main>
-            {/* <Header /> */}
+            <Header />
             {/* Floating Scroll Indicator */}
 
             {/* <ScrollToTop />
@@ -43,7 +43,7 @@ const MainLayout = () => {
             )} */}
 
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
         </main>
     );
 };
