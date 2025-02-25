@@ -1,4 +1,5 @@
 import React from "react";
+import { breastAugmentationData } from "../../../utils/ServiceDatas/BreastData/breastData"; // Adjust path if needed
 
 const BreastAugmentationComponent = () => {
   return (
@@ -13,24 +14,11 @@ const BreastAugmentationComponent = () => {
 
           {/* Grid Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              Proportionately fuller breasts are essential
-            </div>
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              Confidence and body image get a boost with breast enhancement
-            </div>
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              Safe, scientific approach gives the best outcome
-            </div>
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              Planned to individual and precisely executed
-            </div>
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              High quality silicone gel implants are only used
-            </div>
-            <div className="border border-custom-green p-4 rounded-xl shadow-sm text-center">
-              Structural fat grafting combined with advanced tissue engineering solutions offer the new age breast enhancement.
-            </div>
+            {breastAugmentationData.map((item, index) => (
+              <div key={index} className="border border-custom-green p-4 rounded-xl shadow-sm">
+                {item}
+              </div>
+            ))}
           </div>
         </div>
 

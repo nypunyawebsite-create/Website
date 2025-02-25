@@ -1,9 +1,9 @@
 import React from 'react'
-import Banner from '../ServiceComponent/Banner'
+import Banner from './Banner'
 import BreastAugmentationComponent from './BreastAugmentationComponent'
 import ServicesDetails from './ServicesDetails'
-import GalleryComponent from './GalleryCompuneny'
-import ConsultationForm from '../FormsComponent/ConsultationForm'
+import GalleryComponent from './GalleryComponent'
+import ConsultationForm from '../../FormsComponent/ConsultationForm'
 
 
 

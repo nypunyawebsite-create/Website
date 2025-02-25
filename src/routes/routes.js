@@ -17,11 +17,11 @@ import Gallery from '../pages/Gallery/page';
 // import PlasticSurgery from '../pages/PlasricSurgery/PlasticSurgery';
 // import Dermatology from '../pages/Dermetology/Dermetology';
 // import BreastEnhancement from '../pages/BreastEnhancement/BreastEnhancement'; // Import Breast Enhancement
-// import BodyContouringPage from '../pages/BodyContouring/BodyContouring';
-// import HairTransplant from '../pages/HairTransplant/HairTransplant';
-// import AntiAging from '../pages/AntiAging/AntiAging';
-// import Rhinoplasty from '../pages/Rhinoplasty/Rhinoplasty';
-// import StructuralFatGrafting from '../pages/StructuralFatGrafting/StructuralFatGrafting';
+import BodyContouringPage from '../pages/BodyContouringAbdominalPlaty/page';
+import HairTransplant from '../pages/HairTransplant/page';
+import AntiAging from '../pages/AntiAgeingProcedures/page';
+import Rhinoplasty from '../pages/Rhinoplasty/page';
+import StructuralFatGrafting from '../pages/StructuralFatGrafting/page';
 // import Gynaecomastia from '../pages/Gynaecomastia/Gynaecomastia';
 // import AcneAndScars from '../pages/AcneAndScars/AcneAndScars';
 // import LaserHairRemoval from '../pages/LaserHairRemoval/LaserHairRemoval';
@@ -58,11 +58,11 @@ function AppRoutes() {
                 // { path: "plastic-surgery", element: <PlasticSurgery /> },
                 // // Separate route for breast enhancement
                 // { path: "plastic-surgery/breast-enhancement", element: <BreastEnhancement /> },
-                // { path: "plastic-surgery/body-contouring", element: <BodyContouringPage /> },
-                // { path: "plastic-surgery/hair-transplant", element: <HairTransplant /> },
-                // { path: "plastic-surgery/anti-ageing", element: <AntiAging /> },
-                // { path: "plastic-surgery/rhinoplasty", element: <Rhinoplasty /> },
-                // { path: "plastic-surgery/structural-fat-grafting", element: <StructuralFatGrafting /> },
+                { path: "/body-contouring", element: <BodyContouringPage /> },
+                { path: "/hair-transplant", element: <HairTransplant /> },
+                { path: "/anti-ageing", element: <AntiAging /> },
+                { path: "/rhinoplasty", element: <Rhinoplasty /> },
+                { path: "/structural-fat-grafting", element: <StructuralFatGrafting /> },
                 // { path: "plastic-surgery/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
                 // { path: "dermatology/acne-and-scars", element: <AcneAndScars /> },
                 // { path: "dermatology/laser-hair-removal", element: <LaserHairRemoval /> },
