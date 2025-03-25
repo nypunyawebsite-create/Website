@@ -12,7 +12,7 @@ export const doctors = {
             "Dr. Prashantha Kesari has innovated a number of surgical instruments and has published many scientific papers. He keeps abreast of the latest developments by attending and presenting his work in various conferences.",
             "PATIENT is the centre of Dr. Kesari’s clinical practice, and he designs the treatment for individual needs and expectations. He believes a well-informed patient and an understanding surgeon can arrive at the result, which both of them can be proud of.",
         ],
-        image: "/our-doctors/doctor_krashantha_kesari.png",
+        image: "/our-doctors/doctor_krashantha.png",
     },
     shubha: {
         name: "Dr. Shubha M Kesari",
@@ -25,7 +25,7 @@ export const doctors = {
             "She has publications in indexed national and international journals and has also co-authored a chapter in a text book. She believes in keeping abreast with the latest advances in her field and constantly updates herself.",
             "She has participated as a skin care expert in various television programmes and also as a faculty in Dermatology conferences.Her practice is very patient centric and patient care is of paramount importance. Her approach of combining the needs and wishes of the patient along with her acumen in tailoring an effective treatment regime for the patient has helped her with appreciation of thousands of her patients .",
         ],
-        image: "/our-doctors/doctor_shubha_kesari.png",
+        image: "/our-doctors/doctor_shubha.png",
     },
 };
 

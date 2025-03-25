@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
 const ConsultationForm = () => {
-    const [date, setDate] = useState(null);
-    const [time, setTime] = useState(null);
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("");
+
+    const handleDateChange = (event) => {
+        setDate(event.target.value);
+    };
+
+    const handleTimeChange = (event) => {
+        setTime(event.target.value);
+    };
 
     return (
         <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
@@ -47,34 +53,35 @@ const ConsultationForm = () => {
                         </select>
                         <hr className="border-custom-green" />
                     </div>
+                    {/* Date Selection */}
                     <div>
                         <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
                             <FaCalendarAlt className="text-white mr-2" />
-                            <DatePicker
-                                selected={date}
-                                onChange={(date) => setDate(date)}
-                                className="w-full bg-transparent outline-none border-none"
-                                dateFormat="yyyy-MM-dd"
-                                placeholderText="Date"
-                                popperPlacement="bottom"
+                            <input
+                                type="date"
+                                value={date}
+                                onChange={handleDateChange}
+                                className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                style={{
+                                    WebkitAppearance: "none",
+                                    MozAppearance: "none",
+                                    appearance: "none",
+                                }}
+                                required
                             />
                         </div>
                         <hr className="border-custom-green" />
                     </div>
+                    {/* Time Selection */}
                     <div>
                         <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
                             <FaClock className="text-white mr-2" />
-                            <DatePicker
-                                selected={time}
-                                onChange={(time) => setTime(time)}
-                                className="w-full bg-transparent outline-none border-none"
-                                showTimeSelect
-                                showTimeSelectOnly
-                                timeIntervals={15}
-                                timeCaption="Time"
-                                dateFormat="h:mm aa"
-                                placeholderText="Time"
-                                popperPlacement="bottom"
+                            <input
+                                type="time"
+                                value={time}
+                                onChange={handleTimeChange}
+                                className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                required
                             />
                         </div>
                         <hr className="border-custom-green" />
@@ -85,34 +92,35 @@ const ConsultationForm = () => {
                         </select>
                         <hr className="border-custom-green" />
                     </div>
+                    {/* Date Selection */}
                     <div>
                         <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
                             <FaCalendarAlt className="text-white mr-2" />
-                            <DatePicker
-                                selected={date}
-                                onChange={(date) => setDate(date)}
-                                className="w-full bg-transparent outline-none border-none"
-                                dateFormat="yyyy-MM-dd"
-                                placeholderText="Date"
-                                popperPlacement="bottom"
+                            <input
+                                type="date"
+                                value={date}
+                                onChange={handleDateChange}
+                                className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                style={{
+                                    WebkitAppearance: "none",
+                                    MozAppearance: "none",
+                                    appearance: "none",
+                                }}
+                                required
                             />
                         </div>
                         <hr className="border-custom-green" />
                     </div>
+                    {/* Time Selection */}
                     <div>
                         <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
                             <FaClock className="text-white mr-2" />
-                            <DatePicker
-                                selected={time}
-                                onChange={(time) => setTime(time)}
-                                className="w-full bg-transparent outline-none border-none"
-                                showTimeSelect
-                                showTimeSelectOnly
-                                timeIntervals={15}
-                                timeCaption="Time"
-                                dateFormat="h:mm aa"
-                                placeholderText="Time"
-                                popperPlacement="bottom"
+                            <input
+                                type="time"
+                                value={time}
+                                onChange={handleTimeChange}
+                                className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                required
                             />
                         </div>
                         <hr className="border-custom-green" />

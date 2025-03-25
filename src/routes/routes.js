@@ -16,15 +16,15 @@ import Blogs from '../pages/Blogs/page';
 import Gallery from '../pages/Gallery/page';
 // import PlasticSurgery from '../pages/PlasricSurgery/PlasticSurgery';
 // import Dermatology from '../pages/Dermetology/Dermetology';
-// import BreastEnhancement from '../pages/BreastEnhancement/BreastEnhancement'; // Import Breast Enhancement
+import BreastEnhancement from '../pages/BreastAugmentation/page'; // Import Breast Enhancement
 import BodyContouringPage from '../pages/BodyContouringAbdominalPlaty/page';
 import HairTransplant from '../pages/HairTransplant/page';
 import AntiAging from '../pages/AntiAgeingProcedures/page';
 import Rhinoplasty from '../pages/Rhinoplasty/page';
 import StructuralFatGrafting from '../pages/StructuralFatGrafting/page';
-// import Gynaecomastia from '../pages/Gynaecomastia/Gynaecomastia';
-// import AcneAndScars from '../pages/AcneAndScars/AcneAndScars';
-// import LaserHairRemoval from '../pages/LaserHairRemoval/LaserHairRemoval';
+import Gynaecomastia from '../pages/Gynaecomastia/page';
+import AcneAndScars from '../pages/AcneScars/page';
+import LaserHairRemoval from '../pages/LaserHairRemoval/page';
 // import FillersBotox from '../pages/FillersBotox/FillersBotox';
 // import LaserTattooRemoval from '../pages/LaserTattooRemoval/LaserTattooRemoval';
 // import StretchMarksTreatment from '../pages/StretchMarksTreatment/StretchMarksTreatment';
@@ -48,8 +48,8 @@ function AppRoutes() {
 
                 { path: "our-doctors", element: <OurDoctors /> },
                 { path: "contact-us", element: <ContactUs /> }, // Add the route for Contact Us page
-                { path: "blogs", element: <Blogs />},
-                { path: "gallery", element: <Gallery />},
+                { path: "blogs", element: <Blogs /> },
+                { path: "gallery", element: <Gallery /> },
 
                 // { path: "contact-us", element: <ContactUs /> },
                 // { path: "blog", element: <BlogPosts /> },
@@ -57,15 +57,15 @@ function AppRoutes() {
                 // // Plastic Surgery service category
                 // { path: "plastic-surgery", element: <PlasticSurgery /> },
                 // // Separate route for breast enhancement
-                // { path: "plastic-surgery/breast-enhancement", element: <BreastEnhancement /> },
+                { path: "/breast-enhancement", element: <BreastEnhancement /> },
                 { path: "/body-contouring", element: <BodyContouringPage /> },
                 { path: "/hair-transplant", element: <HairTransplant /> },
                 { path: "/anti-ageing", element: <AntiAging /> },
                 { path: "/rhinoplasty", element: <Rhinoplasty /> },
                 { path: "/structural-fat-grafting", element: <StructuralFatGrafting /> },
-                // { path: "plastic-surgery/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
-                // { path: "dermatology/acne-and-scars", element: <AcneAndScars /> },
-                // { path: "dermatology/laser-hair-removal", element: <LaserHairRemoval /> },
+                { path: "/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
+                { path: "/acne-and-scars", element: <AcneAndScars /> },
+                { path: "/laser-hair-removal", element: <LaserHairRemoval /> },
                 // { path: "dermatology/fillers-and-botox", element: <FillersBotox /> },
                 // { path: "dermatology/laser-tattoo-removal", element: <LaserTattooRemoval /> },
                 // { path: "dermatology/stretch-marks-treatment", element: <StretchMarksTreatment /> },

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { galleryImages } from "../../../utils/ServiceDatas/StructuralFatData/StructuralFatData"; // Importing gallery images
+import { galleryImages } from "../../../utils/ServiceDatas/AcneData/acneData"; // Importing gallery images
 
 const PrevArrow = ({ onClick }) => (
     <button
