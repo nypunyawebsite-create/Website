@@ -1,8 +1,13 @@
 import React from 'react'
+import Banner from './Banner'
+import ServiceContent from './ServiceContent'
 
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <Banner />
+      <ServiceContent />
+    </div>
   )
 }
 
