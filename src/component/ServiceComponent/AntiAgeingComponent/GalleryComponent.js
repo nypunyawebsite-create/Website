@@ -7,19 +7,19 @@ import { galleryImages } from "../../../utils/ServiceDatas/AntiAgeingData/antiAg
 
 const PrevArrow = ({ onClick }) => (
     <button
-        className="absolute top-1/2 left-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
+        className="absolute top-1/2 md:left-[-50px] left-[-30px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 "
         onClick={onClick}
     >
-        <FiArrowLeftCircle size={35} />
+        <FiArrowLeftCircle className="md:w-9 md:h-9 w-6 h-6" />
     </button>
 );
 
 const NextArrow = ({ onClick }) => (
     <button
-        className="absolute top-1/2 right-[-50px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 md:block hidden"
+        className="absolute top-1/2 md:right-[-50px] right-[-30px] transform -translate-y-1/2 rounded-full cursor-pointer z-10 "
         onClick={onClick}
     >
-        <FiArrowRightCircle size={35} />
+        <FiArrowRightCircle className="md:w-9 md:h-9 w-6 h-6" />
     </button>
 );
 

@@ -18,7 +18,7 @@ const Banner = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col justify-end items-center text-white">
-          <h1 className="md:text-6xl text-3xl font-bold pb-32">Rhinoplasty</h1>
+          <h1 className="md:text-6xl text-3xl font-bold pb-32 text-center">Rhinoplasty</h1>
         </div>
       </div>
 

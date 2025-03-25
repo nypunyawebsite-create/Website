@@ -39,7 +39,7 @@ const MeetOurMedicalExperts = () => {
       </h2>
 
       <div className="relative flex flex-col md:flex-row items-center justify-center w-full container mx-auto mt-6">
-        
+
         {/* Left Content Section - Dynamic Mapping */}
         <div className="w-full md:w-1/2 px-4 md:px-0">
           {doctors.map((doctor, index) => (
@@ -63,13 +63,13 @@ const MeetOurMedicalExperts = () => {
                   Check Out Doctor
                 </button>
               </div>
-              
+
               <div className="flex items-center gap-3 py-5">
                 <button className="p-2 bg-white rounded text-black shadow-md">
                   <FaXTwitter className="text-xl" />
                 </button>
                 <button className="p-2 bg-white rounded text-black shadow-md">
-                  <FaLinkedinIn  className="text-xl" />
+                  <FaLinkedinIn className="text-xl" />
                 </button>
               </div>
             </div>
