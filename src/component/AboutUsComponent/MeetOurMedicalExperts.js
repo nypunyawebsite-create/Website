@@ -14,6 +14,8 @@ const CustomPrevArrow = ({ onClick }) => (
   </button>
 );
 
+
+
 const CustomNextArrow = ({ onClick }) => (
   <button className="absolute top-1/2 -right-5 md:-right-10 transform -translate-y-1/2 z-10" onClick={onClick}>
     <FiArrowRightCircle className="text-3xl md:text-4xl text-white" />
