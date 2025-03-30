@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import dermatologyServiceData from '../../utils/dermatology-service-data';
 
 const DermatologyServices = () => {
     const [expandedService, setExpandedService] = useState(null);
+    const navigate = useNavigate();
 
     const handleExpandClick = (index) => {
         setExpandedService(index === expandedService ? null : index);
+    };
+
+    const handleNavigate = (slug, section) => {
+        navigate(`/${slug}`, { state: { scrollTo: section } });
     };
 
     return (
@@ -36,29 +41,25 @@ const DermatologyServices = () => {
                             {expandedService === index && (
                                 <div className='w-full lg:w-1/2 lg:h-80 mt-4 lg:mt-0' style={{ backgroundImage: `url(${service.bgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                     <div className="grid grid-cols-2 md:grid-cols-2 bg-opacity-50 bg-black text-white lg:h-full h-48">
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                    <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'information')}>
                                                 <h4 className="font-bold">Information</h4>
-                                                {/* <p>{service.information}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'transformation')}>
                                                 <h4 className="font-bold">Transformation</h4>
-                                                {/* <p>{service.transformation}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'faqs')}>
                                                 <h4 className="font-bold">FAQs</h4>
-                                                {/* <p>{service.faqs}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'whyUs')}>
                                                 <h4 className="font-bold">Why Us</h4>
-                                                {/* <p>{service.whyUs}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

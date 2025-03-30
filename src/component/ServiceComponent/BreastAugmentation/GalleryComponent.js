@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import { galleryImages } from "../../../utils/ServiceDatas/BreastData/breastData";// Importing images
+import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 // Custom Arrows with React Icons
 const PrevArrow = ({ onClick }) => (
@@ -34,9 +36,24 @@ const GalleryComponent = () => {
         arrows: true,
     };
 
+    const location = useLocation();
+    const transformationRef = useRef(null);
+
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            const sectionRefs = {
+                transformation: transformationRef,
+            };
+
+            if (sectionRefs[location.state.scrollTo]?.current) {
+                sectionRefs[location.state.scrollTo].current.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    }, [location]);
+
     return (
         <>
-            <div className="w-full mx-auto pb-10 px-4 relative container">
+            <div className="w-full mx-auto pb-10 px-4 relative container" ref={transformationRef}>
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
                 <div className="relative md:w-[90%] mx-auto">
                     <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />}>
