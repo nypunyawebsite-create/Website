@@ -8,13 +8,13 @@ const Banner = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="/services/body_contouring/body_contouring_banner.png"
+                        src="/services/body_contouring/body_contouring_mainbanner.png"
                         alt="About Us Banner"
                         className="w-full h-full object-cover brightness-75"
                     />
                 </div>
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-custom-blue/50 to-[#187fb7]/0"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-b from-custom-blue/50 to-[#187fb7]/0"></div> */}
 
                 {/* Overlay Content */}
                 <div className="absolute inset-0 flex flex-col justify-end items-center text-white">
