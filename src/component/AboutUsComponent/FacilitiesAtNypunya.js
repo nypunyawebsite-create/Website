@@ -34,11 +34,11 @@ const FacilitiesAtNypunya = () => {
   };
 
   return (
-    <div className="bg-[#d9d9d9] py-10">
+    <div className="bg-[#d9d9d9] py-10 px-2">
       <p className="uppercase text-3xl text-custom-blue py-8 text-center">
         {facilitiesData.title}
       </p>
-      <div className="relative flex items-center justify-center w-full py-10">
+      <div className="relative flex items-center justify-center w-full md:py-10">
         <div className="container relative overflow-hidden rounded-xl">
           <Slider {...settings}>
             {facilitiesData.images.map((img, index) => (

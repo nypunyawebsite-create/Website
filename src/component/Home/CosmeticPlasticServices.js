@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import cosmeticServiceData from '../../utils/cosmetic-service-data';
 
 const CosmeticPlasticServices = () => {
     const [expandedService, setExpandedService] = useState(null);
+    const navigate = useNavigate();
 
     const handleExpandClick = (index) => {
         setExpandedService(index === expandedService ? null : index);
+    };
+
+    const handleNavigate = (slug, section) => {
+        navigate(`/${slug}`, { state: { scrollTo: section } });
+    };
+
+    const handleNavigateToGallery = (category) => {
+        navigate(`/gallery`, { state: { category } });
     };
 
     return (
@@ -21,12 +30,12 @@ const CosmeticPlasticServices = () => {
                         >
                             <div className={`w-full p-4 h-full flex flex-col gap-6 justify-between ${expandedService === index ? 'lg:w-1/2' : ''}`}>
                                 <div>
-                                    <h3 className={`text-xl font-bold ${expandedService === index ? 'text-black' : ''}`}>{service.title}</h3>
-                                    <p className={`${expandedService === index ? 'text-black' : ''}`}>{service.desc}</p>
+                                    <h3 className="text-xl font-bold">{service.title}</h3>
+                                    <p>{service.desc}</p>
                                 </div>
                                 <div>
                                     <button
-                                        className={`mt-4 py-2 px-4 rounded ${expandedService === index ? 'bg-white text-black' : 'bg-[#92E0E0] text-black group-hover:bg-[#000099] group-hover:text-white'}`}
+                                        className="mt-4 py-2 px-4 rounded bg-[#92E0E0] text-black group-hover:bg-[#000099] group-hover:text-white"
                                         onClick={() => handleExpandClick(index)}
                                     >
                                         {expandedService === index ? 'Read Less' : 'Read More'}
@@ -36,29 +45,25 @@ const CosmeticPlasticServices = () => {
                             {expandedService === index && (
                                 <div className='w-full lg:w-1/2 lg:h-80 mt-4 lg:mt-0' style={{ backgroundImage: `url(${service.bgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                     <div className="grid grid-cols-2 md:grid-cols-2 lg:gap-4 bg-opacity-50 bg-black text-white lg:h-full h-48">
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'information')}>
                                                 <h4 className="font-bold">Information</h4>
-                                                {/* <p>{service.information}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigateToGallery(service.title)}>
                                                 <h4 className="font-bold">Transformation</h4>
-                                                {/* <p>{service.transformation}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'faqs')}>
                                                 <h4 className="font-bold">FAQs</h4>
-                                                {/* <p>{service.faqs}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
-                                        <div className="hover:bg-[#000099] hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <Link to="#">
+                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
+                                            <button onClick={() => handleNavigate(service.slug, 'whyUs')}>
                                                 <h4 className="font-bold">Why Us</h4>
-                                                {/* <p>{service.whyUs}</p> */}
-                                            </Link>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +72,7 @@ const CosmeticPlasticServices = () => {
                     ))}
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 

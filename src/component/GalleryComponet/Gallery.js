@@ -1,26 +1,40 @@
-import { useState } from "react";
-import { galleryImages } from "../../utils/galleryData"; // Adjust the import path as needed
-import { FaChevronDown } from "react-icons/fa"; // Import the down arrow icon
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { galleryImages } from "../../utils/galleryData"; 
+import { FaChevronDown } from "react-icons/fa"; 
 
-const categories = ["Hair Transplant", "Skin Treatment", "Dental Surgery"]; // Add more categories as needed
+const categories = [
+  "Hair Transplant",
+  "Body Contouring Abdominal Platy",
+  "Breast Augmentation/Breast Enhancement",
+  "Anti Ageing Procedures",
+  "Rhinoplasty",
+  "Structural Fat Grafting",
+  "Gynaecomastia (Male Breast / Moobs)"
+];
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Default selection
+  const location = useLocation();
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]); 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Function to get images based on the selected category
+  useEffect(() => {
+    if (location.state?.category && categories.includes(location.state.category)) {
+      setSelectedCategory(location.state.category);
+    }
+  }, [location.state]);
+
   const filteredImages = galleryImages[selectedCategory] || [];
-  
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-center gap-44 my-6 relative">
-        <h2 className="text-2xl whitespace-nowrap">
+    <div className="p-4 md:p-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-44 my-6 relative">
+        <h2 className="text-xl md:text-2xl text-center md:text-left whitespace-nowrap">
           Select Gallery to View Results
         </h2>
-        <div className="relative w-72">
+        <div className="relative w-full md:w-72">
           <button
-            className="border-none rounded px-4 py-2 w-full text-left flex items-center justify-between focus:outline-none"
+            className="border rounded px-4 py-2 w-full text-left flex items-center justify-between focus:outline-none"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             {selectedCategory}
@@ -42,21 +56,18 @@ const Gallery = () => {
               ))}
             </ul>
           )}
-            <hr className="w-full border-t border-custom-green" />
+          <hr className="w-full border-t border-custom-green" />
         </div>
-      
       </div>
-      
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-20 container mx-auto py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 container mx-auto py-6 md:py-10">
         {filteredImages.length > 0 ? (
           filteredImages.map((src, index) => (
             <div key={index} className="text-center">
-              <img src={src} alt={selectedCategory} className="w-full h-56 object-cover" />
+              <img src={src} alt={selectedCategory} className="w-full h-48 md:h-56 object-cover rounded-md shadow" />
             </div>
           ))
         ) : (
-          <p className="col-span-2 md:col-span-3 text-center text-gray-500">No images available</p>
+          <p className="col-span-1 sm:col-span-2 md:col-span-3 text-center text-gray-500">No images available</p>
         )}
       </div> 
     </div>

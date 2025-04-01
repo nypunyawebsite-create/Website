@@ -8,7 +8,7 @@ const Banner = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/about-us/about_us_banner.png"
+            src="/about-us/about-page-images/about-banner.png"
             alt="About Us Banner"
             className="w-full h-full object-cover brightness-75"
           />

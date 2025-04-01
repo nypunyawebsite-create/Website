@@ -1,6 +1,12 @@
 export const galleryImages = [
-    "/services/body_contouring/body_image_1.png",
-    "/services/body_contouring/body_image_1.png",
+    "/services/body_contouring/gallery01.png",
+    "/services/body_contouring/gallery02.png",
+    "/services/body_contouring/gallery03.png",
+    "/services/body_contouring/gallery04.png",
+    "/services/body_contouring/gallery05.png",
+    "/services/body_contouring/gallery06.png",
+    "/services/body_contouring/gallery07.png",
+    // "/services/body_contouring/gallery08.png",
 ];
 
 export const lipoSuctionDetails = [
