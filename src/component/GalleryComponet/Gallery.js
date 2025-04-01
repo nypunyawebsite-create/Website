@@ -1,16 +1,31 @@
-import { useState } from "react";
-import { galleryImages } from "../../utils/galleryData"; // Adjust the import path as needed
-import { FaChevronDown } from "react-icons/fa"; // Import the down arrow icon
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { galleryImages } from "../../utils/galleryData"; 
+import { FaChevronDown } from "react-icons/fa"; 
 
-const categories = ["Hair Transplant", "Skin Treatment", "Dental Surgery"]; // Add more categories as needed
+const categories = [
+  "Hair Transplant",
+  "Body Contouring Abdominal Platy",
+  "Breast Augmentation/Breast Enhancement",
+  "Anti Ageing Procedures",
+  "Rhinoplasty",
+  "Structural Fat Grafting",
+  "Gynaecomastia (Male Breast / Moobs)"
+];
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Default selection
+  const location = useLocation();
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]); 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Function to get images based on the selected category
+  useEffect(() => {
+    if (location.state?.category && categories.includes(location.state.category)) {
+      setSelectedCategory(location.state.category);
+    }
+  }, [location.state]);
+
   const filteredImages = galleryImages[selectedCategory] || [];
-  
+
   return (
     <div className="p-4 md:p-8">
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-44 my-6 relative">

@@ -14,6 +14,10 @@ const CosmeticPlasticServices = () => {
         navigate(`/${slug}`, { state: { scrollTo: section } });
     };
 
+    const handleNavigateToGallery = (category) => {
+        navigate(`/gallery`, { state: { category } });
+    };
+
     return (
         <div className="p-6 flex flex-col justify-center items-center">
             <div className="md:container flex flex-col justify-center items-center">
@@ -47,7 +51,7 @@ const CosmeticPlasticServices = () => {
                                             </button>
                                         </div>
                                         <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'transformation')}>
+                                            <button onClick={() => handleNavigateToGallery(service.title)}>
                                                 <h4 className="font-bold">Transformation</h4>
                                             </button>
                                         </div>
