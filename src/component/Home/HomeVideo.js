@@ -4,6 +4,7 @@ import { FaPlayCircle } from 'react-icons/fa';
 const HomeVideo = () => {
     const [videoEnded, setVideoEnded] = useState(false);
     const [videoSrc, setVideoSrc] = useState('');
+    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -15,40 +16,37 @@ const HomeVideo = () => {
             }
         };
 
-        // Set initial video source
         handleResize();
-
-        // Update video source on window resize
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const handleVideoEnd = () => {
         setVideoEnded(true);
+        setIsVideoPlaying(false);
     };
 
     const handleExploreClick = () => {
         if (videoRef.current) {
-            videoRef.current.currentTime = 0; // Reset to start
+            videoRef.current.currentTime = 0;
             videoRef.current.play();
-            setVideoEnded(false); // Show video again
+            setVideoEnded(false);
+            setIsVideoPlaying(true);
         }
     };
 
     return (
         <div className="relative h-screen overflow-hidden">
-            {/* Always keep video in DOM and just toggle visibility */}
             <video
                 ref={videoRef}
                 src={videoSrc}
                 muted
                 onEnded={handleVideoEnd}
-                className={`w-full h-full object-cover transition-opacity duration-500 ${videoEnded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
-                autoPlay
+                className={`w-full h-full object-cover transition-opacity duration-500 ${isVideoPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                autoPlay={false}
             />
 
-            {/* Banner Section (Hidden when video is playing) */}
-            <div className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex items-center justify-center ${videoEnded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex items-center justify-center ${!isVideoPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 bg-gradient-to-b from-blue-900 to-blue-500 h-full items-end justify-center mx-auto p-20">
                     <div className='w-[90%] flex flex-col justify-center items-center'>
                         <div className="flex flex-col justify-center gap-3 h-full">
