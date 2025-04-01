@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import 
+t, { useState, useEffect } from "react";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"; // Importing icons
 import { doctors } from "../../utils/aboutUsDatas"; // Importing data
 
@@ -38,11 +39,7 @@ const MeetOurMedicalExperts = () => {
 
   // Get current doctor
   const doctor = doctors[currentIndex];
-
   return (
-    <div className="w-full bg-blue-900 text-white py-10 px-4 relative">
-        
-      <h2 className="text-center text-2xl font-bold mb-6">MEET OUR MEDICAL EXPERTS</h2>
 
       {/* This part will render the doctor data */}
       <div className="flex flex-col md:flex-row items-center justify-center md:px-10">
