@@ -70,6 +70,8 @@ const MeetOurMedicalExperts = () => {
         </div>
       </div>
 
+
+
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
