@@ -30,6 +30,8 @@ const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true, // enable auto slide
+    autoplaySpeed: 3000, // time in ms between slides
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
 };

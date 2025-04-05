@@ -1,5 +1,5 @@
 const cosmeticServiceData = [
-    {
+    { 
         title: 'Breast Augmentation/Breast Enhancement',
         desc: 'Be the Best Version of You',
         bgimage: '/home/cosmetic-plastic-surgery-services/breast-enhancement-reshaping-reduction.png',
