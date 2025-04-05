@@ -32,7 +32,7 @@ const Gallery = () => {
         <h2 className="text-xl md:text-2xl text-center md:text-left whitespace-nowrap">
           Select Gallery to View Results
         </h2>
-        <div className="relative w-full md:w-72">
+        <div className="relative w-full md:w-1/3">
           <button
             className="border rounded px-4 py-2 w-full text-left flex items-center justify-between focus:outline-none"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}

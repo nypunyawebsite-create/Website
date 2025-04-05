@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import cosmeticServiceData from '../../utils/cosmetic-service-data';
 
 const CosmeticPlasticServices = () => {
-    const [expandedService, setExpandedService] = useState(null);
+    const [expandedService, setExpandedService] = useState(0); // Open first item by default
     const navigate = useNavigate();
 
     const handleExpandClick = (index) => {
@@ -35,11 +35,16 @@ const CosmeticPlasticServices = () => {
                                 </div>
                                 <div>
                                     <button
-                                        className="mt-4 py-2 px-4 rounded bg-[#92E0E0] text-black group-hover:bg-[#000099] group-hover:text-white"
+                                        className={`mt-4 py-2 px-4 rounded text-black group-hover:text-white 
+        ${expandedService === index
+                                                ? 'bg-[#000099] text-white '
+                                                : 'bg-[#92E0E0] group-hover:bg-[#000099]'
+                                            }`}
                                         onClick={() => handleExpandClick(index)}
                                     >
                                         {expandedService === index ? 'Read Less' : 'Read More'}
                                     </button>
+
                                 </div>
                             </div>
                             {expandedService === index && (
@@ -75,5 +80,6 @@ const CosmeticPlasticServices = () => {
         </div>
     );
 };
+
 
 export default CosmeticPlasticServices;

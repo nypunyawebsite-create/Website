@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const Banner = () => {
+const Banner = ({ refProp }) => {
     return (
         <>
-            <div className="relative w-full md:h-[600px] h-[450px]">
+            <div ref={refProp} className="relative w-full md:h-[600px] h-[450px]">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img

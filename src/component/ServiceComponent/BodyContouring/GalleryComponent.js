@@ -34,10 +34,10 @@ const settings = {
     nextArrow: <NextArrow />,
 };
 
-const GalleryComponent = () => {
+const GalleryComponent = ({ refProp }) => {
     return (
         <>
-            <div className="w-full mx-auto pb-10 px-4 relative container">
+            <div ref={refProp} className="w-full mx-auto pb-10 px-4 relative container pt-[100px] -mt-[100px]">
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
                 <div className="relative md:w-[90%] mx-auto">
                     <Slider {...settings}>

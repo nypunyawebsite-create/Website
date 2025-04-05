@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { services } from "../../../utils/ServiceDatas/BodyContouringData/bodyContouring"; // Importing data
 
-const ServicesDetails = () => {
+
+const ServicesDetails = ({ refProp }) => {
     const settings = {
         dots: false,
         infinite: true,
@@ -31,7 +32,7 @@ const ServicesDetails = () => {
     };
 
     return (
-        <div className="p-4 bg-white container mx-auto">
+        <div ref={refProp} className="p-4 bg-white container mx-auto pt-[100px] -mt-[100px]">
             <Slider {...settings} className="flex justify-center">
                 {services.map((service, index) => (
                     <div key={index} className="flex justify-center pb-4 px-2">
