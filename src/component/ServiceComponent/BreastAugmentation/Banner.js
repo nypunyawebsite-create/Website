@@ -8,7 +8,7 @@ const Banner = ({ refProp }) => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/services/services_banner.png"
+            src="/services/breast_augmentation/breast_main_banner.png"
             alt="About Us Banner"
             className="w-full h-full object-cover brightness-75"
           />

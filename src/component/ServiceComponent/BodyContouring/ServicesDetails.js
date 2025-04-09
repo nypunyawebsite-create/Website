@@ -10,7 +10,7 @@ const ServicesDetails = ({ refProp }) => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3, // Default for large screens
+        slidesToShow: 2, // Default for large screens
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,

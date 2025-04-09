@@ -29,8 +29,8 @@ const Index = () => {
         <>
             <Banner refProp={informationRef} />
             <LipoSuctionBodyContouring />
-            <ServicesDetails refProp={faqRef} /> {/* ✅ corrected prop */}
-            <GalleryComponent refProp={whyUsRef} /> {/* ✅ consistent prop */}
+            <ServicesDetails refProp={faqRef} /> 
+            <GalleryComponent refProp={whyUsRef} /> 
             <ConsultationForm />
         </>
     );

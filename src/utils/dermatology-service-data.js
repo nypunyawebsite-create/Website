@@ -17,7 +17,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:''
+        slug:'fillers-and-botox'
     },
     {
         title: 'Laser Hair Removal',
@@ -37,7 +37,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:''
+        slug:'laser-tattoo-removal'
     },
     {
         title: 'PRP (Platelet Rich Plasma)',
@@ -47,7 +47,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:''
+        slug:'platelet-rich-plasma-injections'
     },
     {
         title: 'Dark Circles and Under Eye Bags',
