@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import dermatologyServiceData from '../../utils/dermatology-service-data';
 
 const DermatologyServices = () => {
-    const [expandedService, setExpandedService] = useState(null);
+    const [expandedService, setExpandedService] = useState(0);
     const navigate = useNavigate();
 
     const handleExpandClick = (index) => {
@@ -14,61 +14,94 @@ const DermatologyServices = () => {
         navigate(`/${slug}`, { state: { scrollTo: section } });
     };
 
+    const handleNavigateToGallery = (category) => {
+        navigate(`/gallery`, { state: { category } });
+    };
+
     return (
-        <div className="p-6 flex flex-col justify-center items-center">
-            <div className="md:container flex flex-col justify-center items-center">
-                <h2 className="text-3xl font-bold mb-8">Dermatology Services</h2>
+        <div className="p-4 md:p-6 flex flex-col justify-center items-center pt-20">
+            <div className="w-full max-w-7xl">
+                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    Dermatology Services
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {dermatologyServiceData.map((service, index) => (
-                        <div
-                            key={index}
-                            className={`border rounded-lg ${expandedService === index ? 'lg:col-span-2 flex flex-col lg:flex-row bg-[#92E0E0]' : 'bg-[#e9f9f9] hover:bg-[#92E0E0] group'}`}
-                        >
-                            <div className={`w-full p-4 h-full flex flex-col justify-between gap-6 ${expandedService === index ? 'lg:w-1/2' : ''}`}>
-                                <div>
-                                    <h3 className={`text-xl font-bold ${expandedService === index ? 'text-black' : ''}`}>{service.title}</h3>
-                                    <p className={`${expandedService === index ? 'text-black' : ''}`}>{service.desc}</p>
-                                </div>
-                                <div>
-                                    <button
-                                        className={`mt-4 py-2 px-4 rounded ${expandedService === index ? 'bg-white text-black' : 'bg-[#92E0E0] text-black group-hover:bg-[#000099] group-hover:text-white'}`}
-                                        onClick={() => handleExpandClick(index)}
-                                    >
-                                        {expandedService === index ? 'Read Less' : 'Read More'}
-                                    </button>
-                                </div>
-                            </div>
-                            {expandedService === index && (
-                                <div className='w-full lg:w-1/2 lg:h-80 mt-4 lg:mt-0' style={{ backgroundImage: `url(${service.bgimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                                    <div className="grid grid-cols-2 md:grid-cols-2 bg-opacity-50 bg-black text-white lg:h-full h-48">
-                                    <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'information')}>
-                                                <h4 className="font-bold">Information</h4>
-                                            </button>
+                    {dermatologyServiceData.map((service, index) => {
+                        const isExpanded = expandedService === index;
+
+                        return (
+                            <div
+                                key={index}
+                                className={`border rounded-lg transition-all duration-300 overflow-hidden 
+                                    ${isExpanded ? 'bg-[#92E0E0] col-span-1 md:col-span-2 lg:col-span-2' : 'bg-[#e9f9f9] hover:bg-[#92E0E0] group'}
+                                `}
+                            >
+                                <div className={`flex flex-col ${isExpanded ? 'md:flex-row' : ''}`}>
+                                    <div className={`w-full p-4 flex flex-col justify-between ${isExpanded ? 'md:w-1/2' : ''}`}>
+                                        <div className="flex flex-col gap-2">
+                                            <h3 className="text-xl font-bold">{service.title}</h3>
+                                            <div
+                                                className="text-sm text-gray-700"
+                                                style={{
+                                                    display: '-webkit-box',
+                                                    WebkitLineClamp: 4,
+                                                    WebkitBoxOrient: 'vertical',
+                                                    height: '80px',
+                                                    overflow: 'hidden',
+                                                }}
+                                            >
+                                                {service.desc}
+                                            </div>
                                         </div>
-                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'transformation')}>
-                                                <h4 className="font-bold">Transformation</h4>
-                                            </button>
-                                        </div>
-                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'faqs')}>
-                                                <h4 className="font-bold">FAQs</h4>
-                                            </button>
-                                        </div>
-                                        <div className="hover:bg-white hover:text-black hover:bg-opacity-50 p-2 flex flex-col justify-center items-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'whyUs')}>
-                                                <h4 className="font-bold">Why Us</h4>
+                                        <div>
+                                            <button
+                                                className={`mt-4 py-2 px-4 rounded text-black 
+                                                    ${isExpanded ? 'bg-[#000099] text-white' : 'bg-[#92E0E0] group-hover:bg-[#000099] group-hover:text-white'}
+                                                `}
+                                                onClick={() => handleExpandClick(index)}
+                                            >
+                                                {isExpanded ? 'Read Less' : 'Read More'}
                                             </button>
                                         </div>
                                     </div>
+
+                                    {isExpanded && (
+                                        <div
+                                            className="w-full md:w-1/2 min-h-[200px] md:min-h-[300px] bg-cover bg-center"
+                                            style={{
+                                                backgroundImage: `url(${service.bgimage})`,
+                                            }}
+                                        >
+                                            <div className="grid grid-cols-2 gap-2 bg-black bg-opacity-50 text-white h-full">
+                                                <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
+                                                    <button onClick={() => handleNavigate(service.slug, 'information')}>
+                                                        <h4 className="font-bold text-sm md:text-base">Information</h4>
+                                                    </button>
+                                                </div>
+                                                <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
+                                                    <button onClick={() => handleNavigateToGallery(service.title)}>
+                                                        <h4 className="font-bold text-sm md:text-base">Transformation</h4>
+                                                    </button>
+                                                </div>
+                                                <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
+                                                    <button onClick={() => handleNavigate(service.slug, 'faqs')}>
+                                                        <h4 className="font-bold text-sm md:text-base">FAQs</h4>
+                                                    </button>
+                                                </div>
+                                                <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
+                                                    <button onClick={() => handleNavigate(service.slug, 'whyUs')}>
+                                                        <h4 className="font-bold text-sm md:text-base">Why Us</h4>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 

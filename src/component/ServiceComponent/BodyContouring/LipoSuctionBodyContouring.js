@@ -7,11 +7,11 @@ const LipoSuctionBodyContouring = () => {
             <div className="flex flex-col lg:flex-row lg:gap-8 gap-5 w-full">
                 {/* First Column (Title + Grid) */}
                 <div className="lg:w-1/2 w-full">
-                    {/* Title */}
+                    {/* Information Title */}
                     <p className="text-custom-blue text-2xl mb-4 text-center lg:text-left">
-                        Breast Augmentation / Breast Enhancement
+                    Body Contouring Abdominal Platy
                     </p>
-
+              
                     {/* Grid Items */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {lipoSuctionDetails.map((detail, index) => (
@@ -37,6 +37,7 @@ const LipoSuctionBodyContouring = () => {
                 </div>
             </div>
         </div>
+    
     );
 };
 

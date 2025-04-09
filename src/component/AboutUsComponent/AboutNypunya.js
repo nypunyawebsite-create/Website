@@ -4,7 +4,7 @@ const AboutNypunya = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="container mx-auto px-2 md:px-6 md:py-10 py-5">
+      <div className="container mx-auto px-2 md:px-6 md:pb-10 py-5 relative -top-10">
         <h4 className="text-custom-green text-lg font-semibold">About Nypunya</h4>
         <h2 className="text-3xl text-custom-blue py-2">WELCOME TO THE NEWLOOK</h2>
         <h3 className="text-xl font-semibold py-2">

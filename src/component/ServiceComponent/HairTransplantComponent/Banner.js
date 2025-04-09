@@ -8,7 +8,7 @@ const Banner = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/services/hair_transplant/hair_transplant_banner.png"
+            src="/services/hair_transplant/hair-transplant-banner-img.png"
             alt="About Us Banner"
             className="w-full h-full object-cover brightness-75"
           />

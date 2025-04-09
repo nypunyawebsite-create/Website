@@ -1,15 +1,26 @@
-import React from 'react'
-import Banner from './Banner'
-import Gallery from './Gallery'
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import Banner from './Banner';
+import Gallery from './Gallery';
 
-const index = () => {
+const Index = () => {
+  const location = useLocation();
+  const scrollToSection = location.state?.scrollTo;
+
+  const bannerRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollToSection === "banner" && bannerRef.current) {
+      bannerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [scrollToSection]);
+
   return (
     <>
-    <Banner />
-    <Gallery />
-    
+      <Banner refProp={bannerRef} />
+      <Gallery />
     </>
-  )
-}
+  );
+};
 
-export default index
+export default Index;
