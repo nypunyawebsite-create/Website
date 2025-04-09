@@ -3,7 +3,7 @@
 
 export const cardData = [
     {
-      image: "/about-us/about-page-images/plastic-surgery-services.png",
+      image: "/about-us/about-page-images/plastic-surgery.png",
       title: "Plastic Surgery Services",
       description:
         "Lorem ipsum dolor sit amet consectetur. Nullam velit et mi imperdiet tincidunt nisl massa. Tempor sed ac porta ullamcorper. Amet amet porttitor aliquam nibh tristique consectetur vitae donec purus. Diam vestibulum quis magna aliquet et egestas consectetur netus.",
@@ -17,7 +17,7 @@ export const cardData = [
       link: "/qualified-doctors",
     },
     {
-      image: "/about-us/about-page-images/qualified-doctors.png",
+      image: "/about-us/about-page-images/doctors.png",
       title: "Qualified Doctors",
       description:
         "Lorem ipsum dolor sit amet consectetur. Nullam velit et mi imperdiet tincidunt nisl massa. Tempor sed ac porta ullamcorper. Amet amet porttitor aliquam nibh tristique consectetur vitae donec purus. Diam vestibulum quis magna aliquet et egestas consectetur netus.",

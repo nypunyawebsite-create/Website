@@ -9,9 +9,9 @@ const LipoSuctionBodyContouring = () => {
                 <div className="lg:w-1/2 w-full">
                     {/* Information Title */}
                     <p className="text-custom-blue text-2xl mb-4 text-center lg:text-left">
-                    Body Contouring Abdominal Platy
+                        Body Contouring Abdominal Platy
                     </p>
-              
+
                     {/* Grid Items */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {lipoSuctionDetails.map((detail, index) => (
@@ -26,7 +26,7 @@ const LipoSuctionBodyContouring = () => {
                 <div className="lg:w-1/2 w-full flex items-center justify-center pt-0 lg:pt-10">
                     <div className="relative w-full max-w-md lg:max-w-full">
                         <img
-                            src="/services/body_contouring/lipo_section_image.png"
+                            src="/services/body_contouring/lipo_suction_body_contouring.png"
                             alt="Breast Enhancement"
                             className="rounded-lg w-full object-cover"
                         />
@@ -37,7 +37,7 @@ const LipoSuctionBodyContouring = () => {
                 </div>
             </div>
         </div>
-    
+
     );
 };
 

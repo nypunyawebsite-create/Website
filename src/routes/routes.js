@@ -25,12 +25,12 @@ import StructuralFatGrafting from '../pages/StructuralFatGrafting/page';
 import Gynaecomastia from '../pages/Gynaecomastia/page';
 import AcneAndScars from '../pages/AcneScars/page';
 import LaserHairRemoval from '../pages/LaserHairRemoval/page';
-// import FillersBotox from '../pages/FillersBotox/FillersBotox';
-// import LaserTattooRemoval from '../pages/LaserTattooRemoval/LaserTattooRemoval';
-// import StretchMarksTreatment from '../pages/StretchMarksTreatment/StretchMarksTreatment';
-// import LaserSkinToning from '../pages/LaserSkinToning/LaserSkinToning';
-// import LaserScarRevision from '../pages/LaserScarRevision';
-// import PRPInjections from '../pages/PRPInjections/PRPInjections';
+import FillersBotox from '../pages/FillersandBotox/page';
+import LaserTattooRemoval from '../pages/LaserTattooRemoval/page';
+import StretchMarksTreatment from '../pages/StretchMarksTreatment/page';
+import LaserSkinToning from '../pages/ChemicalPeels/page';
+import LaserScarRevision from '../pages/LaserScarRevision/page';
+import PRPInjections from '../pages/PlateletRichPlasmaInjections/page';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -66,12 +66,12 @@ function AppRoutes() {
                 { path: "/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
                 { path: "/acne-and-scars", element: <AcneAndScars /> },
                 { path: "/laser-hair-removal", element: <LaserHairRemoval /> },
-                // { path: "dermatology/fillers-and-botox", element: <FillersBotox /> },
-                // { path: "dermatology/laser-tattoo-removal", element: <LaserTattooRemoval /> },
-                // { path: "dermatology/stretch-marks-treatment", element: <StretchMarksTreatment /> },
-                // { path: "dermatology/laser-skin-rejuvenation", element: <LaserSkinToning /> },
-                // { path: "dermatology/laser-scar-revision", element: <LaserScarRevision /> },
-                // { path: "dermatology/platelet-rich-plasma-injections", element: <PRPInjections /> },
+                { path: "/fillers-and-botox", element: <FillersBotox /> },
+                { path: "/laser-tattoo-removal", element: <LaserTattooRemoval /> },
+                { path: "/stretch-marks-treatment", element: <StretchMarksTreatment /> },
+                { path: "/laser-skin-rejuvenation", element: <LaserSkinToning /> },
+                { path: "/laser-scar-revision", element: <LaserScarRevision /> },
+                { path: "/platelet-rich-plasma-injections", element: <PRPInjections /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },
                 // // Catch-all route for non-existing paths

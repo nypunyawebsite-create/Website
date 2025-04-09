@@ -1,12 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Banner from './Banner'
-import BreastAugmentationComponent from './BreastAugmentationComponent'
-import ServicesDetails from './ServicesDetails'
-import GalleryComponent from './GalleryComponent'
-import ConsultationForm from '../../FormsComponent/ConsultationForm'
-
-
+import Banner from './Banner';
+import BreastAugmentationComponent from './BreastAugmentationComponent';
+import ServicesDetails from './ServicesDetails';
+import GalleryComponent from './GalleryComponent';
+import ConsultationForm from '../../FormsComponent/ConsultationForm';
+import { breastServiceContent } from "../../../utils/ServiceDatas/BreastData/breastData";
 
 const Index = () => {
   const location = useLocation();
@@ -15,6 +14,8 @@ const Index = () => {
   const informationRef = useRef(null);
   const faqRef = useRef(null);
   const whyUsRef = useRef(null);
+
+  const [selectedService, setSelectedService] = useState(breastServiceContent[0]); // Default service
 
   useEffect(() => {
     if (scrollToSection === "information" && informationRef.current) {
@@ -26,17 +27,19 @@ const Index = () => {
     }
   }, [scrollToSection]);
 
+  return (
+    <>
+      <Banner refProp={informationRef} />
 
-    return (
-      <>
-        <Banner refProp={informationRef} />
-        <BreastAugmentationComponent />
-        <ServicesDetails />
-        <GalleryComponent />
-        <ConsultationForm />
+      <BreastAugmentationComponent selectedService={selectedService} />
+      <ServicesDetails
+        // selectedService={selectedService}
+        setSelectedService={setSelectedService}
+      />
+      <GalleryComponent />
+      <ConsultationForm />
+    </>
+  );
+};
 
-      </>
-    )
-  }
-
-  export default Index 
+export default Index;

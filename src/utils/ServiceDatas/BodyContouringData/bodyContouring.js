@@ -19,9 +19,9 @@ export const lipoSuctionDetails = [
 ];
 
 export const services = [
+    { id: "01", title: "Lipo-Suction-Body Contouring" },
     { id: "02", title: "Massive weight loss-body contouring" },
-    { id: "03", title: "Massive weight loss-body contouring" },
-    { id: "04", title: "Massive weight loss-body contouring" },
+    // { id: "04", title: "Massive weight loss-body contouring" },
 ];
 
 

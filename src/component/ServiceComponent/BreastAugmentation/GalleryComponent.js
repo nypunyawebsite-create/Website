@@ -74,9 +74,9 @@ const GalleryComponent = () => {
                     </Slider>
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <p className="text-center text-2xl text-custom-blue pb-5"> Be the best version of Yourself with NYPUNYA. </p>
-            </div>
+            </div> */}
         </>
     );
 };
