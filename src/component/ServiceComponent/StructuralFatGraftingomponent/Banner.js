@@ -8,7 +8,7 @@ const Banner = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/services/structural_fat_grafting/structural_fat_grafting_banner.png"
+            src="/services/structural_fat_grafting/Mainbanner.png"
             alt="About Us Banner"
             className="w-full h-full object-cover brightness-75"
           />

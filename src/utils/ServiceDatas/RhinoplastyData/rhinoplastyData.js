@@ -1,6 +1,7 @@
 export const galleryImages = [
-    "/services/rhinoplasty/rhinoplasty_gallery_1.png",
-    "/services/rhinoplasty/rhinoplasty_gallery_1.png",
+    "/services/rhinoplasty/gallery01.png",
+    "/services/rhinoplasty/gallery02.png",
+    "/services/rhinoplasty/gallery03.png",
 
 ];
 

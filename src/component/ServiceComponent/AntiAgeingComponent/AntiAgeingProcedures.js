@@ -26,7 +26,7 @@ const AntiAgeingProcedures = () => {
                 <div className="lg:w-1/2 w-full flex items-center justify-center pt-0 lg:pt-10">
                     <div className="relative w-full max-w-md lg:max-w-full">
                         <img
-                            src="/services/anti_ageing/anti_ageing_service_img.png"
+                            src="/services/anti_ageing/lery05.png"
                             alt="Breast Enhancement"
                             className="rounded-lg w-full object-cover"
                         />
