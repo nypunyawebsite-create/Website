@@ -1,22 +1,14 @@
 import { useEffect } from 'react';
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from '../component/Shared/Header';
 import Footer from '../component/Shared/Footer';
 
 const MainLayout = () => {
-    useEffect(() => {
-        const handleLinkClick = (event) => {
-            const target = event.target.closest('a');
-            if (target && target.href) {
-                setTimeout(() => {
-                    window.scrollTo(0, 0);
-                }, 0);
-            }
-        };
+    const location = useLocation();
 
-        document.addEventListener('click', handleLinkClick);
-        return () => document.removeEventListener('click', handleLinkClick);
-    }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]); // Triggers scroll to top on route/pathname change
 
     return (
         <main>

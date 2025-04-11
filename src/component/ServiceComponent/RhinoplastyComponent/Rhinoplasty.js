@@ -26,7 +26,7 @@ const Rhinoplasty = () => {
         <div className="lg:w-1/2 w-full flex items-center justify-center pt-0 lg:pt-10">
           <div className="relative w-full max-w-md lg:max-w-full">
             <img
-              src="/services/rhinoplasty/rhinoplasty_service.png"
+              src="/services/rhinoplasty/rhinoplasty-2nd-banner.png"
               alt="Breast Enhancement"
               className="rounded-lg w-full object-cover"
             />

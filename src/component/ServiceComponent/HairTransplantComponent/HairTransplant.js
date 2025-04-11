@@ -26,7 +26,7 @@ const BreastAugmentationComponent = () => {
         <div className="lg:w-1/2 w-full flex items-center justify-center pt-0 lg:pt-10">
           <div className="relative w-full max-w-md lg:max-w-full">
             <img
-              src="/services/hair_transplant/hair_transplant_image.png"
+              src="/services/hair_transplant/hair-transplant.png"
               alt="Breast Enhancement"
               className="rounded-lg w-full object-cover"
             />

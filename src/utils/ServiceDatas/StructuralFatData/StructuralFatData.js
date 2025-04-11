@@ -1,6 +1,9 @@
 export const galleryImages = [
-    "/services/structural_fat_grafting/structural_fat_grafting_gallery.png",
-    "/services/structural_fat_grafting/structural_fat_grafting_gallery.png",
+    "/services/structural_fat_grafting/gallery01.png",
+    "/services/structural_fat_grafting/gallery02.png",
+    "/services/structural_fat_grafting/gallery03.png",
+    "/services/structural_fat_grafting/gallery04.png",
+    "/services/structural_fat_grafting/gallery06.png",
 
 
 ];
