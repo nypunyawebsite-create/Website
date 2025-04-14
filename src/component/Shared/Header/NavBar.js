@@ -77,7 +77,6 @@ const NavBar = () => {
         return category.subservices.some((service) => isSubserviceActive(service));
     };
 
-
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md top-0 px-6" : "bg-transparent top-2"}`}>
             {/* Top Contact Bar */}
@@ -105,7 +104,9 @@ const NavBar = () => {
             <div className={`h-1/20 transition-all duration-300 mx-auto flex md:justify-center justify-between ${isScrolled ? "bg-white w-full" : "bg-white w-[90%] rounded-3xl rounded-t-none px-6"}`}>
                 <div className="w-full mx-auto flex justify-between items-center p-4 h-full">
                     <div className="text-xl font-bold">
-                        <img src="/site-logo.svg" alt="Nypunya Logo" className="md:w-[100%]" />
+                        <Link to="/" >
+                            <img src="/site-logo.svg" alt="Nypunya Logo" className="md:w-[100%]" />
+                        </Link>
                     </div>
                     <nav className="hidden md:flex md:items-center">
                         <ul className="flex space-x-6">
@@ -122,12 +123,12 @@ const NavBar = () => {
                                     setHoveredSubservice(null);
                                 }}
                             >
-                                <button className="font-bold text-gray-800 flex items-center gap-1">
+                                <Link to="/services" className="font-bold text-gray-800 flex items-center cursor-pointer gap-1">
                                     Services <FaChevronDown className="text-sm mt-[1px]" />
-                                </button>
+                                </Link>
 
                                 {isServicesOpen && (
-                                    <div className="absolute top-full left-0 bg-white shadow-lg rounded-md py-4 px-4 z-50 w-64">
+                                    <div className="absolute top-full left-0  bg-white shadow-lg rounded-md py-4 px-4 z-50 w-64">
                                         <ul>
                                             {serviceSubmenu.map((category, idx) => (
                                                 <li
@@ -155,8 +156,8 @@ const NavBar = () => {
                                                                     >
                                                                         <div
                                                                             className={`px-3 py-2 rounded-md font-medium flex justify-between items-center ${isSubserviceActive(service)
-                                                                                    ? "text-gray-800 bg-[#92E0E0]"
-                                                                                    : "text-gray-800 hover:bg-[#92E0E0]"
+                                                                                ? "text-gray-800 bg-[#92E0E0]"
+                                                                                : "text-gray-800 hover:bg-[#92E0E0]"
                                                                                 }`}
                                                                         >
                                                                             {service.name}
@@ -189,8 +190,8 @@ const NavBar = () => {
                                                                                                 }
                                                                                             }}
                                                                                             className={`block px-2 py-1 text-sm w-full text-left ${isSubmenuItemActive(service, item)
-                                                                                                    ? "text-[#92E0E0] font-semibold"
-                                                                                                    : "text-gray-700 hover:text-[#92E0E0]"
+                                                                                                ? "text-[#92E0E0] font-semibold"
+                                                                                                : "text-gray-700 hover:text-[#92E0E0]"
                                                                                                 }`}
                                                                                         >
                                                                                             {item}
@@ -218,18 +219,51 @@ const NavBar = () => {
                         </ul>
                     </nav>
 
-                    <button className="md:hidden text-gray-800 z-50" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                    <button
+                        className="md:hidden text-gray-800 z-10"
+                        onClick={() => setIsMobileMenuOpen(true)} // only opens the menu
+                    >
+                        <FaBars size={24} />
                     </button>
                 </div>
             </div>
 
             {/* Mobile Full-Screen Menu */}
-            {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 w-full h-[calc(100vh-80px)] bg-white z-40 px-6 py-6 overflow-y-auto flex">
-                    <ul className="flex flex-col gap-4 w-full">
-                        <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Home</Link></li>
-                        <li><Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">About Us</Link></li>
+            <div className="relative md:hidden">
+                {/* Hamburger Toggle */}
+                {/* <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="text-2xl text-gray-800 z-50 relative"
+            >
+                <FaBars />
+            </button> */}
+
+                {/* Fullscreen Mobile Menu */}
+                <div
+                    className={`fixed inset-0 bg-white z-50 px-6 py-6 overflow-y-auto flex flex-col transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                        }`}
+                >
+                    {/* Close Button on Right Top */}
+                    <div className="w-full flex justify-end">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-2xl text-gray-800"
+                        >
+                            <FaTimes />
+                        </button>
+                    </div>
+
+                    <ul className="flex flex-col gap-4 w-full mt-4">
+                        <li>
+                            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                About Us
+                            </Link>
+                        </li>
 
                         {/* SERVICES DROPDOWN */}
                         <li>
@@ -252,7 +286,7 @@ const NavBar = () => {
                                         return (
                                             <details key={idx} className="group">
                                                 <summary
-                                                    className={`cursor-pointer font-semibold flex justify-between items-center py-2 ${isCategoryActive ? "text-[#92E0E0]" : "text-gray-700"
+                                                    className={`cursor-pointer font-semibold flex justify-between items-center py-2 ${isCategoryActive ? 'text-[#92E0E0]' : 'text-gray-700'
                                                         }`}
                                                 >
                                                     {category.category}
@@ -270,7 +304,9 @@ const NavBar = () => {
                                                         return (
                                                             <details key={subIdx} className="group">
                                                                 <summary
-                                                                    className={`cursor-pointer flex justify-between items-center py-1 ${isSubserviceActive ? "text-[#92E0E0]" : "text-gray-700 hover:text-[#92E0E0]"
+                                                                    className={`cursor-pointer flex justify-between items-center py-1 ${isSubserviceActive
+                                                                            ? 'text-[#92E0E0]'
+                                                                            : 'text-gray-700 hover:text-[#92E0E0]'
                                                                         }`}
                                                                 >
                                                                     {service.name}
@@ -288,8 +324,8 @@ const NavBar = () => {
                                                                                 <button
                                                                                     onClick={() => {
                                                                                         setIsMobileMenuOpen(false);
-                                                                                        if (item === "Transformation") {
-                                                                                            navigate("/gallery", {
+                                                                                        if (item === 'Transformation') {
+                                                                                            navigate('/gallery', {
                                                                                                 state: { category: service.name },
                                                                                             });
                                                                                         } else {
@@ -301,8 +337,8 @@ const NavBar = () => {
                                                                                         }
                                                                                     }}
                                                                                     className={`text-sm text-left w-full py-1 ${isSubmenuItemActive
-                                                                                            ? "text-[#92E0E0] font-semibold"
-                                                                                            : "text-gray-600 hover:text-[#92E0E0]"
+                                                                                            ? 'text-[#92E0E0] font-semibold'
+                                                                                            : 'text-gray-600 hover:text-[#92E0E0]'
                                                                                         }`}
                                                                                 >
                                                                                     {item}
@@ -322,14 +358,29 @@ const NavBar = () => {
                             </details>
                         </li>
 
-
-                        <li><Link to="/our-doctors" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Our Doctors</Link></li>
-                        <li><Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Gallery</Link></li>
-                        <li><Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Contact Us</Link></li>
-                        <li><Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Blog</Link></li>
+                        <li>
+                            <Link to="/our-doctors" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                Our Doctors
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                Gallery
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">
+                                Blog
+                            </Link>
+                        </li>
                     </ul>
                 </div>
-            )}
+            </div>
 
         </header>
     );

@@ -38,27 +38,32 @@ const CosmeticPlasticServices = () => {
                                     ></div>
 
                                     <div className="absolute inset-0 grid grid-cols-2 gap-2 bg-black bg-opacity-50 text-white">
-                                        <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'information')}>
-                                                <h4 className="font-bold text-sm md:text-base">Information</h4>
-                                            </button>
+                                        <div
+                                            onClick={() => handleNavigate(service.slug, 'information')}
+                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                        >
+                                            <h4 className="font-bold text-sm md:text-base">Information</h4>
                                         </div>
-                                        <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
-                                            <button onClick={() => handleNavigateToGallery(service.title)}>
-                                                <h4 className="font-bold text-sm md:text-base">Transformation</h4>
-                                            </button>
+                                        <div
+                                            onClick={() => handleNavigateToGallery(service.title)}
+                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                        >
+                                            <h4 className="font-bold text-sm md:text-base">Transformation</h4>
                                         </div>
-                                        <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'faqs')}>
-                                                <h4 className="font-bold text-sm md:text-base">FAQs</h4>
-                                            </button>
+                                        <div
+                                            onClick={() => handleNavigate(service.slug, 'faqs')}
+                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                        >
+                                            <h4 className="font-bold text-sm md:text-base">FAQs</h4>
                                         </div>
-                                        <div className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center">
-                                            <button onClick={() => handleNavigate(service.slug, 'whyUs')}>
-                                                <h4 className="font-bold text-sm md:text-base">Why Us</h4>
-                                            </button>
+                                        <div
+                                            onClick={() => handleNavigate(service.slug, 'whyUs')}
+                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                        >
+                                            <h4 className="font-bold text-sm md:text-base">Why Us</h4>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
