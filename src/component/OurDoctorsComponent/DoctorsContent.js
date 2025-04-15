@@ -7,7 +7,7 @@ const ContentComponent = ({ selectedDoctor }) => {
   return (
     <div className="bg-white text-black py-6 rounded-lg flex flex-col md:flex-row items-center container mx-auto">
       <div className="md:w-2/3">
-        <h3 className="text-6xl py-5">{doctor.name}</h3>
+        <h3 className="md:text-6xl text-3xl py-5">{doctor.name}</h3>
         {/* <p className="text-lg">{doctor.designation}</p> */}
 
         {/* Mapping through paragraphs dynamically */}
