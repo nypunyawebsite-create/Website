@@ -4,13 +4,15 @@ export const serviceSubmenu = [
     {
       category: "Plastic Surgery",
       subservices: [
-        { name: "Breast Augmentation/Breast Enhancement", path: "/breast-enhancement" },
-        { name: "Body Contouring Abdominal Platy", path: "/body-contouring" },
-        { name: "Hair Transplant", path: "/hair-transplant" },
-        { name: "Anti Ageing", path: "/anti-ageing" },
         { name: "Rhinoplasty", path: "/rhinoplasty" },
-        { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
-        { name: "Gynaecomastia (Male Breast / Moobs)", path: "/gynaecomastia-male-breast-moobs" },
+        { name: "Anti Ageing", path: "/anti-ageing" },
+        { name: "Body Contouring Abdominal Platy", path: "/body-contouring" },
+        { name: "Breast Augmentation/Breast Enhancement", path: "/breast-enhancement" },
+        { name: "Hair Transplant", path: "/hair-transplant" },
+      
+       
+        // { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
+        // { name: "Gynaecomastia (Male Breast / Moobs)", path: "/gynaecomastia-male-breast-moobs" },
       ],
     },
     {

@@ -24,7 +24,7 @@ const ConsultationForm = () => {
             <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
                 <div className="w-full md:px-20 text-white md:p-8 p-4 rounded-lg">
                     <h2 className="text-center text-xl md:text-2xl mb-6">
-                        BOOK YOUR FREE CONSULTATION
+                        BOOK YOUR CONSULTATION
                     </h2>
                     <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>

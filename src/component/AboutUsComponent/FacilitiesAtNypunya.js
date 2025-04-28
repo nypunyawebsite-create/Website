@@ -46,7 +46,7 @@ const FacilitiesAtNypunya = () => {
                 <img
                   src={img}
                   alt={`Facility ${index + 1}`}
-                  className="w-full h-[400px] object-cover rounded-xl"
+                  className="w-full h-[500px] object-cover rounded-xl"
                 />
               </div>
             ))}
