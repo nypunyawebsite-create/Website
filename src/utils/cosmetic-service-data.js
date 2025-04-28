@@ -11,7 +11,7 @@ const cosmeticServiceData = [
     },
     {
         title: 'Body Contouring Abdominal Platy',
-        desc: 'Be the Best Version of You',
+        desc: 'I Come, I Saw, I Contoured.',
         bgimage: '/home/cosmetic-plastic-surgery-services/body-contouring-abdomino-pasty.png',
         information: 'Detailed information about Breast Enhancement.',
         transformation: 'Transformation stories and testimonials.',
@@ -21,7 +21,7 @@ const cosmeticServiceData = [
     },
     {
         title: 'Hair Transplant',
-        desc: 'Be the Best Version of You',
+        desc: 'Be Smart, Make every Hair Graft Count!',
         bgimage: '/home/cosmetic-plastic-surgery-services/hair-transplant.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -31,8 +31,8 @@ const cosmeticServiceData = [
     },
     {
         title: 'Anti Ageing Procedures',
-        desc: 'Be the Best Version of You',
-        bgimage: '/home/cosmetic-plastic-surgery-services/anti-aging.png',
+        desc: 'For the Timeless You!',
+        bgimage: '/home/cosmetic-plastic-surgery-services/faceift.jpg',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
@@ -41,7 +41,7 @@ const cosmeticServiceData = [
     },
     {
         title: 'Rhinoplasty',
-        desc: 'Be the Best Version of You',
+        desc: 'Happiness is Right under your NOSE!',
         bgimage: '/home/cosmetic-plastic-surgery-services/rhinoplasty.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
