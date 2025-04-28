@@ -5,11 +5,11 @@ const AboutNypunya = () => {
     <>
       {/* Header Section */}
       <div className="container mx-auto px-2 md:px-6 md:pb-10 py-5 relative -top-10">
-        <h4 className="text-custom-green text-lg font-semibold">About Nypunya</h4>
-        <h2 className="text-3xl text-custom-blue py-2">WELCOME TO THE NEWLOOK</h2>
+        <h4 className="text-custom-green text-3xl font-semibold">About Nypunya</h4>
+        {/* <h2 className="text-3xl text-custom-blue py-2">WELCOME TO THE NEWLOOK</h2>
         <h3 className="text-xl font-semibold py-2">
           What it takes to offer YOU the best Dermatology and Plastic Surgery Services?
-        </h3>
+        </h3> */}
         <p className="text-gray-700 leading-relaxed py-2">
           Nypunya means ‘Expertise’ in Sanskrit. Our Doctors are Experts in the true sense. 
           After training in the most prestigious medical institutes, gaining an immense wealth 
@@ -24,10 +24,10 @@ const AboutNypunya = () => {
       
 
       <div className="flex justify-center items-center px-6 pb-24 ">
-        <div className="max-w-2xl text-center">
+        <div className="md:max-w-3xl text-center">
 
           {/* Vision Section - Content Left, Image Right */}
-          <div className=" flex flex-col md:flex-row items-center text-left py-5">
+          <div className=" flex flex-col md:flex-row items-center text-left py-5 md:py-0">
             <div className="md:w-1/2 md:pr-6">
               <h3 className="text-3xl text-custom-blue ">OUR VISION</h3>
               <p className="text-gray-600 leading-relaxed mt-2">
@@ -42,7 +42,7 @@ const AboutNypunya = () => {
           </div>
 
           {/* Mission Section - Image Left, Content Right */}
-          <div className="flex flex-col md:flex-row-reverse items-center text-left py-5">
+          <div className="flex flex-col md:flex-row-reverse items-center text-left py-5 md:py-0">
             <div className="md:w-1/2 md:pl-6">
               <h3 className="text-3xl text-custom-blue">OUR MISSION</h3>
               <p className="text-gray-600 leading-relaxed mt-2">

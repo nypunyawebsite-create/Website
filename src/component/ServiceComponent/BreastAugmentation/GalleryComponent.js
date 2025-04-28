@@ -60,7 +60,7 @@ const GalleryComponent = () => {
         <>
             <div className="w-full mx-auto pb-10 px-4 relative container" ref={transformationRef}>
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
-                <div className="relative md:w-[90%] mx-auto">
+                <div className="relative md:w-[100%] mx-auto">
                     <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />}>
                         {galleryImages.map((img, index) => (
                             <div key={index} className="w-full">

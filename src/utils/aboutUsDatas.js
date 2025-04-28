@@ -63,7 +63,7 @@ export const cardData = [
       image: "/about-us/prasantha_kesari_doctor.png",
     },
     {
-      name: "DR. JOHN DOE",
+      name: "DR. SHUBHA M KESARI",
       qualifications: "Senior Orthopedic Surgeon, M.B.B.S, M.S (Ortho)",
       description: "Dr. John specializes in advanced orthopedic surgeries and patient-focused treatments.",
       achievements: [
