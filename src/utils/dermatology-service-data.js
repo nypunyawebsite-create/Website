@@ -1,7 +1,7 @@
 const dermatologyServiceData = [
     {
         title: 'Acne and acne scars',
-        desc: 'Be the Best Version of You',
+        desc: 'Stay Unfiltered, Stay ACNE Free!',
         bgimage: '/home/dermatology-services/acne.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -11,7 +11,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Fillers and Botox',
-        desc: 'Be the Best Version of You',
+        desc: 'Aging is a Fact, Looking your Age is not!',
         bgimage: '/home/dermatology-services/filler-and-botox.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -21,7 +21,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Laser Hair Removal',
-        desc: 'Be the Best Version of You',
+        desc: 'Drop the Razor-Go for Laser!',
         bgimage: '/home/dermatology-services/laser-hair-removal.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -31,7 +31,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Laser tattoo removal',
-        desc: 'Be the Best Version of You',
+        desc: 'Regretting your tattoo?',
         bgimage: '/home/dermatology-services/laser-tattoo-removal.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -41,7 +41,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'PRP (Platelet Rich Plasma)',
-        desc: 'Be the Best Version of You',
+        desc: 'Love is in the HAIR',
         bgimage: '/home/dermatology-services/prp.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -51,7 +51,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Dark Circles and Under Eye Bags',
-        desc: 'Be the Best Version of You',
+        desc: 'Heal your Skin, Do not Conceal',
         bgimage: '/home/dermatology-services/dark-circle.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
