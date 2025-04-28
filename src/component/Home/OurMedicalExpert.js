@@ -33,7 +33,7 @@ const OurMedicalExpert = () => {
                             </div>
                             <div className='flex items-center gap-2'>
                                 <FaCheck className='text-green-500 border rounded-full p-1' size={30} />
-                                <p>Expert with over 10+ years experience</p>
+                                <p>Expert with over 20+ years experience</p>
                             </div>
                         </div>
                         <div className='mt-6'>
