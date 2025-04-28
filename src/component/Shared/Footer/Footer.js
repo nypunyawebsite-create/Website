@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="bg-[#4B4B68] md:grid md:grid-cols-6 gap-6 h-full items-start justify-center mx-auto lg:p-20 p-8 text-white flex flex-col">
             <div className='col-span-3 flex flex-col gap-8'>
                 <img src='/footer-logo.svg' alt='Footer Logo' className='lg:w-[60%]' />
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                <div className='flex flex-col gap-2'>
+                {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}
+                <div className='flex flex-col gap-2 md:pt-10'>
                     <h4 className='text-2xl font-semibold'>Follow us on Social Media</h4>
                     <div className='flex gap-4'>
                         <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>

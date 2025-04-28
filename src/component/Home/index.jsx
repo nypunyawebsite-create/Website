@@ -16,7 +16,7 @@ const index = () => {
             <HomeInformation />
             <WelcomeNypunya />
             <OurMedicalExpert />
-            <OurPatientReview />
+            {/* <OurPatientReview /> */}
         </div>
     )
 }

@@ -11,17 +11,17 @@ const BlogContent = () => {
             <div className="p-5">
               <h3 className="text-lg font-semibold h-14">{blog.title}</h3>
               <p className="text-gray-600 text-sm mt-2 h-16">{blog.description}</p>
-              <button className="mt-4 bg-custom-green rounded-2xl  px-14 py-2 hover:bg-teal-600 transition">
-                SUBMIT
+              <button className="mt-4 bg-custom-green rounded-2xl  px-8 py-2 hover:bg-teal-600 transition">
+                Know More
               </button>
             </div>
           </div>
         ))}
       </div>
       <div className="flex justify-center py-10">
-        <button className="bg-custom-green rounded-2xl  px-10 py-2 hover:bg-teal-600 transition">
+        {/* <button className="bg-custom-green rounded-2xl  px-10 py-2 hover:bg-teal-600 transition">
           Read More •••
-        </button>
+        </button> */}
       </div>
     </>
   );
