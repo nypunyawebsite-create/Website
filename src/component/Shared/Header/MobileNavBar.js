@@ -26,7 +26,7 @@ const MobileNavBar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
     };
 
     return (
-        <div className={`fixed inset-0 bg-white z-50 px-6 py-6 overflow-y-auto flex flex-col transition-transform duration-300 ease-in-out md:hidden ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+        <div className={`fixed inset-0 bg-white z-50 px-6 py-6 overflow-y-auto flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
             {/* Close Button */}
             <div className="w-full flex justify-end">
                 <button onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-gray-800">

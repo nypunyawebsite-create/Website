@@ -32,20 +32,20 @@ const Footer = () => {
                 </div>
             </div>
             <div className='col-span-1 flex flex-col gap-2'>
-                <Link to='/' className={location.pathname === '/' ? 'text-[#92E0E0] font-bold' : ''}>Home</Link>
-                <Link to='/about-us' className={location.pathname === '/about-us' ? 'text-[#92E0E0] font-bold' : ''}>About us</Link>
-                <Link to='/services' className={location.pathname === '/services' ? 'text-[#92E0E0] font-bold' : ''}>Services</Link>
-                <Link to='/our-doctors' className={location.pathname === '/our-doctors' ? 'text-[#92E0E0] font-bold' : ''}>Our Doctors</Link>
-                <Link to='/appointment' className={location.pathname === '/appointment' ? 'text-[#92E0E0] font-bold' : ''}>Appointment</Link>
-                <Link to='/blogs' className={location.pathname === '/blogs' ? 'text-[#92E0E0] font-bold' : ''}>Blogs</Link>
-                <Link to='/patient-stories' className={location.pathname === '/patient-stories' ? 'text-[#92E0E0] font-bold' : ''}>Patient Stories</Link>
-                <Link to='/gallery' className={location.pathname === '/gallery' ? 'text-[#92E0E0] font-bold' : ''}>Gallery</Link>
-                <Link to='/contact-us' className={location.pathname === '/contact-us' ? 'text-[#92E0E0] font-bold' : ''}>Contact us</Link>
+                <Link to='/' className={`relative w-fit ${location.pathname === '/' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/' ? 'after:w-full' : ''}`}>Home</Link>
+                <Link to='/about-us' className={`relative w-fit ${location.pathname === '/about-us' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/about-us' ? 'after:w-full' : ''}`}>About us</Link>
+                <Link to='/services' className={`relative w-fit ${location.pathname === '/services' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/services' ? 'after:w-full' : ''}`}>Services</Link>
+                <Link to='/our-doctors' className={`relative w-fit ${location.pathname === '/our-doctors' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/our-doctors' ? 'after:w-full' : ''}`}>Our Doctors</Link>
+                <Link to='/appointment' className={`relative w-fit ${location.pathname === '/appointment' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/appointment' ? 'after:w-full' : ''}`}>Appointment</Link>
+                <Link to='/blogs' className={`relative w-fit ${location.pathname === '/blogs' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/blogs' ? 'after:w-full' : ''}`}>Blogs</Link>
+                <Link to='/patient-stories' className={`relative w-fit ${location.pathname === '/patient-stories' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/patient-stories' ? 'after:w-full' : ''}`}>Patient Stories</Link>
+                <Link to='/gallery' className={`relative w-fit ${location.pathname === '/gallery' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/gallery' ? 'after:w-full' : ''}`}>Gallery</Link>
+                <Link to='/contact-us' className={`relative w-fit ${location.pathname === '/contact-us' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/contact-us' ? 'after:w-full' : ''}`}>Contact us</Link>
             </div>
             <div className='col-span-2 flex flex-col gap-2'>
-                <a href='https://maps.app.goo.gl/1syipVGCs8CVZCb46' target='_blank' rel='noopener noreferrer' >#3,1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</a>
-                <a href='tel:+919738545945'>+91 97385 45945</a>
-                <a href='mailto:clinic.nypunyaaesthetic@gmail.com'>clinic.nypunyaaesthetic@gmail.com</a>
+                <a href='https://maps.app.goo.gl/1syipVGCs8CVZCb46' target='_blank' rel='noopener noreferrer' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">#3,1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</a>
+                <a href='tel:+919738545945' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">+91 97385 45945</a>
+                <a href='mailto:clinic.nypunyaaesthetic@gmail.com' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">clinic.nypunyaaesthetic@gmail.com</a>
             </div>
         </div>
     )
