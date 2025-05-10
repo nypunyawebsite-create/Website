@@ -16,7 +16,7 @@ const ConsultationForm = () => {
     return (
         <>
             <div>
-                <p className="text-center text-xl md:text-2xl mb-6 text-custom-blue pb-10 uppercase">
+                <p className="text-center text-xl md:text-2xl text-custom-blue pb-10 pt-10 uppercase">
                     Be the best version of Yourself with NYPUNYA
                 </p>
 

@@ -30,11 +30,37 @@ export const galleryImages = {
 
   ],
   "Breast Augmentation/Breast Enhancement": [
-    "/gallery/hair_trans_img_6.png",
-    "/gallery/hair_trans_img_1.png",
-    "/gallery/hair_trans_img_2.png",
-    "/gallery/hair_trans_img_5.png",
-    "/gallery/hair_trans_img_3.png",
-    "/gallery/hair_trans_img_4.png",
+    "/gallery/breast/Breast_Augmentation_After_Procedure_India_08.png",
+    "/gallery/breast/Breast_Augmentation_After_Procedure_India_09.png",
+    "/gallery/breast/Breast_Augmentation_After_Procedure_India_10.png",
+    "/gallery/breast/Breast_Augmentation_After_Procedure_India_11.png",
+    "/gallery/breast/Breast_Augmentation_Beautiful_Full_Bust_India_17.png",
+    "/gallery/breast/Breast_Augmentation_Before_After_India_01.png",
+    "/gallery/breast/Breast_Augmentation_Before_After_India_02.png",
+    "/gallery/breast/Breast_Augmentation_Before_After_India_03.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Bust_India_23.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Bust_India_24.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Bust_India_25.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Bust_India_26.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Bust_India_27.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Feminine_Look_India_42.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Feminine_Look_India_43.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Feminine_Look_India_44.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Feminine_Look_India_45.png",
+    "/gallery/breast/Breast_Augmentation_Enhanced_Feminine_Look_India_46.png",
+    "/gallery/breast/Breast_Augmentation_Feminine_Contours_India_15.png",
+    "/gallery/breast/Breast_Augmentation_Feminine_Contours_India_16.png",
+    "/gallery/breast/Breast_Augmentation_Feminine_Contours_India_17.png",
+    "/gallery/breast/Breast_Augmentation_Feminine_Contours_India_18.png",
+    "/gallery/breast/Breast_Augmentation_Feminine_Contours_India_19.png",
+    "/gallery/breast/Breast_Augmentation_Full_Figure_India_06.png",
+    "/gallery/breast/Breast_Augmentation_Full_Figure_India_07.png",
+    "/gallery/breast/Breast_Augmentation_Full_Figure_India_08.png",
+    "/gallery/breast/Breast_Augmentation_Full_Figure_India_09.png",
+
+
+
+
+
   ],
 };
