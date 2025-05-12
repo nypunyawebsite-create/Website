@@ -6,7 +6,9 @@ const Footer = () => {
     const location = useLocation();
 
     return (
-        <div className="bg-[#4B4B68] md:grid md:grid-cols-6 gap-6 h-full items-start justify-center mx-auto lg:p-20 p-8 text-white flex flex-col">
+        <div className="bg-[#4B4B68] md:grid md:grid-cols-6 gap-6 h-full items-start justify-center mx-auto lg:p-20 p-8 text-white flex flex-col" style={{
+            background: 'linear-gradient(90deg, #000099 0%, #2b5aba 20%, #2b59b9 40%, #5f9ece 70%, #fff 100%)'
+        }}>
             <div className='col-span-3 flex flex-col gap-8'>
                 <img src='/footer-logo.svg' alt='Footer Logo' className='lg:w-[60%]' />
                 {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}

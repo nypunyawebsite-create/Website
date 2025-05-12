@@ -11,7 +11,7 @@ const Index = () => {
     <>
       <Banner selectedDoctor={selectedDoctor} setSelectedDoctor={setSelectedDoctor} />
       <DoctorsContent selectedDoctor={selectedDoctor} />
-      <Feedback />
+      {/* <Feedback /> */}
       <Form />
     </>
   );

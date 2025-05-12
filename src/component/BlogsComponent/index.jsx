@@ -1,12 +1,12 @@
 import React from 'react'
 import Banner from './Banner'
-import BlogContent from './BlogsContent'
+import BlogContent from './BlogsContent.jsx'
 
 const index = () => {
   return (
     <>
-    <Banner />
-    <BlogContent />
+      <Banner />
+      <BlogContent />
     </>
   )
 }
