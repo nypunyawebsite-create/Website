@@ -105,10 +105,15 @@ const DesktopNavBar = () => {
             </style>
 
 
-            <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md top-0 px-6" : "bg-transparent top-2"}`}>
+            <header
+                className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-md top-0 px-6" : ""}`}
+                style={{
+                    background: 'linear-gradient(90deg, #fff 0%, #5f9ece 30%, #2b59b9 60%, #2b5aba 80%, #000099 100%)'
+                }}
+            >
                 {/* Top Contact Bar */}
                 <div className={`w-[90%] flex justify-between mx-auto ${isScrolled ? "hidden" : "flex"}`}>
-                    <div className="flex gap-3 text-white">
+                    <div className="flex gap-3 text-black">
                         <div className="flex items-center">
                             <FaEnvelope className="mr-2" />
                             <a href="mailto:clinic.nypunyaaesthetic@gmail.com" className="hidden md:inline">
@@ -121,23 +126,25 @@ const DesktopNavBar = () => {
                             <a href="tel:+919778412980" className="hidden md:inline">, +91 977 841 2980</a>
                         </div>
                     </div>
-                    <button className="bg-[#92E0E0] text-black px-4 py-2 rounded-xl rounded-bl-none rounded-br-none flex items-center">
-                        <FaCalendarAlt className="mr-2 text-black" />
+                    <button
+                        className="bg-[#abe2e5] text-[#000099] mt-1 px-6 py-2 rounded-full shadow-lg font-semibold flex items-center transition-all duration-200 hover:bg-[#92E0E0] hover:scale-105"
+                    >
+                        <FaCalendarAlt className="mr-2 text-[#000099]" />
                         Appointments
                     </button>
                 </div>
                 {/* Main Navbar */}
-                <div className={`h-1/20 transition-all duration-300 mx-auto flex md:justify-center justify-between ${isScrolled ? "bg-white w-full" : "bg-white w-[90%] rounded-3xl rounded-t-none"}`}>
+                <div className={`h-1/20 transition-all duration-300 mx-auto flex md:justify-center justify-between w-[90%]`}>
                     <div className="w-[90%] mx-auto flex justify-between items-center md:p-4 p-2 h-full">
                         <div className="text-xl font-bold">
                             <Link to="/" >
-                                <img src="/site-logo.svg" alt="Nypunya Logo" className="xl:w-[100%] md:w-[80%]" />
+                                <img src="/Banner.png" alt="Nypunya Logo" className="xl:w-[100%] md:w-[80%]" style={{ 'width': '337px' }} />
                             </Link>
                         </div>
                         <nav className="hidden lg:flex lg:items-center">
-                            <ul className="flex space-x-6">
-                                <li><Link to="/" className={`relative text-sm xl:text-base ${isActive("/") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/") ? "after:w-full" : ""}`}>Home</Link></li>
-                                <li><Link to="/about-us" className={`relative text-sm xl:text-base ${isActive("/about-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/about-us") ? "after:w-full" : ""}`}>About Us</Link></li>
+                            <ul className="flex space-x-6 text-white">
+                                <li><Link to="/" className={`relative text-sm xl:text-white ${isActive("/") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/") ? "after:w-full" : ""}`}>Home</Link></li>
+                                <li><Link to="/about-us" className={`relative text-sm xl:text-white ${isActive("/about-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/about-us") ? "after:w-full" : ""}`}>About Us</Link></li>
 
                                 {/* SERVICES MENU */}
                                 <li
@@ -149,7 +156,7 @@ const DesktopNavBar = () => {
                                         setHoveredSubservice(null);
                                     }}
                                 >
-                                    <Link to="/services" className={`relative text-sm xl:text-base ${isActive("/services") || isServicesMenuActive() ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/services") || isServicesMenuActive() ? "after:w-full" : ""} flex items-center cursor-pointer gap-1`}>
+                                    <Link to="/services" className={`relative text-sm xl:text-white ${isActive("/services") || isServicesMenuActive() ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/services") || isServicesMenuActive() ? "after:w-full" : ""} flex items-center cursor-pointer gap-1`}>
                                         Services <FaChevronDown className="text-sm mt-[1px]" />
                                     </Link>
 
@@ -236,10 +243,10 @@ const DesktopNavBar = () => {
                                         </div>
                                     )}
                                 </li>
-                                <li><Link to="/our-doctors" className={`relative text-sm xl:text-base ${isActive("/our-doctors") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/our-doctors") ? "after:w-full" : ""}`}>Our Doctors</Link></li>
-                                <li><Link to="/gallery" className={`relative text-sm xl:text-base ${isActive("/gallery") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/gallery") ? "after:w-full" : ""}`}>Gallery</Link></li>
-                                <li><Link to="/contact-us" className={`relative text-sm xl:text-base ${isActive("/contact-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/contact-us") ? "after:w-full" : ""}`}>Contact Us</Link></li>
-                                <li><Link to="/blogs" className={`relative text-sm xl:text-base ${isActive("/blogs") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/blogs") ? "after:w-full" : ""}`}>Blog</Link></li>
+                                <li><Link to="/our-doctors" className={`relative text-sm xl:text-white ${isActive("/our-doctors") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/our-doctors") ? "after:w-full" : ""}`}>Our Doctors</Link></li>
+                                <li><Link to="/gallery" className={`relative text-sm xl:text-white ${isActive("/gallery") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/gallery") ? "after:w-full" : ""}`}>Gallery</Link></li>
+                                <li><Link to="/contact-us" className={`relative text-sm xl:text-white ${isActive("/contact-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/contact-us") ? "after:w-full" : ""}`}>Contact Us</Link></li>
+                                <li><Link to="/blogs" className={`relative text-sm xl:text-white ${isActive("/blogs") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/blogs") ? "after:w-full" : ""}`}>Blog</Link></li>
                             </ul>
                         </nav>
                         {/* Hamburger Icon (Visible only on mobile) */}

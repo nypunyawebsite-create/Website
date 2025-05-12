@@ -40,6 +40,22 @@ export const team = [
             "M.B.B.S., D.N.B. (General Surgery), D.N.B. (Plastic Surgery), PGDHHM, MBA (Hospital Management)",
     },
 
+    {
+        name: "Dr. Sameer M. Halageri",
+        title: "Fellowship in Microvascular Surgery",
+        image: "/our-doctors/doctor_sameer_ m_halageri.png",
+        icon: "/our-doctors/icon_senior.png",
+        description:
+            "M.B.B.S., M.S. (General Surgery) M.Ch. (Plastic, Reconstructive & Cosmetic Surgery) and Onco-Reconstruction  (Tata Medical Centre) ",
+    },
+
+    {
+        name: "Dr. Renuka Sathyamurthy",
+        title: "Plastic Surgeon",
+        image: "/our-doctors/doctor_renukha.png",
+        icon: "/our-doctors/Dermatology.jpg",
+        description: "MBBS, MS (General Surgery), MCh (Plastic Surgery). Specializes in aesthetic, reconstructive, and cosmetic procedures."
+    },
 
     {
         name: "Dr. Maansa",
@@ -48,20 +64,5 @@ export const team = [
         icon: "/our-doctors/icon_lead.png",
         description:
             "MBBS, MD, DNB Expert in diagnosing and treating skin & hair. Specializes in cosmetic and medical dermatology.",
-    },
-    {
-        name: "Dr. Renuka Sathyamurthy",
-        title: "Plastic Surgeon",
-        image: "/our-doctors/doctor_renukha.png",
-        icon: "/our-doctors/Dermatology.jpg",
-        description: "MBBS, MS (General Surgery), MCh (Plastic Surgery). Specializes in aesthetic, reconstructive, and cosmetic procedures."
-    },
-    {
-        name: "Dr. Sameer M. Halageri",
-        title: "Fellowship in Microvascular Surgery",
-        image: "/our-doctors/doctor_sameer_ m_halageri.png",
-        icon: "/our-doctors/icon_senior.png",
-        description:
-            "M.B.B.S., M.S. (General Surgery) M.Ch. (Plastic, Reconstructive & Cosmetic Surgery) and Onco-Reconstruction  (Tata Medical Centre) ",
     },
 ];

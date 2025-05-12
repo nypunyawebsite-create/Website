@@ -6,3 +6,7 @@
 .container {
     width: 90%;
 }
+
+.bg-custom-blue {
+    background: #000099;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { galleryImages } from "../../utils/galleryData";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaCheck, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const categories = [
   "Hair Transplant",
@@ -23,8 +23,13 @@ const Gallery = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState("Hair Transplant");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(6);
-  const [enlargedImage, setEnlargedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedCase, setSelectedCase] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visibleThumbnails, setVisibleThumbnails] = useState(10);
+
+  // Calculate total images across all categories
+  const totalImages = Object.values(galleryImages).reduce((total, images) => total + images.length, 0);
 
   useEffect(() => {
     if (location.state?.category && categories.includes(location.state.category)) {
@@ -33,19 +38,44 @@ const Gallery = () => {
   }, [location.state]);
 
   useEffect(() => {
-    setVisibleCount(6); // Reset on category change
+    setCurrentIndex(0);
+    setSelectedCase(null);
+    setIsModalOpen(false);
+    setVisibleThumbnails(10);
   }, [selectedCategory]);
 
   const filteredImages = galleryImages[selectedCategory] || [];
-  const visibleImages = filteredImages.slice(0, visibleCount);
+  const visibleImages = filteredImages.slice(0, visibleThumbnails);
+
+  const handleCaseClick = (caseData) => {
+    setSelectedCase(caseData);
+    setIsModalOpen(true);
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === filteredImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? filteredImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const loadMoreThumbnails = () => {
+    setVisibleThumbnails(prev => prev + 10);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 py-8 font-sans">
-      <div className="max-w-6xl mx-auto rounded-3xl shadow-2xl bg-white/90 p-6 md:p-12">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-44 my-6 relative">
-          <h2 className="text-2xl md:text-3xl font-bold text-custom-blue text-center md:text-left whitespace-nowrap drop-shadow mb-2 md:mb-0">
-            Select Gallery to View Results
-          </h2>
+      <div className="max-w-7xl mx-auto rounded-3xl shadow-2xl bg-white/90 p-6 md:p-12">
+        {/* Category Selection */}
+        <div className="flex flex-col md:flex-row items-center justify-end gap-6 my-6 relative">
+          <div className="text-lg font-semibold text-custom-blue">
+            Showing image {currentIndex + 1} / {totalImages}
+          </div>
           <div className="relative w-full md:w-1/3">
             <button
               className={`border-2 rounded-xl px-4 py-2 w-full text-left flex items-center justify-between focus:outline-none shadow transition-all duration-200 ${isDropdownOpen ? 'border-custom-blue bg-blue-50' : 'border-gray-200 bg-white'}`}
@@ -70,105 +100,123 @@ const Gallery = () => {
                 ))}
               </ul>
             )}
-            {/* <hr className="w-full border-t border-custom-blue mt-2" /> */}
           </div>
         </div>
 
-        {/* Show visible/total count */}
-        <div className="flex justify-center mb-6">
-          <span className="inline-block bg-custom-blue text-white text-base font-bold rounded-full px-5 py-2 shadow-lg">
-            {visibleImages.length} / {filteredImages.length} photos
-          </span>
+        {/* Treatment Details Section */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-custom-blue mb-1">Treatment Details</h3>
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <div className="prose max-w-none">
+              {(() => {
+                const desc = filteredImages[currentIndex]?.description || "No description available";
+                // Split at first period followed by space or at first line break
+                const match = desc.match(/^(.*?)([\.!?]\s|\n|$)([\s\S]*)/);
+                if (match) {
+                  const title = filteredImages[currentIndex]?.title || "No title available";
+                  const rest = desc.replace(title, '').trim();
+                  return (
+                    <>
+                      <h4 className="text-lg font-semibold text-custom-blue mb-2">{title}</h4>
+                      {rest && <p className="text-gray-700 leading-relaxed">{rest}</p>}
+                    </>
+                  );
+                } else {
+                  return <p className="text-gray-700 leading-relaxed">{desc}</p>;
+                }
+              })()}
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 container mx-auto py-6 md:py-10">
-          {filteredImages.length === 0 ? (
-            <p className="col-span-1 sm:col-span-2 md:col-span-3 text-center text-gray-500">
-              No images available
-            </p>
-          ) : (
-            visibleImages.map((src, index) => (
-              <div key={index} className="text-center group transition-all duration-300 relative">
+        {/* Before & After Image Section */}
+        <div className="relative">
+          <h3 className="text-2xl font-bold text-custom-blue mb-6">Before & After Results</h3>
+          <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden">
+            {filteredImages.length > 0 ? (
+              <>
                 <img
-                  src={src}
-                  alt={selectedCategory}
-                  className="w-full h-48 md:h-56 object-cover rounded-2xl shadow-lg border-4 border-white group-hover:scale-105 group-hover:shadow-2xl group-hover:border-custom-blue transition-all duration-300 ease-in-out opacity-0 animate-fade-in cursor-zoom-in"
-                  style={{ animationDelay: `${index * 60}ms`, animationFillMode: 'forwards' }}
-                  onClick={() => setEnlargedImage(src)}
+                  src={filteredImages[currentIndex]?.image || filteredImages[currentIndex]}
+                  alt={`${selectedCategory} - Case ${currentIndex + 1}`}
+                  className="w-full h-[500px] object-contain"
                 />
-                {/* Overlay Info on hover */}
-                <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-2/3 bg-gradient-to-t from-black/80 to-transparent text-white flex flex-col justify-end items-center opacity-0 group-hover:opacity-100 transition-all duration-300 p-4 pointer-events-none group-hover:pointer-events-auto">
-                  <div className="w-full text-center text-lg font-semibold mb-2">{selectedCategory}</div>
+                <div className="absolute inset-y-0 left-0 flex items-center">
                   <button
-                    className="px-5 py-2 bg-custom-blue rounded-full font-bold text-white shadow hover:bg-blue-700 transition-all mt-2 pointer-events-auto"
-                    onClick={e => { e.stopPropagation(); setEnlargedImage(src); }}
+                    onClick={prevSlide}
+                    className="bg-black/30 hover:bg-black/50 text-white p-3 rounded-r-lg transition-all duration-300"
                   >
-                    View
+                    <FaArrowLeft className="w-6 h-6" />
                   </button>
                 </div>
+                <div className="absolute inset-y-0 right-0 flex items-center">
+                  <button
+                    onClick={nextSlide}
+                    className="bg-black/30 hover:bg-black/50 text-white p-3 rounded-l-lg transition-all duration-300"
+                  >
+                    <FaArrowRight className="w-6 h-6" />
+                  </button>
+                </div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
+                  {currentIndex + 1} / {totalImages}
+                </div>
+              </>
+            ) : (
+              <div className="h-[500px] flex items-center justify-center text-gray-500">
+                No images available
               </div>
-            ))
-          )}
+            )}
+          </div>
         </div>
 
-        {visibleCount < filteredImages.length && (
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={() => setVisibleCount((prev) => prev + 6)}
-              className="px-8 py-3 bg-gradient-to-r from-custom-blue to-blue-400 text-white rounded-full shadow-xl font-bold text-lg hover:scale-105 hover:from-blue-600 hover:to-custom-blue transition-all duration-300 animate-pulse hover:animate-none"
-            >
-              Load More
-            </button>
+        {/* Thumbnail Grid */}
+        {filteredImages.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold text-custom-blue mb-6">All Cases</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {visibleImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`relative rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 ${currentIndex === index ? 'ring-4 ring-custom-blue' : 'hover:shadow-lg'
+                    }`}
+                  onClick={() => setCurrentIndex(index)}
+                >
+                  <img
+                    src={image?.image || image}
+                    alt={`${selectedCategory} - Case ${index + 1}`}
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-semibold">View Case {index + 1}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Load More Button */}
+            {visibleThumbnails < filteredImages.length && (
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={loadMoreThumbnails}
+                  className="px-8 py-3 bg-gradient-to-r from-custom-blue to-blue-400 text-white rounded-full shadow-xl font-bold text-lg hover:scale-105 hover:from-blue-600 hover:to-custom-blue transition-all duration-300"
+                >
+                  Load More Cases
+                </button>
+              </div>
+            )}
           </div>
         )}
+
+        {/* Animations */}
+        <style>{`
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: none; }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.7s cubic-bezier(.4,0,.2,1) forwards;
+          }
+        `}</style>
       </div>
-      {/* Fade-in animation keyframes */}
-      <style>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: none; }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.7s cubic-bezier(.4,0,.2,1) forwards;
-        }
-      `}</style>
-      {/* Lightbox Modal */}
-      {enlargedImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black bg-opacity-80 transition-all"
-          onClick={() => setEnlargedImage(null)}
-        >
-          <div
-            className="relative w-full max-w-lg mx-auto bg-white rounded-t-3xl md:rounded-2xl shadow-2xl p-4 md:p-8 animate-slide-up"
-            style={{ minHeight: '40vh' }}
-            onClick={e => e.stopPropagation()}
-          >
-            <button
-              className="absolute top-3 right-3 bg-gray-100 hover:bg-red-500 hover:text-white rounded-full p-2 shadow transition"
-              onClick={() => setEnlargedImage(null)}
-              aria-label="Close"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <img
-              src={enlargedImage}
-              alt="Enlarged"
-              className="mx-auto rounded-2xl shadow-lg max-h-[60vh] object-contain"
-            />
-          </div>
-          <style>{`
-            @keyframes slide-up {
-              from { transform: translateY(100%); opacity: 0; }
-              to { transform: translateY(0); opacity: 1; }
-            }
-            .animate-slide-up {
-              animation: slide-up 0.4s cubic-bezier(.4,0,.2,1) forwards;
-            }
-          `}</style>
-        </div>
-      )}
     </div>
   );
 };
