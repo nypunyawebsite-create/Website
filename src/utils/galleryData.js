@@ -6,11 +6,6 @@ export const galleryImages = {
       description: " -",
       disclaimer: "T10101 - Hair Transplant",
       image: "/gallery/hair/Hair_Transplant_Bald_Spot_Correction_India_23.png",
-      results: [
-        "Significant improvement in hair density",
-        "Natural-looking hairline",
-        "Complete coverage of bald areas"
-      ]
     },
     {
       id: "HT002",
@@ -18,11 +13,6 @@ export const galleryImages = {
       description: "A 35+ year old patient underwent FUE hair transplant procedure. Post surgery pictures taken 8 months after the procedure.",
       disclaimer: "Individual results may vary.",
       image: "/gallery/hair/Hair_Transplant_Balding_Area_Coverage_India_30.png",
-      results: [
-        "Restored hairline",
-        "Improved hair thickness",
-        "Enhanced overall appearance"
-      ]
     },
     "/gallery/hair/Hair_Transplant_Balding_Reversal_India_49.png",
     "/gallery/hair/Hair_Transplant_Baldness_Correction_India_06.png",
@@ -30,35 +20,434 @@ export const galleryImages = {
     "/gallery/hair/Hair_Transplant_Before_After_India_01.png",
     "/gallery/hair/Hair_Transplant_Complete_Hair_Transformation_India_40.png",
     "/gallery/hair/Hair_Transplant_Dense_Hair_Growth_India_26.png",
+    "/gallery/hair/Hair_Transplant_Enhanced_Hairline_India_42.png",
+    "/gallery/hair/Hair_Transplant_Fast_Hair_Growth_India_41.png",
+    "/gallery/hair/Hair_Transplant_Flawless_Results_India_39.png",
+    "/gallery/hair/Hair_Transplant_Follicle_Growth_India_08.png",
+    "/gallery/hair/Hair_Transplant_Follicle_Growth_Success_India_18.png",
+    "/gallery/hair/Hair_Transplant_Follicular_Implant_India_43.png",
+    "/gallery/hair/Hair_Transplant_Follicular_Implant_India_43.png.png",
+    "/gallery/hair/Hair_Transplant_Follicular_Restoration_India_31.png",
+    "/gallery/hair/Hair_Transplant_Full_Hair_Coverage_India_12.png",
+    "/gallery/hair/Hair_Transplant_Full_Hair_Restoration_India_20.png",
+    "/gallery/hair/Hair_Transplant_Full_Hairline_India_05.png",
+    "/gallery/hair/Hair_Transplant_Full_Hairline_Indian_Results_25.png",
+    "/gallery/hair/Hair_Transplant_Hair_Restoration_India_17.png",
+    "/gallery/hair/Hair_Transplant_Hairline_Refinement_India_10.png",
+    "/gallery/hair/Hair_Transplant_Healthy_Hair_Growth_India_24.png",
+    "/gallery/hair/Hair_Transplant_Improved_Hairline_India_29.png",
+    "/gallery/hair/Hair_Transplant_Indian_Baldness_Solution_22.png",
+    "/gallery/hair/Hair_Transplant_Indian_Success_Results_16.png",
+    "/gallery/hair/Hair_Transplant_Natural_Density_India_35.png",
+    "/gallery/hair/Hair_Transplant_Natural_Finish_India_15.png",
+    "/gallery/hair/Hair_Transplant_Natural_Growth_India_04.png",
+    "/gallery/hair/Hair_Transplant_No_More_Baldness_India_45.png",
+    "/gallery/hair/Hair_Transplant_Optimized_Growth_India_50.png",
+    "/gallery/hair/Hair_Transplant_Permanent_Results_India_47.png",
+    "/gallery/hair/Hair_Transplant_Post_Procedure_Hair_India_44.png",
+    "/gallery/hair/Hair_Transplant_Post_Surgical_Results_India_27.png",
+    "/gallery/hair/Hair_Transplant_Post_Treatment_India_34.png",
+    "/gallery/hair/Hair_Transplant_PostOp_Results_India_02.png",
+    "/gallery/hair/Hair_Transplant_Procedure_Results_India_13.png",
+    "/gallery/hair/Hair_Transplant_Regrown_Hair_India_28.png",
+    "/gallery/hair/Hair_Transplant_Results_Thicker_Hair_India_11.png",
+    "/gallery/hair/Hair_Transplant_Scalp_Healing_India_46.png",
+    "/gallery/hair/Hair_Transplant_Scalp_Rejuvenation_India_37.png",
+    "/gallery/hair/Hair_Transplant_Seamless_Growth_India_32.png",
+    "/gallery/hair/Hair_Transplant_Success_Results_India_07.png",
+    "/gallery/hair/Hair_Transplant_Successful_Hair_Growth_India_38.png",
+    "/gallery/hair/Hair_Transplant_Successful_Scalp_India_48.png",
+    "/gallery/hair/Hair_Transplant_Thick_Hair_India_19.png",
+    "/gallery/hair/Post_Op_Hair_Transplant_Natural_Hair_India_21.png.png",
 
   ],
   "Body Contouring Abdominal Platy": [
+    //patient 1
     {
-      id: "BC001",
-      title: "Case #17796 - Abdominal Plasty",
-      description: "A 45+ year old patient underwent abdominal plasty procedure. Post surgery pictures taken 3 months after the procedure.",
-      disclaimer: "Individual results may vary.",
-      image: "/gallery/hair/Hair_Transplant_Balding_Reversal_India_49.png",
-      results: [
-        "Flatter, more toned abdomen",
-        "Improved body contour",
-        "Enhanced self-confidence"
-      ]
+      title: "Case #T70101 - ABDOMINOPLASTY ",
+      description: "35-year-old Anita, an IT professional, underwent a lipo abdominoplasty in Bangalore to address post-pregnancy body changes. Lipo abdominoplasty combined liposuction, muscle tightening, and excess skin removal for a flatter abdomen. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure addressed both aesthetic concerns and back pain caused by abdominal bulge. Recovery was smooth, with minimal pain and manageable side effects. Anita resumed normal activities within eight days. She achieved a fabulously flat abdomen and significant reduction in back pain. Lipo abdominoplasty can be a transformative solution for post-pregnancy body concerns and related back pain. Nypunya Aesthetic Clinic offers comprehensive body contouring services. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options.",
+      image: "/gallery/body/Abdominoplasty_Abdominal_Contours_India_22.png",
     },
     {
-      src: "/gallery/hair_trans_img_5.png",
-      description: "Case #17797 - Abdominal Plasty\nA 38+ year old patient underwent abdominal plasty procedure. Post surgery pictures taken 4 months after the procedure.\n\nIndividual results may vary."
+      title: "Case #T70101 - ABDOMINOPLASTY",
+      description: "35-year-old Anita, an IT professional, underwent a lipo abdominoplasty in Bangalore to address post-pregnancy body changes. Lipo abdominoplasty combined liposuction, muscle tightening, and excess skin removal for a flatter abdomen. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure addressed both aesthetic concerns and back pain caused by abdominal bulge. Recovery was smooth, with minimal pain and manageable side effects. Anita resumed normal activities within eight days. She achieved a fabulously flat abdomen and significant reduction in back pain. Lipo abdominoplasty can be a transformative solution for post-pregnancy body concerns and related back pain. Nypunya Aesthetic Clinic offers comprehensive body contouring services. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options.",
+      image: "/gallery/body/Abdominoplasty_Abdominal_Contours_India_23.png",
     },
-    "/gallery/hair_trans_img_6.png",
-    "/gallery/hair_trans_img_1.png",
-    "/gallery/hair_trans_img_2.png",
-    "/gallery/hair_trans_img_3.png",
-    "/gallery/hair_trans_img_6.png",
-    "/gallery/hair_trans_img_1.png",
-    "/gallery/hair_trans_img_2.png",
-    "/gallery/hair_trans_img_5.png",
-    "/gallery/hair_trans_img_3.png",
-    "/gallery/hair_trans_img_4.png",
+    {
+      title: "Case #T70101 - ABDOMINOPLASTY ",
+      description: "35-year-old Anita, an IT professional, underwent a lipo abdominoplasty in Bangalore to address post-pregnancy body changes. Lipo abdominoplasty combined liposuction, muscle tightening, and excess skin removal for a flatter abdomen. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure addressed both aesthetic concerns and back pain caused by abdominal bulge. Recovery was smooth, with minimal pain and manageable side effects. Anita resumed normal activities within eight days. She achieved a fabulously flat abdomen and significant reduction in back pain. Lipo abdominoplasty can be a transformative solution for post-pregnancy body concerns and related back pain. Nypunya Aesthetic Clinic offers comprehensive body contouring services. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options.",
+      image: "/gallery/body/Abdominoplasty_Abdominal_Contours_India_24.png",
+    },
+
+
+    //patient 2
+    {
+      title: "Case #T70102 - ABDOMINOPLASTY",
+      description: "32-year-old Mamata, a homemaker and businesswoman, underwent lipo abdominoplasty in Bangalore to achieve a flatter abdomen. The procedure included liposuction, muscle tightening, excess skin removal, and a new belly button creation. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery using advanced techniques like drainless abdominoplasty and supra-scarpas technique. Mamata was motivated to address stubborn fat and loose muscles that persisted despite fitness efforts. She sought a toned midsection that would allow her to confidently wear modern dresses. Recovery was smooth, with minimal discomfort and tightness. Mamata resumed normal activities within ten days. She achieved a flat, toned abdomen resembling her pre-pregnancy figure. Lipo abdominoplasty can be a transformative solution for those seeking a flatter abdomen and improved body contour. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring",
+      image: "/gallery/body/Abdominoplasty_Aesthetic_Transformation_India_20.png",
+    },
+    {
+      title: "Case #T70102 - ABDOMINOPLASTY ",
+      description: "32-year-old Mamata, a homemaker and businesswoman, underwent lipo abdominoplasty in Bangalore to achieve a flatter abdomen. The procedure included liposuction, muscle tightening, excess skin removal, and a new belly button creation. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery using advanced techniques like drainless abdominoplasty and supra-scarpas technique. Mamata was motivated to address stubborn fat and loose muscles that persisted despite fitness efforts. She sought a toned midsection that would allow her to confidently wear modern dresses. Recovery was smooth, with minimal discomfort and tightness. Mamata resumed normal activities within ten days. She achieved a flat, toned abdomen resembling her pre-pregnancy figure. Lipo abdominoplasty can be a transformative solution for those seeking a flatter abdomen and improved body contour. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring",
+      image: "/gallery/body/Abdominoplasty_Aesthetic_Transformation_India_20.png.png",
+    },
+    {
+      title: "Case #T70102 - ABDOMINOPLASTY ",
+      description: "32-year-old Mamata, a homemaker and businesswoman, underwent lipo abdominoplasty in Bangalore to achieve a flatter abdomen. The procedure included liposuction, muscle tightening, excess skin removal, and a new belly button creation. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery using advanced techniques like drainless abdominoplasty and supra-scarpas technique. Mamata was motivated to address stubborn fat and loose muscles that persisted despite fitness efforts. She sought a toned midsection that would allow her to confidently wear modern dresses. Recovery was smooth, with minimal discomfort and tightness. Mamata resumed normal activities within ten days. She achieved a flat, toned abdomen resembling her pre-pregnancy figure. Lipo abdominoplasty can be a transformative solution for those seeking a flatter abdomen and improved body contour. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring",
+      image: "/gallery/body/Abdominoplasty_Aesthetic_Transformation_India_21.png",
+    },
+    //patient 3
+    {
+      title: "Case #T70103 - ABDOMINOPLASTY ",
+      description: "40-year-old Sakshi Rao, a marketing executive, underwent liposuction and abdominoplasty in Bangalore. She was concerned about belly fat due to a family history of diabetes and wanted a toned midriff. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included liposuction, abdominoplasty, supra-scarpas technique, fat transfer to breasts, and belly button creation. Supra-scarpas technique minimized scarring and promoted faster healing. Fat transfer enhanced breast shape and volume. Recovery was smooth, with minimal pain and tightness. Sakshi resumed normal activities within ten days. She achieved a flatter abdomen, a nicely shaped belly button, and enhanced body confidence. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_After_Belly_Tightening_India_13.png.png",
+    },
+    {
+      title: "Case #T70103 - ABDOMINOPLASTY ",
+      description: "40-year-old Sakshi Rao, a marketing executive, underwent liposuction and abdominoplasty in Bangalore. She was concerned about belly fat due to a family history of diabetes and wanted a toned midriff. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included liposuction, abdominoplasty, supra-scarpas technique, fat transfer to breasts, and belly button creation. Supra-scarpas technique minimized scarring and promoted faster healing. Fat transfer enhanced breast shape and volume. Recovery was smooth, with minimal pain and tightness. Sakshi resumed normal activities within ten days. She achieved a flatter abdomen, a nicely shaped belly button, and enhanced body confidence. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_After_Belly_Tightening_India_14.png",
+    },
+    {
+      title: "Case #T70103 - ABDOMINOPLASTY ",
+      description: "40-year-old Sakshi Rao, a marketing executive, underwent liposuction and abdominoplasty in Bangalore. She was concerned about belly fat due to a family history of diabetes and wanted a toned midriff. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included liposuction, abdominoplasty, supra-scarpas technique, fat transfer to breasts, and belly button creation. Supra-scarpas technique minimized scarring and promoted faster healing. Fat transfer enhanced breast shape and volume. Recovery was smooth, with minimal pain and tightness. Sakshi resumed normal activities within ten days. She achieved a flatter abdomen, a nicely shaped belly button, and enhanced body confidence. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_After_Belly_Tightening_India_15.png",
+    },
+
+    //patient 4
+    {
+      title: "Case #T70104 - ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_08.png",
+    },
+    {
+      title: "Case #T70104 - ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_09.png",
+    },
+    {
+      title: "Case #T70104 - ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_10.png",
+    },
+    {
+      title: "Case #T70104 - ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_11.png",
+    },
+    {
+      title: "Case #T70104 -ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_12.png",
+    },
+    {
+      title: "Case #T70104 -ABDOMINOPLASTY ",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_13.png",
+    },
+    {
+      title: "Case #T70104 - ABDOMINOPLASTY",
+      description: "68-year-old Manirathnam, a businessman, underwent abdominoplasty and hernia repair in Bangalore. He had a large abdominal pannus causing discomfort, restricted mobility, and health issues like diabetes and hypertension. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved removing excess skin and fat, tightening abdominal muscles, repairing hernias, and creating a new belly button. Manirathnam was mobilized on the same day of surgery. He experienced rapid recovery with wounds healing within ten days. He returned to his business within three weeks. The surgery resulted in a flatter abdomen, 11 kg weight loss, improved mobility, and enhanced quality of life. Abdominoplasty can be a life-changing solution for those with a large pannus and related health concerns. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Beautiful_Belly_India_14.png",
+    },
+
+    //patient 5
+
+    {
+      title: "Case #T70105 - ABDOMINOPLASTY ",
+      description: "60-year-old Lokesh, a chartered accountant with a history of bypass surgery, underwent lipo abdominoplasty in Bangalore. He was concerned about excess abdominal fat impacting his health and mobility. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic, specializing in aesthetic surgery for patients with challenging medical conditions, performed the surgery. The procedure involved liposuction, muscle tightening, and excess skin removal. Lokesh's recovery was smooth and uneventful, exceeding expectations. He resumed normal activities within three weeks. The surgery resulted in significant bulk reduction and a flatter abdomen. Lipo abdominoplasty can be a safe and effective option for patients with pre-existing health conditions. Nypunya Aesthetic Clinic offers comprehensive body contouring services with expertise in managing complex cases. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Before_After_India_01.png",
+    },
+    {
+      title: "Case #T70105 - ABDOMINOPLASTY ",
+      description: "60-year-old Lokesh, a chartered accountant with a history of bypass surgery, underwent lipo abdominoplasty in Bangalore. He was concerned about excess abdominal fat impacting his health and mobility. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic, specializing in aesthetic surgery for patients with challenging medical conditions, performed the surgery. The procedure involved liposuction, muscle tightening, and excess skin removal. Lokesh's recovery was smooth and uneventful, exceeding expectations. He resumed normal activities within three weeks. The surgery resulted in significant bulk reduction and a flatter abdomen. Lipo abdominoplasty can be a safe and effective option for patients with pre-existing health conditions. Nypunya Aesthetic Clinic offers comprehensive body contouring services with expertise in managing complex cases. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Before_After_India_02.png",
+    },
+    {
+      title: "Case #T70105 - ABDOMINOPLASTY ",
+      description: "60-year-old Lokesh, a chartered accountant with a history of bypass surgery, underwent lipo abdominoplasty in Bangalore. He was concerned about excess abdominal fat impacting his health and mobility. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic, specializing in aesthetic surgery for patients with challenging medical conditions, performed the surgery. The procedure involved liposuction, muscle tightening, and excess skin removal. Lokesh's recovery was smooth and uneventful, exceeding expectations. He resumed normal activities within three weeks. The surgery resulted in significant bulk reduction and a flatter abdomen. Lipo abdominoplasty can be a safe and effective option for patients with pre-existing health conditions. Nypunya Aesthetic Clinic offers comprehensive body contouring services with expertise in managing complex cases. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Before_After_India_03.png",
+    },
+    //patient 6
+
+    {
+      title: "Case #T70106 - ABDOMINOPLASTY ",
+      description: "45-year-old Nithya Menon, a management executive, underwent liposuction and abdominoplasty in Bangalore. She desired a flatter abdomen and reshaped breasts, addressing stubborn fat, loose skin, stretch marks, and diastasis recti. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty with rectus sheath plication, supra-scarpas technique, drainless abdominoplasty, and fat grafting to the breasts. Nithya's recovery was remarkably fast, returning to work within 72 hours. She experienced minimal pain and resumed normal activities within five days. The surgery resulted in a flat abdomen, defined waistline, enhanced breasts, and boosted confidence. Liposuction and abdominoplasty can be transformative solutions for those seeking body contouring and addressing post-pregnancy changes. Nypunya Aesthetic Clinic offers comprehensive body contouring services with advanced techniques. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Belly_Transformation_India_14.png",
+    },
+    {
+      title: "Case #T70106 - ABDOMINOPLASTY ",
+      description: "45-year-old Nithya Menon, a management executive, underwent liposuction and abdominoplasty in Bangalore. She desired a flatter abdomen and reshaped breasts, addressing stubborn fat, loose skin, stretch marks, and diastasis recti. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty with rectus sheath plication, supra-scarpas technique, drainless abdominoplasty, and fat grafting to the breasts. Nithya's recovery was remarkably fast, returning to work within 72 hours. She experienced minimal pain and resumed normal activities within five days. The surgery resulted in a flat abdomen, defined waistline, enhanced breasts, and boosted confidence. Liposuction and abdominoplasty can be transformative solutions for those seeking body contouring and addressing post-pregnancy changes. Nypunya Aesthetic Clinic offers comprehensive body contouring services with advanced techniques. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Belly_Transformation_India_15.png",
+    },
+    {
+      title: "Case #T70106 - ABDOMINOPLASTY ",
+      description: "45-year-old Nithya Menon, a management executive, underwent liposuction and abdominoplasty in Bangalore. She desired a flatter abdomen and reshaped breasts, addressing stubborn fat, loose skin, stretch marks, and diastasis recti. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty with rectus sheath plication, supra-scarpas technique, drainless abdominoplasty, and fat grafting to the breasts. Nithya's recovery was remarkably fast, returning to work within 72 hours. She experienced minimal pain and resumed normal activities within five days. The surgery resulted in a flat abdomen, defined waistline, enhanced breasts, and boosted confidence. Liposuction and abdominoplasty can be transformative solutions for those seeking body contouring and addressing post-pregnancy changes. Nypunya Aesthetic Clinic offers comprehensive body contouring services with advanced techniques. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Belly_Transformation_India_16.png",
+    },
+    {
+      title: "Case #T70106 - ABDOMINOPLASTY ",
+      description: "45-year-old Nithya Menon, a management executive, underwent liposuction and abdominoplasty in Bangalore. She desired a flatter abdomen and reshaped breasts, addressing stubborn fat, loose skin, stretch marks, and diastasis recti. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty with rectus sheath plication, supra-scarpas technique, drainless abdominoplasty, and fat grafting to the breasts. Nithya's recovery was remarkably fast, returning to work within 72 hours. She experienced minimal pain and resumed normal activities within five days. The surgery resulted in a flat abdomen, defined waistline, enhanced breasts, and boosted confidence. Liposuction and abdominoplasty can be transformative solutions for those seeking body contouring and addressing post-pregnancy changes. Nypunya Aesthetic Clinic offers comprehensive body contouring services with advanced techniques. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Belly_Transformation_India_17.png",
+    },
+    {
+      title: "Case #T70106 - ABDOMINOPLASTY ",
+      description: "45-year-old Nithya Menon, a management executive, underwent liposuction and abdominoplasty in Bangalore. She desired a flatter abdomen and reshaped breasts, addressing stubborn fat, loose skin, stretch marks, and diastasis recti. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty with rectus sheath plication, supra-scarpas technique, drainless abdominoplasty, and fat grafting to the breasts. Nithya's recovery was remarkably fast, returning to work within 72 hours. She experienced minimal pain and resumed normal activities within five days. The surgery resulted in a flat abdomen, defined waistline, enhanced breasts, and boosted confidence. Liposuction and abdominoplasty can be transformative solutions for those seeking body contouring and addressing post-pregnancy changes. Nypunya Aesthetic Clinic offers comprehensive body contouring services with advanced techniques. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_Belly_Transformation_India_18.png",
+    },
+
+    //patient 7
+
+    {
+      title: "Case #T70107 - ABDOMINOPLASTY ",
+      description: "55-year-old Sharada, a homemaker with pre-diabetes, underwent lipo abdominoplasty in Bangalore. She was concerned about stubborn abdominal fat and excess skin that didn't respond to diet and exercise. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure involved liposuction, abdominoplasty with perforator preservation, and muscle tightening. Sharada's recovery was smooth and uneventful. She traveled back to the US within a few weeks, feeling lighter and more energetic. The surgery resulted in a flatter abdomen, reduced waistline bulk, and improved HbA1c levels. Lipo abdominoplasty can be a transformative solution for those seeking body contouring and improved health. Nypunya Aesthetic Clinic offers comprehensive body contouring services at a significantly lower cost than in the US. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring in Bangalore. ",
+      image: "/gallery/body/Abdominoplasty_Flat_Belly_Sculpting_India_18.png",
+    },
+
+    // patient 8
+
+    {
+      title: "Case #T70108 - ABDOMINOPLASTY ",
+      description: "45-year-old Sandhya, a senior executive, underwent hernia repair and abdominoplasty in Bangalore.       She had a challenging umbilical hernia for ten years, causing discomfort and limiting physical activity.      Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the combined procedure.       The surgery addressed both the hernia and her desire for a flatter abdomen.       Hernia repair with abdominoplasty offers a comprehensive solution for functional and aesthetic concerns.       This combined approach can improve health, body image, and confidence.       Nypunya Aesthetic Clinic specializes in body contouring and hernia repair.       Dr. Kesari is experienced in achieving excellent outcomes in challenging cases.       Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari.       Explore abdominoplasty before and after photos and learn more about body contouring options.",
+      image: "/gallery/body/Abdominoplasty_Flat_Stomach_India_05.png",
+    },
+    {
+      title: "Case #T70108 - ABDOMINOPLASTY ",
+      description: "45-year-old Sandhya, a senior executive, underwent hernia repair and abdominoplasty in Bangalore.       She had a challenging umbilical hernia for ten years, causing discomfort and limiting physical activity.      Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the combined procedure.       The surgery addressed both the hernia and her desire for a flatter abdomen.       Hernia repair with abdominoplasty offers a comprehensive solution for functional and aesthetic concerns.       This combined approach can improve health, body image, and confidence.       Nypunya Aesthetic Clinic specializes in body contouring and hernia repair.       Dr. Kesari is experienced in achieving excellent outcomes in challenging cases.       Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari.       Explore abdominoplasty before and after photos and learn more about body contouring options.",
+      image: "/gallery/body/Abdominoplasty_Flat_Stomach_India_06.png",
+    },
+    {
+      title: "Case #T70108 - ABDOMINOPLASTY ",
+      description: "45-year-old Sandhya, a senior executive, underwent hernia repair and abdominoplasty in Bangalore.       She had a challenging umbilical hernia for ten years, causing discomfort and limiting physical activity.      Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the combined procedure.       The surgery addressed both the hernia and her desire for a flatter abdomen.       Hernia repair with abdominoplasty offers a comprehensive solution for functional and aesthetic concerns.       This combined approach can improve health, body image, and confidence.       Nypunya Aesthetic Clinic specializes in body contouring and hernia repair.       Dr. Kesari is experienced in achieving excellent outcomes in challenging cases.       Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari.       Explore abdominoplasty before and after photos and learn more about body contouring options.",
+      image: "/gallery/body/Abdominoplasty_Flat_Stomach_India_07.png",
+    },
+    {
+      title: "Case #T70108 - ABDOMINOPLASTY ",
+      description: "45-year-old Sandhya, a senior executive, underwent hernia repair and abdominoplasty in Bangalore.       She had a challenging umbilical hernia for ten years, causing discomfort and limiting physical activity.      Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the combined procedure.       The surgery addressed both the hernia and her desire for a flatter abdomen.       Hernia repair with abdominoplasty offers a comprehensive solution for functional and aesthetic concerns.       This combined approach can improve health, body image, and confidence.       Nypunya Aesthetic Clinic specializes in body contouring and hernia repair.       Dr. Kesari is experienced in achieving excellent outcomes in challenging cases.       Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari.       Explore abdominoplasty before and after photos and learn more about body contouring options.",
+      image: "/gallery/body/Abdominoplasty_Flat_Stomach_India_08.png",
+    },
+
+    //patient 9
+    {
+      title: "Case #T70109 - ABDOMINOPLASTY ",
+      description: "55-year-old Rama Rao, an accounts officer, underwent total abdominal wall reconstruction in Bangalore. She had large umbilical and paraumbilical hernias and weak abdominal muscles, causing physical and emotional distress.      Dr.Prashantha Kesari at Nypunya Aesthetic Clinic, a leading plastic surgeon, performed the complex procedure. The total abdominal wall reconstruction included hernia repair, abdominoplasty, muscle repair, and liposuction. Rama Rao experienced early mobilization and a smooth post- operative recovery. She returned to normal activities within two weeks. The surgery achieved a flatter, more toned abdomen and restored her confidence. Total abdominal wall aesthetic reconstruction addresses multiple abdominal wall issues, improving health and body image. Nypunya Aesthetic Clinic offers comprehensive body contouring services. Consult with Dr.Kesari to explore options for total abdominal wall reconstruction and address complex abdominal wall defects.  ",
+      image: "/gallery/body/Abdominoplasty_Flat_Tummy_After_Surgery_India_09.png",
+    },
+
+    //patient 10
+    {
+      title: "Case #T70110 - ABDOMINOPLASTY ",
+      description: "32-year-old Ashalatha, a software engineer, underwent abdominoplasty and liposuction in Bangalore. She wanted to address a stubborn 'tyre' of fat, stretch marks, and a disfigured belly button after weight loss. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty, umbilicoplasty, and rectus sheath plication. Ashalatha was mobilized the same day of surgery and discharged the next day. She experienced minimal discomfort and recovered quickly. She returned to work within two weeks. The surgery resulted in a flat abdomen, toned midriff, and a beautifully shaped belly button. Ashalatha regained her body confidence and now enjoys wearing clothes that fit well. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_PostOp_Flat_Contour_India_11.png",
+    },
+    {
+      title: "Case #T70110 - ABDOMINOPLASTY ",
+      description: "32-year-old Ashalatha, a software engineer, underwent abdominoplasty and liposuction in Bangalore. She wanted to address a stubborn 'tyre' of fat, stretch marks, and a disfigured belly button after weight loss. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty, umbilicoplasty, and rectus sheath plication. Ashalatha was mobilized the same day of surgery and discharged the next day. She experienced minimal discomfort and recovered quickly. She returned to work within two weeks. The surgery resulted in a flat abdomen, toned midriff, and a beautifully shaped belly button. Ashalatha regained her body confidence and now enjoys wearing clothes that fit well. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_PostOp_Flat_Contour_India_12.png",
+    },
+    {
+      title: "Case #T70110 - ABDOMINOPLASTY ",
+      description: "32-year-old Ashalatha, a software engineer, underwent abdominoplasty and liposuction in Bangalore. She wanted to address a stubborn 'tyre' of fat, stretch marks, and a disfigured belly button after weight loss. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed the surgery. The procedure included 360-degree liposuction, abdominoplasty, umbilicoplasty, and rectus sheath plication. Ashalatha was mobilized the same day of surgery and discharged the next day. She experienced minimal discomfort and recovered quickly. She returned to work within two weeks. The surgery resulted in a flat abdomen, toned midriff, and a beautifully shaped belly button. Ashalatha regained her body confidence and now enjoys wearing clothes that fit well. Contact Nypunya Aesthetic Clinic to schedule a consultation with Dr. Kesari and explore your options for body contouring. ",
+      image: "/gallery/body/Abdominoplasty_PostOp_Flat_Contour_India_13.png",
+    },
+
+    //patient 11
+    {
+      title: "Case #T70111 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Refined_Belly_India_17.png",
+    },
+    {
+      title: "Case #T70111 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Refined_Belly_India_18.png",
+    },
+    {
+      title: "Case #T70111 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Refined_Belly_India_19.png",
+    },
+    //patient 12
+    {
+      title: "Case #T70112 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Contour_Results_07.png",
+    },
+    //patient 13
+    {
+      title: "Case #T70113 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Slimming_Results_15.png",
+    },
+    {
+      title: "Case #T70113 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Slimming_Results_16.png",
+    },
+    //patient 14
+    {
+      title: "Case #T70114 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Tummy_Tuck_Flat_Stomach_21.png",
+    },
+    {
+      title: "Case #T70114 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Tummy_Tuck_Flat_Stomach_22.png",
+    },
+    //patient 15
+    {
+      title: "Case #T70115 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Tummy_Tuck_Success_Results_10.png",
+    },
+    {
+      title: "Case #T70115 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Tummy_Tuck_Success_Results_11.png",
+    },
+    //patient 16
+    {
+      title: "Case #T70116 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Post_Op_Abdominoplasty_Results_India_04.png",
+    },
+    {
+      title: "Case #T70116 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Post_Op_Abdominoplasty_Results_India_05.png",
+    },
+    //patient 17
+    {
+      title: "Case #T70117 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Post_Op_Abdominoplasty_Tummy_Smooth_India_19.png",
+    },
+    {
+      title: "Case #T70117 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Post_Op_Abdominoplasty_Tummy_Smooth_India_20.png",
+    },
+    //patient 18
+    {
+      title: "Case #T70118 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/PostOp_Abdominoplasty_Tummy_Firm_India_25.png",
+    },
+    {
+      title: "Case #T70118 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/PostOp_Abdominoplasty_Tummy_Firm_India_26.png",
+    },
+    {
+      title: "Case #T70118 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/PostOp_Abdominoplasty_Tummy_Firm_India_27.png",
+    },
+    //patient 19
+    {
+      title: "Case #T70119 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Abdominoplasty_Indian_Figure_24.png",
+    },
+
+    {
+      title: "Case #T70119 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Abdominoplasty_Indian_Figure_25.png",
+    },
+    {
+      title: "Case #T70119 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Abdominoplasty_Indian_Figure_26.png",
+    },
+    //patient 20
+    {
+      title: "Case #T70120 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Procedure_Abdominoplasty_India_12.png",
+    },
+    //patient 21
+    {
+      title: "Case #T70121 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Surgery_Indian_Results_16.png",
+    },
+    //patient 22
+    {
+      title: "Case #T70122 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Transformation_India_02.png",
+    },
+    //patient 23
+    {
+      title: "Case #T70123 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Slim_Belly_Indian_Results_23.png",
+    },
+    {
+      title: "Case #T70123 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Slim_Belly_Indian_Results_24.png",
+    },
+    //patient 24
+    {
+      title: "Case #T70124 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Smooth_Tummy_India_03.png",
+    },
+    //patient 25
+    {
+      title: "Case #T70125 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Tummy_Sculpting_India_06.png",
+    },
+    //patient 26
+    {
+      title: "Case #T70126 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Core_Sculpting_Results_India_32.png",
+    },
+    //patient 27
+    {
+      title: "Case #T70127 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Slim_Waist_After_Surgery_India_35.png",
+    },
+    //patient 28
+    {
+      title: "Case #T70128 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Stomach_Tightening_India_28.png",
+    },
+    //patient 29
+    {
+      title: "Case #T70129 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Abdominoplasty_Toned_Tummy_Results_India_26.png",
+    },
+    //patient 30
+    {
+      title: "Case #T70130 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Perfect_Silhouette_30.png",
+    },
+    {
+      title: "Case #T70130 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Perfect_Silhouette_31.png",
+    },
+    {
+      title: "Case #T70130 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Indian_Abdominoplasty_Perfect_Silhouette_32.png",
+    },
+    //patient 31
+    {
+      title: "Case #T70131 - ABDOMINOPLASTY ",
+      description: "-",
+      image: "/gallery/body/Tummy_Tuck_Contoured_Abdomen_India_27.png.png",
+    },
+
   ],
   "Breast Augmentation/Breast Enhancement": [
     {
