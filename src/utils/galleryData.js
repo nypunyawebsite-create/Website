@@ -528,18 +528,462 @@ export const galleryImages = {
     "/gallery/breast/Fuller_Breasts_Breast_Augmentation_India_09.png",
     "/gallery/breast/Indian_Breast_Augmentation_Perfect_Look_37.png.png",
   ],
+  "Anti Ageing Procedures": [
+    {
+      title: "T20101 - Samantha's Deep Plane Facelift",
+      description: "72-year-old Samantha underwent a deep plane face and neck lift with Dr. Prashantha Kesari in Bangalore. Achieved a natural, youthful rejuvenation with minimal scarring. Deep plane technique addressed deeper layers of facial tissue for comprehensive results. Recovery was smooth and comfortable with minimal downtime. Samantha regained confidence and enjoys a refreshed appearance. ",
+      image: "/gallery/anti_aging/Before_After_Facelift_Neck_Lift_India_09.png",
+    },
+    {
+      title: "T20101 - Samantha's Deep Plane Facelift",
+      description: "72-year-old Samantha underwent a deep plane face and neck lift with Dr. Prashantha Kesari in Bangalore. Achieved a natural, youthful rejuvenation with minimal scarring. Deep plane technique addressed deeper layers of facial tissue for comprehensive results. Recovery was smooth and comfortable with minimal downtime. Samantha regained confidence and enjoys a refreshed appearance. ",
+      image: "/gallery/anti_aging/Before_After_Facelift_Neck_Lift_India_10.png",
+    },
+    {
+      title: "T20101 - Samantha's Deep Plane Facelift",
+      description: "72-year-old Samantha underwent a deep plane face and neck lift with Dr. Prashantha Kesari in Bangalore. Achieved a natural, youthful rejuvenation with minimal scarring. Deep plane technique addressed deeper layers of facial tissue for comprehensive results. Recovery was smooth and comfortable with minimal downtime. Samantha regained confidence and enjoys a refreshed appearance. ",
+      image: "/gallery/anti_aging/Before_After_Facelift_Neck_Lift_India_11.png",
+    },
+
+
+    {
+      title: "T20102 - Sofia's Deep Plane Facelift & Chin Enhancement",
+      description: "61-year-old Sofia underwent a deep plane face and neck lift with chin enhancement in Bangalore. Dr. Kesari's expertise ensured natural, harmonious results with minimal scarring. The procedure addressed sagging skin, jowls, and weak chin, creating a more defined and youthful look. Recovery was smooth and comfortable, with minimal downtime. Sofia regained confidence and enjoys a more balance",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_After_Results_India_02.png",
+    },
+    {
+      title: "T20102 - Sofia's Deep Plane Facelift & Chin Enhancement",
+      description: "61-year-old Sofia underwent a deep plane face and neck lift with chin enhancement in Bangalore. Dr. Kesari's expertise ensured natural, harmonious results with minimal scarring. The procedure addressed sagging skin, jowls, and weak chin, creating a more defined and youthful look. Recovery was smooth and comfortable, with minimal downtime. Sofia regained confidence and enjoys a more balance",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_After_Results_India_03.png",
+    },
+    {
+      title: "T20102 - Sofia's Deep Plane Facelift & Chin Enhancement",
+      description: "61-year-old Sofia underwent a deep plane face and neck lift with chin enhancement in Bangalore. Dr. Kesari's expertise ensured natural, harmonious results with minimal scarring. The procedure addressed sagging skin, jowls, and weak chin, creating a more defined and youthful look. Recovery was smooth and comfortable, with minimal downtime. Sofia regained confidence and enjoys a more balance",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_After_Results_India_04.png",
+    },
+
+
+
+    {
+      title: "T20103 - Zara's Endoscopic Deep Plane Facelift & Fat Grafting",
+      description: "71-year-old Zara underwent an endoscopic deep plane facelift with fat grafting in Bangalore. Minimally invasive technique resulted in minimal scarring and faster recovery. Fat grafting restored youthful volume and improved facial contours. Zara achieved a natural, refreshed appearance with minima ",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Age_Defying_India_11.png",
+    },
+    {
+      title: "T20103 - Zara's Endoscopic Deep Plane Facelift & Fat Grafting",
+      description: "71-year-old Zara underwent an endoscopic deep plane facelift with fat grafting in Bangalore. Minimally invasive technique resulted in minimal scarring and faster recovery. Fat grafting restored youthful volume and improved facial contours. Zara achieved a natural, refreshed appearance with minima ",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Age_Defying_India_12.png",
+    },
+    {
+      title: "T20103 - Zara's Endoscopic Deep Plane Facelift & Fat Grafting",
+      description: "71-year-old Zara underwent an endoscopic deep plane facelift with fat grafting in Bangalore. Minimally invasive technique resulted in minimal scarring and faster recovery. Fat grafting restored youthful volume and improved facial contours. Zara achieved a natural, refreshed appearance with minima ",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Age_Defying_India_13.png",
+    },
+    {
+      title: "T20103 - Zara's Endoscopic Deep Plane Facelift & Fat Grafting",
+      description: "71-year-old Zara underwent an endoscopic deep plane facelift with fat grafting in Bangalore. Minimally invasive technique resulted in minimal scarring and faster recovery. Fat grafting restored youthful volume and improved facial contours. Zara achieved a natural, refreshed appearance with minima ",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Age_Defying_India_14.png",
+    },
+    {
+      title: "T20103 - Zara's Endoscopic Deep Plane Facelift & Fat Grafting",
+      description: "71-year-old Zara underwent an endoscopic deep plane facelift with fat grafting in Bangalore. Minimally invasive technique resulted in minimal scarring and faster recovery. Fat grafting restored youthful volume and improved facial contours. Zara achieved a natural, refreshed appearance with minima ",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Age_Defying_India_15.png",
+    },
+
+
+
+
+    {
+      title: "T20104 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_PostOp_India_04.png",
+    },
+    {
+      title: "T20104 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_PostOp_India_05.png",
+    },
+    {
+      title: "T20104 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_PostOp_India_06.png",
+    },
+    {
+      title: "T20104 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_PostOp_India_07.png",
+    },
+
+
+
+
+    {
+      title: "T20105 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Smooth_Results_India_20.png",
+    },
+    {
+      title: "T20105 - Radha's Natural Facelift for On-Screen Confidence",
+      description: "70-year-old actress Radha underwent a custom-tailored facelift for subtle rejuvenation. Minimal downtime was crucial for her ongoing TV serial shoot. The procedure addressed sagging skin and wrinkles while maintaining her natural features. Radha achieved a refreshed appearance without drastic changes, ideal for her on-screen career.",
+      image: "/gallery/anti_aging/Facelift_And_Neck_Lift_Smooth_Results_India_21.png",
+    },
+
+
+
+
+    {
+      title: "T20106 - Rajesh's Endoscopic Facelift and Fat Grafting",
+      description: "42-year-old Rajesh underwent an endoscopic facelift, structural fat grafting, and nano-fat grafting for acne scars in Bangalore. The comprehensive approach addressed aging, facial asymmetry, and acne scarring. Minimal downtime allowed him to quickly resume his professional activities. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aesthetic_Rejuvenation_India_14.png",
+    },
+
+
+
+
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_21.png",
+    },
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_22.png",
+    },
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_23.png",
+    },
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_24.png",
+    },
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_25.png",
+    },
+    {
+      title: "T20107 - Karmika's Endoscopic Face and Neck Lift",
+      description: "53-year-old Karmika underwent an endoscopic face and neck lift for a natural-looking rejuvenation. Nypunya Aesthetic Clinic's patient-centric approach and advanced technology ensured a positive experience. Karmika achieved a refreshed and confident appearance with minimal downtime",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Aging_Significant_Change_India_26.png",
+    },
+
+
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_24.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_25.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_26.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_27.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_28.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_29.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_30.png",
+    },
+    {
+      title: "T20108 - Dr. Kailash's Deep Plane Facelift and Fat Grafting",
+      description: "62-year-old Dr. Kailash underwent a deep plane facelift, fat grafting, and nano-fat grafting for pigmentation. The comprehensive approach addressed multiple signs of aging, restoring a youthful appearance. Dr. Kailash was thrilled with the natural-looking results and quick recovery.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Before_After_Indian_31.png",
+    },
+
+
+
+    {
+      title: "T20109 - Pushpa's Endoscopic Face and Neck Lift",
+      description: "65-year-old Pushpa underwent a deep plane endoscopic face and neck lift for a natural and elegant rejuvenation. The minimally invasive technique resulted in minimal scarring and a refreshed appearance",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Facial_Contour_India_07.png",
+    },
+    {
+      title: "T20109 - Pushpa's Endoscopic Face and Neck Lift",
+      description: "65-year-old Pushpa underwent a deep plane endoscopic face and neck lift for a natural and elegant rejuvenation. The minimally invasive technique resulted in minimal scarring and a refreshed appearance",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Facial_Contour_India_08.png",
+    },
+    {
+      title: "T20109 - Pushpa's Endoscopic Face and Neck Lift",
+      description: "65-year-old Pushpa underwent a deep plane endoscopic face and neck lift for a natural and elegant rejuvenation. The minimally invasive technique resulted in minimal scarring and a refreshed appearance",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Facial_Contour_India_09.png",
+    },
+
+
+    {
+      title: "T20110 - Nayanadeepa's Weekend Face and Neck Lift",
+      description: "33-year-old actress Nayanadeepa underwent a weekend endoscopic face and neck lift to address post-pregnancy concerns. Minimal downtime allowed her to quickly resume her acting career. Nayanadeepa achieved stunning results and regained her on-screen confidence",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Indian_Rejuvenation_18.png",
+    },
+
+
+
+    {
+      title: "T20111 - Mahima's Deep Plane Neck Lift and Chin Implant",
+      description: "55-year-old Mahima underwent a deep plane neck lift and chin implant to address a lifelong concern of a double chin and sagging neck. The procedure created a more defined jawline and youthful neck contour. Mahima was thrilled with the results, which boosted her confidence and self-image.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Natural_Results_India_15.png",
+    },
+    {
+      title: "T20111 - Mahima's Deep Plane Neck Lift and Chin Implant",
+      description: "55-year-old Mahima underwent a deep plane neck lift and chin implant to address a lifelong concern of a double chin and sagging neck. The procedure created a more defined jawline and youthful neck contour. Mahima was thrilled with the results, which boosted her confidence and self-image.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Natural_Results_India_16.png",
+    },
+    {
+      title: "T20111 - Mahima's Deep Plane Neck Lift and Chin Implant",
+      description: "55-year-old Mahima underwent a deep plane neck lift and chin implant to address a lifelong concern of a double chin and sagging neck. The procedure created a more defined jawline and youthful neck contour. Mahima was thrilled with the results, which boosted her confidence and self-image.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Natural_Results_India_17.png",
+    },
+    {
+      title: "T20111 - Mahima's Deep Plane Neck Lift and Chin Implant",
+      description: "55-year-old Mahima underwent a deep plane neck lift and chin implant to address a lifelong concern of a double chin and sagging neck. The procedure created a more defined jawline and youthful neck contour. Mahima was thrilled with the results, which boosted her confidence and self-image.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Natural_Results_India_18.png",
+    },
+
+
+    {
+      title: "T20112 - Sanmathi's Endoscopic Face and Neck Lift",
+      description: "39-year-old Sanmathi underwent an endoscopic scarless face and neck lift to address a persistent double chin that had not responded to non-surgical treatments. The minimally invasive procedure resulted in a more defined jawline and youthful neck contour.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Procedure_Indian_Results_12.png",
+    },
+    {
+      title: "T20112 - Sanmathi's Endoscopic Face and Neck Lift",
+      description: "39-year-old Sanmathi underwent an endoscopic scarless face and neck lift to address a persistent double chin that had not responded to non-surgical treatments. The minimally invasive procedure resulted in a more defined jawline and youthful neck contour.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Procedure_Indian_Results_13.png",
+    },
+    {
+      title: "T20112 - Sanmathi's Endoscopic Face and Neck Lift",
+      description: "39-year-old Sanmathi underwent an endoscopic scarless face and neck lift to address a persistent double chin that had not responded to non-surgical treatments. The minimally invasive procedure resulted in a more defined jawline and youthful neck contour.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Procedure_Indian_Results_14.png",
+    },
+    {
+      title: "T20112 - Sanmathi's Endoscopic Face and Neck Lift",
+      description: "39-year-old Sanmathi underwent an endoscopic scarless face and neck lift to address a persistent double chin that had not responded to non-surgical treatments. The minimally invasive procedure resulted in a more defined jawline and youthful neck contour.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Procedure_Indian_Results_15.png",
+    },
+
+
+
+    {
+      title: "T20113 - Navya's Scarless Endoscopic Midface Lift",
+      description: "30-year-old Navya underwent a scarless endoscopic deep plane midface lift to address sagging cheeks and restore youthful volume. The minimally invasive procedure resulted in a refreshed appearance and boosted her confidence in taking selfies.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Radiant_Results_India_22.png",
+    },
+    {
+      title: "T20113 - Navya's Scarless Endoscopic Midface Lift",
+      description: "30-year-old Navya underwent a scarless endoscopic deep plane midface lift to address sagging cheeks and restore youthful volume. The minimally invasive procedure resulted in a refreshed appearance and boosted her confidence in taking selfies.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Radiant_Results_India_23.png",
+    },
+    {
+      title: "T20113 - Navya's Scarless Endoscopic Midface Lift",
+      description: "30-year-old Navya underwent a scarless endoscopic deep plane midface lift to address sagging cheeks and restore youthful volume. The minimally invasive procedure resulted in a refreshed appearance and boosted her confidence in taking selfies.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Radiant_Results_India_24.png",
+    },
+    {
+      title: "T20113 - Navya's Scarless Endoscopic Midface Lift",
+      description: "30-year-old Navya underwent a scarless endoscopic deep plane midface lift to address sagging cheeks and restore youthful volume. The minimally invasive procedure resulted in a refreshed appearance and boosted her confidence in taking selfies.",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Radiant_Results_India_25.png",
+    },
+
+
+
+    {
+      title: "T20114 - Aishwarya's Transformative Facelift Journey",
+      description: "42-year-old Aishwarya underwent a comprehensive facial rejuvenation surgery, including an endoscopic facelift, neck lift, blepharoplasty, and fat grafting. The procedures addressed sagging skin, under-eye bags, and facial asymmetry, restoring a youthful and refreshed appearance. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Refined_Contours_India_10.png",
+    },
+    {
+      title: "T20114 - Aishwarya's Transformative Facelift Journey",
+      description: "42-year-old Aishwarya underwent a comprehensive facial rejuvenation surgery, including an endoscopic facelift, neck lift, blepharoplasty, and fat grafting. The procedures addressed sagging skin, under-eye bags, and facial asymmetry, restoring a youthful and refreshed appearance. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Refined_Contours_India_11.png",
+    },
+    {
+      title: "T20114 - Aishwarya's Transformative Facelift Journey",
+      description: "42-year-old Aishwarya underwent a comprehensive facial rejuvenation surgery, including an endoscopic facelift, neck lift, blepharoplasty, and fat grafting. The procedures addressed sagging skin, under-eye bags, and facial asymmetry, restoring a youthful and refreshed appearance. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Refined_Contours_India_12.png",
+    },
+    {
+      title: "T20114 - Aishwarya's Transformative Facelift Journey",
+      description: "42-year-old Aishwarya underwent a comprehensive facial rejuvenation surgery, including an endoscopic facelift, neck lift, blepharoplasty, and fat grafting. The procedures addressed sagging skin, under-eye bags, and facial asymmetry, restoring a youthful and refreshed appearance. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Refined_Contours_India_13.png",
+    },
+    {
+      title: "T20114 - Aishwarya's Transformative Facelift Journey",
+      description: "42-year-old Aishwarya underwent a comprehensive facial rejuvenation surgery, including an endoscopic facelift, neck lift, blepharoplasty, and fat grafting. The procedures addressed sagging skin, under-eye bags, and facial asymmetry, restoring a youthful and refreshed appearance. ",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Refined_Contours_India_14.png",
+    },
+
+
+
+
+    {
+      title: "T20115 - Madhumati's Deep Plane Facelift and Blepharoplasty",
+      description: "50-year-old Madhumati underwent a deep plane facelift and blepharoplasty to address sagging facial skin and prominent under-eye bags. The procedures resulted in a rejuvenated appearance, taking years off her face",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Transformation_India_01.png",
+    },
+    {
+      title: "T20115 - Madhumati's Deep Plane Facelift and Blepharoplasty",
+      description: "50-year-old Madhumati underwent a deep plane facelift and blepharoplasty to address sagging facial skin and prominent under-eye bags. The procedures resulted in a rejuvenated appearance, taking years off her face",
+      image: "/gallery/anti_aging/Facelift_Neck_Lift_Transformation_India_02.png",
+    },
+
+
+
+    {
+      title: "T20116 - Bhuvaneshwari's Facelift Journey",
+      description: "65-year-old Bhuvaneshwari underwent a deep plane face and neck lift with structural fat grafting to address sagging skin and loss of jawline definition. The procedures resulted in a lifted, more youthful appearance with improved jawline definition.",
+      image: "/gallery/anti_aging/Indian_Facelift_Neck_Lift_Facial_Refresh_23.png",
+    },
+
+
+
+    {
+      title: "T20117 - Bhuvaneshwari's Facelift Journey",
+      description: "66-year-old Veena underwent a deep plane neck and lower face lift with fat grafting to address sagging neck skin and jowls. The procedures resulted in a rejuvenated neck and lower face, boosting her confidence and allowing her to enjoy wearing necklaces again.",
+      image: "/gallery/anti_aging/Indian_Facelift_Neck_Lift_Success_05.png",
+    },
+    {
+      title: "T20117 - Bhuvaneshwari's Facelift Journey",
+      description: "66-year-old Veena underwent a deep plane neck and lower face lift with fat grafting to address sagging neck skin and jowls. The procedures resulted in a rejuvenated neck and lower face, boosting her confidence and allowing her to enjoy wearing necklaces again.",
+      image: "/gallery/anti_aging/Indian_Facelift_Neck_Lift_Success_06.png",
+    },
+    {
+      title: "T20117 - Bhuvaneshwari's Facelift Journey",
+      description: "66-year-old Veena underwent a deep plane neck and lower face lift with fat grafting to address sagging neck skin and jowls. The procedures resulted in a rejuvenated neck and lower face, boosting her confidence and allowing her to enjoy wearing necklaces again.",
+      image: "/gallery/anti_aging/Indian_Facelift_Neck_Lift_Success_07.png",
+    },
+
+
+
+    {
+      title: "T20118 - Lalitha's Deep Plane Face and Neck Lift",
+      description: "65-year-old Lalitha underwent a comprehensive deep plane face and neck lift to address sagging skin and achieve a more youthful appearance. The procedure provided a long-lasting solution compared to temporary fixes like fillers",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Aesthetic_Results_India_07.png",
+    },
+    {
+      title: "T20118 - Lalitha's Deep Plane Face and Neck Lift",
+      description: "65-year-old Lalitha underwent a comprehensive deep plane face and neck lift to address sagging skin and achieve a more youthful appearance. The procedure provided a long-lasting solution compared to temporary fixes like fillers",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Aesthetic_Results_India_08.png",
+    },
+    {
+      title: "T20118 - Lalitha's Deep Plane Face and Neck Lift",
+      description: "65-year-old Lalitha underwent a comprehensive deep plane face and neck lift to address sagging skin and achieve a more youthful appearance. The procedure provided a long-lasting solution compared to temporary fixes like fillers",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Aesthetic_Results_India_09.png",
+    },
+    {
+      title: "T20118 - Lalitha's Deep Plane Face and Neck Lift",
+      description: "65-year-old Lalitha underwent a comprehensive deep plane face and neck lift to address sagging skin and achieve a more youthful appearance. The procedure provided a long-lasting solution compared to temporary fixes like fillers",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Aesthetic_Results_India_10.png",
+    },
+
+
+
+    {
+      title: "T20119 - Laveena's Transformative Neck Lift",
+      description: "49-year-old Laveena underwent a deep plane neck lift to address a double chin and lack of jawline definition. The procedure resulted in a beautifully defined neck and jawline, boosting her confidence.",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Beautiful_Outcomes_India_13.png",
+    },
+    {
+      title: "T20119 - Laveena's Transformative Neck Lift",
+      description: "49-year-old Laveena underwent a deep plane neck lift to address a double chin and lack of jawline definition. The procedure resulted in a beautifully defined neck and jawline, boosting her confidence.",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Beautiful_Outcomes_India_14.png",
+    },
+    {
+      title: "T20119 - Laveena's Transformative Neck Lift",
+      description: "49-year-old Laveena underwent a deep plane neck lift to address a double chin and lack of jawline definition. The procedure resulted in a beautifully defined neck and jawline, boosting her confidence.",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Beautiful_Outcomes_India_15.png",
+    },
+
+
+    {
+      title: "T20120 - ",
+      description: "",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Contoured_Facial_Lines_India_25.png",
+    },
+    {
+      title: "T20120 ",
+      description: "",
+      image: "/gallery/anti_aging/Neck_Lift_Facelift_Contoured_Facial_Lines_India_26.png",
+    },
+
+
+    {
+      title: "T20121 ",
+      description: "",
+      image: "/gallery/anti_aging/Neck_Lift_Facial_Rejuvenation_India_09.png",
+    },
+    {
+      title: "T20121",
+      description: "",
+      image: "/gallery/anti_aging/Neck_Lift_Facial_Rejuvenation_India_10.png.png",
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ],
   "Rhinoplasty": [
     {
-      id: "BC001",
       title: "T10101 - Raj's Life-Changing Rhinoplasty",
       description: "Raj suffered from breathing difficulties and a crooked nose due to a deviated septum. Dr. Prashantha Kesari at Nypunya Aesthetic Clinic performed ultrasonic rhinoplasty and extracorporeal septoplasty. The surgery corrected his deviated septum and improved his nasal appearance. Raj experienced a transformation in both breathing and looks. Septorhinoplasty can address both functional and aesthetic nasal concerns",
-      disclaimer: "Individual results may vary.",
       image: "/gallery/rhinoplasty/Before-After-Deviated-Nose-Correction-Rhinoplasty-India 1.png",
-      results: [
-        "Flatter, more toned abdomen",
-        "Improved body contour",
-        "Enhanced self-confidence"
-      ]
     },
     {
       title: "T10101 - Raj's Life-Changing Rhinoplasty",
