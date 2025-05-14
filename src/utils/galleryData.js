@@ -941,44 +941,268 @@ export const galleryImages = {
 
 
 
+  ],
+  "Structural Fat Grafting": [
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Facial_Fat_Grafting_After_Procedure_India_19.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Aesthetic_Results_India_16.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Aesthetic_Results_India_17.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Body_Contouring_India_23.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Body_Contouring_India_24.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Body_Contouring_India_25.png.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Facial_Contours_India_11.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Facial_Contours_India_12.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Beautiful_Facial_Contours_India_13.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Before_After_India_01.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Before_After_India_02.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Body_Enhancement_India_17.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Body_Refinement_India_10.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Body_Sculpting_India_03.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Body_Transformation_India_27.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Complete_Transformation_India_49.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Complete_Transformation_India_49.png.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Complete_Transformation_India_50.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Complete_Transformation_India_50.png.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Defining_Facial_Lines_India_34.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Defining_Facial_Lines_India_35.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Enhanced_Facial_Features_India_26.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Enhanced_Facial_Features_India_27.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Enhanced_Facial_Features_India_28.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Aging_Repair_India_24.png",
+    },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Aging_Repair_India_25.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_and_Body_Enhancement_India_50.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Contour_India_06.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Contour_India_07.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Harmony_India_32.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Refinement_India_37.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Rejuvenation_India_02.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Revamp_India_46.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Structure_Improvement_India_42.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Volume_Improvement_India_22.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Volume_Restore_India_15.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Facial_Volume_Restore_India_16.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Natural_Aesthetic_Results_India_48.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Natural_Body_Contour_India_12.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Natural_Enhancement_India_05.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Natural_Facial_Rejuvenation_India_30.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Natural_Looking_Results_India_38.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Perfect_Contours_India_44.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Post_Procedure_India_33.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Refined_Facial_Contours_India_20.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Revitalized_Skin_India_35.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Revitalized_Skin_India_36.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Sculpted_Contours_India_18.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Shape_Perfection_India_45.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Shape_Perfection_India_46.png",
+    },
+    {
+      title: "FAT GRAFTING",
+      description: "",
+      image: "/gallery/structural/Fat_Grafting_Skin_Tightening_India_14.png",
+    },
 
   ],
+
+
   "Rhinoplasty": [
     {
       title: "T10101 - Raj's Life-Changing Rhinoplasty",
