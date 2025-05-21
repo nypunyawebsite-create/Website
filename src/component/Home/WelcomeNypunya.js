@@ -16,7 +16,7 @@ const WelcomeNypunya = () => {
                             Your browser does not support the video tag.
                         </video> */}
                         <img
-                            src="/home/welcome_to_nypunya.jpeg"
+                            src="/home/homepagebanner.png"
                             alt="Welcome to Nypunya"
                             className="w-full h-auto rounded-lg shadow-lg"
                         />

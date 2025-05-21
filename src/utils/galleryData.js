@@ -1203,6 +1203,442 @@ export const galleryImages = {
   ],
 
 
+  "Gynaecomastia (Male Breast / Moobs)": [
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Before_After_Male_Breast_Lipo_10.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Before_After_Male_Breast_Lipo_11.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Before_After_Male_Breast_Lipo_12.png",
+    },
+    {
+      title: "Body Sculpting Liposuction",
+      description: "",
+      image: "/gallery/liposuction/Body_Sculpting_Liposuction_India_10.png",
+    },
+    {
+      title: "Body Sculpting Liposuction",
+      description: "",
+      image: "/gallery/liposuction/Body_Sculpting_Liposuction_India_11.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Chest_Liposuction_Gynecomastia_Results_05.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Chest_Reshaping_Liposuction_Gynecomastia_23.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Flat_Chest_After_Gynecomastia_Liposuction_15.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Fat_Removal_Before_After_07.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Lipo_Treatment_Before_After_17.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Lipo_Treatment_Before_After_18.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Lipo_Treatment_Before_After_19.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Lipo_Treatment_Before_After_20.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Liposuction_Before_After_01.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Liposuction_Before_After_02.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Liposuction_Before_After_03.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Liposuction_Recovery_Results_25.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Liposuction_Success_Story_16.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Removal_Liposuction_06.png",
+    },
+    {
+      title: "Gynaecomastia (Male Breast / Moobs)",
+      description: "",
+      image: "/gallery/liposuction/Gynecomastia_Surgery_Before_After_04.png",
+    },
+    {
+      title: "Liposuction Aesthetic Body",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Aesthetic_Body_Results_India_13.png",
+    },
+    {
+      title: "Liposuction Aesthetic Refinement",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Aesthetic_Refinement_India_19.png",
+    },
+    {
+      title: "Liposuction Aesthetic Refinement",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_After_Body_Refinement_India_17.png",
+    },
+    {
+      title: "Liposuction Arms Sculpting",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Arms_Sculpting_India_40.png",
+    },
+    {
+      title: "Liposuction Back Fat Removal",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Back_Fat_Removal_India_47.png",
+    },
+    {
+      title: "Liposuction Beautiful Body Contours",
+      description: "Body contouring is a safe and simple procedure Done by trained plastic surgeons- it is very effective and results are pleasing Usually it is a day care or short stay procedures Results take around 6 – 8 weeks to show Side effects are very few and can be efficiently prevented Proportionate physique is a prized possession!! Please come and get it @ NYPUNYA ",
+      image: "/gallery/liposuction/Liposuction_Beautiful_Body_Contours_India_14.png",
+    },
+    {
+      title: "Liposuction Beautiful Body Contours",
+      description: "Body contouring is a safe and simple procedure Done by trained plastic surgeons- it is very effective and results are pleasing Usually it is a day care or short stay procedures Results take around 6 – 8 weeks to show Side effects are very few and can be efficiently prevented Proportionate physique is a prized possession!! Please come and get it @ NYPUNYA ",
+      image: "/gallery/liposuction/Liposuction_Before_After_India_01.png",
+    },
+    {
+      title: "Liposuction Body Refinement",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Body_Refinement_India_36.png",
+    },
+    {
+      title: "Liposuction Body Refinement",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Body_Refinement_India_37.png",
+    },
+    {
+      title: "Liposuction Body Sculpting",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Body_Sculpting_India_02.png",
+    },
+    {
+      title: "Liposuction Beautiful Body Contours",
+      description: "Body contouring is a safe and simple procedure Done by trained plastic surgeons- it is very effective and results are pleasing Usually it is a day care or short stay procedures Results take around 6 – 8 weeks to show Side effects are very few and can be efficiently prevented Proportionate physique is a prized possession!! Please come and get it @ NYPUNYA ",
+      image: "/gallery/liposuction/Liposuction_Contour_Beauty_India_24.png",
+    },
+    {
+      title: "Liposuction Contour Beauty",
+      description: "Body contouring is a safe and simple procedure Done by trained plastic surgeons- it is very effective and results are pleasing Usually it is a day care or short stay procedures Results take around 6 – 8 weeks to show Side effects are very few and can be efficiently prevented Proportionate physique is a prized possession!! Please come and get it @ NYPUNYA ",
+      image: "/gallery/liposuction/Liposuction_Contour_Beauty_India_25.png",
+    },
+    {
+      title: "Liposuction Defining Body Lines",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Defining_Body_Lines_India_55.png",
+    },
+    {
+      title: "Liposuction Enhanced Body Shape",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Enhanced_Body_Shape_India_15.png",
+    },
+    {
+      title: "Liposuction Enhanced Waist Body Shape",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Enhanced_Waist_India_34.png",
+    },
+    {
+      title: "Liposuction Fat Burn Results",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Fat_Burn_Results_India_18.png",
+    },
+    {
+      title: "Liposuction Fat Loss",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Fat_Loss_After_Procedure_India_12.png",
+    },
+    {
+      title: "Liposuction Fat Removal",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Fat_Removal_Results_India_07.png",
+    },
+    {
+      title: "Liposuction Firm Contours",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Firm_Contours_India_42.png",
+    },
+    {
+      title: "Liposuction Flat Tummy Transformation",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Flat_Tummy_Transformation_India_32.png",
+    },
+    {
+      title: "Liposuction Flat Tummy Transformation",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Flat_Tummy_Transformation_India_33.png",
+    },
+    {
+      title: "Liposuction Gynecomastia",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Gynecomastia_PostOp_Results_21.png",
+    },
+    {
+      title: "Liposuction Gynecomastia",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Gynecomastia_PostOp_Results_22.png",
+    },
+    {
+      title: "Liposuction Hips Shaping",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Hips_Shaping_India_54.png",
+    },
+    {
+      title: "Liposuction Hips Shaping",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Hourglass_Figure_India_43.png",
+    },
+    {
+      title: "Liposuction Hips Shaping",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Hourglass_Figure_India_44.png",
+    },
+    {
+      title: "Liposuction Hips Shaping",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Hips_Shaping_India_54.png",
+    },
+    {
+      title: "Liposuction Midsection Tightening",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Midsection_Tightening_India_53.png",
+    },
+    {
+      title: "Liposuction Perfect Body Contours",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Perfect_Body_Contours_India_27.png",
+    },
+    {
+      title: "Liposuction ",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Post_Op_Recovery_India_52.png",
+    },
+    {
+      title: "Liposuction Perfect Body Contours ",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Refined_Body_Contours_India_08.png",
+    },
+    {
+      title: "Liposuction Sculpted Figure",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Sculpted_Figure_India_06.png",
+    },
+    {
+      title: "Liposuction Shape Perfection",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Shape_Perfection_India_41.png",
+    },
+    {
+      title: "Liposuction Slide Profile Slimming ",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Side_Profile_Slimming_India_46.png",
+    },
+    {
+      title: "Liposuction Skin Tightening ",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Skin_Tightening_India_56.png",
+    },
+    {
+      title: "Liposuction Slim Figure",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Slim_Figure_India_16.png",
+    },
+    {
+      title: "Liposuction Slimming Procedure",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Slimming_Procedure_India_05.png",
+    },
+    {
+      title: "Liposuction Smooth Fat Removal",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Smooth_Fat_Removal_India_49.png",
+    },
+    {
+      title: "Liposuction Smooth Fat Removal",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Smooth_Fat_Removal_India_50.png",
+    },
+    {
+      title: "Liposuction Smooth Fat Removal",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Smooth_Fat_Removal_India_51.png",
+    },
+    {
+      title: "Liposuction Smooth Results",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Smooth_Results_India_09.png",
+    },
+    {
+      title: "Liposuction Smooth Silhouette",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Smooth_Silhouette_India_28.png",
+    },
+    {
+      title: "Liposuction Stomach Slimming",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Stomach_Slimming_India_29.png",
+    },
+    {
+      title: "Liposuction Success Transformation",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Success_Transformation_India_04.png",
+    },
+    {
+      title: "Liposuction Successful Body Sculpting",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Successful_Body_Sculpting_India_30.png",
+    },
+    {
+      title: "Liposuction Successful Body Sculpting",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Successful_Body_Sculpting_India_31.png",
+    },
+    {
+      title: "Liposuction Thigh Gap",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Thigh_Gap_Results_India_35.png",
+    },
+    {
+      title: "Liposuction Thigh Gap",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Toned_Physique_India_38.png",
+    },
+    {
+      title: "Liposuction Toned Physique",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Toned_Physique_India_39.png",
+    },
+    {
+      title: "Liposuction Trimmed Waistline",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Trimmed_Waistline_India_26.png",
+    },
+    {
+      title: "Liposuction Tummy Tightening",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Tummy_Tightening_India_20.png",
+    },
+    {
+      title: "Liposuction Tummy Tightening",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Tummy_Tightening_India_21.png",
+    },
+    {
+      title: "Liposuction Tummy Tightening",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Tummy_Tightening_India_22.png",
+    },
+    {
+      title: "Liposuction Tummy Tightening",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Tummy_Tightening_India_23.png",
+    },
+    {
+      title: "Liposuction Waistline Definition",
+      description: "",
+      image: "/gallery/liposuction/Liposuction_Waistline_Definition_India_48.png",
+    },
+    {
+      title: "Male Chest Fat Removal Liposuction",
+      description: "",
+      image: "/gallery/liposuction/Male_Breast_Fat_Removal_Liposuction_13.png",
+    },
+    {
+      title: "Male Chest Fat Removal Liposuction",
+      description: "",
+      image: "/gallery/liposuction/Male_Breast_Fat_Removal_Liposuction_14.png",
+    },
+    {
+      title: "Male Chest Fat Removal Liposuction",
+      description: "",
+      image: "/gallery/liposuction/Male_Chest_Fat_Removal_Lipo_Before_After_24.png",
+    },
+    {
+      title: "Male Chest Liposuction Transformation",
+      description: "",
+      image: "/gallery/liposuction/Male_Chest_Liposuction_Transformation_08.png",
+    },
+    {
+      title: "Male Chest Liposuction Transformation",
+      description: "",
+      image: "/gallery/liposuction/Male_Chest_Liposuction_Transformation_09.png",
+    },
+    {
+      title: "Liposuction",
+      description: "",
+      image: "/gallery/liposuction/PostOp_Liposuction_Results_India_03.png",
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ],
+
   "Rhinoplasty": [
     {
       title: "T10101 - Raj's Life-Changing Rhinoplasty",

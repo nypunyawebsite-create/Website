@@ -1,33 +1,13 @@
 const cosmeticServiceData = [
-    { 
-        title: 'Breast Augmentation/Breast Enhancement',
-        desc: 'Be the Best Version of You',
-        bgimage: '/home/cosmetic-plastic-surgery-services/breast-enhancement-reshaping-reduction.png',
-        information: 'Detailed information about Breast Enhancement.',
-        transformation: 'Transformation stories and testimonials.',
-        faqs: 'Frequently asked questions about Breast Enhancement.',
-        whyUs: 'Reasons to choose our services for Breast Enhancement.',
-        slug: 'breast-enhancement',
-    },
     {
-        title: 'Body Contouring Abdominal Platy',
-        desc: 'I Come, I Saw, I Contoured.',
-        bgimage: '/home/cosmetic-plastic-surgery-services/body-contouring-abdomino-pasty.png',
-        information: 'Detailed information about Breast Enhancement.',
-        transformation: 'Transformation stories and testimonials.',
-        faqs: 'Frequently asked questions about Breast Enhancement.',
-        whyUs: 'Reasons to choose our services for Breast Enhancement.',
-        slug: 'body-contouring',
-    },
-    {
-        title: 'Hair Transplant',
-        desc: 'Be Smart, Make every Hair Graft Count!',
-        bgimage: '/home/cosmetic-plastic-surgery-services/hair-transplant.png',
+        title: 'Rhinoplasty',
+        desc: 'Happiness is Right under your NOSE!',
+        bgimage: '/home/cosmetic-plastic-surgery-services/rhinoplasty.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug: 'hair-transplant', 
+        slug: 'rhinoplasty'
     },
     {
         title: 'Anti Ageing Procedures',
@@ -37,39 +17,63 @@ const cosmeticServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug: 'anti-ageing', 
+        slug: 'anti-ageing',
     },
+
     {
-        title: 'Rhinoplasty',
-        desc: 'Happiness is Right under your NOSE!',
-        bgimage: '/home/cosmetic-plastic-surgery-services/rhinoplasty.png',
-        information: 'Detailed information about Service 2.',
+        title: 'Body Contouring',
+        desc: 'I Come, I Saw, I Contoured.',
+        bgimage: '/home/cosmetic-plastic-surgery-services/body-contouring-abdomino-pasty.png',
+        information: 'Detailed information about Breast Enhancement.',
         transformation: 'Transformation stories and testimonials.',
-        faqs: 'Frequently asked questions about Service 2.',
-        whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'rhinoplasty'
+        faqs: 'Frequently asked questions about Breast Enhancement.',
+        whyUs: 'Reasons to choose our services for Breast Enhancement.',
+        slug: 'body-contouring',
     },
     {
-        title: 'Structural Fat Grafting',
+        title: 'Breast Enhancement / Reshaping',
+        desc: 'Be the Best Version of You',
+        bgimage: '/home/cosmetic-plastic-surgery-services/breast-enhancement-reshaping-reduction.png',
+        information: 'Detailed information about Breast Enhancement.',
+        transformation: 'Transformation stories and testimonials.',
+        faqs: 'Frequently asked questions about Breast Enhancement.',
+        whyUs: 'Reasons to choose our services for Breast Enhancement.',
+        slug: 'breast-enhancement',
+    },
+    {
+        title: 'Mommy Makeover',
         desc: 'Be the Best Version of You',
         bgimage: '/home/service2.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'structural-fat-grafting'
+        slug: 'gynaecomastia-male-breast-moobs'
     },
     {
-        title: 'Gynaecomastia (Male Breast / Moobs)',
-        desc: 'Be the Best Version of You',
-        bgimage: '/home/service2.png',
+        title: 'Hair Transplant',
+        desc: 'Be Smart, Make every Hair Graft Count!',
+        bgimage: '/home/cosmetic-plastic-surgery-services/hair-transplant.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'gynaecomastia-male-breast-moobs'
+        slug: 'hair-transplant',
     },
- 
+
+
+    // {
+    //     title: 'Structural Fat Grafting',
+    //     desc: 'Be the Best Version of You',
+    //     bgimage: '/home/service2.png',
+    //     information: 'Detailed information about Service 2.',
+    //     transformation: 'Transformation stories and testimonials.',
+    //     faqs: 'Frequently asked questions about Service 2.',
+    //     whyUs: 'Reasons to choose our services for Service 2.',
+    //     slug: 'structural-fat-grafting'
+    // },
+
+
 
     // Add more services as needed
 ];

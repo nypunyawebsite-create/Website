@@ -143,8 +143,8 @@ const DesktopNavBar = () => {
                         </div>
                         <nav className="hidden lg:flex lg:items-center">
                             <ul className="flex space-x-6 text-white">
-                                <li><Link to="/" className={`relative text-sm xl:text-white ${isActive("/") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/") ? "after:w-full" : ""}`}>Home</Link></li>
-                                <li><Link to="/about-us" className={`relative text-sm xl:text-white ${isActive("/about-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/about-us") ? "after:w-full" : ""}`}>About Us</Link></li>
+                                <li><Link to="/" className={`relative text-sm xl:text-white ${isActive("/") ? "text-white font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/") ? "after:w-full" : ""}`}>Home</Link></li>
+                                <li><Link to="/about-us" className={`relative text-sm xl:text-white ${isActive("/about-us") ? "text-white font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/about-us") ? "after:w-full" : ""}`}>About Us</Link></li>
 
                                 {/* SERVICES MENU */}
                                 <li
@@ -156,7 +156,7 @@ const DesktopNavBar = () => {
                                         setHoveredSubservice(null);
                                     }}
                                 >
-                                    <Link to="/services" className={`relative text-sm xl:text-white ${isActive("/services") || isServicesMenuActive() ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/services") || isServicesMenuActive() ? "after:w-full" : ""} flex items-center cursor-pointer gap-1`}>
+                                    <Link to="/services" className={`relative text-sm xl:text-white ${isActive("/services") || isServicesMenuActive() ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/services") || isServicesMenuActive() ? "after:w-full" : ""} flex items-center cursor-pointer gap-1`}>
                                         Services <FaChevronDown className="text-sm mt-[1px]" />
                                     </Link>
 
@@ -170,7 +170,7 @@ const DesktopNavBar = () => {
                                                         onMouseEnter={() => setHoveredCategory(category.category)}
                                                     >
                                                         <div
-                                                            className={`relative flex justify-between items-center w-full px-4 py-2 m-1 hover:bg-[#92E0E0] rounded cursor-pointer ${isCategoryActive(category) ? "text-gray-800 bg-[#92E0E0]" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isCategoryActive(category) ? "after:w-full" : ""}`}
+                                                            className={`relative flex justify-between items-center w-full px-4 py-2 m-1 hover:bg-[#92E0E0] rounded cursor-pointer ${isCategoryActive(category) ? "text-white bg-[#92E0E0]" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isCategoryActive(category) ? "after:w-full" : ""}`}
                                                         >
                                                             <span className="font-medium">{category.category}</span>
                                                             <FaChevronRight className="text-sm text-gray-500" />
@@ -188,8 +188,8 @@ const DesktopNavBar = () => {
                                                                         >
                                                                             <div
                                                                                 className={`relative px-3 py-2 rounded-md font-medium flex justify-between items-center ${isSubserviceActive(service)
-                                                                                    ? "text-gray-800 bg-[#92E0E0]"
-                                                                                    : "text-gray-800 hover:bg-[#92E0E0]"
+                                                                                    ? "text-white bg-[#92E0E0]"
+                                                                                    : "text-white hover:bg-[#92E0E0]"
                                                                                     } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isSubserviceActive(service) ? "after:w-full" : ""}`}
                                                                             >
                                                                                 {service.name}
@@ -243,16 +243,16 @@ const DesktopNavBar = () => {
                                         </div>
                                     )}
                                 </li>
-                                <li><Link to="/our-doctors" className={`relative text-sm xl:text-white ${isActive("/our-doctors") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/our-doctors") ? "after:w-full" : ""}`}>Our Doctors</Link></li>
-                                <li><Link to="/gallery" className={`relative text-sm xl:text-white ${isActive("/gallery") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/gallery") ? "after:w-full" : ""}`}>Gallery</Link></li>
-                                <li><Link to="/contact-us" className={`relative text-sm xl:text-white ${isActive("/contact-us") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/contact-us") ? "after:w-full" : ""}`}>Contact Us</Link></li>
-                                <li><Link to="/blogs" className={`relative text-sm xl:text-white ${isActive("/blogs") ? "text-[#92E0E0] font-bold" : "text-gray-800"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/blogs") ? "after:w-full" : ""}`}>Blog</Link></li>
+                                <li><Link to="/our-doctors" className={`relative text-sm xl:text-white ${isActive("/our-doctors") ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/our-doctors") ? "after:w-full" : ""}`}>Our Doctors</Link></li>
+                                <li><Link to="/gallery" className={`relative text-sm xl:text-white ${isActive("/gallery") ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/gallery") ? "after:w-full" : ""}`}>Gallery</Link></li>
+                                <li><Link to="/contact-us" className={`relative text-sm xl:text-white ${isActive("/contact-us") ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/contact-us") ? "after:w-full" : ""}`}>Contact Us</Link></li>
+                                <li><Link to="/blogs" className={`relative text-sm xl:text-white ${isActive("/blogs") ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/blogs") ? "after:w-full" : ""}`}>Blog</Link></li>
                             </ul>
                         </nav>
                         {/* Hamburger Icon (Visible only on mobile) */}
                         <div className="lg:hidden p-2 flex justify-between items-center shadow-sm">
                             <button
-                                className="text-gray-800 z-10"
+                                className="text-white z-10"
                                 onClick={() => setIsMobileMenuOpen(true)}
                             >
                                 <FaBars size={24} />

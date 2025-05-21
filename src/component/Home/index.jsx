@@ -14,7 +14,7 @@ const index = () => {
             <CosmeticPlasticServices />
             <DermatologyServices />
             <HomeInformation />
-            <WelcomeNypunya />
+            {/* <WelcomeNypunya /> */}
             <OurMedicalExpert />
             <OurPatientReview />
         </div>
