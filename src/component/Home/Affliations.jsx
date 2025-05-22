@@ -24,18 +24,19 @@ const Affliations = () => {
                         className="!px-4"
                     >
                         {[
-                            "/affliations/Affiliation-Association-Of-Plastic-Surgeons-of-India.jpg",
-                            "/affliations/Bangalore_Medical_College_and_Research_Institute_logo.png",
-                            "/affliations/images.jpeg",
-                            "/affliations/images_1.png",
-                            "/affliations/ima-logoimg.jpeg",
-                            "/affliations/isaps.png",
-                            "/affliations/Kapras Logo.jpg",
-                            "/affliations/Ltmmc_and_gh_logo.png",
-                            "/affliations/National_Medical_Commission_logo_(2023).jpg",
-                            "/affliations/pratap-8.png",
-                            "/affliations/the-royal-college-of-surgeons-of-edinburgh-logo-vector.png",
-                            "/affliations/whatsapp-image-2024-04-10-at-18.34.26-m7VpNQb1Wkc5lOpR.jpeg.avif"
+                            "/affliations/affiliations_2/1.png",
+                            "/affliations/affiliations_2/2.png",
+                            "/affliations/affiliations_2/3.jpg",
+                            "/affliations/affiliations_2/4.png",
+                            "/affliations/affiliations_2/5.png",
+                            "/affliations/affiliations_2/6.png",
+                            "/affliations/affiliations_2/7.png",
+                            "/affliations/affiliations_2/8.png",
+                            "/affliations/affiliations_2/9.png",
+                            "/affliations/affiliations_2/10.png",
+                            "/affliations/affiliations_2/11.png",
+                            "/affliations/affiliations_2/12.png",
+
                         ].map((src, index) => (
                             <SwiperSlide key={index} className="!flex !justify-center !items-center">
                                 <img

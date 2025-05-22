@@ -2,9 +2,30 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const OurMedicalExpert = () => {
     const [selectedDoctor, setSelectedDoctor] = useState('prashantha');
+
+    // Social media configurations for each doctor
+    const socialMediaLinks = {
+        prashantha: {
+            instagram: 'https://www.instagram.com/dr.prashantha_kesari/',
+            facebook: 'https://www.facebook.com/nypunyaaestheticclinic/',
+            youtube: 'https://www.youtube.com/@nypunya_aesthetic_clinic',
+            linkedin: 'https://www.linkedin.com/company/dr-prashantha-kesari/',
+            twitter: 'https://x.com/TheDrkesari?t=4UUcOGv-i6R__JYz-GSdqQ&s=08',
+            practo: 'https://www.practo.com/bangalore/doctor/dr-prashantha-kesari-cosmetic-plastic-surgeon-1/recommended?utm_source=opd_google_Pmax&utm_medium=&utm_campaign=22055233835&gad_source=1&gad_campaignid=22055283002&gbraid=0AAAAADgl2cJ79yHOmfvqRgjz9gjKz5Vl7&gclid=CjwKCAjw87XBBhBIEiwAxP3_A65daaX7O78jhWq5delKWTzH07mfX_AxZNCbr9ntCFYeOnhdbG3QcBoC2qoQAvD_BwE'
+        },
+        shubha: {
+            instagram: 'https://www.instagram.com/dr.shubhakesari/',
+            facebook: 'https://www.facebook.com/nypunyaaestheticclinic/',
+            youtube: 'https://www.youtube.com/@nypunya_aesthetic_clinic',
+            linkedin: 'https://www.linkedin.com/in/shubha-kesari-651787139?trk=people-search-result',
+            twitter: 'https://x.com/DrShubhaKesari',
+            practo: 'https://www.practo.com/bangalore/doctor/dr-shubha-m-kesari-dermatologist-cosmetologist'
+        }
+    };
 
     // Add custom styles for slick-dots and slick-arrows
     React.useEffect(() => {
@@ -86,6 +107,7 @@ const OurMedicalExpert = () => {
     };
 
     const slides = doctorImages[selectedDoctor];
+    const currentSocialLinks = socialMediaLinks[selectedDoctor];
 
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-12">
@@ -123,12 +145,33 @@ const OurMedicalExpert = () => {
                                     alt={slide.title}
                                     className="w-full h-full object-contain rounded-lg"
                                 />
+                                {slide.id === 9 && (
+                                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4 bg-white/80 px-4 py-2 rounded-full">
+                                        <a href={currentSocialLinks.instagram} target='_blank' rel='noopener noreferrer'>
+                                            <FaInstagram className='text-[#92E0E0] w-6 h-6' />
+                                        </a>
+                                        <a href={currentSocialLinks.facebook} target='_blank' rel='noopener noreferrer'>
+                                            <FaFacebook className='text-[#92E0E0] w-6 h-6' />
+                                        </a>
+                                        <a href={currentSocialLinks.youtube} target='_blank' rel='noopener noreferrer'>
+                                            <FaYoutube className='text-[#92E0E0] w-6 h-6' />
+                                        </a>
+                                        <a href={currentSocialLinks.linkedin} target='_blank' rel='noopener noreferrer'>
+                                            <FaLinkedin className='text-[#92E0E0] w-6 h-6' />
+                                        </a>
+                                        <a href={currentSocialLinks.twitter} target='_blank' rel='noopener noreferrer'>
+                                            <FaTwitter className='text-[#92E0E0] w-6 h-6' />
+                                        </a>
+                                        <a href={currentSocialLinks.practo} target='_blank' rel='noopener noreferrer'>
+                                            <img src='/practo_icon.png' alt='Practo' className='w-6 h-6' />
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
                 </Slider>
             </div>
-
         </div>
     );
 };
