@@ -5,6 +5,12 @@ const ContentComponent = ({ selectedDoctor }) => {
   const [currentDoctorKey, setCurrentDoctorKey] = useState(selectedDoctor || "prashantha");
 
   useEffect(() => {
+    if (selectedDoctor) {
+      setCurrentDoctorKey(selectedDoctor);
+    }
+  }, [selectedDoctor]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       // Get all doctor keys
       const doctorKeys = Object.keys(doctors);
@@ -25,7 +31,17 @@ const ContentComponent = ({ selectedDoctor }) => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center min-h-[70vh] py-12">
         {/* Left: Content */}
         <div className="md:w-1/2 flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-xl font-normal mb-2">{doctor.name}</h2>
+          <h2
+            className="text-xl font-normal mb-2 cursor-pointer"
+            onClick={() => {
+              const doctorKeys = Object.keys(doctors);
+              const currentIndex = doctorKeys.indexOf(currentDoctorKey);
+              const nextIndex = (currentIndex + 1) % doctorKeys.length;
+              setCurrentDoctorKey(doctorKeys[nextIndex]);
+            }}
+          >
+            {doctor.name}
+          </h2>
           <div className="w-16 h-1  bg-custom-blue  mb-4"></div>
           <h1 className="text-6xl font-bold mb-4">
             OUR <span className="text-custom-blue">TEAM</span>
@@ -90,21 +106,13 @@ const ContentComponent = ({ selectedDoctor }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               )}
-              {/* fallback generic medical icon */}
-              {/* {!["Chief Lab Technician", "Lead Lab Technician", "Senior Lab Technician"].includes(member.title) && (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
-              )} */}
             </div>
             <div className="text-sm text-gray-500 font-semibold mb-1 uppercase tracking-wide">{member.title}</div>
             <div className="w-12 h-1 bg-red-500 my-2"></div>
             <div className="text-xl font-bold mb-2 text-center">{member.name}</div>
             <p className="text-gray-600 text-center mb-4 text-sm">{member.description}</p>
-            {/* <button className="bg-blue-500 text-white px-6 py-2 rounded font-semibold hover:bg-blue-600 transition">
-              FIND OUT MORE
-            </button> */}
           </div>
         ))}
-
       </div>
     </div>
   );

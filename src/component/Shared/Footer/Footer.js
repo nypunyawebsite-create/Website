@@ -2,12 +2,15 @@ import React from 'react'
 import { FaTwitter, FaLinkedin, FaYoutube, FaFacebook, FaInstagram } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 
+
+
+
 const Footer = () => {
     const location = useLocation();
 
     return (
         <div className="bg-[#4B4B68] md:grid md:grid-cols-6 gap-6 h-full items-start justify-center mx-auto lg:p-20 p-8 text-white flex flex-col" style={{
-            background: 'linear-gradient(90deg, #000099 0%, #2b5aba 20%, #2b59b9 40%, #5f9ece 70%, #fff 100%)'
+            background: 'linear-gradient(90deg, #000099 0%, #2b5aba 20%, #2b59b9 40%, #5f9ece 70%, rgba(255,255,255,0.3) 135%)'
         }}>
             <div className='col-span-3 flex flex-col gap-8'>
                 <img src='/footer-logo.svg' alt='Footer Logo' className='lg:w-[60%]' />
@@ -15,20 +18,23 @@ const Footer = () => {
                 <div className='flex flex-col gap-2 md:pt-10'>
                     <h4 className='text-2xl font-semibold'>Follow us on Social Media</h4>
                     <div className='flex gap-4'>
-                        <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
-                            <FaTwitter className='text-[#92E0E0] w-6 h-6' />
+                        <a href='https://www.instagram.com/dr.prashantha_kesari/' target='_blank' rel='noopener noreferrer'>
+                            <FaInstagram className='text-[#92E0E0] w-6 h-6' />
                         </a>
-                        <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer'>
-                            <FaLinkedin className='text-[#92E0E0] w-6 h-6' />
-                        </a>
-                        <a href='https://www.youtube.com' target='_blank' rel='noopener noreferrer'>
-                            <FaYoutube className='text-[#92E0E0] w-6 h-6' />
-                        </a>
-                        <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.facebook.com/nypunyaaestheticclinic/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target='_blank' rel='noopener noreferrer'>
                             <FaFacebook className='text-[#92E0E0] w-6 h-6' />
                         </a>
-                        <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer'>
-                            <FaInstagram className='text-[#92E0E0] w-6 h-6' />
+                        <a href='https://www.youtube.com/@nypunya_aesthetic_clinic' target='_blank' rel='noopener noreferrer'>
+                            <FaYoutube className='text-[#92E0E0] w-6 h-6' />
+                        </a>
+                        <a href='https://www.linkedin.com/company/dr-prashantha-kesari/' target='_blank' rel='noopener noreferrer'>
+                            <FaLinkedin className='text-[#92E0E0] w-6 h-6' />
+                        </a>
+                        <a href='https://x.com/TheDrkesari?t=4UUcOGv-i6R__JYz-GSdqQ&s=08' target='_blank' rel='noopener noreferrer'>
+                            <FaTwitter className='text-[#92E0E0] w-6 h-6' />
+                        </a>
+                        <a href='https://www.practo.com/bangalore/doctor/dr-prashantha-kesari-cosmetic-plastic-surgeon-1/recommended?utm_source=opd_google_Pmax&utm_medium=&utm_campaign=22055233835&gad_source=1&gad_campaignid=22055283002&gbraid=0AAAAADgl2cJ79yHOmfvqRgjz9gjKz5Vl7&gclid=CjwKCAjw87XBBhBIEiwAxP3_A65daaX7O78jhWq5delKWTzH07mfX_AxZNCbr9ntCFYeOnhdbG3QcBoC2qoQAvD_BwE' target='_blank' rel='noopener noreferrer'>
+                            <img src='/practo_icon.png' alt='Practo' className='w-6 h-6' />
                         </a>
                     </div>
                 </div>
@@ -43,6 +49,7 @@ const Footer = () => {
                 <Link to='/patient-stories' className={`relative w-fit ${location.pathname === '/patient-stories' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/patient-stories' ? 'after:w-full' : ''}`}>Patient Stories</Link>
                 <Link to='/gallery' className={`relative w-fit ${location.pathname === '/gallery' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/gallery' ? 'after:w-full' : ''}`}>Gallery</Link>
                 <Link to='/contact-us' className={`relative w-fit ${location.pathname === '/contact-us' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/contact-us' ? 'after:w-full' : ''}`}>Contact us</Link>
+                <Link to='/privacy-policy' className={`relative w-fit ${location.pathname === '/privacy-policy' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/privacy-policy' ? 'after:w-full' : ''}`}>Privacy Policy</Link>
             </div>
             <div className='col-span-2 flex flex-col gap-2'>
                 <a href='https://maps.app.goo.gl/1syipVGCs8CVZCb46' target='_blank' rel='noopener noreferrer' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">#3,1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</a>

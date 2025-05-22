@@ -6,7 +6,7 @@ import HomeInformation from './HomeInformation'
 import WelcomeNypunya from './WelcomeNypunya'
 import OurMedicalExpert from './OurMedicalExpert'
 import OurPatientReview from '../OurDoctorsComponent/Feedback';
-
+import Affliations from './Affliations';
 const index = () => {
     return (
         <div>
@@ -14,8 +14,9 @@ const index = () => {
             <CosmeticPlasticServices />
             <DermatologyServices />
             <HomeInformation />
-            <WelcomeNypunya />
+            {/* <WelcomeNypunya /> */}
             <OurMedicalExpert />
+            <Affliations />
             <OurPatientReview />
         </div>
     )

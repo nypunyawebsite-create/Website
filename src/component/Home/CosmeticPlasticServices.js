@@ -23,7 +23,7 @@ const CosmeticPlasticServices = () => {
                     {cosmeticServiceData.map((service, index) => (
                         <div
                             key={index}
-                            className="border rounded-lg bg-[#e9f9f9] hover:bg-[#92E0E0] transition-all duration-300"
+                            className="border border-[#e9f9f9] rounded-lg bg-[#e9f9f9] hover:bg-[#92E0E0] hover:border-[#92E0E0] transition-all duration-300"
                         >
                             <div className="flex flex-col p-4 gap-4">
                                 <div className="flex flex-col gap-2">

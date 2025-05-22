@@ -31,11 +31,20 @@ const Gallery = () => {
   // Calculate total images across all categories
   const totalImages = Object.values(galleryImages).reduce((total, images) => total + images.length, 0);
 
+  // Calculate images per category
+  const categoryCounts = Object.entries(galleryImages).reduce((acc, [category, images]) => {
+    acc[category] = images.length;
+    return acc;
+  }, {});
+
   useEffect(() => {
+    // Calculate total images for selected category
+    const categoryImageCount = galleryImages[selectedCategory]?.length || 0;
+
     if (location.state?.category && categories.includes(location.state.category)) {
       setSelectedCategory(location.state.category);
     }
-  }, [location.state]);
+  }, [location.state, selectedCategory]);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -71,6 +80,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 py-8 font-sans">
       <div className="max-w-7xl mx-auto rounded-3xl shadow-2xl bg-white/90 p-6 md:p-12">
+
         {/* Category Selection */}
         <div className="flex flex-col md:flex-row items-center justify-end gap-6 my-6 relative">
           <div className="text-lg font-semibold text-custom-blue">
@@ -157,7 +167,7 @@ const Gallery = () => {
                   </button>
                 </div>
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
-                  {currentIndex + 1} / {totalImages}
+                  {currentIndex + 1} / {filteredImages.length}
                 </div>
               </>
             ) : (
