@@ -42,8 +42,8 @@ const cosmeticServiceData = [
     },
     {
         title: 'Mommy Makeover',
-        desc: 'Be the Best Version of You',
-        bgimage: '/home/service2.png',
+        desc: 'Self love is not selfish',
+        bgimage: '/home/cosmetic-plastic-surgery-services/mommy_makeover.jpg',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',

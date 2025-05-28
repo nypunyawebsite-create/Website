@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className='flex flex-col gap-2 md:pt-10'>
                     <h4 className='text-2xl font-semibold'>Follow us on Social Media</h4>
                     <div className='flex gap-4'>
-                        <a href='https://www.instagram.com/dr.prashantha_kesari/' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.instagram.com/nypunya_aesthetic_clinic_/' target='_blank' rel='noopener noreferrer'>
                             <FaInstagram className='text-[#92E0E0] w-6 h-6' />
                         </a>
                         <a href='https://www.facebook.com/nypunyaaestheticclinic/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target='_blank' rel='noopener noreferrer'>
