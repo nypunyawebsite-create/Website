@@ -1,13 +1,13 @@
 const dermatologyServiceData = [
     {
-        title: 'Acne and acne scars',
+        title: 'Acne and Acne Scars',
         desc: 'Stay Unfiltered, Stay ACNE Free!',
         bgimage: '/home/dermatology-services/acne.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'acne-and-scars'
+        slug: 'acne-and-scars'
     },
     {
         title: 'Fillers and Botox',
@@ -17,7 +17,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'fillers-and-botox'
+        slug: 'fillers-and-botox'
     },
     {
         title: 'Laser Hair Removal',
@@ -27,17 +27,17 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'laser-hair-removal'
+        slug: 'laser-hair-removal'
     },
     {
-        title: 'Laser tattoo removal',
+        title: 'Laser Tattoo Removal',
         desc: 'Regretting your tattoo?',
         bgimage: '/home/dermatology-services/laser-tattoo-removal.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'laser-tattoo-removal'
+        slug: 'laser-tattoo-removal'
     },
     {
         title: 'PRP (Platelet Rich Plasma)',
@@ -47,7 +47,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:'platelet-rich-plasma-injections'
+        slug: 'platelet-rich-plasma-injections'
     },
     {
         title: 'Dark Circles and Under Eye Bags',
@@ -57,7 +57,7 @@ const dermatologyServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug:''
+        slug: ''
     },
 
     // Add more services as needed

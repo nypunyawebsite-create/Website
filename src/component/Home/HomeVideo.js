@@ -17,9 +17,9 @@ const HomeVideo = () => {
             // Set a new timeout
             resizeTimeoutRef.current = setTimeout(() => {
                 if (window.innerWidth < 768) {
-                    setVideoSrc('/home/intro_video.mp4');
+                    setVideoSrc('/home/home_video_mobile_new.mp4');
                 } else {
-                    setVideoSrc('/home/intro_video.mp4');
+                    setVideoSrc('/home/banner_video.mp4');
                 }
             }, 100); // 100ms debounce
         };
@@ -48,25 +48,34 @@ const HomeVideo = () => {
     };
 
     return (
-        <div className="relative h-screen overflow-hidden">
+        <div className="relative h-screen w-full overflow-hidden">
             {/* Video */}
             <video
                 ref={videoRef}
                 src={videoSrc}
                 muted
                 onEnded={handleVideoEnd}
-                className={`w-full h-full object-cover transition-opacity duration-500 ${videoStarted ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`w-full h-full object-cover transition-opacity duration-500 ${videoStarted ? 'opacity-100 z-50' : 'opacity-0 pointer-events-none'}`}
+                style={{ position: videoStarted ? 'fixed' : 'relative', top: 0, left: 0 }}
             />
 
             {/* Banner Section */}
-            <div className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex flex-col items-center justify-between ${videoStarted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`} style={{ backgroundImage: "url('/home/homepagebanner.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div
+                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex flex-col items-center justify-between ${videoStarted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                style={{
+                    backgroundImage: "url('/home/homepagebanner.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: videoStarted ? 0 : 1
+                }}
+            >
                 {/* Top Headings - Responsive */}
-                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-8 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Plastic Surgery</h2>
-                    <span className="hidden md:inline text-custom-blue text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Aesthetics</h2>
-                    <span className="hidden md:inline text-custom-blue text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Dermatology</h2>
+                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
+                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
+                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
                 </div>
 
                 {/* Bottom Content */}

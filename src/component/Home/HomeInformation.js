@@ -8,7 +8,7 @@ const HomeInformation = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white text-center">
                     <div className='border border-white rounded-lg p-6 bg-[#3384aa] flex flex-col gap-2'>
                         <h4 className="mb-2 flex items-center text-xl text-bold">
-                            <GoMail className="mr-2 text-white" />Contact Us
+                            <GoMail className="mr-2 text-white" />We Listen, We Care
                         </h4>
                         <p className="flex items-center text-xs">
                             <GoMail className="mr-2 text-white" />
@@ -29,7 +29,7 @@ const HomeInformation = () => {
                     </div>
                     <div className='border border-white rounded-lg p-6 bg-[#3384aa] flex flex-col gap-2'>
                         <h4 className="mb-2 flex items-center text-xl text-bold">
-                            <GoClock className="mr-2 text-white" />Open Hours
+                            <GoClock className="mr-2 text-white" />We Welcome You
                         </h4>
                         <p className="flex items-center text-xs gap-2">
                             <span className='bg-[#1B6D9C] px-2 py-1 rounded-sm'>Mon - Sat:</span>  9:30 AM to 7:00 PM
@@ -41,7 +41,7 @@ const HomeInformation = () => {
 
                     <div className='border border-white rounded-lg p-6 bg-[#3384aa] flex flex-col gap-2'>
                         <h4 className="mb-2 flex items-center text-xl text-bold">
-                            <GoLocation className="mr-2 text-white" />Location
+                            <GoLocation className="mr-2 text-white" />We are here for you
                         </h4>
                         <p className="flex items-center text-xs">
                             <a href="https://maps.app.goo.gl/1syipVGCs8CVZCb46" target="_blank" rel="noopener noreferrer">
