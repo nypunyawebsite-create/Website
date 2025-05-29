@@ -17,7 +17,7 @@ const HomeVideo = () => {
             // Set a new timeout
             resizeTimeoutRef.current = setTimeout(() => {
                 if (window.innerWidth < 768) {
-                    setVideoSrc('/home/banner_video.mp4');
+                    setVideoSrc('/home/home_video_mobile_new.mp4');
                 } else {
                     setVideoSrc('/home/banner_video.mp4');
                 }
@@ -70,12 +70,12 @@ const HomeVideo = () => {
                 }}
             >
                 {/* Top Headings - Responsive */}
-                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-8 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Plastic Surgery</h2>
-                    <span className="hidden md:inline text-custom-blue text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Aesthetics</h2>
-                    <span className="hidden md:inline text-custom-blue text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg whitespace-nowrap">Dermatology</h2>
+                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
+                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
+                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
                 </div>
 
                 {/* Bottom Content */}

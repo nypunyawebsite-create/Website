@@ -33,7 +33,7 @@ const Footer = () => {
                         <a href='https://x.com/TheDrkesari?t=4UUcOGv-i6R__JYz-GSdqQ&s=08' target='_blank' rel='noopener noreferrer'>
                             <FaTwitter className='text-[#92E0E0] w-6 h-6' />
                         </a>
-                        <a href='https://www.practo.com/bangalore/doctor/dr-prashantha-kesari-cosmetic-plastic-surgeon-1/recommended?utm_source=opd_google_Pmax&utm_medium=&utm_campaign=22055233835&gad_source=1&gad_campaignid=22055283002&gbraid=0AAAAADgl2cJ79yHOmfvqRgjz9gjKz5Vl7&gclid=CjwKCAjw87XBBhBIEiwAxP3_A65daaX7O78jhWq5delKWTzH07mfX_AxZNCbr9ntCFYeOnhdbG3QcBoC2qoQAvD_BwE' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.practo.com/bangalore/clinic/nypunya-aesthetic-clinic-jayanagar-4-block/reviews?utm_source=opd_google_Pmax&utm_campaign=20240701849&gad_source=1&gad_campaignid=20236356659&gbraid=0AAAAADgl2cL3q7njAm2XdJgKwzdMvYN7M&gclid=CjwKCAjwi-DBBhA5EiwAXOHsGatlWdfo33g2REsEo6kMU0cvLoyDO5Fi_7GcLdEO6eyo5njnhmibkxoClXIQAvD_BwE' target='_blank' rel='noopener noreferrer'>
                             <img src='/practo_icon.png' alt='Practo' className='w-6 h-6' />
                         </a>
                     </div>
