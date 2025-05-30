@@ -31,7 +31,7 @@ export const cardData = [
     link: "/qualified-doctors",
   },
   {
-    image: "/about-us/about-page-images/world_class.png",
+    image: "/about-us/about-page-images/world_class.PNG",
     title: "WORLD CLASS FACILITIES",
     description:
       "Nypunya Aesthetic Clinic boasts world-class facilities, including advanced operation theaters, cutting-edge laser systems, and modern skincare technology. Designed for comfort and safety, the clinic features hygienic treatment rooms, personalized consultation areas, and a serene ambiance. Every detail supports excellence in plastic surgery and dermatology.",
