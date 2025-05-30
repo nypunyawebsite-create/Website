@@ -69,14 +69,14 @@ const CardSlider = () => {
                 <p className="text-gray-600 mt-2 h-24 md:h-44 overflow-hidden">
                   {card.description}
                 </p>
-                {card.link && (
+                {/* {card.link && (
                   <a
                     href={card.link}
                     className="mt-4 inline-block px-4 py-2 text-sm md:text-base bg-custom-green text-black rounded-full hover:bg-custom-blue hover:text-white transition"
                   >
                     Read More
                   </a>
-                )}
+                )} */}
               </div>
             </div>
           </div>
