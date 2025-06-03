@@ -7,7 +7,12 @@ export const galleryImages = [
   "/services/breast_augmentation/gallery/gallery06.png",
 
 ];
-
+export const informationImages = [
+  "/services/breast_augmentation/service/information/1.png",
+  "/services/breast_augmentation/service/information/2.png",
+  "/services/breast_augmentation/service/information/3.png",
+  "/services/breast_augmentation/service/information/4.png",
+];
 // export const servicesData = [
 //   { id: "01", title: "Breast Augmentation" },
 //   { id: "02", title: "Mastopexy / Breast Reshaping" },

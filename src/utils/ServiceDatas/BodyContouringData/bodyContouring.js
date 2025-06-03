@@ -1,3 +1,13 @@
+export const informationImages = [
+    "/services/body_contouring/information/1.png",
+    "/services/body_contouring/information/2.png",
+    "/services/body_contouring/information/3.png",
+    "/services/body_contouring/information/4.png",
+    // "/services/body_contouring/gallery05.png",
+    // "/services/body_contouring/gallery06.png",
+    // "/services/body_contouring/gallery07.png",
+    // "/services/body_contouring/gallery08.png",
+];
 export const galleryImages = [
     "/services/body_contouring/gallery01.png",
     "/services/body_contouring/gallery02.png",
@@ -8,7 +18,6 @@ export const galleryImages = [
     "/services/body_contouring/gallery07.png",
     // "/services/body_contouring/gallery08.png",
 ];
-
 export const lipoSuctionDetails = [
     "Body contouring is a safe and simple procedure",
     "Done by trained plastic surgeons - it is very effective and results are pleasing",

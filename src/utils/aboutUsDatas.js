@@ -83,7 +83,7 @@ export const doctors = [
     qualifications: "Senior Consultant - Dermatologist and Cosmetic Dermatologist | M.B.B.S, M.D(Mumbai) D.M.L.E, D.N.B.",
     description: "Dr. Shubha M Kesari is a very well qualified and experienced Dermatologist with special interest in Cosmetic Dermatology. She has completed her M.D Dermatology from LTM Medical College, & Hospital Sion Mumbai securing the Gold Medal for Maharashtra University of Health Sciences.",
     achievements: [
-      "Recognized Orthopedic Specialist",
+      "Recognized Dermatologist and Cosmetic Dermatologist",
       "Expert with over 20+ years experience",
     ],
     image: "/about-us/doctor_2.png",

@@ -60,6 +60,14 @@ const DesktopNavBar = () => {
         );
     };
 
+    // Add delay to hover events
+    const handleMouseEnter = (callback) => {
+        setTimeout(callback, 100); // 100ms delay
+    };
+
+    const handleMouseLeave = (callback) => {
+        setTimeout(callback, 100); // 100ms delay
+    };
 
     return (
 
@@ -149,12 +157,12 @@ const DesktopNavBar = () => {
                                 {/* SERVICES MENU */}
                                 <li
                                     className="relative service-custom-cls"
-                                    onMouseEnter={() => setIsServicesOpen(true)}
-                                    onMouseLeave={() => {
+                                    onMouseEnter={() => handleMouseEnter(() => setIsServicesOpen(true))}
+                                    onMouseLeave={() => handleMouseLeave(() => {
                                         setIsServicesOpen(false);
                                         setHoveredCategory(null);
                                         setHoveredSubservice(null);
-                                    }}
+                                    })}
                                 >
                                     <Link to="/services" className={`relative text-sm xl:text-white ${isActive("/services") || isServicesMenuActive() ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/services") || isServicesMenuActive() ? "after:w-full" : ""} flex items-center cursor-pointer gap-1`}>
                                         Services <FaChevronDown className="text-sm mt-[1px]" />
@@ -167,10 +175,10 @@ const DesktopNavBar = () => {
                                                     <li
                                                         key={idx}
                                                         className="relative service-custom-cls"
-                                                        onMouseEnter={() => setHoveredCategory(category.category)}
+                                                        onMouseEnter={() => handleMouseEnter(() => setHoveredCategory(category.category))}
                                                     >
                                                         <div
-                                                            className={`relative flex justify-between items-center w-full px-4 py-2 m-1 hover:bg-[#92E0E0] rounded cursor-pointer ${isCategoryActive(category) ? "text-white bg-[#92E0E0]" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isCategoryActive(category) ? "after:w-full" : ""}`}
+                                                            className={`relative flex justify-between items-center w-full px-4 py-2 m-1 hover:bg-[#92E0E0] rounded cursor-pointer ${isCategoryActive(category) ? "text-white bg-[#92E0E0]" : "text-white"}`}
                                                         >
                                                             <span className="font-medium">{category.category}</span>
                                                             <FaChevronRight className="text-sm text-gray-500" />
@@ -183,24 +191,25 @@ const DesktopNavBar = () => {
                                                                         <li
                                                                             key={subIdx}
                                                                             className="relative"
-                                                                            onMouseEnter={() => setHoveredSubservice(service.name)}
-                                                                            onMouseLeave={() => setHoveredSubservice(null)}
+                                                                            onMouseEnter={() => handleMouseEnter(() => setHoveredSubservice(service.name))}
+                                                                            onMouseLeave={() => handleMouseLeave(() => setHoveredSubservice(null))}
                                                                         >
                                                                             <div
-                                                                                className={`relative px-3 py-2 rounded-md font-medium flex justify-between items-center ${isSubserviceActive(service)
+                                                                                className={`relative px-3 py-2 rounded-md font-medium flex justify-between items-center cursor-pointer ${isSubserviceActive(service)
                                                                                     ? "text-white bg-[#92E0E0]"
                                                                                     : "text-white hover:bg-[#92E0E0]"
-                                                                                    } after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isSubserviceActive(service) ? "after:w-full" : ""}`}
+                                                                                    }`}
                                                                             >
                                                                                 {service.name}
                                                                                 <FaChevronRight className="text-xs ml-2" />
                                                                             </div>
 
                                                                             {hoveredSubservice === service.name && (
-                                                                                <ul className="mt-1 bg-gray-50 border border-gray-200 rounded-md p-2 ml-4">
+                                                                                <ul className="mt-1 bg-gray-50 border border-gray-200 rounded-md p-2 ml-4 transition-all duration-300 ease-in-out transform origin-top-left">
                                                                                     {submenuItems.map((item, i) => (
-                                                                                        <li key={i}>
-                                                                                            <button
+                                                                                        <li key={i} className="transition-all duration-300 ease-in-out transform hover:translate-x-1">
+                                                                                            <Link
+                                                                                                to={item === "Transformation" ? "/gallery" : service.path}
                                                                                                 onClick={() => {
                                                                                                     setSelectedCategory(category.category);
                                                                                                     setSelectedSubservice(service.name);
@@ -208,26 +217,18 @@ const DesktopNavBar = () => {
                                                                                                     setIsServicesOpen(false);
                                                                                                     setHoveredCategory(null);
                                                                                                     setHoveredSubservice(null);
-
-                                                                                                    if (item === "Transformation") {
-                                                                                                        navigate("/gallery", {
-                                                                                                            state: { category: service.name },
-                                                                                                        });
-                                                                                                    } else {
-                                                                                                        navigate(service.path, {
-                                                                                                            state: {
-                                                                                                                scrollTo: item.toLowerCase().replace(/\s+/g, "-"),
-                                                                                                            },
-                                                                                                        });
-                                                                                                    }
                                                                                                 }}
-                                                                                                className={`block px-2 py-1 text-sm w-full text-left ${isSubmenuItemActive(service, item)
-                                                                                                    ? "text-[#92E0E0] font-semibold"
+                                                                                                state={item === "Transformation"
+                                                                                                    ? { category: service.name }
+                                                                                                    : { scrollTo: item.toLowerCase().replace(/\s+/g, "-") }
+                                                                                                }
+                                                                                                className={`block px-2 py-1 text-sm w-full text-left cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-100 rounded-md ${isSubmenuItemActive(service, item)
+                                                                                                    ? "text-[#92E0E0] font-semibold bg-gray-100"
                                                                                                     : "text-gray-700 hover:text-[#92E0E0]"
                                                                                                     }`}
                                                                                             >
                                                                                                 {item}
-                                                                                            </button>
+                                                                                            </Link>
                                                                                         </li>
                                                                                     ))}
                                                                                 </ul>
@@ -255,17 +256,14 @@ const DesktopNavBar = () => {
                                 className="text-white z-10"
                                 onClick={() => setIsMobileMenuOpen(true)}
                             >
-                                <FaBars size={24} />
+                                <FaBars className="text-2xl" />
                             </button>
                         </div>
                     </div>
                 </div>
 
                 {/* Mobile Menu */}
-                <MobileNavBar
-                    isMobileMenuOpen={isMobileMenuOpen}
-                    setIsMobileMenuOpen={setIsMobileMenuOpen}
-                />
+                {isMobileMenuOpen && <MobileNavBar onClose={() => setIsMobileMenuOpen(false)} />}
             </header>
         </>
     );

@@ -1,41 +1,95 @@
-import React from "react";
-import { acneData } from "../../../utils/ServiceDatas/AcneData/acneData";
+import React, { useState } from "react";
+import { acneData, galleryImages } from "../../../utils/ServiceDatas/AcneData/acneData";
 
 const AcneAndScars = () => {
-    return (
-        <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center py-10 px-4 bg-white">
-            <div className="flex flex-col lg:flex-row lg:gap-8 gap-5 w-full">
-                {/* First Column (Title + Grid) */}
-                <div className="lg:w-1/2 w-full">
-                    {/* Title */}
-                    <p className="text-custom-blue text-2xl mb-4 text-center lg:text-left">
-                        Acne and acne scars
-                    </p>
+    const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-                    {/* Grid Items */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+        setIsModalOpen(true);
+    };
+
+    return (
+        <div className="container mx-auto px-4 py-10 bg-white">
+            {/* Title Section */}
+            <div className="text-center mb-10">
+                <h1 className="text-3xl font-bold text-custom-blue">Acne and Acne Scars</h1>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-8">
+                {/* Left Section - Details */}
+                <div className="lg:w-1/2">
+                    <div className="space-y-6">
                         {acneData.map((detail, index) => (
-                            <div key={index} className="border border-custom-green p-4 rounded-xl shadow-sm">
-                                {detail}
+                            <div key={index} className="flex gap-4">
+                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-custom-blue text-white flex items-center justify-center font-bold">
+                                    {index + 1}
+                                </div>
+                                <p className="text-gray-700">{detail}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Second Column - Centered Image with Overlay Text */}
-                <div className="lg:w-1/2 w-full flex items-center justify-center pt-0 lg:pt-10">
-                    <div className="relative w-full max-w-md lg:max-w-full">
-                        <img
-                            src="/services/acne/acne_service.png"
-                            alt="Breast Enhancement"
-                            className="rounded-lg w-full object-cover"
-                        />
-                        {/* <span className="absolute bottom-4 right-6 text-6xl md:text-8xl font-bold text-[#9492c4] opacity-60 z-10">
-                            01
-                        </span> */}
+                {/* Right Section - Images */}
+                <div className="lg:w-1/2">
+                    <div className="space-y-4">
+                        {/* Main Image */}
+                        <div
+                            className="relative cursor-pointer rounded-lg overflow-hidden"
+                            onClick={() => handleImageClick(selectedImage)}
+                        >
+                            <img
+                                src={selectedImage}
+                                alt="Acne Treatment"
+                                className="w-full h-[400px] object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300"></div>
+                        </div>
+
+                        {/* Thumbnail Grid */}
+                        <div className="grid grid-cols-4 gap-2">
+                            {galleryImages.map((image, index) => (
+                                <div
+                                    key={index}
+                                    className={`cursor-pointer rounded-lg overflow-hidden ${selectedImage === image ? 'ring-2 ring-custom-blue' : ''
+                                        }`}
+                                    onClick={() => setSelectedImage(image)}
+                                >
+                                    <img
+                                        src={image}
+                                        alt={`Acne Treatment ${index + 1}`}
+                                        className="w-full h-24 object-cover"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
+
+            {/* Fullscreen Modal */}
+            {isModalOpen && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+                    onClick={() => setIsModalOpen(false)}
+                >
+                    <div className="relative max-w-7xl max-h-[90vh] p-4">
+                        <img
+                            src={selectedImage}
+                            alt="Acne Treatment Fullscreen"
+                            className="max-w-full max-h-[90vh] object-contain"
+                        />
+                        <button
+                            className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300"
+                            onClick={() => setIsModalOpen(false)}
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

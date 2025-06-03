@@ -7,7 +7,13 @@ export const galleryImages = [
     "/services/hair_transplant/hair-transplant-gallery06.png",
     "/services/hair_transplant/hair-transplant-gallery07.png",
     "/services/hair_transplant/hair-transplant-gallery08.png",
-    
+
+];
+export const informationImages = [
+    "/services/hair_transplant/information/1.png",
+    "/services/hair_transplant/information/2.png",
+    "/services/hair_transplant/information/3.png",
+    "/services/hair_transplant/information/4.png",
 ];
 
 export const hairTransplantDetails = [
