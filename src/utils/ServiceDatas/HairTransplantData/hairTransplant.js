@@ -10,6 +10,7 @@ export const galleryImages = [
 
 ];
 export const informationImages = [
+    "/services/all_in_one/7.png",
     "/services/hair_transplant/information/1.png",
     "/services/hair_transplant/information/2.png",
     "/services/hair_transplant/information/3.png",

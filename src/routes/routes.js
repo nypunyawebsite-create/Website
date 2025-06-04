@@ -18,6 +18,7 @@ import Gallery from '../pages/Gallery/page';
 // import Dermatology from '../pages/Dermetology/Dermetology';
 import BreastEnhancement from '../pages/BreastAugmentation/page'; // Import Breast Enhancement
 import BodyContouringPage from '../pages/BodyContouringAbdominalPlaty/page';
+import AbdominalContouring from '../pages/AbdominalContouring/page';
 import HairTransplant from '../pages/HairTransplant/page';
 import AntiAging from '../pages/AntiAgeingProcedures/page';
 import Rhinoplasty from '../pages/Rhinoplasty/page';
@@ -59,6 +60,7 @@ function AppRoutes() {
                 // // Separate route for breast enhancement
                 { path: "/breast-enhancement", element: <BreastEnhancement /> },
                 { path: "/body-contouring", element: <BodyContouringPage /> },
+                { path: "/abdominal-contouring", element: <AbdominalContouring /> },
                 { path: "/hair-transplant", element: <HairTransplant /> },
                 { path: "/anti-ageing", element: <AntiAging /> },
                 { path: "/rhinoplasty", element: <Rhinoplasty /> },

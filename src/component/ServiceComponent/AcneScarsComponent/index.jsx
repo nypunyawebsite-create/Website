@@ -4,7 +4,6 @@ import Banner from './Banner';
 import AcneAndScars from './AcneAndScars';
 import GalleryComponent from './GalleryComponent';
 import ConsultationForm from '../../FormsComponent/ConsultationForm';
-
 const Index = () => {
   const location = useLocation();
   const scrollToSection = location.state?.scrollTo;

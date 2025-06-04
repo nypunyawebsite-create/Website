@@ -1,4 +1,5 @@
 export const informationImages = [
+    "/services/all_in_one/6.png",
     "/services/body_contouring/information/1.png",
     "/services/body_contouring/information/2.png",
     "/services/body_contouring/information/3.png",

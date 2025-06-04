@@ -6,7 +6,7 @@ export const serviceSubmenu = [
     subservices: [
       { name: "Rhinoplasty", path: "/rhinoplasty" },
       { name: "Anti Ageing", path: "/anti-ageing" },
-      { name: "Abdominoplasty", path: "/body-contouring" },
+      { name: "Abdominoplasty", path: "/abdominal-contouring" },
       { name: "Breast Aesthetics", path: "/breast-enhancement" },
       { name: "Body Contouring", path: "/body-contouring" },
       { name: "HT", path: "/hair-transplant" },

@@ -5,10 +5,12 @@ export const galleryImages = [
 
 ];
 export const informationImages = [
+    "/services/all_in_one/1.png",
     "/services/rhinoplasty/information/1.png",
     "/services/rhinoplasty/information/2.png",
     "/services/rhinoplasty/information/3.png",
     "/services/rhinoplasty/information/4.png",
+    "/services/why_us/1.png",
 ];
 export const RhinoplastyData = [
     "Nose is the center of face and contributes significantly to the appearance",

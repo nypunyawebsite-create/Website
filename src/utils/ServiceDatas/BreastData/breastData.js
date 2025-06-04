@@ -8,10 +8,17 @@ export const galleryImages = [
 
 ];
 export const informationImages = [
+  "/services/all_in_one/4.png",
+  "/services/all_in_one/5.png",
   "/services/breast_augmentation/service/information/1.png",
   "/services/breast_augmentation/service/information/2.png",
   "/services/breast_augmentation/service/information/3.png",
   "/services/breast_augmentation/service/information/4.png",
+  "/services/breast_augmentation/service/information/5.png",
+  "/services/breast_augmentation/service/information/6.png",
+  "/services/breast_augmentation/service/information/7.png",
+  "/services/breast_augmentation/service/information/8.png",
+  "/services/why_us/1.png",
 ];
 // export const servicesData = [
 //   { id: "01", title: "Breast Augmentation" },

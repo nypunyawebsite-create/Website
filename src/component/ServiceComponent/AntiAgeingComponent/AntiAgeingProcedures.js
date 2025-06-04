@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { antiAgeingData, informationImages, servicesData } from "../../../utils/ServiceDatas/AntiAgeingData/antiAgeingData";
 
 const AntiAgeingProcedures = () => {
     const [selectedImage, setSelectedImage] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!isModalOpen) return;
+
+            switch (e.key) {
+                case 'ArrowLeft':
+                    handlePrevious(e);
+                    break;
+                case 'ArrowRight':
+                    handleNext(e);
+                    break;
+                case 'Escape':
+                    closeModal();
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isModalOpen]);
 
     const openModal = (index) => {
         setSelectedImage(index);
@@ -14,6 +37,18 @@ const AntiAgeingProcedures = () => {
     const closeModal = () => {
         setIsModalOpen(false);
         document.body.style.overflow = 'unset';
+    };
+
+    const handlePrevious = (e) => {
+        e?.stopPropagation();
+        if (informationImages.length <= 1) return;
+        setSelectedImage((prev) => (prev === 0 ? informationImages.length - 1 : prev - 1));
+    };
+
+    const handleNext = (e) => {
+        e?.stopPropagation();
+        if (informationImages.length <= 1) return;
+        setSelectedImage((prev) => (prev === informationImages.length - 1 ? 0 : prev + 1));
     };
 
     return (
@@ -62,6 +97,27 @@ const AntiAgeingProcedures = () => {
                                     <p className="text-white/80">Step {selectedImage + 1}</p>
                                 </div>
                             </div>
+                            {/* Navigation Arrows */}
+                            {informationImages.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={handlePrevious}
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-2 rounded-full transition-all duration-300"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        onClick={handleNext}
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-2 rounded-full transition-all duration-300"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </>
+                            )}
                         </div>
 
                         {/* Image Grid */}
@@ -109,6 +165,33 @@ const AntiAgeingProcedures = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
+                        {/* Modal Navigation Arrows */}
+                        {informationImages.length > 1 && (
+                            <>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handlePrevious(e);
+                                    }}
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-3 rounded-full transition-all duration-300"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleNext(e);
+                                    }}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-3 rounded-full transition-all duration-300"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </>
+                        )}
                         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg">
                             Image {selectedImage + 1} of {informationImages.length}
                         </div>

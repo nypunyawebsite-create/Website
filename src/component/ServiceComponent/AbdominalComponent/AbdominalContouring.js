@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { lipoSuctionDetails, galleryImages, informationImages } from "../../../utils/ServiceDatas/BodyContouringData/bodyContouring";
+import { AbdominalContouringDetails, galleryImages, informationImages } from "../../../utils/ServiceDatas/Abdominal Data/abdominal";
 
-const LipoSuctionBodyContouring = () => {
+const AbdominalContouring = () => {
     const [selectedImage, setSelectedImage] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [images, setImages] = useState([]);
@@ -67,7 +67,7 @@ const LipoSuctionBodyContouring = () => {
         <div className="container mx-auto py-10 px-4">
             {/* Title Section */}
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-custom-blue">Body Contouring Abdominal Platy</h2>
+                <h2 className="text-3xl font-bold text-custom-blue">Abdominal Platy</h2>
                 <div className="w-20 h-1 bg-custom-green mx-auto mt-4"></div>
             </div>
 
@@ -75,7 +75,7 @@ const LipoSuctionBodyContouring = () => {
                 {/* Left Section - Details */}
                 <div className="lg:w-1/2">
                     <div className="bg-white rounded-2xl p-8 shadow-lg">
-                        {lipoSuctionDetails.map((detail, index) => (
+                        {AbdominalContouringDetails.map((detail, index) => (
                             <div key={index} className="mb-8 last:mb-0">
                                 <div className="flex items-start gap-5">
                                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-custom-blue to-blue-600 rounded-xl flex items-center justify-center text-white font-semibold text-lg shadow-md">
@@ -106,7 +106,7 @@ const LipoSuctionBodyContouring = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
                                     <div className="absolute bottom-6 left-6 text-white">
-                                        <h3 className="text-2xl font-bold mb-2">Body Contouring</h3>
+                                        <h3 className="text-2xl font-bold mb-2">Abdominal Contouring</h3>
                                         <p className="text-white/80">Step {selectedImage + 1}</p>
                                     </div>
                                 </div>
@@ -218,4 +218,4 @@ const LipoSuctionBodyContouring = () => {
     );
 };
 
-export default LipoSuctionBodyContouring;
+export default AbdominalContouring;

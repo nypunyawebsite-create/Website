@@ -7,10 +7,12 @@ export const antiAgeingData = [
 
 ];
 export const informationImages = [
+  "/services/all_in_one/1.png",
   "/services/anti_ageing/information/1.png",
   "/services/anti_ageing/information/2.png",
   "/services/anti_ageing/information/3.png",
   "/services/anti_ageing/information/4.png",
+  "/services/why_us/2.png",
 ];
 export const galleryImages = [
   "/services/anti_ageing/anti-ageing-gallery01.png",
