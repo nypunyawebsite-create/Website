@@ -5,7 +5,12 @@ export const galleryImages = [
     "/services/rhinoplasty/4.png",
     "/services/rhinoplasty/5.png",
     "/services/rhinoplasty/6.png",
-
+    "/services/rhinoplasty/7.png",
+    "/services/rhinoplasty/8.png",
+    "/services/rhinoplasty/9.png",
+    "/services/rhinoplasty/10.png",
+    "/services/rhinoplasty/11.png",
+    "/services/rhinoplasty/12.png",
 ];
 export const informationImages = [
     "/services/all_in_one/1.png",

@@ -4,10 +4,6 @@ export const informationImages = [
     "/services/body_contouring/information/2.png",
     "/services/body_contouring/information/3.png",
     "/services/body_contouring/information/4.png",
-    // "/services/body_contouring/gallery05.png",
-    // "/services/body_contouring/gallery06.png",
-    // "/services/body_contouring/gallery07.png",
-    // "/services/body_contouring/gallery08.png",
 ];
 export const galleryImages = [
     "/services/body_contouring/1.png",
@@ -15,6 +11,13 @@ export const galleryImages = [
     "/services/body_contouring/3.png",
     "/services/body_contouring/4.png",
     "/services/body_contouring/5.png",
+    "/services/body_contouring/6.png",
+    "/services/body_contouring/7.png",
+    "/services/body_contouring/8.png",
+    "/services/body_contouring/9.png",
+    "/services/body_contouring/10.png",
+    "/services/body_contouring/11.png",
+    "/services/body_contouring/12.png",
 ];
 export const lipoSuctionDetails = [
     "Body contouring is a safe and simple procedure",
@@ -28,7 +31,6 @@ export const lipoSuctionDetails = [
 export const services = [
     { id: "01", title: "Lipo-Suction-Body Contouring" },
     { id: "02", title: "Massive weight loss-body contouring" },
-    // { id: "04", title: "Massive weight loss-body contouring" },
 ];
 
 

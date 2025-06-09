@@ -21,6 +21,12 @@ export const galleryImages = [
   "/services/anti_ageing/4.png",
   "/services/anti_ageing/5.png",
   "/services/anti_ageing/6.png",
+  "/services/anti_ageing/7.png",
+  "/services/anti_ageing/8.png",
+  "/services/anti_ageing/9.png",
+  "/services/anti_ageing/10.png",
+  "/services/anti_ageing/11.png",
+  "/services/anti_ageing/12.png",
 ];
 
 export const servicesData = [

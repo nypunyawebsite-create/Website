@@ -5,6 +5,12 @@ export const galleryImages = [
   "/services/breast_augmentation/gallery/gallery04.png",
   "/services/breast_augmentation/gallery/gallery05.png",
   "/services/breast_augmentation/gallery/gallery06.png",
+  "/services/breast_augmentation/gallery/7.png",
+  "/services/breast_augmentation/gallery/8.png",
+  "/services/breast_augmentation/gallery/9.png",
+  "/services/breast_augmentation/gallery/10.png",
+  "/services/breast_augmentation/gallery/11.png",
+  "/services/breast_augmentation/gallery/12.png",
 
 ];
 export const informationImages = [

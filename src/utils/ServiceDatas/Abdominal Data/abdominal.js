@@ -7,14 +7,18 @@ export const informationImages = [
     "/services/why_us/1.png",
 ];
 export const galleryImages = [
-    "/services/all_in_one/3.png",
-    "/services/abdominal/gallery01.png",
-    "/services/abdominal/gallery02.png",
-    "/services/abdominal/gallery03.png",
-    "/services/abdominal/gallery04.png",
-    "/services/abdominal/gallery05.png",
-    "/services/abdominal/gallery06.png",
-    "/services/abdominal/gallery07.png",
+    "/services/abdominal/1.png",
+    "/services/abdominal/2.png",
+    "/services/abdominal/3.png",
+    "/services/abdominal/4.png",
+    "/services/abdominal/5.png",
+    "/services/abdominal/6.png",
+    "/services/abdominal/7.png",
+    "/services/abdominal/8.png",
+    "/services/abdominal/9.png",
+    "/services/abdominal/10.png",
+    "/services/abdominal/11.png",
+    "/services/abdominal/12.png",
     // "/services/abdominal/gallery08.png",
 ];
 export const AbdominalContouringDetails = [
