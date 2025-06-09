@@ -10,14 +10,11 @@ export const informationImages = [
     // "/services/body_contouring/gallery08.png",
 ];
 export const galleryImages = [
-    "/services/body_contouring/gallery01.png",
-    "/services/body_contouring/gallery02.png",
-    "/services/body_contouring/gallery03.png",
-    "/services/body_contouring/gallery04.png",
-    "/services/body_contouring/gallery05.png",
-    "/services/body_contouring/gallery06.png",
-    "/services/body_contouring/gallery07.png",
-    // "/services/body_contouring/gallery08.png",
+    "/services/body_contouring/1.png",
+    "/services/body_contouring/2.png",
+    "/services/body_contouring/3.png",
+    "/services/body_contouring/4.png",
+    "/services/body_contouring/5.png",
 ];
 export const lipoSuctionDetails = [
     "Body contouring is a safe and simple procedure",

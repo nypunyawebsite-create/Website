@@ -1,12 +1,9 @@
 export const galleryImages = [
-    "/services/hair_transplant/hair-transplant-gallery01.png",
-    "/services/hair_transplant/hair-transplant-gallery02.png",
-    "/services/hair_transplant/hair-transplant-gallery03.png",
-    "/services/hair_transplant/hair-transplant-gallery04.png",
-    "/services/hair_transplant/hair-transplant-gallery05.png",
-    "/services/hair_transplant/hair-transplant-gallery06.png",
-    "/services/hair_transplant/hair-transplant-gallery07.png",
-    "/services/hair_transplant/hair-transplant-gallery08.png",
+    "/services/hair_transplant/1.png",
+    "/services/hair_transplant/2.png",
+    "/services/hair_transplant/3.png",
+    "/services/hair_transplant/4.png",
+    "/services/hair_transplant/5.png",
 
 ];
 export const informationImages = [

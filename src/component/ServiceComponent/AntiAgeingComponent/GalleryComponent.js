@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import { galleryImages } from "../../../utils/ServiceDatas/AntiAgeingData/antiAgeingData"; // Importing gallery images
+import { useNavigate } from "react-router-dom";
 
 const PrevArrow = ({ onClick }) => (
     <button
@@ -37,6 +38,12 @@ const settings = {
 };
 
 const GalleryComponent = () => {
+    const navigate = useNavigate();
+
+    const handleViewMore = () => {
+        navigate('/gallery', { state: { category: 'Anti Ageing Procedures' } });
+    };
+
     return (
         <>
             <div className="w-full mx-auto pb-10 px-4 relative container">
@@ -53,6 +60,14 @@ const GalleryComponent = () => {
                             </div>
                         ))}
                     </Slider>
+                </div>
+                <div className="text-center mt-6">
+                    <button
+                        onClick={handleViewMore}
+                        className="bg-custom-blue hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+                    >
+                        View More Cases
+                    </button>
                 </div>
             </div>
             {/* <div>

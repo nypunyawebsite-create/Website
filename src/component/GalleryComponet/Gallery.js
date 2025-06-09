@@ -27,34 +27,53 @@ const Gallery = () => {
   const [selectedCase, setSelectedCase] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleThumbnails, setVisibleThumbnails] = useState(10);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   // Calculate total images across all categories
-  const totalImages = Object.values(galleryImages).reduce((total, images) => total + images.length, 0);
-
-  // Calculate images per category
-  const categoryCounts = Object.entries(galleryImages).reduce((acc, [category, images]) => {
-    acc[category] = images.length;
-    return acc;
-  }, {});
+  const totalImages = Object.values(galleryImages).reduce(
+    (total, images) => total + images.length,
+    0
+  );
 
   useEffect(() => {
-    // Calculate total images for selected category
-    const categoryImageCount = galleryImages[selectedCategory]?.length || 0;
+    setCurrentIndex(0);
+    setVisibleThumbnails(10);
+  }, [selectedCategory]);
 
+  const filteredImages = galleryImages[selectedCategory] || [];
+  const visibleImages = filteredImages.slice(0, visibleThumbnails);
+
+  useEffect(() => {
     if (location.state?.category && categories.includes(location.state.category)) {
       setSelectedCategory(location.state.category);
     }
   }, [location.state, selectedCategory]);
 
   useEffect(() => {
-    setCurrentIndex(0);
-    setSelectedCase(null);
-    setIsModalOpen(false);
-    setVisibleThumbnails(10);
-  }, [selectedCategory]);
+    const handleKeyDown = (e) => {
+      if (!isPopupOpen) return;
 
-  const filteredImages = galleryImages[selectedCategory] || [];
-  const visibleImages = filteredImages.slice(0, visibleThumbnails);
+      switch (e.key) {
+        case 'ArrowLeft':
+          e.preventDefault();
+          prevSlide();
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          nextSlide();
+          break;
+        case 'Escape':
+          e.preventDefault();
+          closePopup();
+          break;
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isPopupOpen, currentIndex, filteredImages.length]);
 
   const handleCaseClick = (caseData) => {
     setSelectedCase(caseData);
@@ -75,6 +94,16 @@ const Gallery = () => {
 
   const loadMoreThumbnails = () => {
     setVisibleThumbnails(prev => prev + 10);
+  };
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+    document.body.style.overflow = 'unset';
   };
 
   return (
@@ -142,13 +171,14 @@ const Gallery = () => {
         {/* Before & After Image Section */}
         <div className="relative">
           <h3 className="text-2xl font-bold text-custom-blue mb-6">Before & After Results</h3>
-          <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="relative bg-[#ffeeef] rounded-2xl shadow-lg overflow-hidden">
             {filteredImages.length > 0 ? (
               <>
                 <img
                   src={filteredImages[currentIndex]?.image || filteredImages[currentIndex]}
                   alt={`${selectedCategory} - Case ${currentIndex + 1}`}
-                  className="w-full h-[500px] object-contain"
+                  className="w-full h-[500px] object-contain cursor-pointer"
+                  onClick={openPopup}
                 />
                 <div className="absolute inset-y-0 left-0 flex items-center">
                   <button
@@ -213,6 +243,55 @@ const Gallery = () => {
                 </button>
               </div>
             )}
+          </div>
+        )}
+
+        {/* Fullscreen Popup */}
+        {isPopupOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+            onClick={closePopup}
+          >
+            <div className="relative w-full h-full flex items-center justify-center p-4">
+              <img
+                src={filteredImages[currentIndex]?.image || filteredImages[currentIndex]}
+                alt={`${selectedCategory} - Case ${currentIndex + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+              <button
+                onClick={closePopup}
+                className="absolute top-4 right-4 text-white hover:text-gray-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="absolute inset-y-0 left-0 flex items-center">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevSlide();
+                  }}
+                  className="bg-black/30 hover:bg-black/50 text-white p-3 rounded-r-lg transition-all duration-300"
+                >
+                  <FaArrowLeft className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextSlide();
+                  }}
+                  className="bg-black/30 hover:bg-black/50 text-white p-3 rounded-l-lg transition-all duration-300"
+                >
+                  <FaArrowRight className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
+                {currentIndex + 1} / {filteredImages.length}
+              </div>
+            </div>
           </div>
         )}
 

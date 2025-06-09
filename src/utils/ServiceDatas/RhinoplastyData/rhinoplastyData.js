@@ -1,7 +1,10 @@
 export const galleryImages = [
-    "/services/rhinoplasty/gallery01.png",
-    "/services/rhinoplasty/gallery02.png",
-    "/services/rhinoplasty/gallery03.png",
+    "/services/rhinoplasty/1.png",
+    "/services/rhinoplasty/2.png",
+    "/services/rhinoplasty/3.png",
+    "/services/rhinoplasty/4.png",
+    "/services/rhinoplasty/5.png",
+    "/services/rhinoplasty/6.png",
 
 ];
 export const informationImages = [

@@ -15,15 +15,12 @@ export const informationImages = [
   "/services/why_us/2.png",
 ];
 export const galleryImages = [
-  "/services/anti_ageing/anti-ageing-gallery01.png",
-  "/services/anti_ageing/anti-ageing-gallery02.png",
-  "/services/anti_ageing/anti-ageing-gallery03.png",
-  "/services/anti_ageing/anti-ageing-gallery04.png",
-  "/services/anti_ageing/anti-ageing-gallery06.png",
-  "/services/anti_ageing/anti-ageing-gallery07.png",
-  "/services/anti_ageing/anti-ageing-gallery08.png",
-  "/services/anti_ageing/anti-ageing-gallery09.png",
-  "/services/anti_ageing/anti-ageing-gallery10.png",
+  "/services/anti_ageing/1.png",
+  "/services/anti_ageing/2.png",
+  "/services/anti_ageing/3.png",
+  "/services/anti_ageing/4.png",
+  "/services/anti_ageing/5.png",
+  "/services/anti_ageing/6.png",
 ];
 
 export const servicesData = [

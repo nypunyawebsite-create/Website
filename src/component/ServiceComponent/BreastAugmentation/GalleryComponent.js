@@ -6,7 +6,7 @@ import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import { galleryImages } from "../../../utils/ServiceDatas/BreastData/breastData";// Importing images
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Custom Arrows with React Icons
 const PrevArrow = ({ onClick }) => (
     <button
@@ -26,42 +26,32 @@ const NextArrow = ({ onClick }) => (
     </button>
 );
 
+const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+};
+
 const GalleryComponent = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: true, // enable auto slide
-        autoplaySpeed: 3000, // time in ms between slides
-        prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />,
+    const navigate = useNavigate();
+
+    const handleViewMore = () => {
+        navigate('/gallery', { state: { category: 'Breast Augmentation/Breast Enhancement' } });
     };
-    
-
-    const location = useLocation();
-    const transformationRef = useRef(null);
-
-    useEffect(() => {
-        if (location.state?.scrollTo) {
-            const sectionRefs = {
-                transformation: transformationRef,
-            };
-
-            if (sectionRefs[location.state.scrollTo]?.current) {
-                sectionRefs[location.state.scrollTo].current.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        }
-    }, [location]);
 
     return (
         <>
-            <div className="w-full mx-auto pb-10 px-4 relative container" ref={transformationRef}>
+            <div className="w-full mx-auto pb-10 px-4 relative container">
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
-                <div className="relative md:w-[100%] mx-auto">
-                    <Slider {...settings} prevArrow={<PrevArrow />} nextArrow={<NextArrow />}>
+                <div className="relative md:w-[90%] mx-auto">
+                    <Slider {...settings}>
                         {galleryImages.map((img, index) => (
                             <div key={index} className="w-full">
                                 <img
@@ -73,10 +63,15 @@ const GalleryComponent = () => {
                         ))}
                     </Slider>
                 </div>
+                <div className="text-center mt-6">
+                    <button
+                        onClick={handleViewMore}
+                        className="bg-custom-blue hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+                    >
+                        View More Cases
+                    </button>
+                </div>
             </div>
-            {/* <div>
-                <p className="text-center text-2xl text-custom-blue pb-5"> Be the best version of Yourself with NYPUNYA. </p>
-            </div> */}
         </>
     );
 };

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import { galleryImages } from "../../../utils/ServiceDatas/Abdominal Data/abdominal"; // Importing gallery images
 
 const PrevArrow = ({ onClick }) => (
@@ -30,17 +31,22 @@ const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true, // enable auto slide
-    autoplaySpeed: 3000, // time in ms between slides
+    autoplay: true,
+    autoplaySpeed: 3000,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
 };
 
+const GalleryComponent = () => {
+    const navigate = useNavigate();
 
-const GalleryComponent = ({ refProp }) => {
+    const handleViewMore = () => {
+        navigate('/gallery', { state: { category: 'Body Contouring Abdominal Platy' } });
+    };
+
     return (
         <>
-            <div ref={refProp} className="w-full mx-auto pb-10 px-4 relative container pt-[100px] -mt-[100px]">
+            <div className="w-full mx-auto pb-10 px-4 relative container">
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
                 <div className="relative md:w-[90%] mx-auto">
                     <Slider {...settings}>
@@ -55,12 +61,15 @@ const GalleryComponent = ({ refProp }) => {
                         ))}
                     </Slider>
                 </div>
+                <div className="text-center mt-6">
+                    <button
+                        onClick={handleViewMore}
+                        className="bg-custom-blue hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+                    >
+                        View More Cases
+                    </button>
+                </div>
             </div>
-            {/* <div>
-                <p className="text-center text-2xl text-custom-blue pb-5">
-                    Be the best version of Yourself with NYPUNYA.
-                </p>
-            </div> */}
         </>
     );
 };
