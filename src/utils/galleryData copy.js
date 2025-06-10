@@ -35,7 +35,7 @@ export const galleryImages = {
     "/gallery/hair_trans_img_2.png",
     "/gallery/hair_trans_img_3.png",
   ],
-  "Body Contouring Abdominal Platy": [
+  "Body Contouring Abdominal Plasty": [
     {
       id: "BC001",
       title: "Case #17796 - Abdominal Plasty",

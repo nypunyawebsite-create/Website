@@ -6,7 +6,7 @@ const GalleryComponent = () => {
     const navigate = useNavigate();
 
     const handleViewMore = () => {
-        navigate('/gallery', { state: { category: 'Body Contouring Abdominal Platy' } });
+        navigate('/gallery', { state: { category: 'Body Contouring Abdominal Plasty' } });
     };
 
     return (
@@ -14,7 +14,7 @@ const GalleryComponent = () => {
             <div className="w-full mx-auto pb-10 px-4 relative container">
                 <h2 className="text-center text-xl font-medium text-custom-blue py-5">GALLERY</h2>
                 <div className="relative md:w-[90%] mx-auto">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {galleryImages.map((img, index) => (
                             <div key={index} className="w-full">
                                 <img

@@ -8,10 +8,13 @@ export const serviceSubmenu = [
       { name: "Anti Ageing", path: "/anti-ageing" },
       { name: "Abdominoplasty", path: "/abdominal-contouring" },
       { name: "Breast Aesthetics", path: "/breast-enhancement" },
+      { name: "Blepharo Plasty", path: "/blepharo-plasty" },
       { name: "Body Contouring", path: "/body-contouring" },
+      { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
       { name: "HT", path: "/hair-transplant" },
       { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
-      { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
+
+
     ],
   },
   {

@@ -7,7 +7,7 @@ export const antiAgeingData = [
 
 ];
 export const informationImages = [
-  "/services/all_in_one/1.png",
+  "/services/all_in_one/2.png",
   "/services/anti_ageing/information/1.png",
   "/services/anti_ageing/information/2.png",
   "/services/anti_ageing/information/3.png",

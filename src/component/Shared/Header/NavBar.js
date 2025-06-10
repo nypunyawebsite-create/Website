@@ -130,8 +130,9 @@ const DesktopNavBar = () => {
                         </div>
                         <div className="flex items-center">
                             <FaPhoneAlt className="mr-2" />
-                            <a href="tel:+918136822727" className="hidden md:inline">+91 813 682 2727</a>
-                            <a href="tel:+919778412980" className="hidden md:inline">, +91 977 841 2980</a>
+                            <a href="tel:+918136822727" className="hidden md:inline"> +91 9380902115 </a> &nbsp;&nbsp;&nbsp;
+                            <a href="tel:+919778412980" className="hidden md:inline"> +91 9380902114 </a> &nbsp;&nbsp;&nbsp;
+                            <a href="tel:+919778412980" className="hidden md:inline"> +91 9380902110 </a>
                         </div>
                     </div>
                     <button
@@ -146,9 +147,16 @@ const DesktopNavBar = () => {
                     <div className="w-[90%] mx-auto flex justify-between items-center md:p-4 p-2 h-full">
                         <div className="text-xl font-bold">
                             <Link to="/" >
-                                <img src="/Banner.png" alt="Nypunya Logo" className="xl:w-[100%] md:w-[80%]" style={{ 'width': '337px' }} />
+                                <img src="/nypunya-logo_new.png" alt="Nypunya Logo" className="xl:w-[100%] md:w-[80%]" style={{ 'width': '337px' }} />
                             </Link>
                         </div>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="lg:hidden text-white text-2xl"
+                        >
+                            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                        </button>
                         <nav className="hidden lg:flex lg:items-center">
                             <ul className="flex space-x-6 text-white">
                                 <li><Link to="/" className={`relative text-sm xl:text-white ${isActive("/") ? "text-white font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/") ? "after:w-full" : ""}`}>Home</Link></li>
@@ -219,7 +227,7 @@ const DesktopNavBar = () => {
                                                                                                     setHoveredSubservice(null);
                                                                                                 }}
                                                                                                 state={item === "Transformation"
-                                                                                                    ? { category: service.name }
+                                                                                                    ? { category: `${category.category} ${service.name}` }
                                                                                                     : { scrollTo: item.toLowerCase().replace(/\s+/g, "-") }
                                                                                                 }
                                                                                                 className={`block px-2 py-1 text-sm w-full text-left cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-100 rounded-md ${isSubmenuItemActive(service, item)
@@ -250,21 +258,11 @@ const DesktopNavBar = () => {
                                 <li><Link to="/blogs" className={`relative text-sm xl:text-white ${isActive("/blogs") ? "text-[#92E0E0] font-bold" : "text-white"} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${isActive("/blogs") ? "after:w-full" : ""}`}>Blog</Link></li>
                             </ul>
                         </nav>
-                        {/* Hamburger Icon (Visible only on mobile) */}
-                        <div className="lg:hidden p-2 flex justify-between items-center shadow-sm">
-                            <button
-                                className="text-white z-10"
-                                onClick={() => setIsMobileMenuOpen(true)}
-                            >
-                                <FaBars className="text-2xl" />
-                            </button>
-                        </div>
                     </div>
                 </div>
-
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && <MobileNavBar onClose={() => setIsMobileMenuOpen(false)} />}
             </header>
+            {/* Mobile Navigation */}
+            <MobileNavBar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
         </>
     );
 };

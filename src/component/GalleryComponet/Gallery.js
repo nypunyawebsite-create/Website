@@ -5,8 +5,9 @@ import { FaChevronDown, FaCheck, FaTimes, FaArrowLeft, FaArrowRight } from "reac
 
 const categories = [
   "Hair Transplant",
-  "Body Contouring Abdominal Platy",
+  "Body Contouring Abdominal Plasty",
   "Breast Augmentation/Breast Enhancement",
+  "Blepharo Plasty",
   "Anti Ageing Procedures",
   "Rhinoplasty",
   "Structural Fat Grafting",

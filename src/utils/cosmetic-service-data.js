@@ -48,7 +48,7 @@ const cosmeticServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug: 'gynaecomastia-male-breast-moobs'
+        slug: 'abdominal-contouring'
     },
     {
         title: 'Hair Transplant',

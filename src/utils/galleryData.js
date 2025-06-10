@@ -61,7 +61,7 @@ export const galleryImages = {
     "/gallery/hair/Post_Op_Hair_Transplant_Natural_Hair_India_21.png.png",
 
   ],
-  "Body Contouring Abdominal Platy": [
+  "Body Contouring Abdominal Plasty": [
     //patient 1
     {
       title: "Case #T70101 - ABDOMINOPLASTY ",
@@ -2596,77 +2596,39 @@ export const galleryImages = {
     '/gallery/rhinoplasty/4/Rhinoplasty_Broad_Nose_Indian_Results_18.png',
     '/gallery/rhinoplasty/4/Rhinoplasty_Broad_Nose_Indian_Results_19.png',
     '/gallery/rhinoplasty/4/Rhinoplasty_Broad_Nose_Indian_Results_20.png.png',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ],
+  "Blepharo Plasty": [
+    "/gallery/blepharoplasty/1 (1).png",
+    "/gallery/blepharoplasty/1 (2).png",
+    "/gallery/blepharoplasty/1 (3).png",
+    "/gallery/blepharoplasty/1 (4).png",
+    "/gallery/blepharoplasty/1 (5).png",
+    "/gallery/blepharoplasty/1 (6).png",
+    "/gallery/blepharoplasty/1 (7).png",
+    "/gallery/blepharoplasty/1 (8).png",
+    "/gallery/blepharoplasty/1 (9).png",
+    "/gallery/blepharoplasty/1 (10).png",
+    "/gallery/blepharoplasty/1 (11).png",
+    "/gallery/blepharoplasty/1 (12).png",
+    "/gallery/blepharoplasty/1 (13).png",
+    "/gallery/blepharoplasty/1 (14).png",
+    "/gallery/blepharoplasty/1 (15).png",
+    "/gallery/blepharoplasty/1 (16).png",
+    "/gallery/blepharoplasty/1 (17).png",
+    "/gallery/blepharoplasty/1 (18).png",
+    "/gallery/blepharoplasty/1 (19).png",
+    "/gallery/blepharoplasty/1 (20).png",
+    "/gallery/blepharoplasty/1 (21).png",
+    "/gallery/blepharoplasty/1 (22).png",
+    "/gallery/blepharoplasty/1 (23).png",
+    "/gallery/blepharoplasty/1 (24).png",
+    "/gallery/blepharoplasty/1 (25).png",
+    "/gallery/blepharoplasty/1 (26).png",
+    "/gallery/blepharoplasty/1 (27).png",
+    "/gallery/blepharoplasty/1 (28).png",
+    "/gallery/blepharoplasty/1 (29).png",
+    "/gallery/blepharoplasty/1 (30).png",
+    "/gallery/blepharoplasty/1 (31).png"
+  ],
+
 };
