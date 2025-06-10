@@ -18,6 +18,7 @@ const categories = [
   "Laser tattoo removal",
   "PRP (Platelet Rich Plasma)",
   "Dark Circles and Under Eye Bags",
+  "Liposuction",
 ];
 
 const Gallery = () => {

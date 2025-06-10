@@ -12,6 +12,7 @@ export const serviceSubmenu = [
       { name: "Body Contouring", path: "/body-contouring" },
       { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
       { name: "HT", path: "/hair-transplant" },
+      { name: "Liposuction", path: "/liposuction" },
       { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
 
 

@@ -33,6 +33,7 @@ import LaserSkinToning from '../pages/ChemicalPeels/page';
 import LaserScarRevision from '../pages/LaserScarRevision/page';
 import PRPInjections from '../pages/PlateletRichPlasmaInjections/page';
 import BlepharoPlasty from '../pages/BlepharoPlasty/page'
+import Liposuction from '../pages/Liposuction/page'
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -68,6 +69,7 @@ function AppRoutes() {
                 { path: "/structural-fat-grafting", element: <StructuralFatGrafting /> },
                 { path: "/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
                 { path: "/blepharo-plasty", element: <BlepharoPlasty /> },
+                { path: "/liposuction", element: <Liposuction /> },
                 { path: "/acne-and-scars", element: <AcneAndScars /> },
                 { path: "/laser-hair-removal", element: <LaserHairRemoval /> },
                 { path: "/fillers-and-botox", element: <FillersBotox /> },
