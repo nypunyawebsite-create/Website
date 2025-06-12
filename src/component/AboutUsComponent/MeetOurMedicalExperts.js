@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"; // Importing icons
 import { doctors } from "../../utils/aboutUsDatas"; // Importing data
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 const MeetOurMedicalExperts = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate(); // Add this hook
 
     // Log doctors data to ensure it's being imported correctly
     console.log(doctors);
@@ -56,7 +58,10 @@ const MeetOurMedicalExperts = () => {
                             <li key={i} className="flex items-center gap-2">✅ {award}</li>
                         ))}
                     </ul>
-                    <button className="mt-4 bg-green-400 text-black px-4 py-2 rounded-lg">
+                    <button
+                        className="mt-4 bg-green-400 text-black px-4 py-2 rounded-lg"
+                        onClick={() => navigate('/our-doctors')}
+                    >
                         Check Out Doctor
                     </button>
                 </div>

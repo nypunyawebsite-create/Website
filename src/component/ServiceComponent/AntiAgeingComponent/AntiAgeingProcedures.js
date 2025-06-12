@@ -64,7 +64,7 @@ const AntiAgeingProcedures = () => {
                 <div className="space-y-8">
                     {/* Main Image */}
                     <div
-                        className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                        className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hidden md:block"
                         onClick={() => openModal(selectedImage)}
                     >
                         <img

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { galleryImages } from "../../utils/galleryData";
 import { FaChevronDown, FaCheck, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const categories = [
   "Hair Transplant",
-  "Body Contouring Abdominal Plasty",
+  "Body Contouring Abdominoplasty",
   "Breast Augmentation/Breast Enhancement",
-  "Blepharo Plasty",
+  "Blepharoplasty",
   "Anti Ageing Procedures",
   "Rhinoplasty",
   "Structural Fat Grafting",
@@ -19,10 +19,12 @@ const categories = [
   "PRP (Platelet Rich Plasma)",
   "Dark Circles and Under Eye Bags",
   "Liposuction",
+  "Others"
 ];
 
 const Gallery = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("Hair Transplant");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,6 +32,7 @@ const Gallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleThumbnails, setVisibleThumbnails] = useState(10);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [showSensitiveContentWarning, setShowSensitiveContentWarning] = useState(false);
 
   // Calculate total images across all categories
   const totalImages = Object.values(galleryImages).reduce(
@@ -52,21 +55,36 @@ const Gallery = () => {
   }, [location.state, selectedCategory]);
 
   useEffect(() => {
+    const hasAccepted = localStorage.getItem('sensitiveContentAccepted');
+    if (!hasAccepted) {
+      setShowSensitiveContentWarning(true);
+    }
+
     const handleKeyDown = (e) => {
-      if (!isPopupOpen) return;
+      if (!isPopupOpen && !showSensitiveContentWarning) return; // Only prevent default if any popup is open
 
       switch (e.key) {
         case 'ArrowLeft':
-          e.preventDefault();
-          prevSlide();
+          if (isPopupOpen) {
+            e.preventDefault();
+            prevSlide();
+          }
           break;
         case 'ArrowRight':
-          e.preventDefault();
-          nextSlide();
+          if (isPopupOpen) {
+            e.preventDefault();
+            nextSlide();
+          }
           break;
         case 'Escape':
-          e.preventDefault();
-          closePopup();
+          if (isPopupOpen) {
+            e.preventDefault();
+            closePopup();
+          } else if (showSensitiveContentWarning) {
+            // Optionally prevent escape for sensitive content, or close it if allowed
+            e.preventDefault(); // Prevent default browser behavior
+            // For sensitive content, we'll only allow closing via the button
+          }
           break;
         default:
           break;
@@ -75,7 +93,7 @@ const Gallery = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isPopupOpen, currentIndex, filteredImages.length]);
+  }, [isPopupOpen, currentIndex, filteredImages.length, showSensitiveContentWarning]);
 
   const handleCaseClick = (caseData) => {
     setSelectedCase(caseData);
@@ -106,6 +124,17 @@ const Gallery = () => {
   const closePopup = () => {
     setIsPopupOpen(false);
     document.body.style.overflow = 'unset';
+  };
+
+  const handleAcceptSensitiveContent = () => {
+    localStorage.setItem('sensitiveContentAccepted', 'true');
+    setShowSensitiveContentWarning(false);
+    document.body.style.overflow = 'unset'; // Re-enable scrolling
+  };
+
+  const handleDeclineSensitiveContent = () => {
+    navigate('/'); // Redirect to home page
+    document.body.style.overflow = 'unset'; // Re-enable scrolling
   };
 
   return (
@@ -199,7 +228,7 @@ const Gallery = () => {
                   </button>
                 </div>
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
-                  {currentIndex + 1} / {filteredImages.length}
+                  {currentIndex + 1} / {totalImages}
                 </div>
               </>
             ) : (
@@ -291,7 +320,30 @@ const Gallery = () => {
                 </button>
               </div>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
-                {currentIndex + 1} / {filteredImages.length}
+                {currentIndex + 1} / {totalImages}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {showSensitiveContentWarning && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+            <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-4 text-center transform transition-all scale-100 opacity-100 duration-300">
+              <h3 className="text-2xl font-bold text-red-600 mb-4">Sensitive Content Warning</h3>
+              <p className="text-gray-700 mb-6 px-6">The gallery contains images of medical procedures that some individuals may find sensitive. Viewer discretion is advised.</p>
+              <div className="flex justify-center gap-4">
+                <button
+                  onClick={handleAcceptSensitiveContent}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300"
+                >
+                  I Understand and Agree
+                </button>
+                <button
+                  onClick={handleDeclineSensitiveContent}
+                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 rounded-full transition-all duration-300"
+                >
+                  Decline
+                </button>
               </div>
             </div>
           </div>

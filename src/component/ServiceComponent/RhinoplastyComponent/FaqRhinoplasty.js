@@ -6,52 +6,22 @@ const FaqRhinoplasty = () => {
     const videos = [
         {
             id: "video1",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_1/maxresdefault.jpg",
-            videoId: "VIDEO_ID_1",
-            title: "Rhinoplasty Procedure Overview"
+            thumbnail: "/services/rhinoplasty/faq/1.jpg",
+            videoId: "_IRgZCE20fA",
+            title: "The Art of Nose Transformation"
         },
         {
             id: "video2",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_2/maxresdefault.jpg",
-            videoId: "VIDEO_ID_2",
-            title: "Before & After Results"
+            thumbnail: "/services/rhinoplasty/faq/1.jpg",
+            videoId: "cCgot9lTbpw",
+            title: "Rhinoplasty Transformation"
         },
         {
             id: "video3",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_3/maxresdefault.jpg",
-            videoId: "VIDEO_ID_3",
+            thumbnail: "/services/rhinoplasty/faq/1.jpg",
+            videoId: "r_aEiWeZs6Y", // Please provide the actual YouTube video ID here
             title: "Recovery Process"
         },
-        {
-            id: "video4",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_4/maxresdefault.jpg",
-            videoId: "VIDEO_ID_4",
-            title: "Patient Testimonials"
-        },
-        {
-            id: "video5",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_5/maxresdefault.jpg",
-            videoId: "VIDEO_ID_5",
-            title: "Surgical Techniques"
-        },
-        {
-            id: "video6",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_6/maxresdefault.jpg",
-            videoId: "VIDEO_ID_6",
-            title: "Post-Operative Care"
-        },
-        {
-            id: "video7",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_7/maxresdefault.jpg",
-            videoId: "VIDEO_ID_7",
-            title: "Common Questions"
-        },
-        {
-            id: "video8",
-            thumbnail: "https://img.youtube.com/vi/VIDEO_ID_8/maxresdefault.jpg",
-            videoId: "VIDEO_ID_8",
-            title: "Expert Tips"
-        }
     ];
 
     const handleVideoClick = (videoId) => {
@@ -63,9 +33,9 @@ const FaqRhinoplasty = () => {
             <h2 className="text-center text-xl font-medium text-custom-blue py-5">FAQ</h2>
 
             {/* Video Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto">
                 {videos.map((video) => (
-                    <div key={video.id} className="relative group">
+                    <div key={video.id} className="relative group w-full sm:w-1/2 md:w-1/4">
                         <div
                             className="relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
                             onClick={() => handleVideoClick(video.videoId)}

@@ -75,7 +75,7 @@ const BreastAugmentationComponent = () => {
           {/* Main Image */}
           {images.length > 0 && (
             <div
-              className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hidden md:block"
               onClick={() => openModal(selectedImage)}
             >
               <img

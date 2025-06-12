@@ -5,11 +5,12 @@ import AbdominalContouring from './AbdominalContouring';
 import GalleryComponent from './GalleryComponent';
 import ConsultationForm from '../../FormsComponent/ConsultationForm';
 import ServicesDetails from './ServicesDetails'; // ✅ Notice the corrected component name
+import FaqAbdominal from "./FaqAbdominal";
 
 const Index = () => {
     const location = useLocation();
     const scrollToSection = location.state?.scrollTo;
-
+    const { scrollTo } = location.state || {};
     const informationRef = useRef(null);
     const faqRef = useRef(null);
     const whyUsRef = useRef(null);
@@ -23,7 +24,14 @@ const Index = () => {
             whyUsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }, [scrollToSection]);
-
+    useEffect(() => {
+        if (scrollTo === 'faqs') {
+            const faqSection = document.getElementById('faq-section');
+            if (faqSection) {
+                faqSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [scrollTo]);
 
     return (
         <>
@@ -31,6 +39,7 @@ const Index = () => {
             <AbdominalContouring />
             <ServicesDetails refProp={faqRef} />
             <GalleryComponent refProp={whyUsRef} />
+            <div id="faq-section"><FaqAbdominal refProp={faqRef} /></div>
             <ConsultationForm />
         </>
     );

@@ -41,7 +41,7 @@ const GalleryComponent = () => {
     const navigate = useNavigate();
 
     const handleViewMore = () => {
-        navigate('/gallery', { state: { category: 'Blepharo Plasty' } });
+        navigate('/gallery', { state: { category: 'Blepharoplasty' } });
     };
 
     return (

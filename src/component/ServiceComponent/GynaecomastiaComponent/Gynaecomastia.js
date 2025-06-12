@@ -37,7 +37,7 @@ const Gynaecomastia = () => {
           <div className="space-y-4">
             {/* Main Image */}
             <div
-              className="relative cursor-pointer rounded-lg overflow-hidden"
+              className="relative cursor-pointer rounded-lg overflow-hidden hidden md:block"
               onClick={() => handleImageClick(selectedImage)}
             >
               <img

@@ -67,7 +67,7 @@ const BlepharoPlastyComponent = () => {
     <div className="container mx-auto py-10 px-4">
       {/* Title Section */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-custom-blue">Blepharo Plasty </h2>
+        <h2 className="text-3xl font-bold text-custom-blue">Blepharoplasty</h2>
         <div className="w-20 h-1 bg-custom-green mx-auto mt-4"></div>
       </div>
 
@@ -77,7 +77,7 @@ const BlepharoPlastyComponent = () => {
           {/* Main Image */}
           {images.length > 0 && (
             <div
-              className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hidden md:block"
               onClick={() => openModal(selectedImage)}
             >
               <img
@@ -87,7 +87,7 @@ const BlepharoPlastyComponent = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Blepharo Plasty </h3>
+                  <h3 className="text-2xl font-bold mb-2">Blepharoplasty </h3>
                   <p className="text-white/80">Step {selectedImage + 1}</p>
                 </div>
               </div>

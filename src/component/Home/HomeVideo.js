@@ -82,7 +82,7 @@ const HomeVideo = () => {
                 <div className="w-full flex flex-col items-center pt-16 md:pt-24">
                     <div className="flex flex-col justify-center gap-3 items-center">
                         <div>
-                            <p className="text-[#000099] text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-0 text-center drop-shadow-md font-bold">ONLY BEST FOR YOU</p>
+                            <p className="text-[#000099] text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-0 text-center drop-shadow-md font-bold">ONLY THE BEST FOR YOU</p>
                         </div>
                         <div className="flex items-center mt-2 justify-center">
                             <FaPlayCircle

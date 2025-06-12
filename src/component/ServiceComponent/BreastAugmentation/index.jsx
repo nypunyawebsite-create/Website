@@ -6,11 +6,12 @@ import ServicesDetails from './ServicesDetails';
 import GalleryComponent from './GalleryComponent';
 import ConsultationForm from '../../FormsComponent/ConsultationForm';
 import { breastServiceContent } from "../../../utils/ServiceDatas/BreastData/breastData";
+import FaqBreast from "./FaqBreast";
 
 const Index = () => {
   const location = useLocation();
   const scrollToSection = location.state?.scrollTo;
-
+  const { scrollTo } = location.state || {};
   const informationRef = useRef(null);
   const faqRef = useRef(null);
   const whyUsRef = useRef(null);
@@ -26,7 +27,14 @@ const Index = () => {
       whyUsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [scrollToSection]);
-
+  useEffect(() => {
+    if (scrollTo === 'faqs') {
+      const faqSection = document.getElementById('faq-section');
+      if (faqSection) {
+        faqSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [scrollTo]);
   return (
     <>
       <Banner refProp={informationRef} />
@@ -37,6 +45,9 @@ const Index = () => {
         setSelectedService={setSelectedService}
       />
       <GalleryComponent />
+      <div id="faq-section">
+        <FaqBreast />
+      </div>
       <ConsultationForm />
     </>
   );

@@ -5,7 +5,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 const categories = [
   "Hair Transplant",
-  "Body Contouring Abdominal Plasty",
+  "Body Contouring Abdominoplasty",
   "Breast Augmentation/Breast Enhancement",
   "Anti Ageing Procedures",
   "Rhinoplasty",

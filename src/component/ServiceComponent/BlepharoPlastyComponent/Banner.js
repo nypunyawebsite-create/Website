@@ -8,7 +8,7 @@ const Banner = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/services/rhinoplasty/rhinoplasty-banner-2.png"
+            src="/services/blepharoplasty/banner.jpeg"
             alt="About Us Banner"
             className="w-full h-full object-cover brightness-75"
           />
@@ -18,7 +18,7 @@ const Banner = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col justify-end items-center text-white">
-          <h1 className="md:text-6xl text-3xl font-bold pb-32 text-center">Blepharo Plasty</h1>
+          <h1 className="md:text-6xl text-3xl font-bold pb-32 text-center">Blepharoplasty</h1>
         </div>
       </div>
 

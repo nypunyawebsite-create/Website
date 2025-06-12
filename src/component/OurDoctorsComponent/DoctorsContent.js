@@ -82,7 +82,11 @@ const ContentComponent = ({ selectedDoctor }) => {
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-12">
         {team.map((member, idx) => (
           <div key={idx} className="bg-white rounded-lg shadow-lg flex flex-col items-center p-8">
-            <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4" />
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-32 h-32 rounded-full object-cover object-top mb-4"
+            />
             <div className="bg-red-600 rounded-full p-4 -mt-12 mb-4">
               {/* SVG medical icon based on role */}
               {member.title === "Diabetic Foot Care Specialist" && (

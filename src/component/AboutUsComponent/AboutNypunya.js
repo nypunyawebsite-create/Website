@@ -37,7 +37,7 @@ const AboutNypunya = () => {
               </p>
             </div>
             <div className="md:w-1/2 mt-6 md:mt-0">
-              <img src="/about-us/our_vision.png" alt="Vision" className="w-full h-auto object-cover" />
+              <img src="/about-us/vision.jpg" alt="Vision" className="w-full h-auto object-cover" />
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const AboutNypunya = () => {
               </p>
             </div>
             <div className="md:w-1/2 mt-6 md:mt-0">
-              <img src="/about-us/our_mission.png" alt="Mission" className="w-full h-auto object-cover" />
+              <img src="/about-us/mission.jpg" alt="Mission" className="w-full h-auto object-cover" />
             </div>
           </div>
         </div>

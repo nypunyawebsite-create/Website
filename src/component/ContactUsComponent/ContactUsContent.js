@@ -13,9 +13,9 @@ const ContactUs = () => {
           <div className="lg:col-span-2 space-y-6 md:py-20 pt-20">
             <h2 className="text-2xl sm:text-3xl font-semibold">GET IN TOUCH</h2>
             <p className="text-gray-300 text-sm sm:text-base">
-              Lorem ipsum dolor sit amet consectetur. Ultrices posuere faucibus egestas
+              {/* Lorem ipsum dolor sit amet consectetur. Ultrices posuere faucibus egestas
               luctus turpis non tincidunt volutpat neque. Accumsan lectus id volutpat rhoncus
-              risus. Augue enim dolor tincidunt in interdum eu adipiscing.
+              risus. Augue enim dolor tincidunt in interdum eu adipiscing. */}
             </p>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-[#203372] p-5 sm:p-6 rounded-lg">

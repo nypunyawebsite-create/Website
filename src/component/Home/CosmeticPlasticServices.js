@@ -45,7 +45,13 @@ const CosmeticPlasticServices = () => {
                                             <h4 className="font-bold text-sm md:text-base">Information</h4>
                                         </div>
                                         <div
-                                            onClick={() => handleNavigateToGallery(service.title)}
+                                            onClick={() => {
+                                                if (service.title === "Mommy Makeover") {
+                                                    handleNavigateToGallery('Anti Ageing Procedures');
+                                                } else {
+                                                    handleNavigateToGallery(service.title)
+                                                }
+                                            }}
                                             className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
                                         >
                                             <h4 className="font-bold text-sm md:text-base">Transformation</h4>

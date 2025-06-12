@@ -67,7 +67,7 @@ const LipoSuctionBodyContouring = () => {
         <div className="container mx-auto py-10 px-4">
             {/* Title Section */}
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-custom-blue">Body Contouring Abdominal Plasty</h2>
+                <h2 className="text-3xl font-bold text-custom-blue">Body Contouring Abdominoplasty</h2>
                 <div className="w-20 h-1 bg-custom-green mx-auto mt-4"></div>
             </div>
 
@@ -77,7 +77,7 @@ const LipoSuctionBodyContouring = () => {
                     {/* Main Image */}
                     {images.length > 0 && (
                         <div
-                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hidden md:block"
                             onClick={() => openModal(selectedImage)}
                         >
                             <img

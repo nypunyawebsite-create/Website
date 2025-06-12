@@ -2,7 +2,7 @@ export const services = [
   {
     id: 1,
     image: "/services/body_contouring/body_contouring_banner.png",
-    title: "Body Contouring Abdominal Plasty",
+    title: "Body Contouring Abdominoplasty",
     slug: "/body-contouring",
   },
   {

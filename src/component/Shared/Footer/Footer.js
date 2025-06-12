@@ -55,6 +55,17 @@ const Footer = () => {
                 <a href='https://maps.app.goo.gl/1syipVGCs8CVZCb46' target='_blank' rel='noopener noreferrer' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">#3,1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</a>
                 <a href='tel:+919738545945' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">+91 97385 45945</a>
                 <a href='mailto:clinic.nypunyaaesthetic@gmail.com' className="relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full">clinic.nypunyaaesthetic@gmail.com</a>
+                {/* QR Code for Location */}
+                <p className="text-sm text-white/80 mt-2 text-center md:text-left font-bold">Scan for Location</p>
+                <img
+                    src="/Nypunya.png" // Replace with the actual path to your QR code image
+                    alt="QR Code for Nypunya Aesthetic Clinic Location"
+                    className="w-32 h-32 mt-0 mx-auto md:mx-0 rounded-lg shadow-lg"
+                />
+            </div>
+            {/* Copyright Section */}
+            <div className="col-span-6 w-full border-t border-white/20 mt-8 pt-6 text-center text-sm text-white/80">
+                Copyright © 2025 Nypunya Aesthetic Clinic. All rights reserved.
             </div>
         </div>
     )

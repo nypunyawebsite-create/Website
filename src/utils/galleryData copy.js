@@ -35,11 +35,11 @@ export const galleryImages = {
     "/gallery/hair_trans_img_2.png",
     "/gallery/hair_trans_img_3.png",
   ],
-  "Body Contouring Abdominal Plasty": [
+  "Body Contouring Abdominoplasty": [
     {
       id: "BC001",
-      title: "Case #17796 - Abdominal Plasty",
-      description: "A 45+ year old patient underwent abdominal plasty procedure. Post surgery pictures taken 3 months after the procedure.",
+      title: "Case #17796 - Abdominoplasty",
+      description: "A 45+ year old patient underwent Abdominoplasty procedure. Post surgery pictures taken 3 months after the procedure.",
       disclaimer: "Individual results may vary.",
       image: "/gallery/hair_trans_img_4.png",
       results: [
@@ -50,7 +50,7 @@ export const galleryImages = {
     },
     {
       src: "/gallery/hair_trans_img_5.png",
-      description: "Case #17797 - Abdominal Plasty\nA 38+ year old patient underwent abdominal plasty procedure. Post surgery pictures taken 4 months after the procedure.\n\nIndividual results may vary."
+      description: "Case #17797 - Abdominoplasty\nA 38+ year old patient underwent Abdominoplasty procedure. Post surgery pictures taken 4 months after the procedure.\n\nIndividual results may vary."
     },
     "/gallery/hair_trans_img_6.png",
     "/gallery/hair_trans_img_1.png",

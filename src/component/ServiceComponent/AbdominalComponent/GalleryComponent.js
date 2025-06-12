@@ -6,7 +6,7 @@ const GalleryComponent = () => {
     const navigate = useNavigate();
 
     const handleViewMore = () => {
-        navigate('/gallery', { state: { category: 'Body Contouring Abdominal Plasty' } });
+        navigate('/gallery', { state: { category: 'Body Contouring Abdominoplasty' } });
     };
 
     return (

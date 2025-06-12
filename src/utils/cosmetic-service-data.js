@@ -21,7 +21,7 @@ const cosmeticServiceData = [
     },
 
     {
-        title: 'Body Contouring',
+        title: 'Body Contouring Abdominoplasty',
         desc: 'I Come, I Saw, I Contoured.',
         bgimage: '/home/cosmetic-plastic-surgery-services/body-contouring-abdomino-pasty.png',
         information: 'Detailed information about Breast Enhancement.',
@@ -31,7 +31,7 @@ const cosmeticServiceData = [
         slug: 'body-contouring',
     },
     {
-        title: 'Breast Enhancement / Reshaping',
+        title: 'Breast Augmentation/Breast Enhancement',
         desc: 'Be the Best Version of You',
         bgimage: '/home/cosmetic-plastic-surgery-services/breast-enhancement-reshaping-reduction.png',
         information: 'Detailed information about Breast Enhancement.',
