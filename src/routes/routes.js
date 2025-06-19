@@ -34,6 +34,7 @@ import LaserScarRevision from '../pages/LaserScarRevision/page';
 import PRPInjections from '../pages/PlateletRichPlasmaInjections/page';
 import BlepharoPlasty from '../pages/BlepharoPlasty/page'
 import Liposuction from '../pages/Liposuction/page'
+import International from '../pages/International';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -50,6 +51,7 @@ function AppRoutes() {
                 { path: "test-page/:slug", element: <TestLandingpage /> },
 
                 { path: "our-doctors", element: <OurDoctors /> },
+                { path: "international", element: <International /> },
                 { path: "contact-us", element: <ContactUs /> }, // Add the route for Contact Us page
                 { path: "blogs", element: <Blogs /> },
                 { path: "gallery", element: <Gallery /> },
