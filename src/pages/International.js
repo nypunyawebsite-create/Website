@@ -83,12 +83,55 @@ const International = () => {
         alert('Form submitted!');
     };
 
+    // Responsive styles
+    const mainLayoutStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        gap: 48,
+        maxWidth: 1400,
+        margin: '0 auto',
+        padding: '48px 16px',
+        flexWrap: 'wrap',
+    };
+    const leftColStyle = {
+        flex: 2,
+        background: '#fff',
+        borderRadius: 16,
+        boxShadow: '0 2px 16px #0001',
+        padding: 32,
+        color: '#222',
+        minWidth: 320,
+        width: '100%',
+        maxWidth: 800,
+        boxSizing: 'border-box',
+    };
+    const rightColStyle = {
+        flex: 1,
+        background: '#fff',
+        padding: '40px 32px',
+        borderRadius: 16,
+        boxShadow: '0 2px 16px #0001',
+        minWidth: 280,
+        maxWidth: 420,
+        width: '100%',
+        boxSizing: 'border-box',
+        marginTop: 32,
+    };
+    // Media query for stacking on mobile
+    const mediaQuery = `@media (max-width: 900px) {
+        .intl-main-layout { flex-direction: column !important; gap: 0 !important; padding: 24px 4vw !important; }
+        .intl-left-col, .intl-right-col { max-width: 100% !important; min-width: 0 !important; width: 100% !important; margin-top: 0 !important; }
+        .intl-right-col { margin-top: 32px !important; }
+    }`;
+
     return (
         <div className="w-full min-h-screen" style={{ background: '#f8f9fa' }}>
+            <style>{mediaQuery}</style>
             <BannerSlider />
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '48px', maxWidth: 1400, margin: '0 auto', padding: '48px 16px' }}>
+            <div className="intl-main-layout" style={mainLayoutStyle}>
                 {/* Main Content */}
-                <div style={{ flex: 2, background: '#fff', borderRadius: 16, boxShadow: '0 2px 16px #0001', padding: 32, color: '#222' }}>
+                <div className="intl-left-col" style={leftColStyle}>
                     {/* Heading and Details */}
                     <div>
                         <h1 style={{ fontSize: '2.1rem', color: '#000099', marginBottom: 12, fontWeight: 'bold', letterSpacing: '1px' }}>
@@ -114,7 +157,7 @@ const International = () => {
                     {/* Info Cards Column */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 32, marginTop: 40 }}>
                         {/* Location from the airport */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Location from the airport</div>
                             <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 6 }}>
                                 Kempegowda International Airport to Nypunya Aesthetic Clinic: <b>41 kms</b>
@@ -125,14 +168,14 @@ const International = () => {
                         </div>
 
                         {/* Our Locations */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>OUR LOCATIONS</div>
                             <img src="/location.PNG" alt="Map" style={{ width: '100%', height: 100, objectFit: 'cover', borderRadius: 8, marginBottom: 8 }} />
                             <div style={{ color: '#000099', fontWeight: 'bold', marginBottom: 4 }}>#3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</div>
                         </div>
 
                         {/* Medical Visa and Travel Info */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Medical Visa:</div>
                             <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 12 }}>
                                 To get medical treatments in India, you will need an <b>M­-Visa (Medical Visa)</b> or an <b>eTourist Visa (eTV)</b>. It is legally not permissible to undergo medical procedures with a normal/traditional Tourist visa.
@@ -156,7 +199,7 @@ const International = () => {
                         </div>
 
                         {/* Five star hotels near Nypunya Aesthetic Clinic */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Five star hotels near Nypunya Aesthetic Clinic</div>
                             <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
                                 <li><b>La Marvella - Bangalore</b><br />Address: 1, South End Circle, La Marvella, 14th Cross Rd, next to Infosys Science Foundation, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011 • 080 4333 5333.</li>
@@ -173,7 +216,7 @@ const International = () => {
                         </div>
 
                         {/* Payment Modes */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Payment Modes</div>
                             <ul style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', listStyle: 'circle' }}>
                                 <li>Cash</li>
@@ -185,7 +228,7 @@ const International = () => {
                         </div>
 
                         {/* Tourism */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
+                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Tourism</div>
                             <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
                                 <li><b>Lalbagh Botanical Garden</b><br />Highlights: Glass House, rare plants, serene walking paths.<br />Ideal for: Nature lovers, photography, peaceful start.</li>
@@ -207,18 +250,8 @@ const International = () => {
                 {/* Right: Contact Form */}
                 <form
                     onSubmit={handleSubmit}
-                    style={{
-                        flex: 1,
-                        background: '#fff',
-                        padding: '40px 32px',
-                        borderRadius: 16,
-                        boxShadow: '0 2px 16px #0001',
-                        minWidth: 340,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 22,
-                        justifyContent: 'flex-start',
-                    }}
+                    className="intl-right-col"
+                    style={rightColStyle}
                 >
                     <div style={{ fontSize: '1.5rem', color: '#000099', fontWeight: 'bold', marginBottom: 8, letterSpacing: '1px' }}>CONTACT US</div>
                     <div>
