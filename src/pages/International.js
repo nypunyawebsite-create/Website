@@ -127,7 +127,7 @@ const International = () => {
                         {/* Our Locations */}
                         <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>OUR LOCATIONS</div>
-                            <img src="/location.png" alt="Map" style={{ width: '100%', height: 100, objectFit: 'cover', borderRadius: 8, marginBottom: 8 }} />
+                            <img src="/location.PNG" alt="Map" style={{ width: '100%', height: 100, objectFit: 'cover', borderRadius: 8, marginBottom: 8 }} />
                             <div style={{ color: '#000099', fontWeight: 'bold', marginBottom: 4 }}>#3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</div>
                         </div>
 
