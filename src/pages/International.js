@@ -4,9 +4,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const bannerImages = [
-    '/about-us/about-page-images/plastic-surgery.png',
-    '/about-us/about-page-images/dermatology-services.png',
-    '/about-us/about-page-images/doctors.png',
+    '/services/rhinoplasty/rhinoplasty-banner-2.png',
+    '/services/anti_ageing/anti_ageing_banner.png',
+    '/services/body_contouring/body_contouring_mainbanner.png',
+    '/services/abdominal/body_contouring_mainbanner.png',
+    '/services/acne/acne_banner.jpeg',
+    '/services/hair_transplant/hair-transplant-banner-img.png',
 ];
 
 const BannerSlider = () => {
@@ -22,15 +25,14 @@ const BannerSlider = () => {
         fade: true,
     };
     return (
-        <div className="relative h-screen w-full overflow-hidden">
-            <Slider {...settings} className="h-screen w-full">
+        <div className="relative w-full md:h-[600px] h-[450px] overflow-hidden">
+            <Slider {...settings} className="w-full h-full">
                 {bannerImages.map((img, idx) => (
-                    <div key={idx} className="h-screen w-full">
+                    <div key={idx} className="w-full h-full">
                         <img
                             src={img}
                             alt={`Banner ${idx + 1}`}
-                            className="w-full h-screen object-cover brightness-75"
-                            style={{ minHeight: '100vh', minWidth: '100vw' }}
+                            className="w-full h-full object-cover brightness-75"
                         />
                     </div>
                 ))}
@@ -56,10 +58,6 @@ const BannerSlider = () => {
     );
 };
 
-const beforeAfterImages = [
-    '/gallery/breast/Breast_Augmentation_After_Procedure_India_08.png',
-    '/gallery/breast/Breast_Augmentation_After_Procedure_India_09.png',
-];
 
 const International = () => {
     const [form, setForm] = useState({
@@ -119,11 +117,24 @@ const International = () => {
         marginTop: 32,
     };
     // Media query for stacking on mobile
-    const mediaQuery = `@media (max-width: 900px) {
-        .intl-main-layout { flex-direction: column !important; gap: 0 !important; padding: 24px 4vw !important; }
-        .intl-left-col, .intl-right-col { max-width: 100% !important; min-width: 0 !important; width: 100% !important; margin-top: 0 !important; }
-        .intl-right-col { margin-top: 32px !important; }
-    }`;
+    const mediaQuery = `
+        @media (max-width: 900px) {
+            .intl-main-layout { flex-direction: column !important; gap: 0 !important; padding: 24px 4vw !important; }
+            .intl-left-col, .intl-right-col { max-width: 100% !important; min-width: 0 !important; width: 100% !important; margin-top: 0 !important; }
+            .intl-right-col { margin-top: 32px !important; }
+            .intl-left-col, .intl-right-col, .intl-info-card { padding: 16px !important; }
+            .intl-info-card { font-size: 0.98rem !important; }
+            .intl-info-card h1, .intl-info-card h2, .intl-info-card h3, .intl-info-card h4, .intl-info-card h5 { font-size: 1.1rem !important; }
+            .intl-info-card img { height: 60px !important; }
+        }
+        @media (max-width: 600px) {
+            .intl-main-layout { padding: 12px 2vw !important; }
+            .intl-info-card { padding: 10px !important; font-size: 0.93rem !important; }
+            .intl-info-card img { height: 40px !important; }
+            .intl-right-col { padding: 20px 8px !important; }
+            .intl-left-col { padding: 12px !important; }
+        }
+    `;
 
     return (
         <div className="w-full min-h-screen" style={{ background: '#f8f9fa' }}>
@@ -148,7 +159,7 @@ const International = () => {
                             <li>Contact numbers with WhatsApp access</li>
                         </ul>
                         <div style={{ color: '#444', fontSize: '1rem' }}>
-                            After receiving your details our surgeon will call you to guide you on the treatment enquired for.<br />
+                            After receiving your details our team will call you to guide you on the treatment enquired for.<br />
                             You may be asked to send pictures of the areas of concern after masking your identity. This phase is to guide you, explain the possible treatment plan and the approximate charges for completing the procedure. The pictures shared are confidential.<br />
                             We prefer certain angles for taking the pictures to be sent and those instructions will be sent to you through an email.
                         </div>
@@ -157,7 +168,7 @@ const International = () => {
                     {/* Info Cards Column */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 32, marginTop: 40 }}>
                         {/* Location from the airport */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
+                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Location from the airport</div>
                             <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 6 }}>
                                 Kempegowda International Airport to Nypunya Aesthetic Clinic: <b>41 kms</b>
@@ -168,14 +179,58 @@ const International = () => {
                         </div>
 
                         {/* Our Locations */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>OUR LOCATIONS</div>
-                            <img src="/location.PNG" alt="Map" style={{ width: '100%', height: 100, objectFit: 'cover', borderRadius: 8, marginBottom: 8 }} />
-                            <div style={{ color: '#000099', fontWeight: 'bold', marginBottom: 4 }}>#3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</div>
+                        <div
+                            className="intl-info-card"
+                            style={{
+                                background: '#f8f9fa',
+                                borderRadius: 16,
+                                padding: 28,
+                                maxWidth: 700,
+                                boxShadow: '0 2px 12px #0001',
+                                width: '100%',
+                                boxSizing: 'border-box',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 24,
+                                flexWrap: 'wrap',
+                            }}
+                        >
+                            <iframe
+                                className="intl-map-iframe"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6193083791723!2d77.5865634974667!3d12.916153829207719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159f89eb734f%3A0xc159ff3d3c8abec4!2sNypunya%20Aesthetic%20Clinic%20%7C%20Dermatology%20and%20Cosmetic%20Plastic%20Surgeon%20in%20Bengaluru!5e1!3m2!1sen!2sin!4v1745859791796!5m2!1sen!2sin"
+                                width="100%"
+                                height="220"
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                style={{ borderRadius: 12, border: 0, width: '100%', minWidth: 200, maxWidth: 700 }}
+                            ></iframe>
+                            <div>
+                                <div
+                                    style={{
+                                        fontWeight: 'bold',
+                                        fontSize: '1.2rem',
+                                        marginBottom: 10,
+                                        color: '#000099',
+                                    }}
+                                >
+                                    OUR LOCATIONS
+                                </div>
+                                <div
+                                    style={{
+                                        color: '#000099',
+                                        fontWeight: 'bold',
+                                        marginBottom: 4,
+                                        fontSize: '1.05rem',
+                                    }}
+                                >
+                                    #3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru
+                                </div>
+                            </div>
                         </div>
 
                         {/* Medical Visa and Travel Info */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
+                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Medical Visa:</div>
                             <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 12 }}>
                                 To get medical treatments in India, you will need an <b>M­-Visa (Medical Visa)</b> or an <b>eTourist Visa (eTV)</b>. It is legally not permissible to undergo medical procedures with a normal/traditional Tourist visa.
@@ -199,7 +254,7 @@ const International = () => {
                         </div>
 
                         {/* Five star hotels near Nypunya Aesthetic Clinic */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
+                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Five star hotels near Nypunya Aesthetic Clinic</div>
                             <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
                                 <li><b>La Marvella - Bangalore</b><br />Address: 1, South End Circle, La Marvella, 14th Cross Rd, next to Infosys Science Foundation, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011 • 080 4333 5333.</li>
@@ -216,7 +271,7 @@ const International = () => {
                         </div>
 
                         {/* Payment Modes */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
+                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Payment Modes</div>
                             <ul style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', listStyle: 'circle' }}>
                                 <li>Cash</li>
@@ -228,7 +283,7 @@ const International = () => {
                         </div>
 
                         {/* Tourism */}
-                        <div style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
+                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
                             <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Tourism</div>
                             <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
                                 <li><b>Lalbagh Botanical Garden</b><br />Highlights: Glass House, rare plants, serene walking paths.<br />Ideal for: Nature lovers, photography, peaceful start.</li>

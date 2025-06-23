@@ -6,12 +6,13 @@ export const serviceSubmenu = [
     subservices: [
       { name: "Rhinoplasty", path: "/rhinoplasty" },
       { name: "Anti Ageing", path: "/anti-ageing" },
-      { name: "Abdominoplasty", path: "/abdominal-contouring" },
+      { name: "Body Contouring", path: "/body-contouring" },
       { name: "Breast Aesthetics", path: "/breast-enhancement" },
+      { name: "Abdominoplasty", path: "/abdominal-contouring" },
+      { name: "Hair Transplant", path: "/hair-transplant" },
       { name: "Blepharoplasty", path: "/blepharo-plasty" },
       { name: "Body Contouring", path: "/body-contouring" },
       { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
-      { name: "Hair Transplant", path: "/hair-transplant" },
       { name: "Liposuction", path: "/liposuction" },
       { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
 
