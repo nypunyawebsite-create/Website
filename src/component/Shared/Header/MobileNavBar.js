@@ -121,11 +121,15 @@ const MobileNavBar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                 <li>
                     <Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Gallery</Link>
                 </li>
-                <li>
-                    <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Contact Us</Link>
-                </li>
+
                 <li>
                     <Link to="/blogs" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Blog</Link>
+                </li>
+                <li>
+                    <Link to="/international" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">International</Link>
+                </li>
+                <li>
+                    <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-gray-800">Contact Us</Link>
                 </li>
             </ul>
         </div>

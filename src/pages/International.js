@@ -12,6 +12,17 @@ const bannerImages = [
     '/services/hair_transplant/hair-transplant-banner-img.png',
 ];
 
+const galleryImages = [
+    "/gallery/hair/Hair_Transplant_Balding_Reversal_India_49.png",
+    "/gallery/body/Abdominoplasty_Abdominal_Contours_India_24.png",
+    "/gallery/anti_aging/Before_After_Facelift_Neck_Lift_India_09.png",
+    "/gallery/structural/Facial_Fat_Grafting_After_Procedure_India_19.png",
+    "/gallery/liposuction/1 (81).png",
+    "/gallery/rhinoplasty/Before-After-Deviated-Nose-Correction-Rhinoplasty-India 1.png",
+    "/gallery/blepharoplasty/1 (1).png",
+    "/gallery/others/1 (16).png",
+];
+
 const BannerSlider = () => {
     const settings = {
         dots: true,
@@ -330,6 +341,36 @@ const International = () => {
                         <span>I agree to the <a href="#" style={{ color: '#000099', textDecoration: 'underline' }}>Terms of Use</a></span>
                     </div>
                     <button type="submit" style={{ width: '100%', background: '#000099', color: '#fff', padding: 14, border: 'none', borderRadius: 8, fontWeight: 'bold', fontSize: '1.15rem', cursor: 'pointer', marginTop: 8 }}>Send</button>
+
+                    {/* Gallery Slider */}
+                    <div style={{ marginTop: 32 }}>
+                        <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#000099', marginBottom: 12, textAlign: 'center' }}>Gallery</div>
+                        <Slider
+                            dots={true}
+                            infinite={true}
+                            speed={500}
+                            slidesToShow={1}
+                            slidesToScroll={1}
+                            arrows={true}
+                            autoplay={true}
+                            autoplaySpeed={3000}
+                        >
+                            {galleryImages.map((img, idx) => (
+                                <div key={idx}>
+                                    <img
+                                        src={img}
+                                        alt={`Gallery ${idx + 1}`}
+                                        style={{ width: '100%', borderRadius: 8, maxHeight: 220, objectFit: 'cover' }}
+                                    />
+                                </div>
+                            ))}
+                        </Slider>
+                        <button type="submit" style={{ width: '100%', background: '#000099', color: '#fff', padding: 14, border: 'none', borderRadius: 8, fontWeight: 'bold', fontSize: '1.15rem', cursor: 'pointer', marginTop: 8 }}
+                            onClick={() => window.location.href = '/gallery'}
+                        >
+                            View Gallery
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

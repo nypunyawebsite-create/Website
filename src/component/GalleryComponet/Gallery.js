@@ -4,21 +4,21 @@ import { galleryImages } from "../../utils/galleryData";
 import { FaChevronDown, FaCheck, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const categories = [
-  "Hair Transplant",
+  "Rhinoplasty",
+  "Anti Ageing Procedures",
   "Body Contouring Abdominoplasty",
   "Breast Augmentation/Breast Enhancement",
-  "Blepharoplasty",
-  "Anti Ageing Procedures",
-  "Rhinoplasty",
-  "Structural Fat Grafting",
-  "Gynaecomastia (Male Breast / Moobs)",
+  "Hair Transplant",
+  "Liposuction",
   "Acne and acne scars",
   "Fillers and Botox",
   "Laser Hair Removal",
   "Laser tattoo removal",
   "PRP (Platelet Rich Plasma)",
   "Dark Circles and Under Eye Bags",
-  "Liposuction",
+  "Blepharoplasty",
+  "Structural Fat Grafting",
+  "Gynaecomastia (Male Breast / Moobs)",
   "Others"
 ];
 
