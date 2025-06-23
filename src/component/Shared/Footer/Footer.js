@@ -209,7 +209,7 @@ const Footer = () => {
                                     <a href="https://wa.me/9380902110" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline ml-2">(WhatsApp)</a>
                                 </p>
                                 <p className="text-gray-300 mt-1"><strong>Dermatology:</strong>
-                                    <a href="tel:+919380902115" className="text-blue-400 hover:underline ml-1">+91 9380902115</a>
+                                    <a href="tel:+919380902114" className="text-blue-400 hover:underline ml-1">+91 9380902114</a>
                                     <a href="https://wa.me/9380902115" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline ml-2">(WhatsApp)</a>
                                 </p>
                                 <p className="text-gray-300 mt-1"><strong>Email:</strong>
