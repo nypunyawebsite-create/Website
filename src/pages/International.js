@@ -50,20 +50,20 @@ const BannerSlider = () => {
             </Slider>
             {/* Overlay Content (like Home) */}
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-between pointer-events-none">
-                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
+                {/* <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
                     <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">International Patients</h2>
                     <span className="text-white text-xl md:text-2xl font-bold">–</span>
                     <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Cosmetic Surgery</h2>
                     <span className="text-white text-xl md:text-2xl font-bold">–</span>
                     <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
-                </div>
-                <div className="w-full flex flex-col items-center pt-16 md:pt-24 pb-24">
+                </div> */}
+                {/* <div className="w-full flex flex-col items-center pt-16 md:pt-24 pb-24">
                     <div className="flex flex-col justify-center gap-3 items-center">
                         <div>
                             <p className="text-[#000099] text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-0 text-center drop-shadow-md font-bold">WELCOME INTERNATIONAL PATIENTS</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
