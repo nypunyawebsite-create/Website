@@ -289,8 +289,9 @@ const International = () => {
                                 <li>Credit card</li>
                                 <li>Debit card</li>
                                 <li>Bank transfer (Bank transfer can be made to the below accounts via NEFT / RTGS / IMPS)</li>
+                                <li>Bank Details will be given after booking</li>
                             </ul>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginTop: 8 }}><b>Bank details</b><br />Account number<br />Branch</div>
+                            {/* <div style={{ color: '#222', fontSize: '1.05rem', marginTop: 8 }}><b>Bank details</b><br />Account number<br />Branch</div> */}
                         </div>
 
                         {/* Tourism */}

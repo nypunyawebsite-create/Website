@@ -272,8 +272,11 @@ const Gallery = () => {
                 >
                   Load More Cases
                 </button>
+
               </div>
+
             )}
+            <p className="flex justify-center mt-8">* Disclaimer:  Individual results may vary</p>
           </div>
         )}
 

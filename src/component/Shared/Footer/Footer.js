@@ -95,19 +95,19 @@ const Footer = () => {
                     <h4 className='text-2xl font-semibold'>Follow us on Social Media</h4>
                     <div className='flex gap-4'>
                         <a href='https://www.instagram.com/nypunya_aesthetic_clinic_/' target='_blank' rel='noopener noreferrer'>
-                            <FaInstagram className='text-[#92E0E0] w-6 h-6' />
+                            <FaInstagram className='w-6 h-6' style={{ color: '#E4405F' }} />
                         </a>
                         <a href='https://www.facebook.com/nypunyaaestheticclinic/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0' target='_blank' rel='noopener noreferrer'>
-                            <FaFacebook className='text-[#92E0E0] w-6 h-6' />
+                            <FaFacebook className='w-6 h-6' style={{ color: '#1877F3' }} />
                         </a>
                         <a href='https://www.youtube.com/@nypunya_aesthetic_clinic' target='_blank' rel='noopener noreferrer'>
-                            <FaYoutube className='text-[#92E0E0] w-6 h-6' />
+                            <FaYoutube className='w-6 h-6' style={{ color: '#FF0000' }} />
                         </a>
                         <a href='https://www.linkedin.com/company/dr-prashantha-kesari/' target='_blank' rel='noopener noreferrer'>
-                            <FaLinkedin className='text-[#92E0E0] w-6 h-6' />
+                            <FaLinkedin className='w-6 h-6' style={{ color: '#0077B5' }} />
                         </a>
                         <a href='https://x.com/TheDrkesari?t=4UUcOGv-i6R__JYz-GSdqQ&s=08' target='_blank' rel='noopener noreferrer'>
-                            <FaTwitter className='text-[#92E0E0] w-6 h-6' />
+                            <FaTwitter className='w-6 h-6' style={{ color: '#000000' }} />
                         </a>
                         <a href='https://www.practo.com/bangalore/clinic/nypunya-aesthetic-clinic-jayanagar-4-block/reviews?utm_source=opd_google_Pmax&utm_campaign=20240701849&gad_source=1&gad_campaignid=20236356659&gbraid=0AAAAADgl2cL3q7njAm2XdJgKwzdMvYN7M&gclid=CjwKCAjwi-DBBhA5EiwAXOHsGatlWdfo33g2REsEo6kMU0cvLoyDO5Fi_7GcLdEO6eyo5njnhmibkxoClXIQAvD_BwE' target='_blank' rel='noopener noreferrer'>
                             <img src='/practo_icon.png' alt='Practo' className='w-6 h-6' />

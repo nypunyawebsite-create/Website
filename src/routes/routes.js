@@ -35,6 +35,7 @@ import PRPInjections from '../pages/PlateletRichPlasmaInjections/page';
 import BlepharoPlasty from '../pages/BlepharoPlasty/page'
 import Liposuction from '../pages/Liposuction/page'
 import International from '../pages/International';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -80,6 +81,7 @@ function AppRoutes() {
                 { path: "/laser-skin-rejuvenation", element: <LaserSkinToning /> },
                 { path: "/laser-scar-revision", element: <LaserScarRevision /> },
                 { path: "/platelet-rich-plasma-injections", element: <PRPInjections /> },
+                { path: "/privacy-policy", element: <PrivacyPolicy /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },
                 // // Catch-all route for non-existing paths
