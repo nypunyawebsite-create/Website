@@ -49,7 +49,7 @@ const MobileNavBar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                             Services
                             <FaChevronDown className="ml-2" />
                         </summary>
-                        <ul className="ml-4 mt-2 flex flex-col gap-2">
+                        <ul className="ml-4 flex flex-col gap-1">
                             {serviceSubmenu.map((category, idx) => {
                                 const isCategoryActive = category.subservices.some(service =>
                                     submenuItems.some(item => isSubmenuItemActive(service, item))
@@ -62,7 +62,7 @@ const MobileNavBar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                                             <FaChevronDown className="ml-2" />
                                         </summary>
 
-                                        <ul className="ml-4 mt-2 flex flex-col gap-2">
+                                        <ul className="ml-4 flex flex-col gap-1">
                                             {category.subservices.map((service, subIdx) => {
                                                 const isServiceActive = submenuItems.some(item =>
                                                     isSubmenuItemActive(service, item)
@@ -75,7 +75,7 @@ const MobileNavBar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                                                             <FaChevronDown className="ml-2 text-xs" />
                                                         </summary>
 
-                                                        <ul className="ml-4 mt-1 flex flex-col gap-1">
+                                                        <ul className="ml-4 flex flex-col">
                                                             {submenuItems.map((item, i) => {
                                                                 const isActive = isSubmenuItemActive(service, item);
                                                                 return (

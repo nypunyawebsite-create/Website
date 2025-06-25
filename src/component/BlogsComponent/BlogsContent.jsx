@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
+// Add shake animation CSS
+const shakeStyle = `
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+.animate-shake {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+`;
+
 const BlogContent = () => {
     const [selectedCategory, setSelectedCategory] = useState('plastic-surgery');
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredBlogs, setFilteredBlogs] = useState([]);
+    const [selectedService, setSelectedService] = useState(null);
+    const [shake, setShake] = useState(false);
 
     // Sample blog data - replace with your actual data
     const blogData = {
@@ -14,23 +31,26 @@ const BlogContent = () => {
                 description: 'A comprehensive guide to nose reshaping surgery, including preparation, procedure details, and recovery expectations.',
                 image: '/blogs/botox_injection.png',
                 date: '2024-03-15',
-                tags: ['rhinoplasty', 'facial surgery', 'recovery']
+                tags: ['rhinoplasty', 'facial surgery', 'recovery'],
+                service: 'Rhinoplasty'
             },
             {
                 id: 2,
                 title: 'Breast Augmentation: What to Expect',
                 description: 'Everything you need to know about breast augmentation surgery, from consultation to recovery.',
-                image: '/images/breast-aug.jpg',
+                image: '/blogs/botox_injection.png',
                 date: '2024-03-10',
-                tags: ['breast augmentation', 'cosmetic surgery', 'recovery']
+                tags: ['breast augmentation', 'cosmetic surgery', 'recovery'],
+                service: 'Breast Augmentation'
             },
             {
                 id: 3,
-                title: 'Breast Augmentation: What to Expect',
+                title: 'Breast Augmentation 1 : What to Expect',
                 description: 'Everything you need to know about breast augmentation surgery, from consultation to recovery.',
-                image: '/images/breast-aug.jpg',
+                image: '/blogs/botox_injection.png',
                 date: '2024-03-10',
-                tags: ['breast augmentation', 'cosmetic surgery', 'recovery']
+                tags: ['breast augmentation', 'cosmetic surgery', 'recovery'],
+                service: 'Breast Augmentation 1'
             },
 
         ],
@@ -62,6 +82,25 @@ const BlogContent = () => {
         ]
     };
 
+    const services = {
+        'plastic-surgery': [
+            'Rhinoplasty',
+            'Liposuction',
+            'Breast Augmentation',
+            'Facelift',
+            'Tummy Tuck',
+            'Blepharoplasty',
+        ],
+        dermatology: [
+            'Acne Treatment',
+            'Laser Hair Removal',
+            'Chemical Peels',
+            'PRP Therapy',
+            'Skin Rejuvenation',
+            'Scar Revision',
+        ],
+    };
+
     // Filter blogs based on search query
     useEffect(() => {
         const filtered = blogData[selectedCategory].filter(blog =>
@@ -71,6 +110,14 @@ const BlogContent = () => {
         );
         setFilteredBlogs(filtered);
     }, [searchQuery, selectedCategory]);
+
+    useEffect(() => {
+        if (selectedService) {
+            setShake(true);
+            const timeout = setTimeout(() => setShake(false), 400);
+            return () => clearTimeout(timeout);
+        }
+    }, [selectedService]);
 
     return (
         <div className="bg-[#f6f8f9] min-h-screen py-12">
@@ -130,61 +177,80 @@ const BlogContent = () => {
                     </button>
                 </div>
 
+                {/* Service Folders Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+                    {services[selectedCategory].map((service, idx) => (
+                        <button
+                            key={service}
+                            onClick={() => setSelectedService(service)}
+                            className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none ${selectedService === service ? 'border-custom-blue bg-blue-50' : 'border-gray-200 bg-white'}`}
+                            style={{ minWidth: 100, minHeight: 100 }}
+                        >
+                            <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={`mb-2 ${selectedService === service ? 'text-custom-blue' : 'text-gray-400'}`}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7V6a2 2 0 012-2h3.172a2 2 0 011.414.586l1.828 1.828A2 2 0 0013.828 7H19a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" /></svg>
+                            <span className="text-center font-medium text-gray-700 text-xs">{service}</span>
+                        </button>
+                    ))}
+                </div>
+
                 {/* Blog Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredBlogs.map((blog) => (
-                        <div
-                            key={blog.id}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                        >
-                            <div className="relative">
-                                <img
-                                    src={blog.image}
-                                    alt={blog.title}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="absolute top-4 right-4 bg-custom-blue text-white px-3 py-1 rounded-full text-sm">
-                                    {selectedCategory === 'plastic-surgery' ? 'Plastic Surgery' : 'Dermatology'}
+                    {(blogData[selectedCategory] || [])
+                        .map(blog => (
+                            <div
+                                key={blog.id}
+                                className={`bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl
+                                    ${(shake && blog.service === selectedService) ? 'animate-shake' : ''}
+                                    ${(selectedService && blog.service === selectedService) ? 'border-2 border-custom-blue bg-blue-50' : 'border-2 border-gray-200'}
+                                `}
+                            >
+                                <div className="relative">
+                                    <img
+                                        src={blog.image}
+                                        alt={blog.title}
+                                        className="w-full h-48 object-cover"
+                                    />
+                                    <div className="absolute top-4 right-4 bg-custom-blue text-white px-3 py-1 rounded-full text-sm">
+                                        {selectedCategory === 'plastic-surgery' ? 'Plastic Surgery' : 'Dermatology'}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-6">
-                                <div className="text-sm text-gray-500 mb-2">
-                                    {new Date(blog.date).toLocaleDateString('en-US', {
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric'
-                                    })}
-                                </div>
-                                <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
-                                <p className="text-gray-600 mb-4 line-clamp-3">{blog.description}</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {blog.tags.map((tag, index) => (
-                                        <span
-                                            key={index}
-                                            className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm"
+                                <div className="p-6">
+                                    <div className="text-sm text-gray-500 mb-2">
+                                        {new Date(blog.date).toLocaleDateString('en-US', {
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric'
+                                        })}
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
+                                    <p className="text-gray-600 mb-4 line-clamp-3">{blog.description}</p>
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {blog.tags.map((tag, index) => (
+                                            <span
+                                                key={index}
+                                                className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm"
+                                            >
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <button className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group">
+                                        Read More
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 ml-1 transform transition-transform group-hover:translate-x-1"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
                                         >
-                                            #{tag}
-                                        </span>
-                                    ))}
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
                                 </div>
-                                <button className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group">
-                                    Read More
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5 ml-1 transform transition-transform group-hover:translate-x-1"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                </button>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </div>
 
                 {/* No Results Message */}
@@ -194,6 +260,7 @@ const BlogContent = () => {
                     </div>
                 )}
             </div>
+            <style>{shakeStyle}</style>
         </div>
     );
 };

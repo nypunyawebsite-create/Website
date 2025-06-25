@@ -23,6 +23,14 @@ const Footer = () => {
             const isAtBottom = window.innerHeight + currentScrollY >= document.documentElement.scrollHeight - 100; // 100px buffer
 
             if (isAtBottom && isScrollingDown) {
+                const lastClosedTime = localStorage.getItem('modalClosedTimestamp');
+                if (lastClosedTime) {
+                    const timeDifference = new Date().getTime() - Number(lastClosedTime);
+                    const threeMinutes = 3 * 60 * 1000;
+                    if (timeDifference < threeMinutes) {
+                        return; // Don't show modal if it was closed within the last 3 minutes
+                    }
+                }
                 setShowScrollModal(true);
             }
             prevScrollY.current = currentScrollY;
@@ -36,6 +44,7 @@ const Footer = () => {
 
     const closeModal = () => {
         setShowScrollModal(false);
+        localStorage.setItem('modalClosedTimestamp', new Date().getTime().toString());
         // Optionally clear form fields on close
         setName('');
         setPhoneNumber('');

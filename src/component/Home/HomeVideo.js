@@ -59,6 +59,20 @@ const HomeVideo = () => {
                 style={{ position: videoStarted ? 'fixed' : 'relative', top: 0, left: 0 }}
             />
 
+            {/* Close Button */}
+            {videoStarted && (
+                <button
+                    onClick={() => {
+                        if (videoRef.current) videoRef.current.pause();
+                        setVideoStarted(false);
+                    }}
+                    className="fixed top-4 right-4 z-[100] w-10 h-10 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg text-2xl font-bold text-[#000099] hover:bg-[#000099] hover:text-white hover:bg-opacity-100 transition-all duration-200 border border-[#000099]"
+                    aria-label="Close Video"
+                >
+                    ×
+                </button>
+            )}
+
             {/* Banner Section */}
             <div
                 className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex flex-col items-center justify-between ${videoStarted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
@@ -70,7 +84,7 @@ const HomeVideo = () => {
                 }}
             >
                 {/* Top Headings - Responsive */}
-                <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
+                <div className="w-full flex flex-nowrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20 overflow-x-auto whitespace-nowrap" style={{ marginTop: 'calc(2rem + 180px)' }}>
                     <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
                     <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
                     <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
