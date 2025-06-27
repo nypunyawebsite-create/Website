@@ -26,7 +26,9 @@ const Index = () => {
       <HairTransplant scrollTo={scrollTo} />
       {/* <ServicesDetails /> */}
       <GalleryComponent />
-      <div id="faq-section"><FaqHairTransplant /></div>
+      <div id="faq-section">
+        <FaqHairTransplant />
+      </div>
 
       <ConsultationForm />
 

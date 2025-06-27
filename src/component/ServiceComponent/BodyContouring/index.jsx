@@ -30,9 +30,6 @@ const Index = () => {
             <LipoSuctionBodyContouring scrollTo={scrollTo} />
             <ServicesDetails refProp={faqRef} />
             <GalleryComponent refProp={whyUsRef} />
-            <div id="faq-section">
-                {/* FaqBodyContouring component is removed as per the instructions */}
-            </div>
             <ConsultationForm />
         </>
     );
