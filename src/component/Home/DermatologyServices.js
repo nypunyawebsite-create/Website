@@ -40,27 +40,27 @@ const DermatologyServices = () => {
                                     <div className="absolute inset-0 grid grid-cols-2 gap-2 bg-black bg-opacity-50 text-white">
                                         <div
                                             onClick={() => handleNavigate(service.slug, 'information')}
-                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                            className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base">Information</h4>
+                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Information</h4>
                                         </div>
                                         <div
                                             onClick={() => handleNavigateToGallery(service.title)}
-                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                            className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base">Transformation</h4>
+                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Transformation</h4>
                                         </div>
                                         <div
                                             onClick={() => handleNavigate(service.slug, 'faqs')}
-                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                            className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base">FAQs</h4>
+                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">FAQs</h4>
                                         </div>
                                         <div
                                             onClick={() => handleNavigate(service.slug, 'whyUs')}
-                                            className="hover:bg-white/50 hover:text-black flex flex-col justify-center items-center text-center cursor-pointer"
+                                            className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base">Why Us</h4>
+                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Why Us</h4>
                                         </div>
                                     </div>
 

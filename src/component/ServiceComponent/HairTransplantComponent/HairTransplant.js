@@ -12,6 +12,9 @@ const HairTransplant = ({ scrollTo }) => {
       if (scrollTo === 'whyUs') {
         setSelectedImage(informationImages.length - 1);
         setIsModalOpen(true);
+      } else if (scrollTo === 'information') {
+        setSelectedImage(0);
+        setIsModalOpen(true);
       } else {
         setSelectedImage(0);
         setIsModalOpen(false);
