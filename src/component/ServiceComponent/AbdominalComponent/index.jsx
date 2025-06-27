@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Banner from './Banner';
 import AbdominalContouring from './AbdominalContouring';
@@ -24,12 +24,14 @@ const Index = () => {
             whyUsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }, [scrollToSection]);
-    useEffect(() => {
+
+    useLayoutEffect(() => {
         if (scrollTo === 'faqs' || window.location.hash === '#faq-section') {
-            const faqSection = document.getElementById('faq-section');
-            if (faqSection) {
-                faqSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            setTimeout(() => {
+                if (faqRef.current) {
+                    faqRef.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     }, [scrollTo]);
 
@@ -39,7 +41,9 @@ const Index = () => {
             <AbdominalContouring scrollTo={scrollTo} />
             <ServicesDetails refProp={faqRef} />
             <GalleryComponent refProp={whyUsRef} />
-            <div id="faq-section"><FaqAbdominal refProp={faqRef} /></div>
+            <div id="faq-section" ref={faqRef}>
+                <FaqAbdominal />
+            </div>
             <ConsultationForm />
         </>
     );

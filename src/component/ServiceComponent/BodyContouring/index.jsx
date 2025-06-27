@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Banner from './Banner';
 import LipoSuctionBodyContouring from './LipoSuctionBodyContouring';
@@ -14,15 +14,15 @@ const Index = () => {
     const faqRef = useRef(null);
     const whyUsRef = useRef(null);
 
-    useEffect(() => {
-        if (scrollTo === 'faqs') {
-            const faqSection = document.getElementById('faq-section');
-            if (faqSection) {
-                faqSection.scrollIntoView({ behavior: 'smooth' });
-            }
+    useLayoutEffect(() => {
+        if (scrollTo === 'faqs' || window.location.hash === '#faq-section') {
+            setTimeout(() => {
+                if (faqRef.current) {
+                    faqRef.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
         }
     }, [scrollTo]);
-
 
     return (
         <>

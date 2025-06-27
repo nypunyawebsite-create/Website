@@ -4,29 +4,30 @@ import { useLocation } from "react-router-dom";
 import GalleryComponent from '../HairTransplantComponent/GalleryComponent'
 import ConsultationForm from '../../FormsComponent/ConsultationForm'
 import FaqHairTransplant from './FaqHairTransplant'
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 
 const Index = () => {
   const location = useLocation();
   const { scrollTo } = location.state || {};
-  console.log(location.state, 'location.state');
-  console.log(scrollTo);
+  const faqRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (scrollTo === 'faqs' || window.location.hash === '#faq-section') {
-      const faqSection = document.getElementById('faq-section');
-      if (faqSection) {
-        faqSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        if (faqRef.current) {
+          faqRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
     }
   }, [scrollTo]);
+
   return (
     <>
       <Banner />
       <HairTransplant scrollTo={scrollTo} />
       {/* <ServicesDetails /> */}
       <GalleryComponent />
-      <div id="faq-section">
+      <div id="faq-section" ref={faqRef}>
         <FaqHairTransplant />
       </div>
 

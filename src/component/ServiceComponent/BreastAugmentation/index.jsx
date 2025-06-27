@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Banner from './Banner';
 import BreastAugmentationComponent from './BreastAugmentationComponent';
@@ -27,14 +27,17 @@ const Index = () => {
       whyUsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [scrollToSection]);
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     if (scrollTo === 'faqs' || window.location.hash === '#faq-section') {
-      const faqSection = document.getElementById('faq-section');
-      if (faqSection) {
-        faqSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        if (faqRef.current) {
+          faqRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
     }
   }, [scrollTo]);
+
   return (
     <>
       <Banner refProp={informationRef} />
@@ -45,9 +48,9 @@ const Index = () => {
         setSelectedService={setSelectedService}
       />
       <GalleryComponent />
-      <div id="faq-section">
-        <FaqBreast />
-      </div>
+      {/* <div id="faq-section" ref={faqRef}>
+        <FaqBreastAugmentation />
+      </div> */}
       <ConsultationForm />
     </>
   );
