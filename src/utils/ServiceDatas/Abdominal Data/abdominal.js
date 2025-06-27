@@ -4,7 +4,7 @@ export const informationImages = [
     "/services/abdominal/information/2.png",
     "/services/abdominal/information/3.png",
     "/services/abdominal/information/4.png",
-    "/services/why_us/1.png",
+    "/services/why_us/7.png",
 ];
 export const galleryImages = [
     "/services/abdominal/1.png",

@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { AbdominalContouringDetails, galleryImages, informationImages } from "../../../utils/ServiceDatas/Abdominal Data/abdominal";
 
-const AbdominalContouring = () => {
+const AbdominalContouring = ({ scrollTo }) => {
     const [selectedImage, setSelectedImage] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        // Ensure informationImages is an array and has at least one image
         if (Array.isArray(informationImages) && informationImages.length > 0) {
             setImages(informationImages);
+            if (scrollTo === 'whyUs') {
+                setSelectedImage(informationImages.length - 1);
+                setIsModalOpen(true);
+            } else {
+                setSelectedImage(0);
+                setIsModalOpen(false);
+            }
         } else {
-            // Fallback to gallery images if informationImages is empty
             setImages(galleryImages);
+            setSelectedImage(0);
+            setIsModalOpen(false);
         }
-    }, []);
+    }, [scrollTo]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {

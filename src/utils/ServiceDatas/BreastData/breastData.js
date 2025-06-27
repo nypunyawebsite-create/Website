@@ -24,7 +24,7 @@ export const informationImages = [
   "/services/breast_augmentation/service/information/6.png",
   "/services/breast_augmentation/service/information/7.png",
   "/services/breast_augmentation/service/information/8.png",
-  "/services/why_us/1.png",
+  "/services/why_us/4.png",
 ];
 // export const servicesData = [
 //   { id: "01", title: "Breast Augmentation" },

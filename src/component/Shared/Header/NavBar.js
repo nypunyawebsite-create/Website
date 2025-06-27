@@ -226,9 +226,12 @@ const DesktopNavBar = () => {
                                                                                                     setHoveredCategory(null);
                                                                                                     setHoveredSubservice(null);
                                                                                                 }}
-                                                                                                state={item === "Transformation"
-                                                                                                    ? { category: `${category.category} ${service.name}` }
-                                                                                                    : { scrollTo: item.toLowerCase().replace(/\s+/g, "-") }
+                                                                                                state={
+                                                                                                    item === "Transformation"
+                                                                                                        ? { category: `${category.category} ${service.name}` }
+                                                                                                        : item === "Why Us"
+                                                                                                            ? { scrollTo: "whyUs" }
+                                                                                                            : { scrollTo: item.toLowerCase().replace(/\s+/g, "-") }
                                                                                                 }
                                                                                                 className={`block px-2 py-1 text-sm w-full text-left cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-100 rounded-md ${isSubmenuItemActive(service, item)
                                                                                                     ? "text-[#92E0E0] font-semibold bg-gray-100"

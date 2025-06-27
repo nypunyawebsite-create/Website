@@ -3,16 +3,19 @@ import Banner from "../BlepharoPlastyComponent/Banner"
 import BlepharoPlastyComponent from './BlepharoPlastyComponent'
 import GalleryComponent from './GalleryComponent'
 import ConsultationForm from '../../FormsComponent/ConsultationForm'
+import { useLocation } from 'react-router-dom'
 
-const index = () => {
+const Index = () => {
+  const location = useLocation();
+  const { scrollTo } = location.state || {};
   return (
     <>
       <Banner />
-      <BlepharoPlastyComponent />
+      <BlepharoPlastyComponent scrollTo={scrollTo} />
       <GalleryComponent />
       <ConsultationForm />
     </>
   )
 }
 
-export default index
+export default Index

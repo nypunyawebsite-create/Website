@@ -4,33 +4,35 @@ import Banner from './Banner';
 import LipoSuctionBodyContouring from './LipoSuctionBodyContouring';
 import GalleryComponent from './GalleryComponent';
 import ConsultationForm from '../../FormsComponent/ConsultationForm';
-import ServicesDetails from './ServicesDetails'; // ✅ Notice the corrected component name
+import ServicesDetails from './ServicesDetails';
 
 const Index = () => {
     const location = useLocation();
-    const scrollToSection = location.state?.scrollTo;
+    const { scrollTo } = location.state || {};
 
     const informationRef = useRef(null);
     const faqRef = useRef(null);
     const whyUsRef = useRef(null);
 
     useEffect(() => {
-        if (scrollToSection === "information" && informationRef.current) {
-            informationRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else if (scrollToSection === "faqs" && faqRef.current) {
-            faqRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else if (scrollToSection === "whyUs" && whyUsRef.current) {
-            whyUsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (scrollTo === 'faqs') {
+            const faqSection = document.getElementById('faq-section');
+            if (faqSection) {
+                faqSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
-    }, [scrollToSection]);
+    }, [scrollTo]);
 
 
     return (
         <>
             <Banner refProp={informationRef} />
-            <LipoSuctionBodyContouring />
-            <ServicesDetails refProp={faqRef} /> 
-            <GalleryComponent refProp={whyUsRef} /> 
+            <LipoSuctionBodyContouring scrollTo={scrollTo} />
+            <ServicesDetails refProp={faqRef} />
+            <GalleryComponent refProp={whyUsRef} />
+            <div id="faq-section">
+                {/* FaqBodyContouring component is removed as per the instructions */}
+            </div>
             <ConsultationForm />
         </>
     );

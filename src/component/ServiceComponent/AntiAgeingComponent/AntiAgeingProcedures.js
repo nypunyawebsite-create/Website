@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { antiAgeingData, informationImages, servicesData } from "../../../utils/ServiceDatas/AntiAgeingData/antiAgeingData";
 
-const AntiAgeingProcedures = () => {
+const AntiAgeingProcedures = ({ scrollTo }) => {
     const [selectedImage, setSelectedImage] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        if (Array.isArray(informationImages) && informationImages.length > 0) {
+            setImages(informationImages);
+            if (scrollTo === 'whyUs') {
+                setSelectedImage(informationImages.length - 1);
+                setIsModalOpen(true);
+            } else {
+                setSelectedImage(0);
+                setIsModalOpen(false);
+            }
+        }
+    }, [scrollTo]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -41,14 +55,14 @@ const AntiAgeingProcedures = () => {
 
     const handlePrevious = (e) => {
         e?.stopPropagation();
-        if (informationImages.length <= 1) return;
-        setSelectedImage((prev) => (prev === 0 ? informationImages.length - 1 : prev - 1));
+        if (images.length <= 1) return;
+        setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     };
 
     const handleNext = (e) => {
         e?.stopPropagation();
-        if (informationImages.length <= 1) return;
-        setSelectedImage((prev) => (prev === informationImages.length - 1 ? 0 : prev + 1));
+        if (images.length <= 1) return;
+        setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
     return (
@@ -68,7 +82,7 @@ const AntiAgeingProcedures = () => {
                         onClick={() => openModal(selectedImage)}
                     >
                         <img
-                            src={informationImages[selectedImage]}
+                            src={images[selectedImage]}
                             alt="Featured Anti-Ageing"
                             className="w-full h-[600px] object-cover"
                         />
@@ -79,7 +93,7 @@ const AntiAgeingProcedures = () => {
                             </div>
                         </div>
                         {/* Navigation Arrows */}
-                        {informationImages.length > 1 && (
+                        {images.length > 1 && (
                             <>
                                 <button
                                     onClick={handlePrevious}
@@ -103,7 +117,7 @@ const AntiAgeingProcedures = () => {
 
                     {/* Image Grid */}
                     <div className="flex justify-center gap-4 overflow-x-auto pb-4">
-                        {informationImages.map((image, index) => (
+                        {images.map((image, index) => (
                             <div
                                 key={index}
                                 className={`relative flex-shrink-0 w-48 rounded-xl overflow-hidden shadow-md group cursor-pointer transition-all duration-300 ${selectedImage === index ? 'ring-2 ring-custom-green' : ''}`}
@@ -133,7 +147,7 @@ const AntiAgeingProcedures = () => {
                 >
                     <div className="relative w-full h-full flex items-center justify-center p-4">
                         <img
-                            src={informationImages[selectedImage]}
+                            src={images[selectedImage]}
                             alt={`Anti-Ageing ${selectedImage + 1}`}
                             className="max-w-full max-h-full object-contain"
                         />
@@ -146,7 +160,7 @@ const AntiAgeingProcedures = () => {
                             </svg>
                         </button>
                         {/* Modal Navigation Arrows */}
-                        {informationImages.length > 1 && (
+                        {images.length > 1 && (
                             <>
                                 <button
                                     onClick={(e) => {
@@ -173,7 +187,7 @@ const AntiAgeingProcedures = () => {
                             </>
                         )}
                         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg">
-                            Image {selectedImage + 1} of {informationImages.length}
+                            Image {selectedImage + 1} of {images.length}
                         </div>
                     </div>
                 </div>

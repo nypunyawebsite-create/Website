@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <>
       <Banner />
-      <HairTransplant />
+      <HairTransplant scrollTo={scrollTo} />
       {/* <ServicesDetails /> */}
       <GalleryComponent />
       <div id="faq-section"><FaqHairTransplant /></div>

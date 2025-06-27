@@ -18,6 +18,7 @@ export const informationImages = [
     "/services/hair_transplant/information/2.png",
     "/services/hair_transplant/information/3.png",
     "/services/hair_transplant/information/4.png",
+    "/services/why_us/6.png",
 ];
 
 export const hairTransplantDetails = [

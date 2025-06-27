@@ -36,7 +36,7 @@ const Index = () => {
     return (
         <>
             <Banner refProp={informationRef} />
-            <AbdominalContouring />
+            <AbdominalContouring scrollTo={scrollTo} />
             <ServicesDetails refProp={faqRef} />
             <GalleryComponent refProp={whyUsRef} />
             <div id="faq-section"><FaqAbdominal refProp={faqRef} /></div>

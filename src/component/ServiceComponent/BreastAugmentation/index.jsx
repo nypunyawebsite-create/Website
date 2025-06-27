@@ -39,7 +39,7 @@ const Index = () => {
     <>
       <Banner refProp={informationRef} />
 
-      <BreastAugmentationComponent selectedService={selectedService} />
+      <BreastAugmentationComponent scrollTo={scrollTo} selectedService={selectedService} />
       <ServicesDetails
         // selectedService={selectedService}
         setSelectedService={setSelectedService}

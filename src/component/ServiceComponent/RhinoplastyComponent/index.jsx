@@ -22,7 +22,7 @@ const RhinoplastyComponent = () => {
   return (
     <>
       <Banner />
-      <Rhinoplasty />
+      <Rhinoplasty scrollTo={scrollTo} />
       <GalleryComponent />
       <div id="faq-section">
         <FaqRhinoplasty />

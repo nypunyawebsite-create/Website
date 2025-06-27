@@ -4,6 +4,7 @@ export const informationImages = [
     "/services/body_contouring/information/2.png",
     "/services/body_contouring/information/3.png",
     "/services/body_contouring/information/4.png",
+    "/services/why_us/5.png",
 ];
 export const galleryImages = [
     "/services/body_contouring/1.png",

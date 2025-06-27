@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <>
       <Banner />
-      <AntiAgeing />
+      <AntiAgeing scrollTo={scrollTo} />
       <Gallery />
       <div id="faq-section">
         <FaqAntiAgeing />
