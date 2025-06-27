@@ -28,7 +28,7 @@ const Index = () => {
     }
   }, [scrollToSection]);
   useEffect(() => {
-    if (scrollTo === 'faqs') {
+    if (scrollTo === 'faqs' || window.location.hash === '#faq-section') {
       const faqSection = document.getElementById('faq-section');
       if (faqSection) {
         faqSection.scrollIntoView({ behavior: 'smooth' });

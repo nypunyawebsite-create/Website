@@ -6,7 +6,11 @@ const DermatologyServices = () => {
     const navigate = useNavigate();
 
     const handleNavigate = (slug, section) => {
-        navigate(`/${slug}`, { state: { scrollTo: section } });
+        if (section === 'faqs') {
+            navigate(`/${slug}#faq-section`);
+        } else {
+            navigate(`/${slug}`, { state: { scrollTo: section } });
+        }
     };
 
     const handleNavigateToGallery = (category) => {
