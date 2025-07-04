@@ -11,7 +11,6 @@ export const serviceSubmenu = [
       { name: "Abdominoplasty", path: "/abdominal-contouring" },
       { name: "Hair Transplant", path: "/hair-transplant" },
       { name: "Blepharoplasty", path: "/blepharo-plasty" },
-      { name: "Body Contouring", path: "/body-contouring" },
       { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
       { name: "Liposuction", path: "/liposuction" },
       { name: "Structural Fat Grafting", path: "/structural-fat-grafting" },
