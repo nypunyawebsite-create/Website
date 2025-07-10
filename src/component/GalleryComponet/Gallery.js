@@ -33,6 +33,13 @@ const Gallery = () => {
   const [visibleThumbnails, setVisibleThumbnails] = useState(10);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [showSensitiveContentWarning, setShowSensitiveContentWarning] = useState(false);
+  const [showPhonePopup, setShowPhonePopup] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [userName, setUserName] = useState("");
+  const [nameError, setNameError] = useState("");
+  const getLeadFlagKey = (cat) => `leadSubmitted_${cat}`;
+  const [leadSubmitted, setLeadSubmitted] = useState(() => localStorage.getItem(getLeadFlagKey(selectedCategory)) === 'true');
 
   // Calculate total images across all categories
   const totalImages = Object.values(galleryImages).reduce(
@@ -53,6 +60,10 @@ const Gallery = () => {
       setSelectedCategory(location.state.category);
     }
   }, [location.state, selectedCategory]);
+
+  useEffect(() => {
+    setLeadSubmitted(localStorage.getItem(getLeadFlagKey(selectedCategory)) === 'true');
+  }, [selectedCategory]);
 
   useEffect(() => {
     const hasAccepted = localStorage.getItem('sensitiveContentAccepted');
@@ -135,6 +146,56 @@ const Gallery = () => {
   const handleDeclineSensitiveContent = () => {
     navigate('/'); // Redirect to home page
     document.body.style.overflow = 'unset'; // Re-enable scrolling
+  };
+
+  const handleLoadMoreClick = () => {
+    if (leadSubmitted) {
+      loadMoreThumbnails();
+    } else {
+      setShowPhonePopup(true);
+    }
+  };
+
+  const handlePhoneSubmit = async (e) => {
+    e.preventDefault();
+    let valid = true;
+    if (!userName.trim()) {
+      setNameError("Please enter your name.");
+      valid = false;
+    } else {
+      setNameError("");
+    }
+    // Simple phone validation (10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      setPhoneError("Please enter a valid 10-digit phone number.");
+      valid = false;
+    } else {
+      setPhoneError("");
+    }
+    if (!valid) return;
+
+    // Call the leads API
+    try {
+      await fetch('http://localhost:7010/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: userName,
+          phone_number: phoneNumber,
+          category: selectedCategory
+        })
+      });
+      localStorage.setItem(getLeadFlagKey(selectedCategory), 'true');
+      setLeadSubmitted(true);
+    } catch (err) {
+      alert('Failed to submit lead. Please try again.');
+    }
+
+    setShowPhonePopup(false);
+    setPhoneNumber("");
+    setUserName("");
+    loadMoreThumbnails();
   };
 
   return (
@@ -267,14 +328,71 @@ const Gallery = () => {
             {visibleThumbnails < filteredImages.length && (
               <div className="flex justify-center mt-8">
                 <button
-                  onClick={loadMoreThumbnails}
+                  onClick={handleLoadMoreClick}
                   className="px-8 py-3 bg-gradient-to-r from-custom-blue to-blue-400 text-white rounded-full shadow-xl font-bold text-lg hover:scale-105 hover:from-blue-600 hover:to-custom-blue transition-all duration-300"
                 >
                   Load More Cases
                 </button>
-
               </div>
-
+            )}
+            {/* Phone Number Popup */}
+            {showPhonePopup && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+                <form
+                  onSubmit={handlePhoneSubmit}
+                  className="relative bg-gray-900 text-white p-8 rounded-lg shadow-lg w-full max-w-md mx-4"
+                  style={{ boxShadow: '0 4px 32px rgba(0,0,0,0.15)' }}
+                >
+                  <button
+                    type="button"
+                    onClick={() => { setShowPhonePopup(false); setPhoneError(""); setNameError(""); }}
+                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl font-bold focus:outline-none"
+                    aria-label="Close"
+                  >
+                    &times;
+                  </button>
+                  <h3 className="text-3xl font-bold mb-4">Enter Your Details</h3>
+                  <p className="text-white mb-4">To view more images, please enter your name and phone number. This helps us provide a better experience and keep our gallery secure.</p>
+                  <div className="mb-4">
+                    <input
+                      type="text"
+                      value={userName}
+                      onChange={e => setUserName(e.target.value)}
+                      className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                      placeholder="Your Name"
+                      required
+                    />
+                    {nameError && <div className="text-red-600 mb-2">{nameError}</div>}
+                  </div>
+                  <div className="mb-4">
+                    <input
+                      type="tel"
+                      value={phoneNumber}
+                      onChange={e => setPhoneNumber(e.target.value)}
+                      className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                      placeholder="10-digit phone number"
+                      maxLength={10}
+                      required
+                    />
+                    {phoneError && <div className="text-red-600 mb-2">{phoneError}</div>}
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                  >
+                    Submit
+                  </button>
+                </form>
+                <style>{`
+                  @keyframes slide-up {
+                    from { transform: translateY(40px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                  }
+                  .animate-slide-up {
+                    animation: slide-up 0.4s cubic-bezier(.4,0,.2,1) forwards;
+                  }
+                `}</style>
+              </div>
             )}
             <p className="flex justify-center mt-8">* Disclaimer:  Individual results may vary</p>
           </div>

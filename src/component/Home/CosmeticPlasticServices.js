@@ -51,7 +51,7 @@ const CosmeticPlasticServices = () => {
                                         <div
                                             onClick={() => {
                                                 if (service.title === "Mommy Makeover") {
-                                                    handleNavigateToGallery('Anti Ageing Procedures');
+                                                    handleNavigateToGallery('Body Contouring Abdominoplasty');
                                                 } else {
                                                     handleNavigateToGallery(service.title)
                                                 }
