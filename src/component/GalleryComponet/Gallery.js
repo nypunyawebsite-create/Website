@@ -352,7 +352,7 @@ const Gallery = () => {
                     &times;
                   </button>
                   <h3 className="text-3xl font-bold mb-4">Enter Your Details</h3>
-                  <p className="text-white mb-4">To view more images, please enter your name and phone number. This helps us provide a better experience and keep our gallery secure.</p>
+                  <p className="text-white mb-4">We’d love to show you more images! Just enter your name and phone number. This helps us give you a better experience and keep our patients’ privacy safe.</p>
                   <div className="mb-4">
                     <input
                       type="text"
