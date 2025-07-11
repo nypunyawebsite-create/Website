@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Add shake animation CSS
 const shakeStyle = `
@@ -16,6 +17,7 @@ const shakeStyle = `
 `;
 
 const BlogContent = () => {
+    const navigate = useNavigate();
     const [mainCategories, setMainCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
@@ -161,7 +163,7 @@ const BlogContent = () => {
                     {subcategories.map((service, idx) => (
                         <button
                             key={service._id}
-                            onClick={() => setSelectedService(service.name)}
+                            onClick={() => navigate(`/blogs/service/${encodeURIComponent(service.name)}`)}
                             className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none ${selectedService === service.name ? 'border-custom-blue bg-blue-50' : 'border-gray-200 bg-white'}`}
                             style={{ minWidth: 100, minHeight: 100 }}
                         >
@@ -212,7 +214,8 @@ const BlogContent = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <button className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group">
+                                <button className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group"
+                                    onClick={() => navigate(`/blogs/${blog.slug}`)}>
                                     Read More
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

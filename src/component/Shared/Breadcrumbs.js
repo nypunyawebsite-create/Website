@@ -23,7 +23,7 @@ const Breadcrumbs = () => {
 
     return (
         <div className="absolute z-10 pt-28 md:pt-36 lg:pt-40 w-full mt-7 md:mt-0">
-            <nav aria-label="breadcrumb" className="container mx-auto pr-4 pl-0 sm:px-6 lg:px-8">
+            <nav aria-label="breadcrumb" className="container mx-auto pr-4 pl-0 sm:px-1 lg:px-1 mt-2">
                 <ol className="flex flex-wrap items-center bg-black/20 backdrop-blur-sm rounded-full px-3 py-2 w-fit text-xs sm:text-sm">
                     <li>
                         <Link to="/" className="text-white hover:text-gray-200 transition-colors whitespace-nowrap">

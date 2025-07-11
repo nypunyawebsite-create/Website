@@ -36,6 +36,8 @@ import BlepharoPlasty from '../pages/BlepharoPlasty/page'
 import Liposuction from '../pages/Liposuction/page'
 import International from '../pages/International';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
+import ServiceBlogs from '../pages/Blogs/ServiceBlogs';
+import BlogDetails from '../pages/Blogs/BlogDetails';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -56,6 +58,8 @@ function AppRoutes() {
                 { path: "contact-us", element: <ContactUs /> }, // Add the route for Contact Us page
                 { path: "blogs", element: <Blogs /> },
                 { path: "gallery", element: <Gallery /> },
+                { path: "blogs/service/:serviceName", element: <ServiceBlogs /> },
+                { path: "blogs/:slug", element: <BlogDetails /> },
 
                 // { path: "contact-us", element: <ContactUs /> },
                 // { path: "blog", element: <BlogPosts /> },
