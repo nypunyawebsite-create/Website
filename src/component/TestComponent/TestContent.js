@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import API_URL from "../../Config";
 const TestContent = () => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -9,7 +9,7 @@ const TestContent = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch("https://blog-dashboard-backend.vercel.app/api/blogs");
+                const response = await fetch(`${API_URL}api/blogs`);
                 if (!response.ok) throw new Error("Failed to fetch blogs");
                 const data = await response.json();
                 setBlogs(data);

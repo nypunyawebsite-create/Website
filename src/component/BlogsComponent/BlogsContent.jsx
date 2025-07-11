@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_URL from '../../Config';
 
 // Add shake animation CSS
 const shakeStyle = `
@@ -33,7 +34,7 @@ const BlogContent = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const res = await fetch('http://localhost:7010/api/categories/main');
+                const res = await fetch(`${API_URL}api/categories/main`);
                 const data = await res.json();
                 setMainCategories(data);
                 if (data.length > 0 && !selectedCategory) {
@@ -51,7 +52,7 @@ const BlogContent = () => {
         const fetchBlogs = async () => {
             setLoading(true);
             try {
-                const res = await fetch('http://localhost:7010/api/blogs');
+                const res = await fetch(`${API_URL}api/blogs`);
                 const data = await res.json();
                 setBlogs(data.blogs || []);
                 setError('');
@@ -68,7 +69,7 @@ const BlogContent = () => {
     // Fetch subcategories when selectedCategory changes
     useEffect(() => {
         if (selectedCategory && selectedCategory._id) {
-            fetch(`http://localhost:7010/api/categories/subcategories/${selectedCategory._id}`)
+            fetch(`${API_URL}api/categories/subcategories/${selectedCategory._id}`)
                 .then(res => res.json())
                 .then(data => setSubcategories(data))
                 .catch(() => setSubcategories([]));

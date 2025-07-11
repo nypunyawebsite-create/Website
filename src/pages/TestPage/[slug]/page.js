@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import API_URL from '../../../Config';
 const TestLandingPage = () => {
     const { slug } = useParams();
     const [blog, setBlog] = useState(null);
@@ -10,7 +10,7 @@ const TestLandingPage = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await fetch("https://blog-dashboard-backend.vercel.app/api/blogs");
+                const response = await fetch(`${API_URL}api/blogs`);
                 if (!response.ok) throw new Error("Failed to fetch blogs");
 
                 const blogs = await response.json();

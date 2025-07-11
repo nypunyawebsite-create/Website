@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import API_URL from '../../Config';
 
 const ServiceBlogs = () => {
     const { serviceName } = useParams();
@@ -10,7 +11,7 @@ const ServiceBlogs = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:7010/api/blogs')
+        fetch(`${API_URL}api/blogs`)
             .then(res => res.json())
             .then(data => {
                 setBlogs(data.blogs || []);
