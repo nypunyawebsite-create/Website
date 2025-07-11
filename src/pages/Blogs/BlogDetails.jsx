@@ -8,7 +8,7 @@ const BlogDetails = () => {
     const [error, setError] = useState('');
     useEffect(() => {
         setLoading(true);
-        fetch(`${API_URL}/api/blogs/${slug}`)
+        fetch(`${API_URL}api/blogs/${slug}`)
             .then(res => res.json())
             .then(data => {
                 setBlog(data.blog || data); // fallback if API returns blog directly
