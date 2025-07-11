@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { galleryImages } from "../../utils/galleryData";
 import { FaChevronDown, FaCheck, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import API_URL from '../../Config';
 const categories = [
   "Rhinoplasty",
   "Anti Ageing Procedures",
@@ -177,7 +177,7 @@ const Gallery = () => {
 
     // Call the leads API
     try {
-      await fetch('http://localhost:7010/leads', {
+      await fetch(`${API_URL}/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

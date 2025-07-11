@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import API_URL from '../../Config';
 const BlogDetails = () => {
     const { slug } = useParams();
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:7010/api/blogs/${slug}`)
+        fetch(`${API_URL}/api/blogs/${slug}`)
             .then(res => res.json())
             .then(data => {
                 setBlog(data.blog || data); // fallback if API returns blog directly
