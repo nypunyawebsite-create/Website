@@ -203,8 +203,14 @@ const BlogContent = () => {
                                         day: 'numeric'
                                     }) : ''}
                                 </div>
+
                                 <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
-                                <p className="text-gray-600 mb-4 line-clamp-3">{blog.description}</p>
+
+                                <div
+                                    className="text-gray-600 mb-4 line-clamp-3 prose prose-sm max-w-none"
+                                    dangerouslySetInnerHTML={{ __html: blog.description }}
+                                ></div>
+
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {Array.isArray(blog.tags) && blog.tags.map((tag, index) => (
                                         <span
@@ -215,8 +221,11 @@ const BlogContent = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <button className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group"
-                                    onClick={() => navigate(`/blogs/${blog.slug}`)}>
+
+                                <button
+                                    className="text-custom-blue font-semibold hover:text-blue-700 transition-colors flex items-center group"
+                                    onClick={() => navigate(`/blogs/${blog.slug}`)}
+                                >
                                     Read More
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -232,6 +241,7 @@ const BlogContent = () => {
                                     </svg>
                                 </button>
                             </div>
+
                         </div>
                     ))}
                 </div>
