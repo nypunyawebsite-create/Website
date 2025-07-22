@@ -38,11 +38,19 @@ const BlogDetails = () => {
                     <span>Status: {blog.status}</span>
                 </div>
                 {(blog.banner || blog.thumbnail) && (
-                    <img src={blog.banner || blog.thumbnail} alt={blog.title} className="w-full h-64 object-cover rounded mb-6" />
+                    <img
+                        src={`${API_URL.replace(/\/$/, '')}/${(blog.banner || blog.thumbnail).replace(/^\/+/, '')}`}
+                        alt={blog.title}
+                        className="w-full h-64 object-cover rounded mb-6"
+                    />
                 )}
+
                 <div className="mb-6">
                     <h2 className="text-xl font-semibold mb-2">Description</h2>
-                    <p className="text-gray-700 whitespace-pre-line">{blog.description}</p>
+                    <div
+                        className="text-gray-700 prose prose-blue max-w-none"
+                        dangerouslySetInnerHTML={{ __html: blog.description }}
+                    ></div>
                 </div>
                 <div className="mb-6">
                     <h2 className="text-xl font-semibold mb-2">Meta Information</h2>
