@@ -35,7 +35,7 @@ const BlogDetails = () => {
                     </div>
                     <span>By <span className="font-semibold">{blog.createdBy?.name}</span></span>
                     <span>Published: {blog.publishedDate ? new Date(blog.publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}</span>
-                    <span>Status: {blog.status}</span>
+                    {/* <span>Status: {blog.status}</span> */}
                 </div>
                 {(blog.banner || blog.thumbnail) && (
                     <img
@@ -52,11 +52,11 @@ const BlogDetails = () => {
                         dangerouslySetInnerHTML={{ __html: blog.description }}
                     ></div>
                 </div>
-                <div className="mb-6">
+                {/* <div className="mb-6">
                     <h2 className="text-xl font-semibold mb-2">Meta Information</h2>
                     <div className="text-gray-700"><b>Meta Title:</b> {blog.metaTitle}</div>
                     <div className="text-gray-700"><b>Meta Description:</b> {blog.metaDescription}</div>
-                </div>
+                </div> */}
                 <div className="mb-6">
                     <h2 className="text-xl font-semibold mb-2">Categories</h2>
                     <div className="flex flex-wrap gap-2">
@@ -76,12 +76,12 @@ const BlogDetails = () => {
                         </div>
                     </div>
                 )}
-                <div className="mb-6">
+                {/* <div className="mb-6">
                     <h2 className="text-xl font-semibold mb-2">Timestamps</h2>
                     <div className="text-gray-700"><b>Created At:</b> {blog.createdAt ? new Date(blog.createdAt).toLocaleString() : ''}</div>
                     <div className="text-gray-700"><b>Updated At:</b> {blog.updatedAt ? new Date(blog.updatedAt).toLocaleString() : ''}</div>
-                </div>
-                {Array.isArray(blog.updates) && blog.updates.length > 0 && (
+                </div> */}
+                {/* {Array.isArray(blog.updates) && blog.updates.length > 0 && (
                     <div className="mb-6">
                         <h2 className="text-xl font-semibold mb-2">Change History</h2>
                         <ul className="list-disc pl-5 text-gray-700">
@@ -92,7 +92,7 @@ const BlogDetails = () => {
                             ))}
                         </ul>
                     </div>
-                )}
+                )} */}
             </div>
         </div>
     );
