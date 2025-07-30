@@ -39,11 +39,11 @@ const Breadcrumbs = () => {
                                 <span className="mx-2 text-gray-400">/</span>
                                 {isLast ? (
                                     <span className="text-gray-300 whitespace-nowrap" aria-current="page">
-                                        {formatBreadcrumb(name)}
+                                        {formatBreadcrumb(decodeURIComponent(name))}
                                     </span>
                                 ) : (
                                     <Link to={breadcrumbPath} className="text-white hover:text-gray-200 transition-colors whitespace-nowrap">
-                                        {formatBreadcrumb(name)}
+                                        {formatBreadcrumb(decodeURIComponent(name))}
                                     </Link>
                                 )}
                             </li>
