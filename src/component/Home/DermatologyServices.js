@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dermatologyServiceData from '../../utils/dermatology-service-data';
 
 const DermatologyServices = () => {
     const navigate = useNavigate();
+    const [clickedServices, setClickedServices] = useState(new Set());
 
     const handleNavigate = (slug, section) => {
         if (section === 'faqs') {
@@ -15,6 +16,18 @@ const DermatologyServices = () => {
 
     const handleNavigateToGallery = (category) => {
         navigate(`/gallery`, { state: { category } });
+    };
+
+    const handleReadMore = (index) => {
+        setClickedServices(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(index)) {
+                newSet.delete(index);
+            } else {
+                newSet.add(index);
+            }
+            return newSet;
+        });
     };
 
     return (
@@ -31,7 +44,9 @@ const DermatologyServices = () => {
                         >
                             <div className="flex flex-col p-4 gap-4">
                                 <div className="flex flex-col gap-2">
-                                    <h3 className="text-xl font-bold min-h-16">{service.title}</h3>
+                                    <h3 className="text-xl font-bold min-h-16">
+                                        {clickedServices.has(index) ? 'Read More' : service.title}
+                                    </h3>
                                     <p className="text-sm text-gray-700">{service.desc}</p>
                                 </div>
 
@@ -43,28 +58,48 @@ const DermatologyServices = () => {
 
                                     <div className="absolute inset-0 grid grid-cols-2 gap-2 bg-black bg-opacity-50 text-white">
                                         <div
-                                            onClick={() => handleNavigate(service.slug, 'information')}
                                             className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Information</h4>
+                                            <h4 className="font-bold text-sm md:text-base">Information</h4>
+                                            <button
+                                                onClick={() => handleNavigate(service.slug, 'information')}
+                                                className="mt-2 px-3 py-1 bg-white text-black text-xs rounded hover:bg-gray-200 transition-colors duration-200"
+                                            >
+                                                Read More
+                                            </button>
                                         </div>
                                         <div
-                                            onClick={() => handleNavigateToGallery(service.title)}
                                             className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Transformation</h4>
+                                            <h4 className="font-bold text-sm md:text-base">Transformation</h4>
+                                            <button
+                                                onClick={() => handleNavigateToGallery(service.title)}
+                                                className="mt-2 px-3 py-1 bg-white text-black text-xs rounded hover:bg-gray-200 transition-colors duration-200"
+                                            >
+                                                Read More
+                                            </button>
                                         </div>
                                         <div
-                                            onClick={() => handleNavigate(service.slug, 'faqs')}
                                             className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">FAQs</h4>
+                                            <h4 className="font-bold text-sm md:text-base">FAQs</h4>
+                                            <button
+                                                onClick={() => handleNavigate(service.slug, 'faqs')}
+                                                className="mt-2 px-3 py-1 bg-white text-black text-xs rounded hover:bg-gray-200 transition-colors duration-200"
+                                            >
+                                                Read More
+                                            </button>
                                         </div>
                                         <div
-                                            onClick={() => handleNavigate(service.slug, 'whyUs')}
                                             className="flex flex-col justify-center items-center text-center cursor-pointer group"
                                         >
-                                            <h4 className="font-bold text-sm md:text-base underline md:no-underline md:group-hover:underline">Why Us</h4>
+                                            <h4 className="font-bold text-sm md:text-base">Why Us</h4>
+                                            <button
+                                                onClick={() => handleNavigate(service.slug, 'whyUs')}
+                                                className="mt-2 px-3 py-1 bg-white text-black text-xs rounded hover:bg-gray-200 transition-colors duration-200"
+                                            >
+                                                Read More
+                                            </button>
                                         </div>
                                     </div>
 
