@@ -214,6 +214,23 @@ const DesktopNavBar = () => {
 
                                                                             {hoveredSubservice === service.name && (
                                                                                 <ul className="mt-1 bg-gray-50 border border-gray-200 rounded-md p-2 ml-4 transition-all duration-300 ease-in-out transform origin-top-left">
+                                                                                    {/* Service Name Header */}
+                                                                                    <li className="px-2 py-1 mb-2 border-b border-gray-200">
+                                                                                        <Link
+                                                                                            to={service.path}
+                                                                                            onClick={() => {
+                                                                                                setSelectedCategory(category.category);
+                                                                                                setSelectedSubservice(service.name);
+                                                                                                setIsServicesOpen(false);
+                                                                                                setHoveredCategory(null);
+                                                                                                setHoveredSubservice(null);
+                                                                                            }}
+                                                                                            className="text-sm font-semibold text-[#92E0E0] capitalize hover:text-[#040857] transition-colors duration-200 cursor-pointer block"
+                                                                                        >
+                                                                                            {service.name}
+                                                                                        </Link>
+                                                                                    </li>
+
                                                                                     {submenuItems.map((item, i) => (
                                                                                         <li key={i} className="transition-all duration-300 ease-in-out transform hover:translate-x-1">
                                                                                             <Link

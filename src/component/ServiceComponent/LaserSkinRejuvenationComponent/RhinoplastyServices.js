@@ -24,7 +24,7 @@ const RhinoplastyServices = ({ scrollTo }) => {
         setTime(event.target.value);
     };
     return (
-        <div className="font-sans font-normal">
+        <div>
             {/* Main Title Section - Full Screen */}
             <div className="w-full py-10 px-4">
                 <div className="container mx-auto">
