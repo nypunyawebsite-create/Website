@@ -1,0 +1,282 @@
+import React, { useState, useEffect } from "react";
+import { LaserSkinRejuvenationData, galleryImages, informationImages } from "../../../utils/ServiceDatas/LaserSkinRejuvenationData/laserSkinRejuvenationData";
+
+const RhinoplastyServices = ({ scrollTo }) => {
+    const [selectedImage, setSelectedImage] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        if (Array.isArray(informationImages) && informationImages.length > 0) {
+            setImages(informationImages);
+            if (scrollTo === 'whyUs') {
+                setSelectedImage(informationImages.length - 1);
+                setIsModalOpen(true);
+            } else if (scrollTo === 'information') {
+                setSelectedImage(0);
+                setIsModalOpen(true);
+            } else {
+                setSelectedImage(0);
+                setIsModalOpen(false);
+            }
+        } else {
+            setImages(galleryImages);
+            setSelectedImage(0);
+            setIsModalOpen(false);
+        }
+    }, [scrollTo]);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!isModalOpen) return;
+
+            switch (e.key) {
+                case 'ArrowLeft':
+                    handlePrevious(e);
+                    break;
+                case 'ArrowRight':
+                    handleNext(e);
+                    break;
+                case 'Escape':
+                    closeModal();
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isModalOpen, images.length]);
+
+    const openModal = (index) => {
+        if (images.length === 0) return;
+        setSelectedImage(index);
+        setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        document.body.style.overflow = 'unset';
+    };
+
+    const handlePrevious = (e) => {
+        e?.stopPropagation();
+        if (images.length <= 1) return;
+        setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    };
+
+    const handleNext = (e) => {
+        e?.stopPropagation();
+        if (images.length <= 1) return;
+        setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    };
+
+    return (
+        <div className="container mx-auto py-10 px-4">
+            {/* Title Section */}
+            <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-custom-blue">Laser Skin Rejuvenation</h2>
+                <div className="w-20 h-1 bg-custom-green mx-auto mt-4"></div>
+            </div>
+
+            {/* Main Content Section */}
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+                {/* Left Column - Text Content */}
+                <div className="space-y-6">
+                    <div className="prose max-w-none">
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Your skin is the largest organ of your body and plays a crucial role in your overall appearance and confidence.
+                            As we age, our skin naturally loses collagen and elastin, leading to fine lines, wrinkles, and uneven texture.
+                        </p>
+
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Laser Skin Rejuvenation is more than just a cosmetic treatment – it's a comprehensive approach to restoring
+                            your skin's natural radiance and youthful appearance. At Nypunya Aesthetic Clinic, we understand that
+                            beautiful skin is the foundation of confidence and self-assurance.
+                        </p>
+
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Nypunya Aesthetic Clinic is recognized as one of the premier destinations for laser skin rejuvenation in Bangalore.
+                            Our expert team combines cutting-edge technology with years of experience to deliver exceptional results
+                            that exceed expectations.
+                        </p>
+
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Dr. Prashantha Kesari brings over 20 years of expertise in aesthetic medicine and laser treatments.
+                            Having trained with leading institutions worldwide, he has refined his techniques to provide safe,
+                            effective, and natural-looking results for every patient.
+                        </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                        <h3 className="text-xl font-bold text-custom-blue mb-4">
+                            WHAT IS LASER SKIN REJUVENATION?
+                        </h3>
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            Laser Skin Rejuvenation is an advanced cosmetic procedure that uses precise laser technology to
+                            stimulate collagen production and improve skin texture, tone, and overall appearance. This innovative
+                            treatment targets multiple skin concerns simultaneously, making it an ideal solution for comprehensive skin improvement.
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            At Nypunya Aesthetic Clinic, we utilize state-of-the-art laser technologies including:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4">
+                            <li>Fractional CO2 Laser Treatment</li>
+                            <li>Q-Switched Laser Technology</li>
+                            <li>Intense Pulsed Light (IPL) Therapy</li>
+                            <li>Non-Ablative Laser Resurfacing</li>
+                        </ul>
+                    </div>
+
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                        Dr. Kesari's expertise ensures that each treatment is customized to your unique skin type and concerns,
+                        delivering natural-looking results that enhance your natural beauty while maintaining skin health and integrity.
+                    </p>
+                </div>
+
+                {/* Right Column - Image */}
+                <div className="flex items-center justify-center">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img
+                            src="/services/laser_skin_rejuvenation/treatment-procedure.png"
+                            alt="Laser Skin Rejuvenation Treatment"
+                            className="w-full h-[600px] object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-[100%] mx-auto">
+                {/* Main Section - Images */}
+                <div className="space-y-8">
+                    {/* Main Image */}
+                    {images.length > 0 && (
+                        <div
+                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer hidden md:block"
+                            onClick={() => openModal(selectedImage)}
+                        >
+                            <img
+                                src={images[selectedImage]}
+                                alt="Featured Laser Skin Rejuvenation"
+                                className="w-full h-[600px] object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                <div className="absolute bottom-6 left-6 text-white">
+                                    <h3 className="text-2xl font-bold mb-2">Laser Skin Rejuvenation</h3>
+                                    <p className="text-white/80">Step {selectedImage + 1}</p>
+                                </div>
+                            </div>
+                            {/* Navigation Arrows */}
+                            {images.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={handlePrevious}
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-2 rounded-full transition-all duration-300"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        onClick={handleNext}
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-2 rounded-full transition-all duration-300"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </>
+                            )}
+                        </div>
+                    )}
+
+                    {/* Image Grid */}
+                    {images.length > 0 && (
+                        <div className="flex justify-center gap-4 overflow-x-auto pb-4">
+                            {images.map((image, index) => (
+                                <div
+                                    key={index}
+                                    className={`relative flex-shrink-0 w-48 rounded-xl overflow-hidden shadow-md group cursor-pointer transition-all duration-300 ${selectedImage === index ? 'ring-2 ring-custom-green' : ''}`}
+                                    onClick={() => openModal(index)}
+                                >
+                                    <img
+                                        src={image}
+                                        alt={`Laser Skin Rejuvenation ${index + 1}`}
+                                        className="w-full h-32 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                        <div className="absolute bottom-3 left-3 text-white">
+                                            <p className="text-sm font-medium">Step {index + 1}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Fullscreen Modal */}
+            {isModalOpen && images.length > 0 && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 transition-opacity duration-300"
+                    onClick={closeModal}
+                >
+                    <div className="relative w-full h-full flex items-center justify-center p-4">
+                        <img
+                            src={images[selectedImage]}
+                            alt={`Laser Skin Rejuvenation ${selectedImage + 1}`}
+                            className="max-w-full max-h-full object-contain"
+                        />
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-4 right-4 text-white hover:text-custom-green transition-colors duration-300"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        {/* Modal Navigation Arrows */}
+                        {images.length > 1 && (
+                            <>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handlePrevious(e);
+                                    }}
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-3 rounded-full transition-all duration-300"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleNext(e);
+                                    }}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-custom-blue/80 hover:bg-custom-blue text-white p-3 rounded-full transition-all duration-300"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </>
+                        )}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-lg">
+                            View {selectedImage + 1} of {images.length}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default RhinoplastyServices;
