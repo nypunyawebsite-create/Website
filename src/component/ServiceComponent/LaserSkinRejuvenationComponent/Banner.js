@@ -7,7 +7,7 @@ const Banner = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="/services/rhinoplasty/rhinoplasty_service_main_page.png"
+                        src="/services/rhinoplasty/rhinoplasty_service_main_page.PNG"
                         alt="Rhinoplasty Services Banner"
                         className="w-full h-full object-cover"
                     />
