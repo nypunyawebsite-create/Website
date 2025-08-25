@@ -34,11 +34,12 @@ import LaserScarRevision from '../pages/LaserScarRevision/page';
 import PRPInjections from '../pages/PlateletRichPlasmaInjections/page';
 import BlepharoPlasty from '../pages/BlepharoPlasty/page'
 import Liposuction from '../pages/Liposuction/page'
-import RhinoplastyServices from '../pages/LaserSkinRejuvenation/page';
+import RhinoplastyServices from '../pages/RhinoplastyServices/page';
 import International from '../pages/International';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import ServiceBlogs from '../pages/Blogs/ServiceBlogs';
 import BlogDetails from '../pages/Blogs/BlogDetails';
+import AntiAgeingServices from '../pages/AntiAgeingServices/page';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -84,10 +85,13 @@ function AppRoutes() {
                 { path: "/laser-tattoo-removal", element: <LaserTattooRemoval /> },
                 { path: "/stretch-marks-treatment", element: <StretchMarksTreatment /> },
                 { path: "/laser-skin-rejuvenation", element: <LaserSkinToning /> },
-                { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
+                // { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
                 { path: "/laser-scar-revision", element: <LaserScarRevision /> },
                 { path: "/platelet-rich-plasma-injections", element: <PRPInjections /> },
                 { path: "/privacy-policy", element: <PrivacyPolicy /> },
+
+                { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
+                { path: "/anti-ageing-services", element: <AntiAgeingServices /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },
                 // // Catch-all route for non-existing paths
