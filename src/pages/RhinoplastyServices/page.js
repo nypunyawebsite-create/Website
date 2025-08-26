@@ -1,5 +1,5 @@
 import React from 'react'
-import RhinoplastyComponents from '../../component/RhinoplastyComponents'
+import RhinoplastyComponents from '../../component/WordPressServicePages/RhinoplastyComponents'
 
 const page = () => {
     return (

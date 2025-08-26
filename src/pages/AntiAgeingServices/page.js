@@ -1,10 +1,10 @@
 import React from 'react'
-import AntiAging from '../../component/AntiAgeingComponent/AntiAgeing'
+import AntiAgeingWordpress from '../../component/WordPressServicePages/AntiAgeingComponent/AntiAgeingWordpress'
 
 const page = () => {
     return (
         <div>
-            <AntiAging />
+            <AntiAgeingWordpress />
         </div>
     )
 }

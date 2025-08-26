@@ -20,7 +20,7 @@ import BreastEnhancement from '../pages/BreastAugmentation/page'; // Import Brea
 import BodyContouringPage from '../pages/BodyContouringAbdominalPlaty/page';
 import AbdominalContouring from '../pages/AbdominalContouring/page';
 import HairTransplant from '../pages/HairTransplant/page';
-import AntiAging from '../pages/AntiAgeingProcedures/page';
+import AntiAgeing from '../pages/AntiAgeingProcedures/page';
 import Rhinoplasty from '../pages/Rhinoplasty/page';
 import StructuralFatGrafting from '../pages/StructuralFatGrafting/page';
 import Gynaecomastia from '../pages/Gynaecomastia/page';
@@ -73,7 +73,7 @@ function AppRoutes() {
                 { path: "/body-contouring", element: <BodyContouringPage /> },
                 { path: "/abdominal-contouring", element: <AbdominalContouring /> },
                 { path: "/hair-transplant", element: <HairTransplant /> },
-                { path: "/anti-ageing", element: <AntiAging /> },
+                { path: "/anti-ageing", element: <AntiAgeing /> },
                 { path: "/rhinoplasty", element: <Rhinoplasty /> },
                 { path: "/structural-fat-grafting", element: <StructuralFatGrafting /> },
                 { path: "/gynaecomastia-male-breast-moobs", element: <Gynaecomastia /> },
@@ -85,12 +85,11 @@ function AppRoutes() {
                 { path: "/laser-tattoo-removal", element: <LaserTattooRemoval /> },
                 { path: "/stretch-marks-treatment", element: <StretchMarksTreatment /> },
                 { path: "/laser-skin-rejuvenation", element: <LaserSkinToning /> },
-                // { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
+                { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
                 { path: "/laser-scar-revision", element: <LaserScarRevision /> },
                 { path: "/platelet-rich-plasma-injections", element: <PRPInjections /> },
                 { path: "/privacy-policy", element: <PrivacyPolicy /> },
 
-                { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
                 { path: "/anti-ageing-services", element: <AntiAgeingServices /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },

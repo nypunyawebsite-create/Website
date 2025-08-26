@@ -217,7 +217,7 @@ const DesktopNavBar = () => {
                                                                                     {/* Service Name Header */}
                                                                                     <li className="px-2 py-1 mb-2 border-b border-gray-200">
                                                                                         <Link
-                                                                                            to={service.path}
+                                                                                            to={service.service_path}
                                                                                             onClick={() => {
                                                                                                 setSelectedCategory(category.category);
                                                                                                 setSelectedSubservice(service.name);

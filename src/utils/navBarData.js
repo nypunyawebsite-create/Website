@@ -4,8 +4,8 @@ export const serviceSubmenu = [
   {
     category: "Plastic Surgery",
     subservices: [
-      { name: "Rhinoplasty", path: "/rhinoplasty-services" },
-      { name: "Anti Ageing", path: "/anti-ageing" },
+      { name: "Rhinoplasty", path: "/rhinoplasty", service_path: "rhinoplasty-services" },
+      { name: "Anti Ageing", path: "/anti-ageing", service_path: "anti-ageing-services" },
       { name: "Body Contouring", path: "/body-contouring" },
       { name: "Breast Aesthetics", path: "/breast-enhancement" },
       { name: "Abdominoplasty", path: "/abdominal-contouring" },

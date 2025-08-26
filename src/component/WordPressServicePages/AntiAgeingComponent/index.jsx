@@ -1,14 +1,13 @@
 import React from 'react'
-import RhinoplastyWordpress from './RhinoplastyWordpress'
+import AntiAgeing from './AntiAgeing'
 import { HelmetProvider } from 'react-helmet-async'
-
 const index = () => {
     return (
-        <>
+        <div>
             <HelmetProvider>
-                <RhinoplastyWordpress />
+                <AntiAgeing />
             </HelmetProvider>
-        </>
+        </div>
     )
 }
 

@@ -1,11 +1,26 @@
 "use client"
 import React, { useState, useEffect } from "react"
 import { Helmet } from "react-helmet-async"
+import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
-const RhinoplastyWordpress = () => {
+const FaceliftWordpress = () => {
     const [pageData, setPageData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+
+
+
+
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("");
+
+    const handleDateChange = (event) => {
+        setDate(event.target.value);
+    };
+
+    const handleTimeChange = (event) => {
+        setTime(event.target.value);
+    };
 
     // Domain configuration
     const DOMAIN = "https://docs.nypunyaaesthetics.com"
@@ -16,7 +31,7 @@ const RhinoplastyWordpress = () => {
         const fetchPage = async () => {
             try {
                 setLoading(true)
-                const response = await fetch(`${API_BASE}/pages/10?_embed&acf=1`)
+                const response = await fetch(`${API_BASE}/pages/105?_embed&acf=1`)
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`)
@@ -266,6 +281,7 @@ const RhinoplastyWordpress = () => {
 
     return (
         <>
+
             {/* SEO Meta Tags with react-helmet */}
             <Helmet>
                 <meta charSet="utf-8" />
@@ -310,7 +326,7 @@ const RhinoplastyWordpress = () => {
             </Helmet>
 
             {/* Main Content */}
-            <div className="w-full p-6">
+            <div className="w-full">
                 {/* Featured Image */}
                 <div className="w-full mb-8">
                     <img
@@ -318,6 +334,7 @@ const RhinoplastyWordpress = () => {
                         alt="Rhinoplasty Services"
                         className="w-full h-auto object-cover rounded-lg shadow-lg"
                     />
+                    {/* banner image */}
                 </div>
 
                 {/* Page Title */}
@@ -331,9 +348,130 @@ const RhinoplastyWordpress = () => {
                     className="prose prose-lg max-w-none mx-auto"
                     dangerouslySetInnerHTML={{ __html: pageData.content.rendered }}
                 />
-
+                <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
+                    <div className="w-full md:px-20 text-white md:p-8 p-4 rounded-lg">
+                        <h2 className="text-center text-xl md:text-2xl mb-6">
+                            BOOK YOUR CONSULTATION
+                        </h2>
+                        <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="Name *"
+                                    className="w-full bg-transparent outline-none border-none"
+                                    required
+                                />
+                                <hr className="border-custom-green" />
+                            </div>
+                            <div>
+                                <input
+                                    type="email"
+                                    placeholder="Email *"
+                                    className="w-full border-none bg-transparent outline-none"
+                                    required
+                                />
+                                <hr className="border-custom-green" />
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="Phone Number *"
+                                    className="w-full border-none bg-transparent outline-none"
+                                    required
+                                />
+                                <hr className="border-custom-green" />
+                            </div>
+                            <div>
+                                <select className="w-full border-none bg-transparent outline-none">
+                                    <option className="text-black">Select Treatment *</option>
+                                </select>
+                                <hr className="border-custom-green" />
+                            </div>
+                            {/* Date Selection */}
+                            <div>
+                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
+                                    <FaCalendarAlt className="text-white mr-2" />
+                                    <input
+                                        type="date"
+                                        value={date}
+                                        onChange={handleDateChange}
+                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                        style={{
+                                            WebkitAppearance: "none",
+                                            MozAppearance: "none",
+                                            appearance: "none",
+                                        }}
+                                        required
+                                    />
+                                </div>
+                                <hr className="border-custom-green" />
+                            </div>
+                            {/* Time Selection */}
+                            <div>
+                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
+                                    <FaClock className="text-white mr-2" />
+                                    <input
+                                        type="time"
+                                        value={time}
+                                        onChange={handleTimeChange}
+                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                        required
+                                    />
+                                </div>
+                                <hr className="border-custom-green" />
+                            </div>
+                            <div>
+                                <select className="w-full border-none bg-transparent outline-none">
+                                    <option className="text-black">Select Department *</option>
+                                </select>
+                                <hr className="border-custom-green" />
+                            </div>
+                            {/* Date Selection */}
+                            <div>
+                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
+                                    <FaCalendarAlt className="text-white mr-2" />
+                                    <input
+                                        type="date"
+                                        value={date}
+                                        onChange={handleDateChange}
+                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                        style={{
+                                            WebkitAppearance: "none",
+                                            MozAppearance: "none",
+                                            appearance: "none",
+                                        }}
+                                        required
+                                    />
+                                </div>
+                                <hr className="border-custom-green" />
+                            </div>
+                            {/* Time Selection */}
+                            <div>
+                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
+                                    <FaClock className="text-white mr-2" />
+                                    <input
+                                        type="time"
+                                        value={time}
+                                        onChange={handleTimeChange}
+                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
+                                        required
+                                    />
+                                </div>
+                                <hr className="border-custom-green" />
+                            </div>
+                            <div className="md:col-span-3 flex justify-center">
+                                <button
+                                    type="submit"
+                                    className="bg-custom-green text-black px-8 md:w-[30%] py-2 rounded-full font-semibold hover:bg-[#8ccdc9] transition"
+                                >
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 {/* ACF Fields Debug */}
-                {pageData.acf && (
+                {/* {pageData.acf && (
                     <div className="mt-8 p-6 bg-green-50 rounded-lg">
                         <h3 className="text-xl font-semibold mb-4">ACF Custom Fields:</h3>
                         <div className="space-y-2 text-sm">
@@ -388,10 +526,10 @@ const RhinoplastyWordpress = () => {
                             </p>
                         </div>
                     </div>
-                )}
+                )} */}
             </div>
         </>
     )
 }
 
-export default RhinoplastyWordpress
+export default FaceliftWordpress
