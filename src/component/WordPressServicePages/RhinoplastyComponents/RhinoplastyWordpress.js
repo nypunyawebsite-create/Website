@@ -338,10 +338,10 @@ const RhinoplastyWordpress = () => {
                 </div>
 
                 {/* Page Title */}
-                <h1
+                {/* <h1
                     className="text-4xl font-bold mb-6 text-center"
                     dangerouslySetInnerHTML={{ __html: pageData.title.rendered }}
-                />
+                /> */}
 
                 {/* Page Content */}
                 <div
