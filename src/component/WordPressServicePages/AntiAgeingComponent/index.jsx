@@ -4,9 +4,7 @@ import { HelmetProvider } from 'react-helmet-async'
 const index = () => {
     return (
         <div>
-            <HelmetProvider>
-                <AntiAgeing />
-            </HelmetProvider>
+            <AntiAgeing />
         </div>
     )
 }

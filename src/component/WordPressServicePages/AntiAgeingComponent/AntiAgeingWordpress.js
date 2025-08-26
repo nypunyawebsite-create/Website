@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { Helmet } from "react-helmet-async"
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 const AntiAgeingWordpress = () => {
     const [pageData, setPageData] = useState(null)
@@ -29,7 +28,7 @@ const AntiAgeingWordpress = () => {
         const fetchPage = async () => {
             try {
                 setLoading(true)
-                const response = await fetch(`${API_BASE}/pages/10?_embed&acf=1`)
+                const response = await fetch(`${API_BASE}/pages/26?_embed&acf=1`)
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`)
@@ -280,48 +279,7 @@ const AntiAgeingWordpress = () => {
     return (
         <>
 
-            {/* SEO Meta Tags with react-helmet */}
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{seoTitle}</title>
-                <meta name="description" content={seoDescription} />
-                <meta name="keywords" content={generateKeywords()} />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/images/favicon-150x150.png" />
 
-                {/* Canonical */}
-                <link rel="canonical" href={seoCanonical} />
-
-                {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={seoTitle} />
-                <meta property="og:description" content={seoDescription} />
-                <meta property="og:url" content={seoCanonical} />
-                <meta property="og:site_name" content="Nypunya Aesthetics" />
-                <meta property="og:image" content={finalSeoImage} />
-                <meta property="og:image:width" content={pageData.acf?.social_media?.width || "1200"} />
-                <meta property="og:image:height" content={pageData.acf?.social_media?.height || "630"} />
-                <meta property="og:image:alt" content={pageData.acf?.social_media?.alt || seoTitle} />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={seoTitle} />
-                <meta name="twitter:description" content={seoDescription} />
-                <meta name="twitter:image" content={finalSeoImage} />
-                <meta name="twitter:image:alt" content={seoTitle} />
-
-                {/* Extra */}
-                <meta name="robots" content="index, follow" />
-                <meta name="author" content="Nypunya Aesthetics" />
-                <meta name="language" content="English" />
-                <meta name="revisit-after" content="7 days" />
-
-                {/* Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify(generateSchema())}
-                </script>
-            </Helmet>
 
             {/* Main Content */}
             <div className="w-full">
@@ -336,138 +294,17 @@ const AntiAgeingWordpress = () => {
                 </div>
 
                 {/* Page Title */}
-                <h1
+                {/* <h1
                     className="text-4xl font-bold mb-6 text-center"
                     dangerouslySetInnerHTML={{ __html: pageData.title.rendered }}
-                />
+                /> */}
 
                 {/* Page Content */}
                 <div
                     className="prose prose-lg max-w-none mx-auto"
                     dangerouslySetInnerHTML={{ __html: pageData.content.rendered }}
                 />
-                <div className="flex justify-center items-center bg-[#040857] px-4 py-10">
-                    <div className="w-full md:px-20 text-white md:p-8 p-4 rounded-lg">
-                        <h2 className="text-center text-xl md:text-2xl mb-6">
-                            BOOK YOUR CONSULTATION
-                        </h2>
-                        <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div>
-                                <input
-                                    type="text"
-                                    placeholder="Name *"
-                                    className="w-full bg-transparent outline-none border-none"
-                                    required
-                                />
-                                <hr className="border-custom-green" />
-                            </div>
-                            <div>
-                                <input
-                                    type="email"
-                                    placeholder="Email *"
-                                    className="w-full border-none bg-transparent outline-none"
-                                    required
-                                />
-                                <hr className="border-custom-green" />
-                            </div>
-                            <div>
-                                <input
-                                    type="text"
-                                    placeholder="Phone Number *"
-                                    className="w-full border-none bg-transparent outline-none"
-                                    required
-                                />
-                                <hr className="border-custom-green" />
-                            </div>
-                            <div>
-                                <select className="w-full border-none bg-transparent outline-none">
-                                    <option className="text-black">Select Treatment *</option>
-                                </select>
-                                <hr className="border-custom-green" />
-                            </div>
-                            {/* Date Selection */}
-                            <div>
-                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                    <FaCalendarAlt className="text-white mr-2" />
-                                    <input
-                                        type="date"
-                                        value={date}
-                                        onChange={handleDateChange}
-                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                        style={{
-                                            WebkitAppearance: "none",
-                                            MozAppearance: "none",
-                                            appearance: "none",
-                                        }}
-                                        required
-                                    />
-                                </div>
-                                <hr className="border-custom-green" />
-                            </div>
-                            {/* Time Selection */}
-                            <div>
-                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                    <FaClock className="text-white mr-2" />
-                                    <input
-                                        type="time"
-                                        value={time}
-                                        onChange={handleTimeChange}
-                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                        required
-                                    />
-                                </div>
-                                <hr className="border-custom-green" />
-                            </div>
-                            <div>
-                                <select className="w-full border-none bg-transparent outline-none">
-                                    <option className="text-black">Select Department *</option>
-                                </select>
-                                <hr className="border-custom-green" />
-                            </div>
-                            {/* Date Selection */}
-                            <div>
-                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                    <FaCalendarAlt className="text-white mr-2" />
-                                    <input
-                                        type="date"
-                                        value={date}
-                                        onChange={handleDateChange}
-                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                        style={{
-                                            WebkitAppearance: "none",
-                                            MozAppearance: "none",
-                                            appearance: "none",
-                                        }}
-                                        required
-                                    />
-                                </div>
-                                <hr className="border-custom-green" />
-                            </div>
-                            {/* Time Selection */}
-                            <div>
-                                <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                    <FaClock className="text-white mr-2" />
-                                    <input
-                                        type="time"
-                                        value={time}
-                                        onChange={handleTimeChange}
-                                        className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                        required
-                                    />
-                                </div>
-                                <hr className="border-custom-green" />
-                            </div>
-                            <div className="md:col-span-3 flex justify-center">
-                                <button
-                                    type="submit"
-                                    className="bg-custom-green text-black px-8 md:w-[30%] py-2 rounded-full font-semibold hover:bg-[#8ccdc9] transition"
-                                >
-                                    SUBMIT
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+
                 {/* ACF Fields Debug */}
                 {/* {pageData.acf && (
                     <div className="mt-8 p-6 bg-green-50 rounded-lg">
