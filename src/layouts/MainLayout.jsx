@@ -4,7 +4,7 @@ import { useSeoMetadata } from '../hooks/useSeoMetadata';
 import Header from '../component/Shared/Header';
 import Footer from '../component/Shared/Footer';
 import Breadcrumbs from '../component/Shared/Breadcrumbs';
-import SeoDebugger from '../components/SeoDebugger';
+// import SeoDebugger from '../components/SeoDebugger';
 
 const MainLayout = () => {
     const location = useLocation();
@@ -131,12 +131,12 @@ const MainLayout = () => {
             <Breadcrumbs />
             <Outlet />
             <Footer />
-            <SeoDebugger
+            {/* <SeoDebugger
                 seoData={seoData}
                 loading={loading}
                 seoId={seoId}
                 pathname={location.pathname}
-            />
+            /> */}
         </main>
     );
 };

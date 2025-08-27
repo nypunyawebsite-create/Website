@@ -7,7 +7,7 @@ const SeoDebugger = ({ seoData, loading, seoId, pathname }) => {
 
     useEffect(() => {
         setCurrentTitle(document.title);
-        
+
         // Get all meta tags for debugging
         const allMetaTags = Array.from(document.querySelectorAll('meta')).map(meta => ({
             name: meta.getAttribute('name') || meta.getAttribute('property') || 'unknown',
@@ -53,7 +53,7 @@ const SeoDebugger = ({ seoData, loading, seoId, pathname }) => {
                     <div><strong>Loading:</strong> {loading ? 'Yes' : 'No'}</div>
                     <div><strong>Current Title:</strong> {currentTitle}</div>
                     <div><strong>SEO Data:</strong> {seoData ? 'Loaded' : 'None'}</div>
-                    
+
                     {seoData && (
                         <div style={{ marginTop: '10px', padding: '10px', background: '#374151', borderRadius: '4px' }}>
                             <div><strong>Title:</strong> {seoData.metaTitle}</div>
