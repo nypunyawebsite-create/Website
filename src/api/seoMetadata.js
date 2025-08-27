@@ -5,7 +5,7 @@ const API_BASE_URL = API_URL;
 export const getSeoMetadataById = async (id) => {
     try {
         console.log(`🌐 API: Fetching SEO metadata by ID: ${id}`);
-        const response = await fetch(`${API_BASE_URL}/seo-metadata/id/${id}`);
+        const response = await fetch(`${API_BASE_URL}api/seo-metadata/id/${id}`);
         console.log(`🌐 API: Response status: ${response.status}`);
 
         if (!response.ok) {
