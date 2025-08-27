@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import { Helmet } from "react-helmet-async"
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
-const FaceliftWordpress = () => {
+const BreastAugmentation = () => {
     const [pageData, setPageData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -28,7 +28,7 @@ const FaceliftWordpress = () => {
         const fetchPage = async () => {
             try {
                 setLoading(true)
-                const response = await fetch(`${API_BASE}/pages/105?_embed&acf=1`)
+                const response = await fetch(`${API_BASE}/pages/111?_embed&acf=1`)
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`)
@@ -335,10 +335,10 @@ const FaceliftWordpress = () => {
                 </div>
 
                 {/* Page Title */}
-                <h1
+                {/* <h1
                     className="text-4xl font-bold mb-6 text-center"
                     dangerouslySetInnerHTML={{ __html: pageData.title.rendered }}
-                />
+                /> */}
 
                 {/* Page Content */}
                 <div
@@ -529,4 +529,4 @@ const FaceliftWordpress = () => {
     )
 }
 
-export default FaceliftWordpress
+export default BreastAugmentation
