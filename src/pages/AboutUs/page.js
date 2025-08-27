@@ -1,11 +1,11 @@
 import React from 'react'
 import AboutUsComponent from '../../component/AboutUsComponent/index'
-const page = () => {
+const AboutUs = () => {
   return (
-   <>
-   <AboutUsComponent />
-   </>
+    <>
+      <AboutUsComponent />
+    </>
   )
 }
 
-export default page
+export default AboutUs
