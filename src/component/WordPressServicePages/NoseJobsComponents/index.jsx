@@ -1,12 +1,12 @@
 import React from 'react'
 import { HelmetProvider } from 'react-helmet-async'
-import FaceliftWordpress from './FaceliftWordpress'
+import NoseJobsWordpress from './NoseJobsWordpress'
 
 const index = () => {
     return (
         <>
             <HelmetProvider>
-                <FaceliftWordpress />
+                <NoseJobsWordpress />
             </HelmetProvider>
         </>
     )
