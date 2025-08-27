@@ -40,6 +40,7 @@ import PrivacyPolicy from '../pages/PrivacyPolicy';
 import ServiceBlogs from '../pages/Blogs/ServiceBlogs';
 import BlogDetails from '../pages/Blogs/BlogDetails';
 import AntiAgeingServices from '../pages/AntiAgeingServices/page';
+import BreastAugmentation from '../component/WordPressServicePages/BreastAugmentation/index';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -91,6 +92,7 @@ function AppRoutes() {
                 { path: "/privacy-policy", element: <PrivacyPolicy /> },
 
                 { path: "/anti-ageing-services", element: <AntiAgeingServices /> },
+                { path: "/breast-augmentation-in-bangalore", element: <BreastAugmentation /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },
                 // // Catch-all route for non-existing paths
