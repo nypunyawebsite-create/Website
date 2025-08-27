@@ -1,15 +1,11 @@
 "use client"
 import React, { useState, useEffect } from "react"
-import { Helmet } from "react-helmet-async"
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
-const RhinoplastyWordpress = () => {
+const LaserHairRemoval = () => {
     const [pageData, setPageData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-
-
-
 
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
@@ -31,7 +27,7 @@ const RhinoplastyWordpress = () => {
         const fetchPage = async () => {
             try {
                 setLoading(true)
-                const response = await fetch(`${API_BASE}/pages/10?_embed&acf=1`)
+                const response = await fetch(`${API_BASE}/pages/194?_embed&acf=1`)
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`)
@@ -283,47 +279,7 @@ const RhinoplastyWordpress = () => {
         <>
 
             {/* SEO Meta Tags with react-helmet */}
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{seoTitle}</title>
-                <meta name="description" content={seoDescription} />
-                <meta name="keywords" content={generateKeywords()} />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/images/favicon-150x150.png" />
 
-                {/* Canonical */}
-                <link rel="canonical" href={seoCanonical} />
-
-                {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content={seoTitle} />
-                <meta property="og:description" content={seoDescription} />
-                <meta property="og:url" content={seoCanonical} />
-                <meta property="og:site_name" content="Nypunya Aesthetics" />
-                <meta property="og:image" content={finalSeoImage} />
-                <meta property="og:image:width" content={pageData.acf?.social_media?.width || "1200"} />
-                <meta property="og:image:height" content={pageData.acf?.social_media?.height || "630"} />
-                <meta property="og:image:alt" content={pageData.acf?.social_media?.alt || seoTitle} />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={seoTitle} />
-                <meta name="twitter:description" content={seoDescription} />
-                <meta name="twitter:image" content={finalSeoImage} />
-                <meta name="twitter:image:alt" content={seoTitle} />
-
-                {/* Extra */}
-                <meta name="robots" content="index, follow" />
-                <meta name="author" content="Nypunya Aesthetics" />
-                <meta name="language" content="English" />
-                <meta name="revisit-after" content="7 days" />
-
-                {/* Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify(generateSchema())}
-                </script>
-            </Helmet>
 
             {/* Main Content */}
             <div className="w-full">
@@ -532,4 +488,4 @@ const RhinoplastyWordpress = () => {
     )
 }
 
-export default RhinoplastyWordpress
+export default LaserHairRemoval

@@ -4,12 +4,12 @@ export const serviceSubmenu = [
   {
     category: "Plastic Surgery",
     subservices: [
-      { name: "Rhinoplasty", path: "/rhinoplasty", service_path: "rhinoplasty-services" },
-      { name: "Anti Ageing", path: "/anti-ageing", service_path: "anti-ageing-services" },
-      { name: "Body Contouring", path: "/body-contouring" },
-      { name: "Breast Aesthetics", path: "/breast-enhancement" },
+      { name: "Rhinoplasty", path: "/rhinoplasty", service_path: "rhinoplasty-in-bangalore" },
+      { name: "Anti Ageing", path: "/anti-ageing", service_path: "facelift-in-bangalore" },
+      { name: "Body Contouring", path: "/body-contouring", service_path: "body-contouring-in-bangalore" },
+      { name: "Breast Aesthetics", path: "/breast-enhancement", service_path: "breast-augmentation-in-bangalore" },
       { name: "Abdominoplasty", path: "/abdominal-contouring" },
-      { name: "Hair Transplant", path: "/hair-transplant" },
+      { name: "Hair Transplant", path: "/hair-transplant", service_path: "hair-transplant-in-bangalore" },
       { name: "Blepharoplasty", path: "/blepharo-plasty" },
       { name: "Gynaecomastia", path: "/gynaecomastia-male-breast-moobs" },
       { name: "Liposuction", path: "/liposuction" },
@@ -22,7 +22,7 @@ export const serviceSubmenu = [
     category: "Dermatology",
     subservices: [
       { name: "Acne and acne scars", path: "/acne-and-scars" },
-      { name: "Laser Hair Removal", path: "/laser-hair-removal" },
+      { name: "Laser Hair Removal", path: "/laser-hair-removal", service_path: "laser-hair-removal-in-bangalore" },
       { name: "Fillers and Botox", path: "/fillers-and-botox" },
       { name: "Laser Tattoo Removal", path: "/laser-tattoo-removal" },
       { name: "Stretch Marks Treatment", path: "/stretch-marks-treatment" },

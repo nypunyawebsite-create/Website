@@ -42,6 +42,9 @@ import BlogDetails from '../pages/Blogs/BlogDetails';
 import AntiAgeingServices from '../pages/AntiAgeingServices/page';
 import NoseJobs from '../pages/NoseJobs/page';
 import BreastAugmentationServices from '../pages/BreastAugmentationServices/page';
+import BodyContouringServices from '../pages/BodyContouringServices/page';
+import HairTransplantServices from '../pages/HairTransplantServices/page';
+import LaserHairRemovalServices from '../pages/LaserHairRemovalServices/page';
 // import BlogPosts from '../pages/BlogPosts/BlogPosts';
 // import SinglePost from '../pages/SinglePost/SinglePost';
 
@@ -87,14 +90,18 @@ function AppRoutes() {
                 { path: "/laser-tattoo-removal", element: <LaserTattooRemoval /> },
                 { path: "/stretch-marks-treatment", element: <StretchMarksTreatment /> },
                 { path: "/laser-skin-rejuvenation", element: <LaserSkinToning /> },
-                { path: "/rhinoplasty-services", element: <RhinoplastyServices /> },
+
                 { path: "/laser-scar-revision", element: <LaserScarRevision /> },
                 { path: "/platelet-rich-plasma-injections", element: <PRPInjections /> },
                 { path: "/privacy-policy", element: <PrivacyPolicy /> },
 
-                { path: "/anti-ageing-services", element: <AntiAgeingServices /> },
+                { path: "/rhinoplasty-in-bangalore", element: <RhinoplastyServices /> },
+                { path: "/facelift-in-bangalore", element: <AntiAgeingServices /> },
                 { path: "/nose-jobs", element: <NoseJobs /> },
                 { path: "/breast-augmentation-in-bangalore", element: <BreastAugmentationServices /> },
+                { path: "/body-contouring-in-bangalore", element: <BodyContouringServices /> },
+                { path: "/hair-transplant-in-bangalore", element: <HairTransplantServices /> },
+                { path: "/laser-hair-removal-in-bangalore", element: <LaserHairRemovalServices /> },
                 // // Dermatology service category
                 // { path: "dermatology", element: <Dermatology /> },
                 // // Catch-all route for non-existing paths

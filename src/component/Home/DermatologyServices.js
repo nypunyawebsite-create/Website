@@ -30,6 +30,12 @@ const DermatologyServices = () => {
         });
     };
 
+    const handleServiceReadMore = (servicePath) => {
+        if (servicePath) {
+            navigate(`/${servicePath}`);
+        }
+    };
+
     return (
         <div className="p-4 md:p-6 flex flex-col justify-center items-center pt-20">
             <div className="w-full max-w-7xl">
@@ -47,7 +53,18 @@ const DermatologyServices = () => {
                                     <h3 className="text-xl font-bold min-h-16">
                                         {clickedServices.has(index) ? 'Read More' : service.title}
                                     </h3>
-                                    <p className="text-sm text-gray-700">{service.desc}</p>
+                                    <p className="text-sm text-gray-700"> {service.desc} &nbsp;
+
+                                        {/* Read More Button */}
+                                        {service.service_path && (
+                                            <button
+                                                onClick={() => handleServiceReadMore(service.service_path)}
+                                                className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors duration-200 self-start"
+                                            >
+                                                Read More
+                                            </button>
+                                        )}
+                                    </p>
                                 </div>
 
                                 <div className="relative min-h-[200px] md:min-h-[250px] rounded-md overflow-hidden">

@@ -7,7 +7,8 @@ const cosmeticServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug: 'rhinoplasty'
+        slug: 'rhinoplasty',
+        service_path: "rhinoplasty-in-bangalore"
     },
     {
         title: 'Anti Ageing Procedures',
@@ -18,6 +19,7 @@ const cosmeticServiceData = [
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
         slug: 'anti-ageing',
+        service_path: "facelift-in-bangalore"
     },
 
     {
@@ -29,6 +31,7 @@ const cosmeticServiceData = [
         faqs: 'Frequently asked questions about Breast Enhancement.',
         whyUs: 'Reasons to choose our services for Breast Enhancement.',
         slug: 'body-contouring',
+        service_path: "body-contouring-in-bangalore"
     },
     {
         title: 'Breast Augmentation/Breast Enhancement',
@@ -39,6 +42,7 @@ const cosmeticServiceData = [
         faqs: 'Frequently asked questions about Breast Enhancement.',
         whyUs: 'Reasons to choose our services for Breast Enhancement.',
         slug: 'breast-enhancement',
+        service_path: "breast-augmentation-in-bangalore"
     },
     {
         title: 'Mommy Makeover',
@@ -48,7 +52,8 @@ const cosmeticServiceData = [
         transformation: 'Transformation stories and testimonials.',
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
-        slug: 'abdominal-contouring'
+        slug: 'abdominal-contouring',
+        service_path: "mommy-makeover-in-bangalore"
     },
     {
         title: 'Hair Transplant',
@@ -59,6 +64,7 @@ const cosmeticServiceData = [
         faqs: 'Frequently asked questions about Service 2.',
         whyUs: 'Reasons to choose our services for Service 2.',
         slug: 'hair-transplant',
+        service_path: "hair-transplant-in-bangalore"
     },
 
 

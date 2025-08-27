@@ -325,14 +325,14 @@ const BreastAugmentation = () => {
             {/* Main Content */}
             <div className="w-full">
                 {/* Featured Image */}
-                <div className="w-full mb-8">
-                    <img
+                {/* <div className="w-full mb-8"> */}
+                {/* <img
                         src={finalSeoImage}
                         alt="Rhinoplasty Services"
                         className="w-full h-auto object-cover rounded-lg shadow-lg"
-                    />
-                    {/* banner image */}
-                </div>
+                    /> */}
+                {/* banner image */}
+                {/* </div> */}
 
                 {/* Page Title */}
                 {/* <h1
