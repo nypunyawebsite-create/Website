@@ -1,6 +1,6 @@
 const dermatologyServiceData = [
     {
-        title: 'Acne and Acne Scars',
+        title: 'Acne and acne scars',
         desc: 'Stay Unfiltered, Stay ACNE Free!',
         bgimage: '/home/dermatology-services/acne.png',
         information: 'Detailed information about Service 2.',
@@ -33,7 +33,7 @@ const dermatologyServiceData = [
         service_path: "laser-hair-removal-in-bangalore"
     },
     {
-        title: 'Laser Tattoo Removal',
+        title: 'Laser tattoo removal',
         desc: 'Regretting your tattoo?',
         bgimage: '/home/dermatology-services/laser-tattoo-removal.png',
         information: 'Detailed information about Service 2.',
