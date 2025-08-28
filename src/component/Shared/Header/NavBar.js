@@ -136,11 +136,13 @@ const DesktopNavBar = () => {
                         </div>
                     </div>
                     <button
+                        onClick={() => window.open("http://nypunya.caremap.in:9049/caremap/newAppointment/new_app", "_blank")}
                         className="bg-[#abe2e5] text-[#000099] mt-1 px-6 py-2 rounded-full shadow-lg font-semibold flex items-center transition-all duration-200 hover:bg-[#92E0E0] hover:scale-105"
                     >
                         <FaCalendarAlt className="mr-2 text-[#000099]" />
                         Appointments
                     </button>
+
                 </div>
                 {/* Main Navbar */}
                 <div className={`h-1/20 transition-all duration-300 mx-auto flex md:justify-center justify-between w-[90%]`}>

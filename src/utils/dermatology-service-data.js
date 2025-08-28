@@ -64,8 +64,6 @@ const dermatologyServiceData = [
         whyUs: 'Reasons to choose our services for Service 2.',
         slug: 'dark-circles-under-eye-bags',
         service_path: "dark-circles-and-under-eye-bags-in-bangalore"
-    },
-
+    }
 ];
-
 export default dermatologyServiceData;

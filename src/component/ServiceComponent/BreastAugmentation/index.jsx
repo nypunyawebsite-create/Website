@@ -48,9 +48,9 @@ const Index = () => {
         setSelectedService={setSelectedService}
       />
       <GalleryComponent />
-      {/* <div id="faq-section" ref={faqRef}>
-        <FaqBreastAugmentation />
-      </div> */}
+      <div id="faq-section" ref={faqRef}>
+        <FaqBreast />
+      </div>
       <ConsultationForm />
     </>
   );

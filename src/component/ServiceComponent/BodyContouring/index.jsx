@@ -5,7 +5,7 @@ import LipoSuctionBodyContouring from './LipoSuctionBodyContouring';
 import GalleryComponent from './GalleryComponent';
 import ConsultationForm from '../../FormsComponent/ConsultationForm';
 import ServicesDetails from './ServicesDetails';
-
+import FaqAbdominal from "./FaqAbdominal";
 const Index = () => {
     const location = useLocation();
     const { scrollTo } = location.state || {};
@@ -30,6 +30,9 @@ const Index = () => {
             <LipoSuctionBodyContouring scrollTo={scrollTo} />
             <ServicesDetails refProp={faqRef} />
             <GalleryComponent refProp={whyUsRef} />
+            <div id="faq-section" ref={faqRef}>
+                <FaqAbdominal />
+            </div>
             <ConsultationForm />
         </>
     );
