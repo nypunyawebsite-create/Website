@@ -59,7 +59,7 @@ const CosmeticPlasticServices = () => {
                                         {service.service_path && (
                                             <button
                                                 onClick={() => handleServiceReadMore(service.service_path)}
-                                                className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors duration-200 self-start"
+                                                className="mt-2 px-4 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors duration-200 self-start"
                                             >
                                                 Read More
                                             </button>

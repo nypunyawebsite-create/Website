@@ -4,6 +4,22 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Affliations = () => {
+    // Certificate names corresponding to each image
+    const affiliations = [
+        { src: "/affliations/affiliations_2/1.png", name: "Indian Association of Plastic Surgeons" },
+        { src: "/affliations/affiliations_2/2.png", name: "Association of Plastic Surgeons of India" },
+        { src: "/affliations/affiliations_2/3.jpg", name: "Indian Society of Aesthetic Plastic Surgery" },
+        { src: "/affliations/affiliations_2/4.png", name: "International Society of Aesthetic Plastic Surgery" },
+        { src: "/affliations/affiliations_2/5.png", name: "American Society of Plastic Surgeons" },
+        { src: "/affliations/affiliations_2/6.png", name: "European Society of Plastic Surgery" },
+        { src: "/affliations/affiliations_2/7.png", name: "Indian Association of Dermatologists" },
+        { src: "/affliations/affiliations_2/8.png", name: "Association of Cutaneous Surgeons of India" },
+        { src: "/affliations/affiliations_2/9.png", name: "Indian Society of Cosmetic Dermatology" },
+        { src: "/affliations/affiliations_2/10.png", name: "International Association of Physicians" },
+        { src: "/affliations/affiliations_2/11.png", name: "Medical Council of India" },
+        { src: "/affliations/affiliations_2/12.png", name: "Karnataka Medical Council" }
+    ];
+
     return (
         <>
             {/* Affiliations Section - Full Width */}
@@ -23,30 +39,32 @@ const Affliations = () => {
                         }}
                         className="!px-4"
                     >
-                        {[
-                            "/affliations/affiliations_2/1.png",
-                            "/affliations/affiliations_2/2.png",
-                            "/affliations/affiliations_2/3.jpg",
-                            "/affliations/affiliations_2/4.png",
-                            "/affliations/affiliations_2/5.png",
-                            "/affliations/affiliations_2/6.png",
-                            "/affliations/affiliations_2/7.png",
-                            "/affliations/affiliations_2/8.png",
-                            "/affliations/affiliations_2/9.png",
-                            "/affliations/affiliations_2/10.png",
-                            "/affliations/affiliations_2/11.png",
-                            "/affliations/affiliations_2/12.png",
-
-                        ].map((src, index) => (
+                        {affiliations.map((affiliation, index) => (
                             <SwiperSlide key={index} className="!flex !justify-center !items-center">
-                                <img
-                                    src={src}
-                                    alt={`Affiliation ${index + 1}`}
-                                    className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition block"
-                                />
+                                <div className="text-center">
+                                    <img
+                                        src={affiliation.src}
+                                        alt={affiliation.name}
+                                        className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition block mx-auto"
+                                        title={affiliation.name}
+                                    />
+                                    <p className="text-xs text-gray-600 mt-2 hidden lg:block">
+                                        {affiliation.name}
+                                    </p>
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+
+                {/* SEO-Friendly Hidden Content */}
+                <div className="sr-only" aria-hidden="true">
+                    <h4>Professional Affiliations and Certifications</h4>
+                    <ul>
+                        {affiliations.map((affiliation, index) => (
+                            <li key={index}>{affiliation.name}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </>
