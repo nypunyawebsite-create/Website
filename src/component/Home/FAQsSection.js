@@ -75,28 +75,7 @@ const FAQsSection = () => {
                     ))}
                 </div>
 
-                {/* Call to Action */}
-                <div className="text-center mt-12">
-                    <p className="text-lg text-gray-700 mb-6">
-                        Have more questions? <a href="/contact-us" className="text-blue-600 hover:text-blue-800 font-semibold underline">Contact us</a> for a personalized consultation.
-                    </p>
 
-                    {/* Additional CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="/contact-us"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300"
-                        >
-                            Schedule Consultation
-                        </a>
-                        <a
-                            href="tel:+919738545945"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 hover:border-blue-700 font-semibold rounded-lg transition-colors duration-300"
-                        >
-                            Call Now
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     );
