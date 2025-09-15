@@ -1,7 +1,7 @@
 const dermatologyServiceData = [
     {
         title: 'Acne and acne scars',
-        desc: 'Stay Unfiltered, Stay ACNE Free!',
+        desc: 'Combat acne and minimize scars at Nypunya Aesthetic Clinic in Bangalore, led by Dr. Shubha Kesari. We offer advanced treatments for acne, acne scars, and blemishes, including laser therapy and chemical peels. Achieve clear, smooth skin and renewed confidence with our personalized dermatological solutions.',
         bgimage: '/home/dermatology-services/acne.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -12,7 +12,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Fillers and Botox',
-        desc: 'Aging is a Fact, Looking your Age is not!',
+        desc: 'Rejuvenate your look with Filler & Botox treatments at Nypunya Aesthetic Clinic in Bangalore, led by Dr. Shubha Kesari. We offer safe, effective dermal fillers and Botox for wrinkle reduction, volume restoration, and a refreshed appearance. Achieve natural-looking results and youthful radiance with our expert non-surgical solutions.',
         bgimage: '/home/dermatology-services/filler-and-botox.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -23,7 +23,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Laser Hair Removal',
-        desc: 'Drop the Razor-Go for Laser!',
+        desc: 'Experience lasting smoothness with Laser Hair Removal at Nypunya Aesthetic Clinic in Bangalore, led by Dr. Shubha Kesari. Our advanced laser treatments effectively reduce unwanted hair on all body areas. Enjoy safe, efficient, and permanent hair reduction, achieving silky-smooth skin with our expert dermatological care.',
         bgimage: '/home/dermatology-services/laser-hair-removal.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -34,7 +34,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Laser tattoo removal',
-        desc: 'Regretting your tattoo?',
+        desc: 'Regret your tattoo? Nypunya Aesthetic Clinic in Bangalore, led by Dr. Shubha Kesari, offers advanced Laser Tattoo Removal. Our safe and effective treatments fade unwanted tattoos, restoring clear skin. Achieve complete tattoo removal or lightening with our expert, personalized care.',
         bgimage: '/home/dermatology-services/laser-tattoo-removal.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -45,7 +45,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'PRP (Platelet Rich Plasma)',
-        desc: 'Love is in the HAIR',
+        desc: 'Harness your body\'s healing power with Platelet - Rich Plasma(PRP) Treatment at Nypunya Aesthetic Clinic in Bangalore, led by Dr.Shubha Kesari.PRP therapy stimulates natural regeneration for hair growth, skin rejuvenation, and scar reduction.Experience cutting- edge, personalized regenerative solutions for remarkable, natural results.',
         bgimage: '/home/dermatology-services/prp.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',
@@ -56,7 +56,7 @@ const dermatologyServiceData = [
     },
     {
         title: 'Dark Circles and Under Eye Bags',
-        desc: 'Heal your Skin, Do not Conceal',
+        desc: 'Minimize dark circles and under-eye bags at Nypunya Aesthetic Clinic in Bangalore, led by Dr. Shubha Kesari. We offer advanced treatments like fillers and specialized therapies to rejuvenate your eyes. Achieve a refreshed, youthful look and restore brightness with our expert, personalized aesthetic solutions',
         bgimage: '/home/dermatology-services/dark-circle.png',
         information: 'Detailed information about Service 2.',
         transformation: 'Transformation stories and testimonials.',

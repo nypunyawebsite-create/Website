@@ -51,9 +51,9 @@ const DermatologyServices = () => {
                                 key={index}
                                 className="border border-[#e9f9f9] rounded-lg bg-[#e9f9f9] hover:bg-[#92E0E0] hover:border-[#92E0E0] transition-all duration-300"
                             >
-                                <div className="flex flex-col p-4 gap-4">
-                                    <div className="flex flex-col gap-2">
-                                        <h3 className="text-xl font-bold min-h-16">
+                                <div className="flex flex-col p-4 gap-4 h-full">
+                                    <div className="flex flex-col gap-2 flex-1">
+                                        <h3 className="text-xl font-bold min-h-10">
                                             {clickedServices.has(index) ? 'Read More' : service.title}
                                         </h3>
                                         <p className="text-sm text-gray-700"> {service.desc} &nbsp;
@@ -70,7 +70,7 @@ const DermatologyServices = () => {
                                         </p>
                                     </div>
 
-                                    <div className="relative min-h-[200px] md:min-h-[250px] rounded-md overflow-hidden">
+                                    <div className="relative h-[250px] rounded-md overflow-hidden">
                                         <div
                                             className="absolute inset-0 bg-cover bg-center"
                                             style={{ backgroundImage: `url(${service.bgimage})` }}

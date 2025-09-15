@@ -3,22 +3,26 @@ import React from 'react';
 const MediaCoverage = () => {
     const mediaOutlets = [
         {
-            name: "Times of India",
-            link: "https://www.google.com/amp/s/www.outlookindia.com/amp/story/healthcare-spotlight/outlook-best-doctors-south-2025",
-            description: "Featured in leading healthcare publications"
+            name: "Outlook India",
+            image: "/home/outlook.jpeg",
+            link: "https://www.outlookindia.com/healthcare-spotlight/outlook-best-doctors-south-2025",
+            description: "Healthcare publications"
         },
         {
-            name: "Deccan Herald",
+            name: "Tv9",
+            image: "/home/tv_9.jpeg",
             link: "https://youtu.be/NbQFGZyUytg?si=cIsypIy-cvapW4aE",
             description: "Healthcare innovation spotlight"
         },
         {
-            name: "Healthcare Today",
+            name: "Doordarshan",
+            image: "/home/dd.jpeg",
             link: "https://youtu.be/NLV9o-hk9p8?si=puSpkRUVHzxeFZxu",
             description: "Medical excellence recognition"
         },
         {
-            name: "Beauty & Wellness",
+            name: "Suvarna News 24x7",
+            image: "/home/24_7.jpeg",
             link: "https://youtu.be/0FqBsNAvUN4?si=Zk4UaNM_IOXMwiog",
             description: "Aesthetic medicine coverage"
         }
@@ -47,7 +51,13 @@ const MediaCoverage = () => {
                             rel="noopener noreferrer"
                             className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center group"
                         >
+                            {/* Media Outlet Image */}
                             <div className="mb-4">
+                                <img
+                                    src={outlet.image}
+                                    alt={`${outlet.name} logo`}
+                                    className="w-20 h-20 mx-auto mb-3 object-contain rounded-lg"
+                                />
                                 <h3 className="text-xl font-bold text-black mb-2 group-hover:text-blue-600 transition-colors">
                                     {outlet.name}
                                 </h3>

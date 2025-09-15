@@ -74,7 +74,7 @@ const ClinicBanner = () => {
 
                         {/* Sub-heading */}
                         <p className="text-lg md:text-xl text-blue-800 mb-8 leading-relaxed">
-                            Nypunya Aesthetic Clinic is the best clinic for Aesthetic Plastic surgery & Dermatology in Bangalore because of the following reasons
+                            Nypunya Aesthetic Clinic – The Best Cosmetic Plastic Surgery Bangalore and Dermatology Centre Bangalore, offering Specialized Aesthetic Dermatology and Advanced Plastic Surgery Treatments
                         </p>
 
 
