@@ -7,6 +7,8 @@ import DermatologyServices from './DermatologyServices'
 import HomeInformation from './HomeInformation'
 import WelcomeNypunya from './WelcomeNypunya'
 import OurMedicalExpert from './OurMedicalExpert'
+import OurMedicalExpertDrKesari from './OurMedicalExpertDrKesari'
+import OurMedicalExpertDrSubha from './OurMedicalExpertDrSubha'
 import OurPatientReview from '../OurDoctorsComponent/Feedback';
 import Affliations from './Affliations';
 import MediaCoverage from './MediaCoverage';
@@ -26,6 +28,8 @@ const Home = () => {
             {/* <HomeInformation /> */}
             {/* <WelcomeNypunya /> */}
             <OurMedicalExpert />
+            {/* <OurMedicalExpertDrKesari /> */}
+            {/* <OurMedicalExpertDrSubha /> */}
             <Affliations />
             <OurPatientReview />
             <MediaCoverage />
