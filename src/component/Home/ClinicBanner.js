@@ -20,14 +20,23 @@ const ClinicBanner = () => {
             { threshold: 0.3 }
         );
 
-        const element = document.getElementById('stats-overlay');
-        if (element) {
-            observer.observe(element);
+        // Observe both desktop and mobile stats elements
+        const desktopElement = document.getElementById('stats-overlay');
+        const mobileElement = document.getElementById('stats-overlay-mobile');
+
+        if (desktopElement) {
+            observer.observe(desktopElement);
+        }
+        if (mobileElement) {
+            observer.observe(mobileElement);
         }
 
         return () => {
-            if (element) {
-                observer.unobserve(element);
+            if (desktopElement) {
+                observer.unobserve(desktopElement);
+            }
+            if (mobileElement) {
+                observer.unobserve(mobileElement);
             }
         };
     }, []);
@@ -180,7 +189,7 @@ const ClinicBanner = () => {
 
                         {/* Mobile Statistics Box - Below Image */}
                         <div className="lg:hidden mt-4 mb-6 flex justify-center">
-                            <div className="bg-white rounded-lg p-3 shadow-xl w-3/4 sm:w-2/3 md:w-1/2">
+                            <div id="stats-overlay-mobile" className="bg-white rounded-lg p-3 shadow-xl w-3/4 sm:w-2/3 md:w-1/2">
                                 <div className="text-center">
                                     <div className="text-2xl font-bold text-green-500 mb-1 transition-all duration-500 transform hover:scale-105">
                                         {formatNumber(surgeriesCount)}
