@@ -159,8 +159,8 @@ const ClinicBanner = () => {
                                 className="w-full h-auto object-contain"
                             />
 
-                            {/* Overlay Statistics Box */}
-                            <div id="stats-overlay" className="absolute bottom-4 right-4 bg-white rounded-lg p-4 shadow-xl max-w-xs">
+                            {/* Desktop Overlay Statistics Box */}
+                            <div id="stats-overlay" className="hidden lg:block absolute bottom-4 right-4 bg-white rounded-lg p-4 shadow-xl max-w-xs">
                                 <div className="text-center">
                                     <div className="text-3xl font-bold text-green-500 mb-1 transition-all duration-500 transform hover:scale-105">
                                         {formatNumber(surgeriesCount)}
@@ -169,6 +169,26 @@ const ClinicBanner = () => {
                                         Successful Surgeries
                                     </div>
                                     <div className="text-3xl font-bold text-green-500 mb-1 transition-all duration-500 transform hover:scale-105">
+                                        {formatNumber(transformationsCount)}
+                                    </div>
+                                    <div className="text-xs font-semibold text-black leading-tight">
+                                        Transformations
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Mobile Statistics Box - Below Image */}
+                        <div className="lg:hidden mt-4 mb-6 flex justify-center">
+                            <div className="bg-white rounded-lg p-3 shadow-xl w-3/4 sm:w-2/3 md:w-1/2">
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-green-500 mb-1 transition-all duration-500 transform hover:scale-105">
+                                        {formatNumber(surgeriesCount)}
+                                    </div>
+                                    <div className="text-xs font-semibold text-black leading-tight mb-2">
+                                        Successful Surgeries
+                                    </div>
+                                    <div className="text-2xl font-bold text-green-500 mb-1 transition-all duration-500 transform hover:scale-105">
                                         {formatNumber(transformationsCount)}
                                     </div>
                                     <div className="text-xs font-semibold text-black leading-tight">
