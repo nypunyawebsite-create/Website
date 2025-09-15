@@ -89,22 +89,22 @@ const TransformationsSection = () => {
         },
         {
             id: 2,
-            title: "Hair Restoration",
+            title: "PRP",
             image: "home/gallery/dermatology/2.jpeg"
         },
         {
             id: 3,
-            title: "Hairline Restoration",
+            title: "Pigmentation",
             image: "home/gallery/dermatology/3.jpeg"
         },
         {
             id: 4,
-            title: "Hair Density Enhancement",
+            title: "Laser Hair Removal",
             image: "home/gallery/dermatology/4.jpeg"
         },
         {
             id: 5,
-            title: "Hair Transplant Success",
+            title: "Botox",
             image: "home/gallery/dermatology/5.jpeg"
         },
         {
