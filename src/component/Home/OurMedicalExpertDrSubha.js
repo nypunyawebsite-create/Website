@@ -26,7 +26,7 @@ const OurMedicalExpertDrSubha = () => {
                     text: "A strong understanding between patient and doctor leads to results both can be proud of."
                 }
             ],
-            image: "/home/our_doctors/subha/1.png"
+            image: "/home/our_doctors/subha/1.PNG"
         },
         {
             id: 2,
@@ -44,7 +44,7 @@ const OurMedicalExpertDrSubha = () => {
                 "Dark Circles and Under Eye Bags"
             ],
             description: "Expert Dermatologist specializing in aesthetic dermatology, anti aging treatments, and advanced laser procedures.",
-            image: "/home/our_doctors/subha/2.png"
+            image: "/home/our_doctors/subha/2.PNG"
         },
         {
             id: 3,
@@ -76,7 +76,7 @@ const OurMedicalExpertDrSubha = () => {
                 "BEST PATIENTS",
                 "BEST INTENTIONS"
             ],
-            image: "/home/our_doctors/subha/3.png"
+            image: "/home/our_doctors/subha/3.PNG"
         },
         {
             id: 4,
@@ -88,13 +88,13 @@ const OurMedicalExpertDrSubha = () => {
             ],
             sectionTitle: "Trained in the BEST Places",
             description: "Dr. Shubha M Kesari is a very well qualified and experienced Dermatologist with special interest in Cosmetic Dermatology. She has completed her M.D Dermatology from LTM Medical College, & Hospital Sion Mumbai securing the  Gold Medal  for Maharashtra University of Health Sciences.",
-            image: "/home/our_doctors/subha/4.png"
+            image: "/home/our_doctors/subha/4.PNG"
         },
         {
             id: 5,
             title: "Dr. Shubha Kesari",
             description: "**Dr. Shubha Kesari** has publications in indexed **national and international journals** and has also co-authored a chapter in a text book. She believes in keeping abreast with the **latest advances** in her field and constantly **updates** herself.",
-            image: "/home/our_doctors/subha/5.png"
+            image: "/home/our_doctors/subha/5.PNG"
         },
         {
             id: 6,
@@ -117,7 +117,7 @@ const OurMedicalExpertDrSubha = () => {
                     text: "Her ability to tailor treatments by balancing **patient needs** and her expertise has earned her appreciation from **thousands of patients**."
                 }
             ],
-            image: "/home/our_doctors/subha/6.png"
+            image: "/home/our_doctors/subha/6.PNG"
         },
         {
             id: 7,
@@ -189,7 +189,7 @@ const OurMedicalExpertDrSubha = () => {
         },
         {
             id: 9,
-            image: "/home/our_doctors/subha/9.png"
+            image: "/home/our_doctors/subha/9.PNG"
         }
     ];
 

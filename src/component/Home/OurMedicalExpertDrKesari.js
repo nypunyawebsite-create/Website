@@ -26,7 +26,7 @@ const OurMedicalExpertDrKesari = () => {
                     text: "A strong understanding between patient and surgeon leads to results both can be proud of."
                 }
             ],
-            image: "/home/our_doctors/1.png"
+            image: "/home/our_doctors/1.PNG"
         },
         {
             id: 2,
@@ -44,7 +44,7 @@ const OurMedicalExpertDrKesari = () => {
             ],
             qualifications: "Advanced Fellowship in Cosmetic Surgery, M.Ch - Plastic Surgery, DNB, MRCS, DMLE, MBBS",
             description: "Leading plastic surgeon specializing in Advanced Aesthetic Surgeries with international training and certifications.",
-            image: "/home/our_doctors/2.png"
+            image: "/home/our_doctors/2.PNG"
         },
         {
             id: 3,
@@ -67,7 +67,7 @@ const OurMedicalExpertDrKesari = () => {
                     text: "He is among the select few trained in the country's top and busiest hospitals, gaining invaluable experience."
                 }
             ],
-            image: "/home/our_doctors/3.png"
+            image: "/home/our_doctors/3.PNG"
         },
         {
             id: 4,
@@ -85,13 +85,13 @@ const OurMedicalExpertDrKesari = () => {
             ],
             sectionTitle: "Trained in the BEST Places",
             description: "Dr. Prashantha Kesari completed an Advanced Fellowship in Cosmetic and Laser Surgery at a top cosmetic surgery center. He received comprehensive Plastic Surgery training at LTM Medical College (Sion Hospital), renowned as the best center for Plastic Surgery training in the country. Sion Hospital has a legacy of producing many distinguished experts in the field.",
-            image: "/home/our_doctors/4.png"
+            image: "/home/our_doctors/4.PNG"
         },
         {
             id: 5,
             title: "Dr. Prashantha Kesari",
             description: "Dr. Prashantha Kesari has gained quality surgical experience by working with the **best known surgeons** for over **nine years**. He is meritorious throughout and was appreciated in every stage. He has won **gold medals** and a number of awards.",
-            image: "/home/our_doctors/5.png"
+            image: "/home/our_doctors/5.PNG"
         },
         {
             id: 6,
@@ -114,7 +114,7 @@ const OurMedicalExpertDrKesari = () => {
                     text: "He actively stays updated with the latest developments in his field by attending and presenting his work at various professional conferences."
                 }
             ],
-            image: "/home/our_doctors/6.png"
+            image: "/home/our_doctors/6.PNG"
         },
         {
             id: 7,
@@ -186,7 +186,7 @@ const OurMedicalExpertDrKesari = () => {
         },
         {
             id: 9,
-            image: "/home/our_doctors/9.png"
+            image: "/home/our_doctors/9.PNG"
         }
     ];
 
