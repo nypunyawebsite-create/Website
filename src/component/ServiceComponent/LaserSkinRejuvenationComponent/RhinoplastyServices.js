@@ -78,7 +78,8 @@ const RhinoplastyServices = ({ scrollTo }) => {
                                 <img
                                     src="/services/rhinoplasty/rhinoplasty_service_main_page_right_side_banner.png"
                                     alt="Rhinoplasty Treatment"
-                                    className="w-full h-[600px] object-cover"
+                                    className="w-full"
+                                    style={{ height: '400px' }}
                                 />
                             </div>
                         </div>

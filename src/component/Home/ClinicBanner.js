@@ -130,7 +130,10 @@ const ClinicBanner = () => {
                         {/* Call-to-Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-8">
                             {/* Book Consultation Button */}
-                            <button className="flex items-center justify-center gap-3 bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <button
+                                onClick={() => window.open("https://cep.prodoc.ai/appointment/660d4391b389336a08ec464d?section=1", "_blank")}
+                                className="flex items-center justify-center gap-3 bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            >
                                 <FaCalendarAlt className="text-xl" />
                                 Book Consultation
                             </button>

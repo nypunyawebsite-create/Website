@@ -130,7 +130,7 @@ const Footer = () => {
                 <Link to='/services' className={`relative w-fit ${location.pathname === '/services' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/services' ? 'after:w-full' : ''}`}>Services</Link>
                 <Link to='/our-doctors' className={`relative w-fit ${location.pathname === '/our-doctors' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/our-doctors' ? 'after:w-full' : ''}`}>Our Doctors</Link>
                 <a
-                    href="http://nypunya.caremap.in:9049/caremap/newAppointment/new_app"
+                    href="https://cep.prodoc.ai/appointment/660d4391b389336a08ec464d?section=1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full`}
@@ -158,31 +158,35 @@ const Footer = () => {
             </div>
             {/* Copyright Section */}
             <div className="col-span-6 w-full border-t border-white/20 mt-8 pt-6 text-center text-sm text-white/80">
-                Copyright © 2025 Nypunya Aesthetic Clinic. All rights reserved.
+                <div className="mb-2">
+                    Copyright © 2025 Nypunya Aesthetic Clinic. All rights reserved.
+                </div>
+                <div className="text-xs text-white/60">
+                    Developed by <a href="http://www.youngzen.in/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-200">YoungZen Technologies</a>
+                </div>
             </div>
 
             {showScrollModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-                    <div className="relative bg-gray-900 text-white p-8 rounded-lg shadow-lg w-full max-w-md mx-4">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto">
+                    <div className="relative bg-gray-900 text-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md mx-4 my-8">
                         <button
                             onClick={closeModal}
-                            className="absolute top-4 right-4 text-gray-400 hover:text-white flex items-center space-x-2 p-2 rounded-full"
+                            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-400 hover:text-white flex items-center justify-center p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-200 z-10"
                         >
-                            <span className="text-sm font-semibold"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
-                        <h2 className="text-3xl font-bold mb-4">Talk to us, directly.</h2>
-                        <p className="text-gray-400 mb-6">Drop your phone number, and we'll reach out to you.</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Talk to us, directly.</h2>
+                        <p className="text-gray-400 mb-6 text-sm sm:text-base">Drop your phone number, and we'll reach out to you.</p>
 
                         <form onSubmit={handleSubmit}>
                             <div className="mb-4">
                                 <input
                                     type="text"
                                     placeholder="Name*"
-                                    className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
                                     required
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
@@ -192,7 +196,7 @@ const Footer = () => {
                                 <input
                                     type="tel"
                                     placeholder="Phone number*"
-                                    className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
                                     required
                                     value={phoneNumber}
                                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -202,7 +206,7 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="Email*"
-                                    className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -211,7 +215,7 @@ const Footer = () => {
                             <div className="mb-6">
                                 <textarea
                                     placeholder="Describe your requirement*"
-                                    className="w-full p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 form-textarea"
+                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 form-textarea text-sm sm:text-base"
                                     rows="4"
                                     required
                                     value={requirement}
@@ -219,7 +223,7 @@ const Footer = () => {
                                 ></textarea>
                             </div>
                             {/* Contact Information */}
-                            <div className="mb-6 p-4 bg-gray-800 rounded-md text-sm leading-relaxed">
+                            <div className="mb-6 p-3 sm:p-4 bg-gray-800 rounded-md text-xs sm:text-sm leading-relaxed">
                                 <p className="font-bold text-white mb-2">Contact Us:</p>
                                 <p className="text-gray-300"><strong>Plastic Surgery:</strong>
                                     <a href="tel:+919380902110" className="text-blue-400 hover:underline ml-1">+91 9380902110</a>
@@ -236,12 +240,12 @@ const Footer = () => {
 
                             <button
                                 type="submit"
-                                className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                                className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-colors text-sm sm:text-base"
                             >
                                 Submit
                             </button>
 
-                            <p className="text-xs text-gray-500 mt-4 text-center">
+                            <p className="text-xs text-gray-500 mt-4 text-center leading-relaxed">
                                 By clicking on "Submit" you are agreeing to our <a href="/terms-conditions" className="text-blue-400 hover:underline">Terms & Conditions</a> and
                                 are allowing us <span className="text-blue-400 hover:underline" >Nypunya Aesthetic Clinic</span> and our service partners to get in touch with you.
                             </p>

@@ -84,28 +84,28 @@ const HomeVideo = () => {
                 }}
             >
                 {/* Top Headings - Responsive */}
-                <div className="w-full flex flex-nowrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20 overflow-x-auto whitespace-nowrap" style={{ marginTop: 'calc(2rem + 180px)' }}>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
-                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
-                    <span className="text-custom-blue text-xl md:text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
+                <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center px-4 md:px-16 mt-8 md:mt-12 lg:mt-16 xl:mt-20" style={{ marginTop: 'calc(2rem + 140px)' }}>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
+                    <span className="text-custom-blue text-base sm:text-lg md:text-xl lg:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
+                    <span className="text-custom-blue text-base sm:text-lg md:text-xl lg:text-2xl font-bold">–</span>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
                 </div>
 
                 {/* Bottom Content */}
-                <div className="w-full flex flex-col items-center pt-16 md:pt-24">
-                    <div className="flex flex-col justify-center gap-3 items-center">
-                        <div>
-                            <p className="text-[#000099] text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-0 text-center drop-shadow-md font-bold">ONLY THE BEST FOR YOU</p>
+                <div className="absolute bottom-0 left-0 w-full flex flex-col items-center justify-center pb-1 md:pb-2 lg:pb-3 xl:pb-4">
+                    <div className="flex flex-col justify-center gap-4 lg:gap-6 items-center max-w-5xl mx-auto px-4">
+                        <div className="w-full">
+                            <p className="text-[#000099] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl m-0 text-center drop-shadow-md font-bold leading-tight break-words">ONLY THE BEST FOR YOU</p>
                         </div>
-                        <div className="flex items-center mt-2 justify-center">
+                        <div className="flex items-center mt-1 lg:mt-1 justify-center">
                             <FaPlayCircle
-                                className="text-[#000099] mr-2 cursor-pointer animate-pulse drop-shadow-md"
-                                size={48}
+                                className="text-[#000099] mr-3 lg:mr-4 cursor-pointer animate-pulse drop-shadow-md"
+                                size={40}
                                 onClick={handleExploreClick}
                                 style={{ filter: 'drop-shadow(0 0 10px rgba(0, 0, 153, 0.5))' }}
                             />
-                            <span className="text-[#000099] text-lg drop-shadow-md">Explore Video</span>
+                            <span className="text-[#000099] text-base sm:text-lg md:text-xl lg:text-xl drop-shadow-md">Explore Video</span>
                         </div>
                     </div>
                 </div>

@@ -55,10 +55,9 @@ const ContactUs = () => {
             </h3>
             <div className="mt-4 space-y-4">
               {[
-                { day: "Monday - Wednesday", time: "10:00 AM - 8:30 PM" },
-                { day: "Thursday - Friday", time: "10:00 AM - 8:30 PM" },
-                { day: "Saturday", time: "10:00 AM - 8:30 PM" },
-                { day: "Sunday", time: "10:00 AM - 8:30 PM" },
+                { day: "Week Days", time: "9:00 AM - 8:00 PM" },
+                { day: "Saturday", time: "9:00 AM - 8:00 PM" },
+                { day: "Sunday", time: "Holiday" },
               ].map((item, index) => (
                 <div
                   key={index}
