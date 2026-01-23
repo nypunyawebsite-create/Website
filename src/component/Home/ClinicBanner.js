@@ -75,7 +75,7 @@ const ClinicBanner = () => {
             <div className="w-full">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     {/* Left Section - Text and Buttons */}
-                    <div className="flex-1 lg:w-2/3 py-16 px-4 md:px-8 lg:px-16">
+                    <div className="flex-1 lg:w-2/3 py-16 px-4 md:px-8 lg:px-12 laptop:px-14 xl:px-16">
                         {/* Main Heading */}
                         <h2 className="text-3xl font-bold text-black mb-6 leading-tight">
                             Why is Nypunya Aesthetic Clinic the best Centre for Cosmetic plastic surgery & Dermatology in Bangalore?
@@ -131,7 +131,7 @@ const ClinicBanner = () => {
                         <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-8">
                             {/* Book Consultation Button */}
                             <button
-                                onClick={() => window.open("https://cep.prodoc.ai/appointment/660d4391b389336a08ec464d?section=1", "_blank")}
+                                onClick={() => window.open("https://appointment.telearogya.com/home/doctors_list/Tm9fdmFsWU=/MzEw?src=pdc", "_blank")}
                                 className="flex items-center justify-center gap-3 bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                                 <FaCalendarAlt className="text-xl" />
@@ -140,7 +140,7 @@ const ClinicBanner = () => {
 
                             {/* WhatsApp Button */}
                             <a
-                                href="https://wa.me/+918050111908"
+                                href="https://wa.me/918050111908?text=Hi%2C%20I%20have%20a%20question"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-green-500 border-2 border-white-300 hover:border-green-500 px-6 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -169,6 +169,7 @@ const ClinicBanner = () => {
                                 src="/home/hero_image.png"
                                 alt="Professional cosmetic treatment in progress"
                                 className="w-full h-auto object-contain"
+                                loading="eager"
                             />
 
                             {/* Desktop Overlay Statistics Box */}

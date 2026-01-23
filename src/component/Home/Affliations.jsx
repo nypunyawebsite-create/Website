@@ -23,8 +23,8 @@ const Affliations = () => {
     return (
         <>
             {/* Affiliations Section - Full Width */}
-            <div className="w-full bg-[#f6f8fa] py-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-center text-[#000099] mb-8">Affiliations</h3>
+            <div className="w-full bg-[#f6f8fa] pt-0 pb-12">
+                <h3 className="text-2xl md:text-3xl font-bold text-center text-[#000099] mb-8 pt-8">Affiliations</h3>
                 <div className="max-w-5xl mx-auto px-4">
                     <Swiper
                         modules={[Autoplay]}
@@ -45,6 +45,7 @@ const Affliations = () => {
                                     <img
                                         src={affiliation.src}
                                         alt={affiliation.name}
+                                        loading="lazy"
                                         className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition block mx-auto"
                                         title={affiliation.name}
                                     />

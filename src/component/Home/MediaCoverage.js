@@ -56,6 +56,7 @@ const MediaCoverage = () => {
                                 <img
                                     src={outlet.image}
                                     alt={`${outlet.name} logo`}
+                                    loading="lazy"
                                     className="w-20 h-20 mx-auto mb-3 object-contain rounded-lg"
                                 />
                                 <h3 className="text-xl font-bold text-black mb-2 group-hover:text-blue-600 transition-colors">

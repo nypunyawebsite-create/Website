@@ -53,6 +53,7 @@ const HomeVideo = () => {
             <video
                 ref={videoRef}
                 src={videoSrc}
+                preload="none"
                 muted
                 onEnded={handleVideoEnd}
                 className={`w-full h-full object-cover transition-opacity duration-500 ${videoStarted ? 'opacity-100 z-50' : 'opacity-0 pointer-events-none'}`}
@@ -76,27 +77,29 @@ const HomeVideo = () => {
             {/* Banner Section */}
             <div
                 className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 flex flex-col items-center justify-between ${videoStarted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
-                style={{
-                    backgroundImage: "url('/home/homepagebanner.png')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    zIndex: videoStarted ? 0 : 1
-                }}
             >
+                {/* Hero Background Image - Optimized for LCP */}
+                <img 
+                    src="/home/homepagebanner.png" 
+                    alt="Nypunya Aesthetic Clinic Banner" 
+                    className="absolute inset-0 w-full h-full object-cover -z-10"
+                    fetchpriority="high"
+                />
+
                 {/* Top Headings - Responsive */}
-                <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center px-4 md:px-16 mt-8 md:mt-12 lg:mt-16 xl:mt-20" style={{ marginTop: 'calc(2rem + 140px)' }}>
-                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
+                <div className="banner-top-headings w-full flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center px-4 md:px-16 mt-8 md:mt-12 lg:mt-16 xl:mt-20" style={{ marginTop: 'calc(2rem + 140px)' }}>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl laptop:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Plastic Surgery</h2>
                     <span className="text-custom-blue text-base sm:text-lg md:text-xl lg:text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl laptop:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Aesthetics</h2>
                     <span className="text-custom-blue text-base sm:text-lg md:text-xl lg:text-2xl font-bold">–</span>
-                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
+                    <h2 className="text-custom-blue text-sm sm:text-base md:text-lg lg:text-xl laptop:text-xl xl:text-2xl 2xl:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
                 </div>
 
                 {/* Bottom Content */}
                 <div className="absolute bottom-0 left-0 w-full flex flex-col items-center justify-center pb-1 md:pb-2 lg:pb-3 xl:pb-4">
                     <div className="flex flex-col justify-center gap-4 lg:gap-6 items-center max-w-5xl mx-auto px-4">
-                        <div className="w-full">
-                            <p className="text-[#000099] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl m-0 text-center drop-shadow-md font-bold leading-tight break-words">ONLY THE BEST FOR YOU</p>
+                        <div className="w-full px-4">
+                            <p className="banner-main-text text-[#000099] text-xl sm:text-2xl md:text-3xl lg:text-4xl laptop:text-4xl xl:text-5xl 2xl:text-6xl m-0 text-center drop-shadow-md font-bold leading-tight break-words">ONLY THE BEST FOR YOU</p>
                         </div>
                         <div className="flex items-center mt-1 lg:mt-1 justify-center">
                             <FaPlayCircle

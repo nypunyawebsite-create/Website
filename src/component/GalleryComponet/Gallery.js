@@ -165,9 +165,12 @@ const Gallery = () => {
     } else {
       setNameError("");
     }
-    // Simple phone validation (10 digits)
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phoneNumber)) {
+    
+    // Use the new API validation
+    const { validatePhoneNumber, submitLead, createLeadFromForm } = await import('../../api/leadsApi');
+    const { LEADS_API_TOKEN } = await import('../../Config');
+    
+    if (!validatePhoneNumber(phoneNumber)) {
       setPhoneError("Please enter a valid 10-digit phone number.");
       valid = false;
     } else {
@@ -175,27 +178,32 @@ const Gallery = () => {
     }
     if (!valid) return;
 
-    // Call the leads API
+    // Call the leads API using the new service
     try {
-      await fetch(`${API_URL}leads`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: userName,
-          phone_number: phoneNumber,
-          category: selectedCategory
-        })
-      });
+      const leadData = createLeadFromForm(
+        { name: userName, phone: phoneNumber },
+        {
+          source: 'Gallery Form',
+          tags: ['website', 'gallery', selectedCategory],
+          summary: `Gallery lead - Category: ${selectedCategory}`,
+          dynamicFields: {
+            category: selectedCategory,
+          }
+        }
+      );
+      
+      await submitLead(leadData, {}, LEADS_API_TOKEN);
+      
       localStorage.setItem(getLeadFlagKey(selectedCategory), 'true');
       setLeadSubmitted(true);
+      setShowPhonePopup(false);
+      setPhoneNumber("");
+      setUserName("");
+      loadMoreThumbnails();
     } catch (err) {
-      alert('Failed to submit lead. Please try again.');
+      console.error('Error submitting lead:', err);
+      alert(err.message || 'Failed to submit lead. Please try again.');
     }
-
-    setShowPhonePopup(false);
-    setPhoneNumber("");
-    setUserName("");
-    loadMoreThumbnails();
   };
 
   return (

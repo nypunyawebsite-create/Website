@@ -1,0 +1,870 @@
+Apr 14 14:47:44 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6620.[0m
+Apr 14 14:47:44 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 6620.[0m
+Apr 14 15:13:32 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7551.[0m
+Apr 14 15:13:32 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 15:13:32 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7551 and the job result is done.[0m
+Apr 14 15:13:32 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7551.[0m
+Apr 14 15:13:32 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7551.[0m
+Apr 14 15:29:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8333.[0m
+Apr 14 15:29:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 15:29:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8333 and the job result is done.[0m
+Apr 14 15:29:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8333.[0m
+Apr 14 15:29:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8333.[0m
+Apr 14 15:40:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8723.[0m
+Apr 14 15:40:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 15:40:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8723 and the job result is done.[0m
+Apr 14 15:40:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8723.[0m
+Apr 14 15:40:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8723.[0m
+Apr 14 15:42:11 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8853.[0m
+Apr 14 15:42:11 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 15:42:11 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8853 and the job result is done.[0m
+Apr 14 15:42:11 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8853.[0m
+Apr 14 15:42:11 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 8853.[0m
+Apr 14 16:31:59 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 9901.[0m
+Apr 14 16:31:59 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 16:31:59 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 9901 and the job result is done.[0m
+Apr 14 16:31:59 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 9901.[0m
+Apr 14 16:31:59 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 9901.[0m
+Apr 14 16:34:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10031.[0m
+Apr 14 16:34:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 16:34:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10031 and the job result is done.[0m
+Apr 14 16:34:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10031.[0m
+Apr 14 16:34:35 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10031.[0m
+Apr 14 16:38:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10422.[0m
+Apr 14 16:38:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 16:38:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10422 and the job result is done.[0m
+Apr 14 16:38:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10422.[0m
+Apr 14 16:38:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10422.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10682.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10682 and the job result is done.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10682.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31049]: 2025/04/14 16:49:50 [emerg] 31049#31049: unexpected ";" in /etc/nginx/conf.d/client-backend.conf:26
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31049]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStartPre= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 16:49:50 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10682 and the job result is failed.[0m
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10942.[0m
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31077]: 2025/04/14 16:53:31 [emerg] 31077#31077: unexpected ";" in /etc/nginx/conf.d/client-backend.conf:26
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31077]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStartPre= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 16:53:31 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 10942 and the job result is failed.[0m
+Apr 14 16:54:22 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11072.[0m
+Apr 14 16:54:22 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has finished successfully[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished successfully.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11072.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11202.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: nginx.service: Deactivated successfully.
+[0;38;5;245m░░ [0m[0;32mSubject: Unit succeeded[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has successfully entered the 'dead' state.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+[0;38;5;245m░░ [0m[0;32mSubject: A stop job for unit nginx.service has finished[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA stop job for unit nginx.service has finished.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11202 and the job result is done.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11202.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31123]: 2025/04/14 16:55:30 [emerg] 31123#31123: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/conf.d/client-backend.conf:1
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31123]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStartPre= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 16:55:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11202 and the job result is failed.[0m
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11332.[0m
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31165]: 2025/04/14 16:58:24 [emerg] 31165#31165: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/conf.d/client-backend.conf:1
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31165]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStartPre= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 16:58:24 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11332 and the job result is failed.[0m
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11592.[0m
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:03:34 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:03:35 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31241]: nginx: [emerg] still could not bind()
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:03:36 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11592 and the job result is failed.[0m
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11722.[0m
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31259]: 2025/04/14 17:04:46 [emerg] 31259#31259: SSL_CTX_set_cipher_list("TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:...") failed (SSL: error:0A0000B9:SSL routines::no cipher match)
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31259]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStartPre= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:04:46 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11722 and the job result is failed.[0m
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11852.[0m
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:05:15 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:05:16 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31275]: nginx: [emerg] still could not bind()
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:05:17 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11852 and the job result is failed.[0m
+Apr 14 17:06:19 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11982.[0m
+Apr 14 17:06:19 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:06:19 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:06:19 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:06:20 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:06:21 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:06:22 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31291]: nginx: [emerg] still could not bind()
+Apr 14 17:06:22 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:06:22 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:06:22 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 11982 and the job result is failed.[0m
+Apr 14 17:07:09 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12112.[0m
+Apr 14 17:07:09 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:07:09 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:07:09 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:07:10 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:07:11 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:07:12 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31303]: nginx: [emerg] still could not bind()
+Apr 14 17:07:12 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:07:12 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:07:12 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12112 and the job result is failed.[0m
+Apr 14 17:09:45 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12242.[0m
+Apr 14 17:09:45 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:09:45 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:09:45 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:09:46 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:09:47 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:09:48 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31337]: nginx: [emerg] still could not bind()
+Apr 14 17:09:48 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:09:48 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:09:48 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12242 and the job result is failed.[0m
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12502.[0m
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:10:25 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:10:26 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31363]: nginx: [emerg] still could not bind()
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:10:27 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12502 and the job result is failed.[0m
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12632.[0m
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:11:58 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:11:59 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31460]: nginx: [emerg] still could not bind()
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:12:00 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12632 and the job result is failed.[0m
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12762.[0m
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:28 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:29 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 nginx[31472]: nginx: [emerg] still could not bind()
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mnginx.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit nginx.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mnginx.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit nginx.service has entered the 'failed' state with result 'exit-code'.[0m
+Apr 14 17:12:30 ubuntu-s-2vcpu-4gb-blr1-01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start nginx.service - A high performance web server and a reverse proxy server.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit nginx.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit nginx.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 12762 and the job result is failed.[0m

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import SeoWrapper from '../utils/Seo/SeoWrapper';
+import { FaPlane, FaMapMarkerAlt, FaHotel, FaCreditCard, FaPassport, FaLandmark, FaCheckCircle } from 'react-icons/fa';
 
 const bannerImages = [
     '/services/rhinoplasty/rhinoplasty-banner-2.png',
@@ -36,39 +38,30 @@ const BannerSlider = () => {
         fade: true,
     };
     return (
-        <div className="relative w-full md:h-[600px] h-[450px] overflow-hidden">
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
             <Slider {...settings} className="w-full h-full">
                 {bannerImages.map((img, idx) => (
                     <div key={idx} className="w-full h-full">
                         <img
                             src={img}
                             alt={`Banner ${idx + 1}`}
-                            className="w-full h-full object-cover brightness-75"
+                            className="w-full h-full object-cover brightness-50"
                         />
                     </div>
                 ))}
             </Slider>
-            {/* Overlay Content (like Home) */}
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-between pointer-events-none">
-                {/* <div className="w-full flex flex-wrap justify-center gap-2 md:gap-4 items-center px-2 md:px-16 mt-8 md:mt-20" style={{ marginTop: 'calc(2rem + 180px)' }}>
-                    <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">International Patients</h2>
-                    <span className="text-white text-xl md:text-2xl font-bold">–</span>
-                    <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Cosmetic Surgery</h2>
-                    <span className="text-white text-xl md:text-2xl font-bold">–</span>
-                    <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold drop-shadow-lg">Dermatology</h2>
-                </div> */}
-                {/* <div className="w-full flex flex-col items-center pt-16 md:pt-24 pb-24">
-                    <div className="flex flex-col justify-center gap-3 items-center">
-                        <div>
-                            <p className="text-[#000099] text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-0 text-center drop-shadow-md font-bold">WELCOME INTERNATIONAL PATIENTS</p>
-                        </div>
-                    </div>
-                </div> */}
+            {/* Banner Overlay Text */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
+                <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold drop-shadow-2xl mb-4">
+                    Welcome International Patients
+                </h1>
+                <p className="text-white text-lg md:text-xl lg:text-2xl drop-shadow-lg max-w-3xl">
+                    World-Class Cosmetic Surgery & Dermatology in India
+                </p>
             </div>
         </div>
     );
 };
-
 
 const International = () => {
     const [form, setForm] = useState({
@@ -78,6 +71,8 @@ const International = () => {
         requirement: '',
         terms: false,
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [phoneError, setPhoneError] = useState('');
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -85,297 +80,430 @@ const International = () => {
             ...prev,
             [name]: type === 'checkbox' ? checked : value,
         }));
+        // Clear phone error when user types
+        if (name === 'phone') {
+            setPhoneError('');
+        }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert('Form submitted!');
+        
+        if (!form.terms) {
+            alert('Please accept the terms and conditions to proceed.');
+            return;
+        }
+        
+        // Reset error
+        setPhoneError('');
+        
+        // Validate phone number
+        const { validatePhoneNumber } = await import('../api/leadsApi');
+        if (!validatePhoneNumber(form.phone)) {
+            setPhoneError('Please enter a valid 10-digit phone number.');
+            return;
+        }
+        
+        setIsSubmitting(true);
+        
+        try {
+            const { submitLead, createLeadFromForm } = await import('../api/leadsApi');
+            const { LEADS_API_TOKEN } = await import('../Config');
+            
+            // Create lead object from form data
+            const leadData = createLeadFromForm(
+                { name: form.name, phone: form.phone, email: form.email, requirement: form.requirement },
+                {
+                    source: 'International Patients Form',
+                    tags: ['website', 'international'],
+                }
+            );
+            
+            // Submit lead to API
+            const response = await submitLead(leadData, {}, LEADS_API_TOKEN);
+            
+            // Success
+            alert('Thank you! Your form has been submitted. We will contact you soon.');
+            
+            // Reset form
+            setForm({
+                name: '',
+                email: '',
+                phone: '',
+                requirement: '',
+                terms: false,
+            });
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert(error.message || 'Failed to submit form. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
-    // Responsive styles
-    const mainLayoutStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        gap: 48,
-        maxWidth: 1400,
-        margin: '0 auto',
-        padding: '48px 16px',
-        flexWrap: 'wrap',
+    const gallerySettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
     };
-    const leftColStyle = {
-        flex: 2,
-        background: '#fff',
-        borderRadius: 16,
-        boxShadow: '0 2px 16px #0001',
-        padding: 32,
-        color: '#222',
-        minWidth: 320,
-        width: '100%',
-        maxWidth: 800,
-        boxSizing: 'border-box',
-    };
-    const rightColStyle = {
-        flex: 1,
-        background: '#fff',
-        padding: '40px 32px',
-        borderRadius: 16,
-        boxShadow: '0 2px 16px #0001',
-        minWidth: 280,
-        maxWidth: 420,
-        width: '100%',
-        boxSizing: 'border-box',
-        marginTop: 32,
-    };
-    // Media query for stacking on mobile
-    const mediaQuery = `
-        @media (max-width: 900px) {
-            .intl-main-layout { flex-direction: column !important; gap: 0 !important; padding: 24px 4vw !important; }
-            .intl-left-col, .intl-right-col { max-width: 100% !important; min-width: 0 !important; width: 100% !important; margin-top: 0 !important; }
-            .intl-right-col { margin-top: 32px !important; }
-            .intl-left-col, .intl-right-col, .intl-info-card { padding: 16px !important; }
-            .intl-info-card { font-size: 0.98rem !important; }
-            .intl-info-card h1, .intl-info-card h2, .intl-info-card h3, .intl-info-card h4, .intl-info-card h5 { font-size: 1.1rem !important; }
-            .intl-info-card img { height: 60px !important; }
-        }
-        @media (max-width: 600px) {
-            .intl-main-layout { padding: 12px 2vw !important; }
-            .intl-info-card { padding: 10px !important; font-size: 0.93rem !important; }
-            .intl-info-card img { height: 40px !important; }
-            .intl-right-col { padding: 20px 8px !important; }
-            .intl-left-col { padding: 12px !important; }
-        }
-    `;
 
     return (
-        <div className="w-full min-h-screen" style={{ background: '#f8f9fa' }}>
-            <style>{mediaQuery}</style>
-            <BannerSlider />
-            <div className="intl-main-layout" style={mainLayoutStyle}>
+        <SeoWrapper
+            title="International Patients - Cosmetic Surgery in India | Nypunya Bangalore"
+            description="Welcome international patients to Nypunya Aesthetic Clinic, Bangalore. Expert plastic surgery and dermatology services for patients from around the world. Comprehensive care, visa assistance, accommodation support. Contact us for your cosmetic surgery journey in India."
+            keywords="international patients india, cosmetic surgery bangalore, plastic surgery india, medical tourism bangalore, rhinoplasty india, hair transplant india, international aesthetic clinic, surgery india for foreigners"
+            image="https://nypunyaaesthetics.com/services/rhinoplasty/rhinoplasty-banner-2.png"
+        >
+            <div className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
+                
+                {/* Banner */}
+                <BannerSlider />
+
                 {/* Main Content */}
-                <div className="intl-left-col" style={leftColStyle}>
-                    {/* Heading and Details */}
-                    <div>
-                        <h1 style={{ fontSize: '2.1rem', color: '#000099', marginBottom: 12, fontWeight: 'bold', letterSpacing: '1px' }}>
-                            GUIDING OUR INTERNATIONAL CLIENTS ON HOW TO TAKE THE DISCUSSION FURTHER TO PROCEED THE COSMETIC SURGERY
-                        </h1>
-                        <div style={{ fontSize: '1.1rem', marginBottom: 18, color: '#222' }}>
-                            During enquiry the following personal details are collected from the client
-                        </div>
-                        <ul style={{ marginLeft: 18, marginBottom: 18, color: '#222', listStyle: 'circle' }}>
-                            <li>Name</li>
-                            <li>Age and gender</li>
-                            <li>Height and weight</li>
-                            <li>Email address</li>
-                            <li>Contact numbers with WhatsApp access</li>
-                        </ul>
-                        <div style={{ color: '#444', fontSize: '1rem' }}>
-                            After receiving your details our team will call you to guide you on the treatment enquired for.<br />
-                            You may be asked to send pictures of the areas of concern after masking your identity. This phase is to guide you, explain the possible treatment plan and the approximate charges for completing the procedure. The pictures shared are confidential.<br />
-                            We prefer certain angles for taking the pictures to be sent and those instructions will be sent to you through an email.
-                        </div>
+                <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
+                    
+                    {/* Hero Section */}
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-custom-blue mb-4">
+                            Your Journey to Beauty Starts Here
+                        </h2>
+                        <div className="w-24 h-1 bg-custom-green mx-auto mb-6"></div>
+                        <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                            Guiding our international clients on how to take the discussion further to proceed with cosmetic surgery at Nypunya Aesthetic Clinic, Bangalore
+                        </p>
                     </div>
 
-                    {/* Info Cards Column */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 32, marginTop: 40 }}>
-                        {/* Location from the airport */}
-                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Location from the airport</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 6 }}>
-                                Kempegowda International Airport to Nypunya Aesthetic Clinic: <b>41 kms</b>
-                            </div>
-                            <div style={{ color: '#222', fontSize: '1.05rem' }}>
-                                Travelling time: <b>1:30 hrs</b>
-                            </div>
-                        </div>
-
-                        {/* Our Locations */}
-                        <div
-                            className="intl-info-card"
-                            style={{
-                                background: '#f8f9fa',
-                                borderRadius: 16,
-                                padding: 28,
-                                maxWidth: 700,
-                                boxShadow: '0 2px 12px #0001',
-                                width: '100%',
-                                boxSizing: 'border-box',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: 24,
-                                flexWrap: 'wrap',
-                            }}
-                        >
-                            <iframe
-                                className="intl-map-iframe"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6193083791723!2d77.5865634974667!3d12.916153829207719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159f89eb734f%3A0xc159ff3d3c8abec4!2sNypunya%20Aesthetic%20Clinic%20%7C%20Dermatology%20and%20Cosmetic%20Plastic%20Surgeon%20in%20Bengaluru!5e1!3m2!1sen!2sin!4v1745859791796!5m2!1sen!2sin"
-                                width="100%"
-                                height="220"
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                style={{ borderRadius: 12, border: 0, width: '100%', minWidth: 200, maxWidth: 700 }}
-                            ></iframe>
-                            <div>
-                                <div
-                                    style={{
-                                        fontWeight: 'bold',
-                                        fontSize: '1.2rem',
-                                        marginBottom: 10,
-                                        color: '#000099',
-                                    }}
-                                >
-                                    OUR LOCATIONS
-                                </div>
-                                <div
-                                    style={{
-                                        color: '#000099',
-                                        fontWeight: 'bold',
-                                        marginBottom: 4,
-                                        fontSize: '1.05rem',
-                                    }}
-                                >
-                                    #3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru
+                    {/* Two Column Layout */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+                        
+                        {/* Left Column - Information (2/3 width) */}
+                        <div className="lg:col-span-2 space-y-8">
+                            
+                            {/* Initial Consultation Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-blue">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaCheckCircle className="text-custom-green" />
+                                    Initial Consultation Process
+                                </h3>
+                                <p className="text-gray-700 text-base md:text-lg mb-4">
+                                    During enquiry, the following personal details are collected from the client:
+                                </p>
+                                <ul className="space-y-2 ml-6">
+                                    {['Name', 'Age and gender', 'Height and weight', 'Email address', 'Contact numbers with WhatsApp access'].map((item, idx) => (
+                                        <li key={idx} className="flex items-center gap-3 text-gray-700">
+                                            <span className="w-2 h-2 bg-custom-green rounded-full"></span>
+                                            <span className="text-base md:text-lg">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-custom-blue">
+                                    <p className="text-gray-700 leading-relaxed">
+                                        <strong>Next Steps:</strong> After receiving your details, our team will call you to guide you on the treatment enquired for. 
+                                        You may be asked to send pictures of the areas of concern after masking your identity. This phase is to guide you, 
+                                        explain the possible treatment plan and the approximate charges for completing the procedure. The pictures shared are confidential.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Medical Visa and Travel Info */}
-                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Medical Visa:</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 12 }}>
-                                To get medical treatments in India, you will need an <b>M­-Visa (Medical Visa)</b> or an <b>eTourist Visa (eTV)</b>. It is legally not permissible to undergo medical procedures with a normal/traditional Tourist visa.
+                            {/* Location Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-green">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaMapMarkerAlt className="text-custom-green" />
+                                    Location & Distance
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                    <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl">
+                                        <FaPlane className="text-custom-blue text-3xl mb-3" />
+                                        <p className="text-sm text-gray-600 mb-2">From Airport</p>
+                                        <p className="text-2xl font-bold text-custom-blue">41 kms</p>
+                                        <p className="text-gray-600 mt-2">Travel time: <strong>1:30 hrs</strong></p>
+                                    </div>
+                                    <div className="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl">
+                                        <FaMapMarkerAlt className="text-custom-green text-3xl mb-3" />
+                                        <p className="text-sm text-gray-600 mb-2">Clinic Location</p>
+                                        <p className="text-base font-semibold text-custom-blue">
+                                            #3, 1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Google Map */}
+                                <div className="rounded-xl overflow-hidden shadow-md">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6193083791723!2d77.5865634974667!3d12.916153829207719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159f89eb734f%3A0xc159ff3d3c8abec4!2sNypunya%20Aesthetic%20Clinic%20%7C%20Dermatology%20and%20Cosmetic%20Plastic%20Surgeon%20in%20Bengaluru!5e1!3m2!1sen!2sin!4v1745859791796!5m2!1sen!2sin"
+                                        width="100%"
+                                        height="300"
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        className="border-0"
+                                    ></iframe>
+                                </div>
                             </div>
-                            <div style={{ fontWeight: 'bold', color: '#000099', marginBottom: 8 }}>STEPS TO GET YOUR ETOURIST VISA (ETV)</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 8 }}><b>Step 1</b><br />Keep the following documents ready:</div>
-                            <ul style={{ color: '#222', marginLeft: 18, marginBottom: 10, listStyle: 'circle' }}>
-                                <li>Applicant's recent colour photo (2 inch * 2 inch) size but less than 1MB.</li>
-                                <li>Copy a passport page personal particular.</li>
-                                <li>Copy of particular treatment letter from Nypunya Aesthetic Clinic</li>
-                            </ul>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 8 }}><b>Step 2</b><br />Visit <a href="https://indianvisaonline.gov.in/evisa/Registration" target="_blank" rel="noopener noreferrer" style={{ color: '#000099', textDecoration: 'underline' }}>https://indianvisaonline.gov.in/evisa/Registration</a></div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 8 }}><b>Step 3</b><br />Click on <b>e-VISA Application</b> Tab from the Menu</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 8 }}><b>Step 4</b><br />Select <b>eMedical VISA &gt;&gt; Short Term Medical Treatment of Self</b> Option</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem', marginBottom: 8 }}><b>Step 5</b><br />It will ask for the below documents. Upload them and complete the process.</div>
-                            <div style={{ fontWeight: 'bold', color: '#000099', margin: '18px 0 8px 0' }}>Transport and food apps:</div>
-                            <div style={{ color: '#222', fontSize: '1.05rem' }}>
-                                There are many travel agencies and taxi service apps like <b>OLA</b>, <b>UBER</b> and <b>Rapido</b>. <br />
-                                Food delivering service apps like <b>UBEREATS</b>, <b>SWIGGY</b> and <b>Zomato</b> which will be helpful for you to make the stay comfortable in India.
+
+                            {/* Medical Visa Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-blue">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaPassport className="text-custom-green" />
+                                    Medical Visa Information
+                                </h3>
+                                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-6">
+                                    <p className="text-gray-800 leading-relaxed">
+                                        To get medical treatments in India, you will need an <strong>M-Visa (Medical Visa)</strong> or an <strong>eTourist Visa (eTV)</strong>. 
+                                        It is legally not permissible to undergo medical procedures with a normal/traditional Tourist visa.
+                                    </p>
+                                </div>
+
+                                <div className="mb-6">
+                                    <h4 className="text-xl font-bold text-custom-blue mb-4">Steps to Get Your eTourist Visa (eTV)</h4>
+                                    
+                                    {/* Step 1 */}
+                                    <div className="mb-6 bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl">
+                                        <p className="font-bold text-custom-blue mb-3 text-lg">Step 1: Prepare Documents</p>
+                                        <ul className="space-y-2 ml-4">
+                                            {[
+                                                'Applicant\'s recent colour photo (2 inch * 2 inch) size but less than 1MB',
+                                                'Copy of passport page personal particular',
+                                                'Copy of particular treatment letter from Nypunya Aesthetic Clinic'
+                                            ].map((item, idx) => (
+                                                <li key={idx} className="flex items-start gap-2">
+                                                    <span className="text-custom-green mt-1">✓</span>
+                                                    <span className="text-gray-700">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Step 2-5 */}
+                                    {[
+                                        { step: 2, text: 'Visit https://indianvisaonline.gov.in/evisa/Registration' },
+                                        { step: 3, text: 'Click on e-VISA Application Tab from the Menu' },
+                                        { step: 4, text: 'Select eMedical VISA >> Short Term Medical Treatment of Self Option' },
+                                        { step: 5, text: 'Upload required documents and complete the process' }
+                                    ].map((item) => (
+                                        <div key={item.step} className="mb-3 flex items-start gap-3">
+                                            <div className="flex-shrink-0 w-8 h-8 bg-custom-blue text-white rounded-full flex items-center justify-center font-bold">
+                                                {item.step}
+                                            </div>
+                                            <p className="text-gray-700 mt-1">{item.text}</p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Transport & Food Apps */}
+                                <div className="bg-gradient-to-r from-green-50 to-white p-6 rounded-xl">
+                                    <h4 className="font-bold text-custom-blue mb-3">Transport and Food Apps:</h4>
+                                    <p className="text-gray-700">
+                                        Travel agencies and taxi services: <strong>OLA, UBER, Rapido</strong><br />
+                                        Food delivery services: <strong>UBEREATS, SWIGGY, Zomato</strong>
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Hotels Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-green">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaHotel className="text-custom-green" />
+                                    Five Star Hotels Nearby
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {[
+                                        { name: 'La Marvella - Bangalore', phone: '080 4333 5333' },
+                                        { name: 'Vivanta Bengaluru, Residency Road', phone: '080666 04545' },
+                                        { name: 'Le Foliage By TGI', phone: '080 6199 3399' },
+                                        { name: 'FOUNTAIN TREE By TGI', phone: '080 6188 5555' },
+                                        { name: 'Hotel Greenpark Bengaluru', phone: '080665 15151' },
+                                        { name: 'SFO Hotel and Suites', phone: '080 4297 7777' }
+                                    ].map((hotel, idx) => (
+                                        <div key={idx} className="bg-gradient-to-br from-blue-50 to-white p-4 rounded-lg hover:shadow-md transition-shadow">
+                                            <p className="font-semibold text-custom-blue text-base">{hotel.name}</p>
+                                            <p className="text-sm text-gray-600 mt-1">📞 {hotel.phone}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Payment Modes Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-blue">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaCreditCard className="text-custom-green" />
+                                    Payment Options
+                                </h3>
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                    {['Cash', 'Credit Card', 'Debit Card', 'Bank Transfer', 'NEFT / RTGS', 'IMPS'].map((mode, idx) => (
+                                        <div key={idx} className="bg-gradient-to-br from-green-50 to-white p-4 rounded-lg text-center">
+                                            <FaCheckCircle className="text-custom-green text-2xl mx-auto mb-2" />
+                                            <p className="font-semibold text-custom-blue">{mode}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="text-gray-600 mt-6 text-center italic">
+                                    Bank details will be provided after booking confirmation
+                                </p>
+                            </div>
+
+                            {/* Tourism Card */}
+                            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 border-custom-green">
+                                <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 flex items-center gap-3">
+                                    <FaLandmark className="text-custom-green" />
+                                    Explore Bangalore & Karnataka
+                                </h3>
+                                <div className="space-y-4">
+                                    {[
+                                        { name: 'Lalbagh Botanical Garden', highlights: 'Glass House, rare plants, serene walking paths' },
+                                        { name: 'Bull Temple', highlights: 'Giant Nandi statue, traditional architecture' },
+                                        { name: 'Bangalore Palace', highlights: 'Tudor-style palace, lavish interiors, photo-worthy' },
+                                        { name: 'Cubbon Park', highlights: 'Lush greenery, relaxing walks, State Central Library' },
+                                        { name: 'ISKCON Temple', highlights: 'Spiritual ambiance, beautiful surroundings' },
+                                        { name: 'UB City Mall / MG Road', highlights: 'Shopping, cafes, vibrant street life' },
+                                        { name: 'Mysore', highlights: 'Mysore Palace, Dasara festival, cultural capital' },
+                                        { name: 'Coorg', highlights: 'Coffee plantations, misty hills, waterfalls - "Scotland of India"' }
+                                    ].map((place, idx) => (
+                                        <div key={idx} className="bg-gradient-to-r from-blue-50 to-white p-5 rounded-xl hover:shadow-md transition-shadow">
+                                            <h4 className="font-bold text-custom-blue text-lg mb-2">{place.name}</h4>
+                                            <p className="text-gray-600 text-sm md:text-base">{place.highlights}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* Right Column - Contact Form & Gallery (1/3 width) */}
+                        <div className="lg:col-span-1">
+                            {/* Sticky Container for Form */}
+                            <div className="lg:sticky lg:top-24 space-y-8">
+                                
+                                {/* Contact Form */}
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border-t-4 border-custom-blue">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-custom-blue mb-6 text-center">
+                                        Contact Us
+                                    </h3>
+                                    <form onSubmit={handleSubmit} className="space-y-5">
+                                        {/* Name */}
+                                        <div>
+                                            <label className="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                value={form.name}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-custom-blue focus:outline-none transition-colors"
+                                                placeholder="Enter your name"
+                                            />
+                                        </div>
+
+                                        {/* Email */}
+                                        <div>
+                                            <label className="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                value={form.email}
+                                                onChange={handleChange}
+                                                required
+                                                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-custom-blue focus:outline-none transition-colors"
+                                                placeholder="your@email.com"
+                                            />
+                                        </div>
+
+                                        {/* Phone */}
+                                        <div>
+                                            <label className="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                value={form.phone}
+                                                onChange={handleChange}
+                                                required
+                                                className={`w-full px-4 py-3 border-2 ${phoneError ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:border-custom-blue focus:outline-none transition-colors`}
+                                                placeholder="Enter your 10-digit phone number"
+                                            />
+                                            {phoneError && (
+                                                <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+                                            )}
+                                        </div>
+
+                                        {/* Requirement */}
+                                        <div>
+                                            <label className="block text-gray-700 font-semibold mb-2">Your Requirements</label>
+                                            <textarea
+                                                name="requirement"
+                                                value={form.requirement}
+                                                onChange={handleChange}
+                                                rows={4}
+                                                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-custom-blue focus:outline-none transition-colors resize-none"
+                                                placeholder="Tell us about your treatment requirements..."
+                                            />
+                                        </div>
+
+                                        {/* Terms */}
+                                        <div className="flex items-start gap-3">
+                                            <input
+                                                type="checkbox"
+                                                name="terms"
+                                                checked={form.terms}
+                                                onChange={handleChange}
+                                                required
+                                                className="mt-1 w-5 h-5 text-custom-blue focus:ring-custom-blue"
+                                            />
+                                            <label className="text-sm text-gray-700">
+                                                I agree to the <a href="#" className="text-custom-blue underline font-semibold">Terms of Use</a> and consent to be contacted
+                                            </label>
+                                        </div>
+
+                                        {/* Submit Button */}
+                                        <button
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className="w-full bg-custom-blue hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                                        >
+                                            {isSubmitting ? 'Submitting...' : 'Send Enquiry →'}
+                                        </button>
+                                    </form>
+                                </div>
+
+                                {/* Gallery Slider */}
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl">
+                                    <h3 className="text-xl md:text-2xl font-bold text-custom-blue mb-6 text-center">
+                                        Our Transformations
+                                    </h3>
+                                    <div className="rounded-xl overflow-hidden shadow-md mb-4">
+                                        <Slider {...gallerySettings}>
+                                            {galleryImages.map((img, idx) => (
+                                                <div key={idx}>
+                                                    <img
+                                                        src={img}
+                                                        alt={`Gallery ${idx + 1}`}
+                                                        className="w-full h-64 object-cover"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </Slider>
+                                    </div>
+                                    <button
+                                        onClick={() => window.location.href = '/gallery'}
+                                        className="w-full bg-custom-green hover:bg-green-400 text-custom-blue font-bold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                                    >
+                                        View Full Gallery →
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
 
-                        {/* Five star hotels near Nypunya Aesthetic Clinic */}
-                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Five star hotels near Nypunya Aesthetic Clinic</div>
-                            <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
-                                <li><b>La Marvella - Bangalore</b><br />Address: 1, South End Circle, La Marvella, 14th Cross Rd, next to Infosys Science Foundation, 2nd Block, Jayanagar, Bengaluru, Karnataka 560011 • 080 4333 5333.</li>
-                                <li><b>Vivanta Bengaluru, Residency Road</b><br />Address: 66, Residency Rd, Srinivas Nagar, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 • 080666 04545</li>
-                                <li><b>Le Foliage By TGI</b><br />Address: 51, 46th Cross Rd, 8th Block, CR Layout, 1st Phase, J. P. Nagar, Bengaluru, Karnataka 560082 • 080 6199 3399</li>
-                                <li><b>FOUNTAIN TREE By TGI</b><br />Address: Sri Krishna Arcade, 9th Cross Rd, Sarakki Industrial Layout, 3rd Phase, J. P. Nagar, Bengaluru, Karnataka 560078 • 080 6188 5555</li>
-                                <li><b>Hotel Greenpark Bengaluru</b><br />Address: No 75 & 172, Bannerghatta Rd, Dollar Layout, BTM 2nd Stage, J. P. Nagar, Bengaluru, Karnataka 560076 • 080665 15151</li>
-                                <li><b>SFO Hotel and Suites</b><br />Address: 24, Marenahalli Rd, TMC Layout, 5th Block, Jayanagar, Bengaluru, Karnataka 560041 • 080 4297 7777</li>
-                                <li><b>Hotel Pai Comforts, JP Nagar</b><br />Address: Metro Pillar No 66, 1319, Marenahalli Rd, near Sapphire honda showroom, Marenahalli, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078 • 097409 89348</li>
-                                <li><b>Hotel Paramos Inn</b><br />Address: 1353, Marenahalli Rd, Jayanagara 9th Block, Jayanagar, Bengaluru, Karnataka 560069 • 080 4166 0005.</li>
-                                <li><b>AURICK HOTEL</b><br />Address: 598, 15th Cross, 35th Main Rd, JP Nagar 6th Phase, J. P. Nagar, Bengaluru, Karnataka 560078 • 063638 81374</li>
-                                <li><b>Olive JP Nagar – by Embassy Group</b><br />Address: 11, Ring Road, 15th Cross Rd, near Delmia Circle, KAS Officers HBCS layout, 7th Phase, J. P. Nagar, Bengaluru, Karnataka 560078 • 088676 25161</li>
-                            </ol>
-                        </div>
-
-                        {/* Payment Modes */}
-                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Payment Modes</div>
-                            <ul style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', listStyle: 'circle' }}>
-                                <li>Cash</li>
-                                <li>Credit card</li>
-                                <li>Debit card</li>
-                                <li>Bank transfer (Bank transfer can be made to the below accounts via NEFT / RTGS / IMPS)</li>
-                                <li>Bank Details will be given after booking</li>
-                            </ul>
-                            {/* <div style={{ color: '#222', fontSize: '1.05rem', marginTop: 8 }}><b>Bank details</b><br />Account number<br />Branch</div> */}
-                        </div>
-
-                        {/* Tourism */}
-                        <div className="intl-info-card" style={{ background: '#f8f9fa', borderRadius: 16, padding: 28, maxWidth: 700, boxShadow: '0 2px 12px #0001', width: '100%', boxSizing: 'border-box' }}>
-                            <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginBottom: 10, color: '#000099' }}>Tourism</div>
-                            <ol style={{ color: '#222', marginLeft: 18, marginBottom: 10, fontSize: '1.05rem', paddingLeft: 18 }}>
-                                <li><b>Lalbagh Botanical Garden</b><br />Highlights: Glass House, rare plants, serene walking paths.<br />Ideal for: Nature lovers, photography, peaceful start.</li>
-                                <li><b>Bull Temple (Dodda Basavana Gudi)</b><br />Highlights: Giant Nandi statue, traditional architecture.<br />Ideal for: Spiritual vibe, quick visit.</li>
-                                <li><b>Tipu Sultan's Summer Palace</b><br />Highlights: Indo-Islamic architecture, rich history.<br />Ideal for: History buffs, quick cultural exploration.</li>
-                                <li><b>Bangalore Palace</b><br />Highlights: Tudor-style palace, lavish interiors, photo-worthy.<br />Ideal for: Architecture and luxury lovers.</li>
-                                <li><b>Cubbon Park</b><br />Highlights: Lush greenery, relaxing walks, State Central Library nearby.<br />Ideal for: Quick break, coffee/snack time.</li>
-                                <li><b>Vidhana Soudha</b><br />Highlights: Iconic government building, great for photos.<br />Ideal for: Quick pitstop and photoshoot.</li>
-                                <li><b>ISKCON Temple</b><br />Highlights: Spiritual ambiance, beautiful surroundings, prasadam.<br />Ideal for: Peaceful evening moment.</li>
-                                <li><b>UB City Mall / MG Road / Brigade Road</b><br />Highlights: Shopping, cafes, street vibe.<br />Ideal for: Evening chill, shopping, and dinner.</li>
-                                <li><b>Skyye Lounge or Toit</b><br />Highlights: Rooftop dinner, great views of Bangalore.<br />Ideal for: Romantic/special dinner.</li>
-                                <li><b>Mysore</b><br />Mysore, known as the Cultural Capital of Karnataka, is a city steeped in royal heritage, majestic architecture, and vibrant traditions. Famous for the magnificent Mysore Palace, Dasara festival, and fragrant sandalwood, it blends history with charm. Whether it's strolling through the lush Brindavan Gardens, shopping for rich silk sarees, or exploring the Chamundi Hills, Mysore offers a perfect mix of culture, serenity, and timeless elegance.</li>
-                                <li><b>Belur</b><br />Nestled in the Hassan district of Karnataka, Belur is a serene town famed for its breathtaking Chennakesava Temple, a masterpiece of Hoysala architecture built in the 12th century. The intricate carvings, detailed sculptures, and beautifully polished stonework make it a must-visit for history buffs, art lovers, and spiritual seekers. Surrounded by lush greenery and river views, Belur offers a peaceful escape and a glimpse into the grandeur of South India's ancient dynasties.</li>
-                                <li><b>Coorg</b><br />Coorg (Kodagu), often called the "Scotland of India," is a picturesque hill station located in Karnataka. Known for its lush green coffee plantations, misty hills, cascading waterfalls, and rich wildlife, Coorg offers a peaceful retreat into nature. With charming towns like Madikeri and scenic spots like Abbey Falls, Raja's Seat, and Dubare Elephant Camp, it's perfect for trekking, coffee tours, and cultural experiences with the Kodava community.</li>
-                            </ol>
-                        </div>
                     </div>
                 </div>
-                {/* Right: Contact Form */}
-                <form
-                    onSubmit={handleSubmit}
-                    className="intl-right-col"
-                    style={rightColStyle}
-                >
-                    <div style={{ fontSize: '1.5rem', color: '#000099', fontWeight: 'bold', marginBottom: 8, letterSpacing: '1px' }}>CONTACT US</div>
-                    <div>
-                        <label style={{ color: '#222', fontWeight: 500 }}>Full Name</label>
-                        <input name="name" value={form.name} onChange={handleChange} required style={{ width: '100%', padding: 10, borderRadius: 6, border: '1px solid #bbb', marginTop: 4, background: '#fff', color: '#222' }} />
-                    </div>
-                    <div>
-                        <label style={{ color: '#222', fontWeight: 500 }}>Email id:</label>
-                        <input type="email" name="email" value={form.email} onChange={handleChange} required style={{ width: '100%', padding: 10, borderRadius: 6, border: '1px solid #bbb', marginTop: 4, background: '#fff', color: '#222' }} />
-                    </div>
-                    <div>
-                        <label style={{ color: '#222', fontWeight: 500 }}>Phone :</label>
-                        <input name="phone" value={form.phone} onChange={handleChange} style={{ width: '100%', padding: 10, borderRadius: 6, border: '1px solid #bbb', marginTop: 4, background: '#fff', color: '#222' }} />
-                    </div>
-                    <div>
-                        <label style={{ color: '#222', fontWeight: 500 }}>Requirement :</label>
-                        <textarea name="requirement" value={form.requirement} onChange={handleChange} rows={4} style={{ width: '100%', padding: 10, borderRadius: 6, border: '1px solid #bbb', marginTop: 4, background: '#fff', color: '#222' }} />
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', fontSize: '0.98rem', color: '#222' }}>
-                        <input type="checkbox" name="terms" checked={form.terms} onChange={handleChange} required style={{ marginRight: 8 }} />
-                        <span>I agree to the <a href="#" style={{ color: '#000099', textDecoration: 'underline' }}>Terms of Use</a></span>
-                    </div>
-                    <button type="submit" style={{ width: '100%', background: '#000099', color: '#fff', padding: 14, border: 'none', borderRadius: 8, fontWeight: 'bold', fontSize: '1.15rem', cursor: 'pointer', marginTop: 8 }}>Send</button>
-
-                    {/* Gallery Slider */}
-                    <div style={{ marginTop: 32 }}>
-                        <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#000099', marginBottom: 12, textAlign: 'center' }}>Gallery</div>
-                        <Slider
-                            dots={true}
-                            infinite={true}
-                            speed={500}
-                            slidesToShow={1}
-                            slidesToScroll={1}
-                            arrows={true}
-                            autoplay={true}
-                            autoplaySpeed={3000}
-                        >
-                            {galleryImages.map((img, idx) => (
-                                <div key={idx}>
-                                    <img
-                                        src={img}
-                                        alt={`Gallery ${idx + 1}`}
-                                        style={{ width: '100%', borderRadius: 8, maxHeight: 220, objectFit: 'cover' }}
-                                    />
-                                </div>
-                            ))}
-                        </Slider>
-                        <button type="submit" style={{ width: '100%', background: '#000099', color: '#fff', padding: 14, border: 'none', borderRadius: 8, fontWeight: 'bold', fontSize: '1.15rem', cursor: 'pointer', marginTop: 8 }}
-                            onClick={() => window.location.href = '/gallery'}
-                        >
-                            View Gallery
-                        </button>
-                    </div>
-                </form>
             </div>
-        </div>
+        </SeoWrapper>
     );
 };
 
 export default International;
+

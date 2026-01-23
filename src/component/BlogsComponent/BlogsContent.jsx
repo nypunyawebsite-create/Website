@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import API_URL from '../../Config';
+
+const WORDPRESS_API_URL = 'https://docs.nypunyaaesthetics.com/wp-json/wp/v2';
 
 // Add shake animation CSS
 const shakeStyle = `
@@ -29,32 +30,81 @@ const BlogContent = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [subcategories, setSubcategories] = useState([]);
+    const [wpCategories, setWpCategories] = useState([]);
+    const [displayLimit, setDisplayLimit] = useState(6);
 
-    // Fetch main categories from API
+    // Helper function to get featured image URL from WordPress post
+    const getFeaturedImageUrl = (post) => {
+        if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
+            return post._embedded['wp:featuredmedia'][0].source_url || post._embedded['wp:featuredmedia'][0].media_details?.sizes?.medium?.source_url || null;
+        }
+        return null;
+    };
+
+    // Fetch WordPress categories
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const res = await fetch(`${API_URL}api/categories/main`);
+                const res = await fetch(`${WORDPRESS_API_URL}/categories?per_page=100`);
                 const data = await res.json();
-                setMainCategories(data);
-                if (data.length > 0 && !selectedCategory) {
-                    setSelectedCategory(data[0]);
+                setWpCategories(data);
+                // Set main categories - filter out "Uncategorized" category
+                const mainCats = data
+                    .filter(cat => cat.parent === 0 && cat.slug !== 'uncategorized' && cat.name.toLowerCase() !== 'uncategorized')
+                    .map(cat => ({
+                        _id: cat.id.toString(),
+                        name: cat.name,
+                        id: cat.id
+                    }));
+                setMainCategories(mainCats);
+                if (mainCats.length > 0 && !selectedCategory) {
+                    setSelectedCategory(mainCats[0]);
                 }
             } catch (err) {
                 setMainCategories([]);
+                setWpCategories([]);
             }
         };
         fetchCategories();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // Fetch blogs from API
+    // Fetch blogs from WordPress API
     useEffect(() => {
         const fetchBlogs = async () => {
             setLoading(true);
             try {
-                const res = await fetch(`${API_URL}api/blogs`);
+                const res = await fetch(`${WORDPRESS_API_URL}/posts?_embed&per_page=100`);
                 const data = await res.json();
-                setBlogs(data.blogs || []);
+
+                // Map WordPress posts to our blog format
+                const mappedBlogs = data.map(post => {
+                    const featuredImage = getFeaturedImageUrl(post);
+                    const categories = wpCategories.length > 0
+                        ? wpCategories.filter(cat =>
+                            post.categories && post.categories.includes(cat.id) &&
+                            cat.slug !== 'uncategorized' &&
+                            cat.name.toLowerCase() !== 'uncategorized'
+                        )
+                        : [];
+
+                    return {
+                        _id: post.id.toString(),
+                        title: post.title?.rendered || '',
+                        description: post.excerpt?.rendered || post.content?.rendered || '',
+                        content: post.content?.rendered || '',
+                        slug: post.slug || '',
+                        publishedDate: post.date || '',
+                        banner: featuredImage,
+                        thumbnail: featuredImage,
+                        mainCategory: categories[0] ? { name: categories[0].name, _id: categories[0].id.toString() } : null,
+                        subcategories: categories.slice(1).map(cat => ({ name: cat.name, _id: cat.id.toString() })),
+                        tags: [], // WordPress tags would need separate fetch
+                        createdBy: { name: 'Author' }, // WordPress author info would be in _embedded.author
+                    };
+                });
+
+                setBlogs(mappedBlogs);
                 setError('');
             } catch (err) {
                 setError('Failed to fetch blogs');
@@ -64,19 +114,23 @@ const BlogContent = () => {
             }
         };
         fetchBlogs();
-    }, []);
+    }, [wpCategories]);
 
     // Fetch subcategories when selectedCategory changes
     useEffect(() => {
-        if (selectedCategory && selectedCategory._id) {
-            fetch(`${API_URL}api/categories/subcategories/${selectedCategory._id}`)
-                .then(res => res.json())
-                .then(data => setSubcategories(data))
-                .catch(() => setSubcategories([]));
+        if (selectedCategory && selectedCategory.id) {
+            const subs = wpCategories
+                .filter(cat => cat.parent === selectedCategory.id && cat.slug !== 'uncategorized' && cat.name.toLowerCase() !== 'uncategorized')
+                .map(cat => ({
+                    _id: cat.id.toString(),
+                    name: cat.name,
+                    id: cat.id
+                }));
+            setSubcategories(subs);
         } else {
             setSubcategories([]);
         }
-    }, [selectedCategory]);
+    }, [selectedCategory, wpCategories]);
 
     // Filter blogs based on search query, selectedCategory, and selectedService
     useEffect(() => {
@@ -98,6 +152,15 @@ const BlogContent = () => {
             return matches;
         });
         setFilteredBlogs(filtered);
+
+        // Reset display limit when filters change
+        // If filters are applied (searchQuery or selectedService), show all blogs
+        // Otherwise (default on /blogs/ page), show only 6
+        if (selectedService || searchQuery) {
+            setDisplayLimit(Infinity); // Show all when filters are applied
+        } else {
+            setDisplayLimit(6); // Show only 6 by default on /blogs/ page
+        }
     }, [blogs, searchQuery, selectedCategory, selectedService]);
 
     useEffect(() => {
@@ -176,7 +239,7 @@ const BlogContent = () => {
 
                 {/* Blog Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredBlogs.map(blog => (
+                    {filteredBlogs.slice(0, displayLimit).map(blog => (
                         <div
                             key={blog._id}
                             className={`bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl
@@ -245,6 +308,18 @@ const BlogContent = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* Load More Button - Only show when no filters are applied and there are more blogs */}
+                {!loading && !selectedService && !searchQuery && filteredBlogs.length > displayLimit && (
+                    <div className="text-center mt-8">
+                        <button
+                            onClick={() => setDisplayLimit(prev => prev + 6)}
+                            className="px-6 py-3 bg-custom-blue text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors transform hover:scale-105"
+                        >
+                            Load More Articles
+                        </button>
+                    </div>
+                )}
 
                 {/* No Results Message */}
                 {!loading && filteredBlogs.length === 0 && (

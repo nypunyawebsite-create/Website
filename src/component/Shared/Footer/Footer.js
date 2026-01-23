@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import { FaTwitter, FaLinkedin, FaYoutube, FaFacebook, FaInstagram } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import { FaPhoneAlt, FaEnvelope, FaCalendarAlt, FaTimes, FaBars, FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { submitLead, createLeadFromForm, validatePhoneNumber } from '../../../api/leadsApi';
+import { LEADS_API_TOKEN } from '../../../Config';
 
 
 
@@ -15,6 +17,8 @@ const Footer = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
     const [requirement, setRequirement] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [phoneError, setPhoneError] = useState('');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,45 +56,42 @@ const Footer = () => {
         setRequirement('');
     };
 
-    const handleSubmit = async (e) => { // Made async for potential API call
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const formData = {
-            name,
-            phoneNumber,
-            email,
-            requirement,
-        };
-
-        console.log('Form Data to be sent:', formData);
-
-        // --- IMPORTANT: This is where you would send data to your backend API ---
-        // Example using fetch:
-        /*
+        
+        // Reset error
+        setPhoneError('');
+        
+        // Validate phone number
+        if (!validatePhoneNumber(phoneNumber)) {
+            setPhoneError('Please enter a valid 10-digit phone number.');
+            return;
+        }
+        
+        setIsSubmitting(true);
+        
         try {
-            const response = await fetch('/api/send-email', { // Replace with your actual backend endpoint
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                alert('Thank you! Your message has been sent.');
-                closeModal();
-            } else {
-                alert('Failed to send message. Please try again later.');
-            }
+            // Create lead object from form data
+            const leadData = createLeadFromForm(
+                { name, phoneNumber, email, requirement },
+                {
+                    source: 'Footer Form',
+                    tags: ['website', 'footer'],
+                }
+            );
+            
+            // Submit lead to API
+            const response = await submitLead(leadData, {}, LEADS_API_TOKEN);
+            
+            // Success
+            alert('Thank you! Your message has been sent. We will contact you soon.');
+            closeModal();
         } catch (error) {
             console.error('Error submitting form:', error);
-            alert('An error occurred. Please try again later.');
+            alert(error.message || 'Failed to send message. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
         }
-        */
-
-        // --- For now, simulating success and clearing form ---
-        alert('Thank you! Your message has been sent.');
-        closeModal();
     };
 
     return (
@@ -98,7 +99,7 @@ const Footer = () => {
             background: 'linear-gradient(90deg, #000099 0%, #2b5aba 20%, #2b59b9 40%, #5f9ece 70%, rgba(255,255,255,0.3) 135%)'
         }}>
             <div className='col-span-3 flex flex-col gap-8'>
-                <img src='/footer-logo.svg' alt='Footer Logo' className='lg:w-[60%]' />
+                <img src='/footer-logo.svg' alt='Footer Logo' loading="lazy" className='lg:w-[60%]' />
                 {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}
                 <div className='flex flex-col gap-2 md:pt-10'>
                     <h4 className='text-2xl font-semibold'>Follow us on Social Media</h4>
@@ -119,7 +120,7 @@ const Footer = () => {
                             <FaTwitter className='w-6 h-6' style={{ color: '#000000' }} />
                         </a>
                         <a href='https://www.practo.com/bangalore/clinic/nypunya-aesthetic-clinic-jayanagar-4-block/reviews?utm_source=opd_google_Pmax&utm_campaign=20240701849&gad_source=1&gad_campaignid=20236356659&gbraid=0AAAAADgl2cL3q7njAm2XdJgKwzdMvYN7M&gclid=CjwKCAjwi-DBBhA5EiwAXOHsGatlWdfo33g2REsEo6kMU0cvLoyDO5Fi_7GcLdEO6eyo5njnhmibkxoClXIQAvD_BwE' target='_blank' rel='noopener noreferrer'>
-                            <img src='/practo_icon.png' alt='Practo' className='w-6 h-6' />
+                            <img src='/practo_icon.png' alt='Practo' loading="lazy" className='w-6 h-6' />
                         </a>
                     </div>
                 </div>
@@ -130,7 +131,7 @@ const Footer = () => {
                 <Link to='/services' className={`relative w-fit ${location.pathname === '/services' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/services' ? 'after:w-full' : ''}`}>Services</Link>
                 <Link to='/our-doctors' className={`relative w-fit ${location.pathname === '/our-doctors' ? 'text-[#92E0E0] font-bold' : ''} after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full ${location.pathname === '/our-doctors' ? 'after:w-full' : ''}`}>Our Doctors</Link>
                 <a
-                    href="https://cep.prodoc.ai/appointment/660d4391b389336a08ec464d?section=1"
+                    href="https://appointment.telearogya.com/home/doctors_list/Tm9fdmFsWU=/MzEw?src=pdc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`relative w-fit after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-2px] after:left-0 after:bg-[#92E0E0] after:transition-all after:duration-300 hover:after:w-full`}
@@ -153,6 +154,7 @@ const Footer = () => {
                 <img
                     src="/Nypunya.png" // Replace with the actual path to your QR code image
                     alt="QR Code for Nypunya Aesthetic Clinic Location"
+                    loading="lazy"
                     className="w-32 h-32 mt-0 mx-auto md:mx-0 rounded-lg shadow-lg"
                 />
             </div>
@@ -167,89 +169,154 @@ const Footer = () => {
             </div>
 
             {showScrollModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto">
-                    <div className="relative bg-gray-900 text-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md mx-4 my-8">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 overflow-y-auto p-4">
+                    <div className="relative bg-[#000099] text-white rounded-xl shadow-2xl w-full max-w-5xl mx-4 my-8 max-h-[90vh] overflow-y-auto">
+                        {/* Close Button - Always visible */}
                         <button
                             onClick={closeModal}
-                            className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-400 hover:text-white flex items-center justify-center p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-200 z-10"
+                            className="sticky top-4 right-4 float-right text-white hover:text-custom-green flex items-center justify-center p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 z-20 backdrop-blur-sm shadow-lg"
+                            style={{ marginRight: '1rem', marginTop: '1rem' }}
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
-                        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Talk to us, directly.</h2>
-                        <p className="text-gray-400 mb-6 text-sm sm:text-base">Drop your phone number, and we'll reach out to you.</p>
-
-                        <form onSubmit={handleSubmit}>
-                            <div className="mb-4">
-                                <input
-                                    type="text"
-                                    placeholder="Name*"
-                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
-                                    required
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                />
-                            </div>
-                            <div className="mb-6">
-                                <input
-                                    type="tel"
-                                    placeholder="Phone number*"
-                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
-                                    required
-                                    value={phoneNumber}
-                                    onChange={(e) => setPhoneNumber(e.target.value)}
-                                />
-                            </div>
-                            <div className="mb-6">
-                                <input
-                                    type="email"
-                                    placeholder="Email*"
-                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm sm:text-base"
-                                    required
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </div>
-                            <div className="mb-6">
-                                <textarea
-                                    placeholder="Describe your requirement*"
-                                    className="w-full p-2 sm:p-3 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 form-textarea text-sm sm:text-base"
-                                    rows="4"
-                                    required
-                                    value={requirement}
-                                    onChange={(e) => setRequirement(e.target.value)}
-                                ></textarea>
-                            </div>
-                            {/* Contact Information */}
-                            <div className="mb-6 p-3 sm:p-4 bg-gray-800 rounded-md text-xs sm:text-sm leading-relaxed">
-                                <p className="font-bold text-white mb-2">Contact Us:</p>
-                                <p className="text-gray-300"><strong>Plastic Surgery:</strong>
-                                    <a href="tel:+919380902110" className="text-blue-400 hover:underline ml-1">+91 9380902110</a>
-                                    <a href="https://wa.me/9380902110" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline ml-2">(WhatsApp)</a>
-                                </p>
-                                <p className="text-gray-300 mt-1"><strong>Dermatology:</strong>
-                                    <a href="tel:+919380902114" className="text-blue-400 hover:underline ml-1">+91 9380902114</a>
-                                    <a href="https://wa.me/9380902115" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline ml-2">(WhatsApp)</a>
-                                </p>
-                                <p className="text-gray-300 mt-1"><strong>Email:</strong>
-                                    <a href="mailto:clinic.nypunyaaesthetic@gmail.com" className="text-blue-400 hover:underline ml-1">clinic.nypunyaaesthetic@gmail.com</a>
-                                </p>
+                        <div className="p-6 sm:p-8 md:p-10">
+                            {/* Header */}
+                            <div className="mb-6 sm:mb-8 text-center">
+                                <h2 className="text-3xl sm:text-4xl font-bold mb-2">Talk to us, directly.</h2>
+                                <div className="w-20 h-1 bg-custom-green mx-auto mb-3"></div>
+                                <p className="text-gray-200 text-sm sm:text-base">Drop your phone number, and we'll reach out to you.</p>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-colors text-sm sm:text-base"
-                            >
-                                Submit
-                            </button>
+                            {/* Horizontal Layout: Form on Left, Contact Info on Right */}
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                                
+                                {/* Left Section: Form (2 columns on large screens) */}
+                                <div className="lg:col-span-2">
+                                    <form onSubmit={handleSubmit}>
+                                        {/* Form Fields in Grid */}
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                            <div>
+                                                <label className="block text-sm font-semibold mb-2">Name*</label>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Enter your name"
+                                                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-custom-green focus:bg-white/15 transition-all text-sm"
+                                                    required
+                                                    value={name}
+                                                    onChange={(e) => setName(e.target.value)}
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-semibold mb-2">Phone Number*</label>
+                                                <input
+                                                    type="tel"
+                                                    placeholder="Enter your 10-digit phone number"
+                                                    className={`w-full p-3 rounded-lg bg-white/10 border ${phoneError ? 'border-red-500' : 'border-white/20'} text-white placeholder-gray-400 focus:outline-none focus:border-custom-green focus:bg-white/15 transition-all text-sm`}
+                                                    required
+                                                    value={phoneNumber}
+                                                    onChange={(e) => {
+                                                        setPhoneNumber(e.target.value);
+                                                        setPhoneError('');
+                                                    }}
+                                                />
+                                                {phoneError && (
+                                                    <p className="text-red-400 text-xs mt-1">{phoneError}</p>
+                                                )}
+                                            </div>
+                                        </div>
 
-                            <p className="text-xs text-gray-500 mt-4 text-center leading-relaxed">
-                                By clicking on "Submit" you are agreeing to our <a href="/terms-conditions" className="text-blue-400 hover:underline">Terms & Conditions</a> and
-                                are allowing us <span className="text-blue-400 hover:underline" >Nypunya Aesthetic Clinic</span> and our service partners to get in touch with you.
-                            </p>
-                        </form>
+                                        <div className="mb-4">
+                                            <label className="block text-sm font-semibold mb-2">Email*</label>
+                                            <input
+                                                type="email"
+                                                placeholder="Enter your email"
+                                                className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-custom-green focus:bg-white/15 transition-all text-sm"
+                                                required
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                            />
+                                        </div>
+
+                                        <div className="mb-4">
+                                            <label className="block text-sm font-semibold mb-2">Describe Your Requirement*</label>
+                                            <textarea
+                                                placeholder="Tell us about your needs..."
+                                                className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-custom-green focus:bg-white/15 transition-all form-textarea text-sm"
+                                                rows="3"
+                                                required
+                                                value={requirement}
+                                                onChange={(e) => setRequirement(e.target.value)}
+                                            ></textarea>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className="w-full bg-custom-green hover:bg-green-400 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                                        >
+                                            {isSubmitting ? 'Submitting...' : 'Submit Request'}
+                                        </button>
+
+                                        <p className="text-xs text-gray-300 mt-4 text-center leading-relaxed">
+                                            By clicking "Submit" you agree to our <a href="/terms-conditions" className="text-custom-green hover:underline">Terms & Conditions</a> and
+                                            allow <span className="text-custom-green">Nypunya Aesthetic Clinic</span> to contact you.
+                                        </p>
+                                    </form>
+                                </div>
+
+                                {/* Right Section: Contact Info & QR Code (1 column on large screens) */}
+                                <div className="lg:col-span-1 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                                    <h3 className="text-base font-bold mb-3 text-custom-green">Contact Info</h3>
+                                    
+                                    <div className="space-y-3 text-xs">
+                                        {/* Plastic Surgery */}
+                                        <div className="pb-2 border-b border-white/20">
+                                            <p className="font-semibold mb-1 text-xs">Plastic Surgery</p>
+                                            <a href="tel:+919380902110" className="text-gray-300 hover:text-custom-green transition-colors block text-xs">
+                                                📞 +91 9380902110
+                                            </a>
+                                            <a href="https://wa.me/9380902110" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors text-[10px] inline-flex items-center gap-1 mt-0.5">
+                                                💬 WhatsApp
+                                            </a>
+                                        </div>
+
+                                        {/* Dermatology */}
+                                        <div className="pb-2 border-b border-white/20">
+                                            <p className="font-semibold mb-1 text-xs">Dermatology</p>
+                                            <a href="tel:+919380902114" className="text-gray-300 hover:text-custom-green transition-colors block text-xs">
+                                                📞 +91 9380902114
+                                            </a>
+                                            <a href="https://wa.me/9380902114" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors text-[10px] inline-flex items-center gap-1 mt-0.5">
+                                                💬 WhatsApp
+                                            </a>
+                                        </div>
+
+                                        {/* Email */}
+                                        <div className="pb-2 border-b border-white/20">
+                                            <p className="font-semibold mb-1 text-xs">Email</p>
+                                            <a href="mailto:clinic.nypunyaaesthetic@gmail.com" className="text-gray-300 hover:text-custom-green transition-colors text-[10px] break-all leading-tight">
+                                                ✉️ clinic.nypunyaaesthetic@gmail.com
+                                            </a>
+                                        </div>
+
+                                        {/* QR Code */}
+                                        <div className="pt-1">
+                                            <p className="font-semibold mb-2 text-center text-xs">Scan Location</p>
+                                            <img
+                                                src="/Nypunya.png"
+                                                alt="QR Code for Location"
+                                                loading="lazy"
+                                                className="w-24 h-24 mx-auto rounded-lg shadow-lg bg-white p-1.5"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

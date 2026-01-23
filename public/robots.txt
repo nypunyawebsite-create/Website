@@ -1,3 +1,91 @@
+# Robots.txt for Nypunya Aesthetic Clinic
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /test-page/
+Disallow: /api/
+
+# Disallow old WordPress structure and feed URLs
+Disallow: /page/
+Disallow: /pages/
+Disallow: /faq/
+Disallow: /faq/*/feed/
+Disallow: /*/feed/
+
+# Disallow old WordPress taxonomy URLs
+Disallow: /testimonial/
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /blog/blog-right-sidebar/
+Disallow: /blog/page/
+
+# Disallow old service URLs
+Disallow: /service/
+Disallow: /all-services/
+Disallow: /megamenu/
+Disallow: /page_title/
+
+# Disallow old WordPress patterns
+Disallow: /breast-augmentation/
+Disallow: /breast-implants-faq/
+Disallow: /tummy-tuck/
+Disallow: /body-contouring-abdomino-plasty/
+Disallow: /acne/
+Disallow: /chemical-peels/
+Disallow: /patient-stories/
+Disallow: /under-eye-rejuvenation/
+Disallow: /the-deep-plane-neck-lift/
+Disallow: /antiaging-by-fat-grafting/
+Disallow: /other-dermatology-services/
+
+# Allow important pages
+Allow: /appointment
+Allow: /contact-us
+Allow: /about-us
+Allow: /services
+Allow: /our-doctors
+Allow: /gallery
+Allow: /blogs
+Allow: /international
+
+# Allow service pages - Plastic Surgery
+Allow: /breast-enhancement
+Allow: /breast-augmentation-in-bangalore
+Allow: /body-contouring
+Allow: /body-contouring-in-bangalore
+Allow: /abdominal-contouring
+Allow: /hair-transplant
+Allow: /hair-transplant-in-bangalore
+Allow: /rhinoplasty
+Allow: /rhinoplasty-in-bangalore
+Allow: /nose-jobs
+Allow: /anti-ageing
+Allow: /facelift-in-bangalore
+Allow: /structural-fat-grafting
+Allow: /gynaecomastia-male-breast-moobs
+Allow: /blepharo-plasty
+Allow: /liposuction
+Allow: /fillers-and-botox
+
+# Allow service pages - Dermatology
+Allow: /laser-hair-removal
+Allow: /laser-hair-removal-in-bangalore
+Allow: /acne-and-scars
+Allow: /laser-tattoo-removal
+Allow: /stretch-marks-treatment
+Allow: /laser-skin-rejuvenation
+Allow: /laser-scar-revision
+Allow: /platelet-rich-plasma-injections
+
+# Sitemap location
+Sitemap: https://nypunyaaesthetics.com/sitemap.xml
+
+# Crawl delay removed for faster indexing
+# Google recommends not using crawl-delay as it slows down indexing
+# If needed, use Google Search Console crawl rate settings instead

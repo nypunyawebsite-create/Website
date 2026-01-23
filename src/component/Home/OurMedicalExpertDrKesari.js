@@ -238,6 +238,7 @@ const OurMedicalExpertDrKesari = () => {
                                     <img
                                         src={currentSlideData.image}
                                         alt="Dr. Prashantha Kesari Certificates"
+                                        loading="lazy"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
@@ -379,6 +380,7 @@ const OurMedicalExpertDrKesari = () => {
                                 <img
                                     src={currentSlideData.image}
                                     alt="Dr. Prashantha Kesari"
+                                    loading="lazy"
                                     className="w-full h-full object-contain"
                                 />
                                 {/* Linktree Link - Bottom Left */}
@@ -404,6 +406,7 @@ const OurMedicalExpertDrKesari = () => {
                                     <img
                                         src={currentSlideData.image}
                                         alt={currentSlide === 4 ? "Dr. Prashantha Kesari Awards" : "Medical professionals"}
+                                        loading="lazy"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>

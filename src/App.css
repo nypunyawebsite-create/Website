@@ -10,3 +10,16 @@
 .bg-custom-blue {
     background: #000099;
 }
+
+/* Hide Prodoc chatbot completely across the site - Optimized for performance */
+[data-client-id="68820d613b55037856519239"],
+.prodoc-chatbot-container,
+.prodoc-chatbot-widget,
+[data-client-id="68820d613b55037856519239"] *,
+.prodoc-chatbot-container *,
+.prodoc-chatbot-widget * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

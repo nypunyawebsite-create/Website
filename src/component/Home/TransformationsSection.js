@@ -205,6 +205,7 @@ const TransformationsSection = () => {
                                                 <img
                                                     src={transformation.image}
                                                     alt={`${transformation.title} transformation`}
+                                                    loading="lazy"
                                                     className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700"
                                                 />
                                                 {/* Before/After Labels */}
@@ -287,6 +288,7 @@ const TransformationsSection = () => {
                                                 <img
                                                     src={transformation.image}
                                                     alt={`${transformation.title} transformation`}
+                                                    loading="lazy"
                                                     className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700"
                                                 />
                                                 {/* Before/After Labels */}

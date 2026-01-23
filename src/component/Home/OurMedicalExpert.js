@@ -7,7 +7,7 @@ const OurMedicalExpert = () => {
 
     return (
         <div className="w-full" style={{ backgroundColor: '#f6f6f6' }}>
-            <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="max-w-7xl mx-auto px-4 pt-12 pb-0">
                 <h2 className="text-[#000099] text-3xl md:text-4xl font-bold text-center mb-12">
                     Meet Our Medical Experts
                 </h2>

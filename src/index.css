@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ========================================
+   LAPTOP RESPONSIVE FIXES (1366-1440px)
+   14-15 inch laptop optimization
+   ======================================== */
+
+/* Medium Laptop Fixes (1280-1365px) */
+@media (min-width: 1280px) and (max-width: 1365px) {
+    /* Navigation spacing */
+    nav ul li {
+        padding: 0.4rem 0.5rem !important;
+    }
+    
+    /* Top contact bar - reduce font size */
+    header .w-\[90\%\] {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Logo size adjustment */
+    .w-48.lg\:w-64.xl\:w-80 {
+        width: 12rem !important; /* 192px */
+    }
+    
+    /* Navigation links spacing */
+    nav ul {
+        gap: 0.5rem !important;
+    }
+    
+    /* Prevent text overflow */
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Container max-width for smaller laptops */
+    .container {
+        max-width: 1200px !important;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    /* Navigation spacing optimization */
+    nav ul li {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Heading sizes optimized for laptop screens */
+    h1 {
+        font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+    }
+    
+    h2 {
+        font-size: clamp(1.35rem, 2.5vw, 1.75rem) !important;
+    }
+    
+    h3 {
+        font-size: clamp(1.15rem, 2vw, 1.5rem) !important;
+    }
+    
+    /* Images - prevent overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .hero-image {
+        max-height: 550px;
+        object-fit: contain;
+    }
+    
+    /* Grid layouts - reduce columns for better spacing */
+    .grid-cols-4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+    
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    /* Improve text readability */
+    body {
+        font-size: 15px;
+    }
+    
+    /* Better button sizes */
+    button {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.25rem;
+    }
+    
+    /* Banner text responsive */
+    .banner-main-text {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Top headings in banner */
+    .banner-top-headings {
+        font-size: clamp(0.875rem, 1.5vw, 1.125rem) !important;
+        gap: 0.5rem !important;
+    }
+}

@@ -18,6 +18,7 @@ const WelcomeNypunya = () => {
                         <img
                             src="/home/homepagebanner.png"
                             alt="Welcome to Nypunya"
+                            loading="lazy"
                             className="w-full h-auto rounded-lg shadow-lg"
                         />
                     </div>

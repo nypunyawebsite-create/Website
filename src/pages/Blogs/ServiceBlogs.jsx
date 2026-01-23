@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import API_URL from '../../Config';
+
+const WORDPRESS_API_URL = 'https://docs.nypunyaaesthetics.com/wp-json/wp/v2';
 
 const ServiceBlogs = () => {
     const { serviceName } = useParams();
@@ -8,23 +9,83 @@ const ServiceBlogs = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const [wpCategories, setWpCategories] = useState([]);
 
+    // Helper function to get featured image URL from WordPress post
+    const getFeaturedImageUrl = (post) => {
+        if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
+            return post._embedded['wp:featuredmedia'][0].source_url || post._embedded['wp:featuredmedia'][0].media_details?.sizes?.medium?.source_url || null;
+        }
+        return null;
+    };
+
+    // Fetch WordPress categories
     useEffect(() => {
-        setLoading(true);
-        fetch(`${API_URL}api/blogs`)
-            .then(res => res.json())
-            .then(data => {
-                setBlogs(data.blogs || []);
-                setError('');
-            })
-            .catch(() => setError('Failed to fetch blogs'))
-            .finally(() => setLoading(false));
+        const fetchCategories = async () => {
+            try {
+                const res = await fetch(`${WORDPRESS_API_URL}/categories?per_page=100`);
+                const data = await res.json();
+                setWpCategories(data);
+            } catch (err) {
+                setWpCategories([]);
+            }
+        };
+        fetchCategories();
     }, []);
 
-    // Filter blogs by subcategory name
-    const filteredBlogs = blogs.filter(blog =>
-        Array.isArray(blog.subcategories) && blog.subcategories.some(sub => sub.name === serviceName)
-    );
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            setLoading(true);
+            try {
+                const res = await fetch(`${WORDPRESS_API_URL}/posts?_embed&per_page=100`);
+                const data = await res.json();
+
+                // Map WordPress posts to our blog format
+                const mappedBlogs = data.map(post => {
+                    const featuredImage = getFeaturedImageUrl(post);
+                    const categories = wpCategories.length > 0
+                        ? wpCategories.filter(cat =>
+                            post.categories && post.categories.includes(cat.id) &&
+                            cat.slug !== 'uncategorized' &&
+                            cat.name.toLowerCase() !== 'uncategorized'
+                        )
+                        : [];
+
+                    return {
+                        _id: post.id.toString(),
+                        title: post.title?.rendered || '',
+                        description: post.excerpt?.rendered || post.content?.rendered || '',
+                        content: post.content?.rendered || '',
+                        slug: post.slug || '',
+                        publishedDate: post.date || '',
+                        banner: featuredImage,
+                        thumbnail: featuredImage,
+                        mainCategory: categories[0] ? { name: categories[0].name, _id: categories[0].id.toString() } : null,
+                        subcategories: categories.slice(1).map(cat => ({ name: cat.name, _id: cat.id.toString() })),
+                        tags: [],
+                        createdBy: { name: 'Author' },
+                    };
+                });
+
+                setBlogs(mappedBlogs);
+                setError('');
+            } catch (err) {
+                setError('Failed to fetch blogs');
+                setBlogs([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchBlogs();
+    }, [wpCategories]);
+
+    // Filter blogs by subcategory name or main category name
+    const filteredBlogs = blogs.filter(blog => {
+        const matchesSubcategory = Array.isArray(blog.subcategories) && blog.subcategories.some(sub => sub.name === serviceName);
+        const matchesMainCategory = blog.mainCategory?.name === serviceName;
+        return matchesSubcategory || matchesMainCategory;
+    });
 
     // Get the main category name from the first filtered blog (if any)
     const mainCategoryName = filteredBlogs.length > 0 ? filteredBlogs[0].mainCategory?.name : '';
@@ -65,7 +126,10 @@ const ServiceBlogs = () => {
                                     }) : ''}
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
-                                <p className="text-gray-600 mb-4 line-clamp-3">{blog.description}</p>
+                                <div
+                                    className="text-gray-600 mb-4 line-clamp-3 prose prose-sm max-w-none"
+                                    dangerouslySetInnerHTML={{ __html: blog.description }}
+                                ></div>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {Array.isArray(blog.tags) && blog.tags.map((tag, index) => (
                                         <span
