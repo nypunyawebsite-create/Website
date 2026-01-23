@@ -76,8 +76,13 @@ const ClinicBanner = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     {/* Left Section - Text and Buttons */}
                     <div className="flex-1 lg:w-2/3 py-16 px-4 md:px-8 lg:px-12 laptop:px-14 xl:px-16">
-                        {/* Main Heading */}
-                        <h2 className="text-3xl font-bold text-black mb-6 leading-tight">
+                        {/* Main Heading - H1 for SEO */}
+                        <h1 className="text-3xl font-bold text-black mb-6 leading-tight">
+                            Best Plastic Surgery & Dermatology Clinic in Bangalore - Nypunya Aesthetics
+                        </h1>
+
+                        {/* Sub-heading - H2 for structure */}
+                        <h2 className="text-2xl font-semibold text-blue-800 mb-4 leading-tight">
                             Why is Nypunya Aesthetic Clinic the best Centre for Cosmetic plastic surgery & Dermatology in Bangalore?
                         </h2>
 

@@ -4,6 +4,7 @@ import ClinicBanner from './ClinicBanner'
 import AboutNypunyaSection from './AboutNypunyaSection'
 import CosmeticPlasticServices from './CosmeticPlasticServices'
 import DermatologyServices from './DermatologyServices'
+import ServiceKeywordLinks from './ServiceKeywordLinks'
 import HomeInformation from './HomeInformation'
 import WelcomeNypunya from './WelcomeNypunya'
 import OurMedicalExpert from './OurMedicalExpert'
@@ -25,6 +26,7 @@ const Home = () => {
             <AboutNypunyaSection />
             <CosmeticPlasticServices />
             <DermatologyServices />
+            <ServiceKeywordLinks />
             {/* <HomeInformation /> */}
             {/* <WelcomeNypunya /> */}
             <OurMedicalExpert />
