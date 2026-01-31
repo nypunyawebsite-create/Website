@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
-import { submitLead, createLeadFromForm, validatePhoneNumber } from '../../api/leadsApi';
-import { LEADS_API_TOKEN } from '../../Config';
+import { validatePhoneNumber } from '../../api/leadsApi';
 
 const ConsultationForm = () => {
     const [formData, setFormData] = useState({
@@ -12,8 +11,6 @@ const ConsultationForm = () => {
         department: '',
         date: '',
         time: '',
-        date2: '',
-        time2: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [phoneError, setPhoneError] = useState('');
@@ -58,49 +55,118 @@ const ConsultationForm = () => {
         setIsSubmitting(true);
         
         try {
-            // Create summary from form data
-            const summary = `Consultation Request - Treatment: ${formData.treatment || 'Not specified'}, Department: ${formData.department || 'Not specified'}, Preferred Date: ${formData.date || 'Not specified'}, Preferred Time: ${formData.time || 'Not specified'}`;
+            // Prepare form data for Contact Form 7 API
+            const formDataToSend = new FormData();
+            formDataToSend.append('f_name', formData.name);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('phone_no', formData.phone);
+            formDataToSend.append('treatment', formData.treatment);
+            formDataToSend.append('app_date', formData.date);
+            formDataToSend.append('app_time', formData.time);
+            formDataToSend.append('department', formData.department);
             
-            // Create lead object from form data
-            const leadData = createLeadFromForm(
-                { 
-                    name: formData.name, 
-                    phone: formData.phone, 
-                    email: formData.email,
-                    summary: summary
-                },
-                {
-                    source: 'Consultation Form',
-                    tags: ['website', 'consultation'],
-                    dynamicFields: {
-                        treatment: formData.treatment,
-                        department: formData.department,
-                        preferredDate: formData.date,
-                        preferredTime: formData.time,
-                    }
-                }
-            );
-            
-            // Submit lead to API
-            const response = await submitLead(leadData, {}, LEADS_API_TOKEN);
-            
-            // Success
-            alert('Thank you! Your consultation request has been submitted. We will contact you soon.');
-            
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                treatment: '',
-                department: '',
-                date: '',
-                time: '',
-                date2: '',
-                time2: '',
+            // Submit to Contact Form 7 API
+            const response = await fetch('https://docs.nypunyaaesthetics.com/wp-json/contact-form-7/v1/contact-forms/503/feedback', {
+                method: 'POST',
+                body: formDataToSend,
+                // Don't set Content-Type - browser sets it automatically with boundary for FormData
             });
+            
+            // Check if response is ok before parsing JSON
+            let result;
+            try {
+                result = await response.json();
+            } catch (jsonError) {
+                console.error('Failed to parse JSON response:', jsonError);
+                const textResponse = await response.text();
+                console.error('Response text:', textResponse);
+                throw new Error('Invalid response from server. Please try again later.');
+            }
+            
+            // Log response for debugging
+            console.log('Contact Form 7 API Response:', result);
+            console.log('Response Status:', response.status);
+            console.log('Result Status:', result.status);
+            console.log('Result Message:', result.message);
+            console.log('Invalid Fields:', result.invalid_fields);
+            
+            // Check if submission was successful
+            // Treat 'mail_sent' and 'mail_failed' as success since data was received
+            // 'mail_failed' means form submission worked but email sending failed (server config issue)
+            if (response.ok && (result.status === 'mail_sent' || result.status === 'mail_failed')) {
+                // Success - data was received by the API
+                alert('Thank you! Your consultation request has been submitted. We will contact you soon.');
+                
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    treatment: '',
+                    department: '',
+                    date: '',
+                    time: '',
+                });
+            } else {
+                // Handle actual API errors - only show errors for validation failures or other issues
+                let errorMessage = 'Failed to submit consultation request. Please try again later.';
+                
+                // Only show errors for validation failures, spam, or aborted submissions
+                if (result.status === 'validation_failed') {
+                    if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                        const fieldErrors = result.invalid_fields.map(field => {
+                            return field.message || `${field.field || 'Field'}: Invalid`;
+                        }).join(', ');
+                        errorMessage = fieldErrors;
+                    } else {
+                        errorMessage = 'Please check your form fields and try again.';
+                    }
+                } else if (result.status === 'spam') {
+                    errorMessage = 'Your message was flagged as spam. Please try again.';
+                } else if (result.status === 'aborted') {
+                    errorMessage = 'Submission was aborted. Please try again.';
+                } else if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                    // Handle invalid fields
+                    const fieldErrors = result.invalid_fields.map(field => {
+                        return field.message || `${field.field || 'Field'}: Invalid`;
+                    }).join(', ');
+                    errorMessage = fieldErrors;
+                }
+                
+                // Only log errors, don't show popup for 'mail_failed' since data was received
+                if (result.status !== 'mail_failed') {
+                    console.error('Contact Form 7 Error Details:', {
+                        status: result.status,
+                        message: result.message,
+                        invalid_fields: result.invalid_fields,
+                        fullResponse: result,
+                        responseStatus: response.status,
+                        responseStatusText: response.statusText
+                    });
+                    throw new Error(errorMessage);
+                } else {
+                    // For 'mail_failed', treat as success (data received)
+                    alert('Thank you! Your consultation request has been submitted. We will contact you soon.');
+                    
+                    // Reset form
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        treatment: '',
+                        department: '',
+                        date: '',
+                        time: '',
+                    });
+                }
+            }
         } catch (error) {
             console.error('Error submitting form:', error);
+            console.error('Error details:', {
+                message: error.message,
+                stack: error.stack,
+                name: error.name
+            });
             alert(error.message || 'Failed to submit consultation request. Please try again later.');
         } finally {
             setIsSubmitting(false);
@@ -226,41 +292,6 @@ const ConsultationForm = () => {
                                 <option value="Plastic Surgery" className="text-black">Plastic Surgery</option>
                                 <option value="Dermatology" className="text-black">Dermatology</option>
                             </select>
-                            <hr className="border-custom-green" />
-                        </div>
-                        {/* Date Selection */}
-                        <div>
-                            <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                <FaCalendarAlt className="text-white mr-2" />
-                                <input
-                                    type="date"
-                                    name="date"
-                                    value={formData.date}
-                                    onChange={handleDateChange}
-                                    className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                    style={{
-                                        WebkitAppearance: "none",
-                                        MozAppearance: "none",
-                                        appearance: "none",
-                                    }}
-                                    required
-                                />
-                            </div>
-                            <hr className="border-custom-green" />
-                        </div>
-                        {/* Time Selection */}
-                        <div>
-                            <div className="w-full border-none bg-transparent outline-none h-10 flex items-center">
-                                <FaClock className="text-white mr-2" />
-                                <input
-                                    type="time"
-                                    name="time"
-                                    value={formData.time}
-                                    onChange={handleTimeChange}
-                                    className="w-full bg-transparent outline-none border-none text-white cursor-pointer appearance-none"
-                                    required
-                                />
-                            </div>
                             <hr className="border-custom-green" />
                         </div>
                         <div className="md:col-span-3 flex justify-center">

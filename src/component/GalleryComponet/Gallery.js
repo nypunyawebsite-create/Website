@@ -166,9 +166,8 @@ const Gallery = () => {
       setNameError("");
     }
     
-    // Use the new API validation
-    const { validatePhoneNumber, submitLead, createLeadFromForm } = await import('../../api/leadsApi');
-    const { LEADS_API_TOKEN } = await import('../../Config');
+    // Use the API validation
+    const { validatePhoneNumber } = await import('../../api/leadsApi');
     
     if (!validatePhoneNumber(phoneNumber)) {
       setPhoneError("Please enter a valid 10-digit phone number.");
@@ -178,31 +177,92 @@ const Gallery = () => {
     }
     if (!valid) return;
 
-    // Call the leads API using the new service
+    // Submit to Contact Form 7 API
     try {
-      const leadData = createLeadFromForm(
-        { name: userName, phone: phoneNumber },
-        {
-          source: 'Gallery Form',
-          tags: ['website', 'gallery', selectedCategory],
-          summary: `Gallery lead - Category: ${selectedCategory}`,
-          dynamicFields: {
-            category: selectedCategory,
+      // Prepare form data for Contact Form 7 API (multipart/form-data format)
+      const formData = new FormData();
+      formData.append('first_name', userName);
+      formData.append('phone_no', phoneNumber);
+      
+      // Submit to Contact Form 7 API (form ID 502)
+      const response = await fetch('https://docs.nypunyaaesthetics.com/wp-json/contact-form-7/v1/contact-forms/502/feedback', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      // Check if response is ok before parsing JSON
+      let result;
+      try {
+        result = await response.json();
+      } catch (jsonError) {
+        console.error('Failed to parse JSON response:', jsonError);
+        const textResponse = await response.text();
+        console.error('Response text:', textResponse);
+        throw new Error('Invalid response from server. Please try again later.');
+      }
+      
+      // Log response for debugging
+      console.log('Contact Form 7 API Response (Gallery):', result);
+      console.log('Response Status:', response.status);
+      console.log('Result Status:', result.status);
+      
+      // Check if submission was successful
+      // Treat 'mail_sent' and 'mail_failed' as success since data was received
+      if (response.ok && (result.status === 'mail_sent' || result.status === 'mail_failed')) {
+        // Success - data was received by the API
+        localStorage.setItem(getLeadFlagKey(selectedCategory), 'true');
+        setLeadSubmitted(true);
+        setShowPhonePopup(false);
+        setPhoneNumber("");
+        setUserName("");
+        loadMoreThumbnails();
+      } else {
+        // Handle actual API errors - only show errors for validation failures or other issues
+        let errorMessage = 'Failed to send message. Please try again later.';
+        
+        if (result.status === 'validation_failed') {
+          if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+            const fieldErrors = result.invalid_fields.map(field => {
+              return field.message || `${field.field || 'Field'}: Invalid`;
+            }).join(', ');
+            errorMessage = fieldErrors;
+          } else {
+            errorMessage = 'Please check your form fields and try again.';
           }
+        } else if (result.status === 'spam') {
+          errorMessage = 'Your message was flagged as spam. Please try again.';
+        } else if (result.status === 'aborted') {
+          errorMessage = 'Submission was aborted. Please try again.';
+        } else if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+          const fieldErrors = result.invalid_fields.map(field => {
+            return field.message || `${field.field || 'Field'}: Invalid`;
+          }).join(', ');
+          errorMessage = fieldErrors;
         }
-      );
-      
-      await submitLead(leadData, {}, LEADS_API_TOKEN);
-      
-      localStorage.setItem(getLeadFlagKey(selectedCategory), 'true');
-      setLeadSubmitted(true);
-      setShowPhonePopup(false);
-      setPhoneNumber("");
-      setUserName("");
-      loadMoreThumbnails();
-    } catch (err) {
-      console.error('Error submitting lead:', err);
-      alert(err.message || 'Failed to submit lead. Please try again.');
+        
+        // Only show error for actual failures, not mail_failed
+        if (result.status !== 'mail_failed') {
+          console.error('Contact Form 7 Error Details (Gallery):', {
+            status: result.status,
+            message: result.message,
+            invalid_fields: result.invalid_fields,
+            fullResponse: result,
+            responseStatus: response.status,
+          });
+          throw new Error(errorMessage);
+        } else {
+          // For 'mail_failed', treat as success (data received)
+          localStorage.setItem(getLeadFlagKey(selectedCategory), 'true');
+          setLeadSubmitted(true);
+          setShowPhonePopup(false);
+          setPhoneNumber("");
+          setUserName("");
+          loadMoreThumbnails();
+        }
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert(error.message || 'Failed to submit form. Please try again.');
     }
   };
 

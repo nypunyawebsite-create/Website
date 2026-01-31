@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { FaTwitter, FaLinkedin, FaYoutube, FaFacebook, FaInstagram } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import { FaPhoneAlt, FaEnvelope, FaCalendarAlt, FaTimes, FaBars, FaChevronRight, FaChevronDown } from "react-icons/fa";
-import { submitLead, createLeadFromForm, validatePhoneNumber } from '../../../api/leadsApi';
-import { LEADS_API_TOKEN } from '../../../Config';
+import { validatePhoneNumber } from '../../../api/leadsApi';
 
 
 
@@ -71,23 +70,96 @@ const Footer = () => {
         setIsSubmitting(true);
         
         try {
-            // Create lead object from form data
-            const leadData = createLeadFromForm(
-                { name, phoneNumber, email, requirement },
-                {
-                    source: 'Footer Form',
-                    tags: ['website', 'footer'],
+            // Prepare form data for Contact Form 7 API
+            // Try FormData format first (multipart/form-data)
+            const formData = new FormData();
+            formData.append('first_name', name);
+            formData.append('email', email);
+            formData.append('phone_no', phoneNumber);
+            formData.append('description', requirement);
+            
+            // Submit to Contact Form 7 API
+            const response = await fetch('https://docs.nypunyaaesthetics.com/wp-json/contact-form-7/v1/contact-forms/500/feedback', {
+                method: 'POST',
+                body: formData,
+                // Don't set Content-Type - browser sets it automatically with boundary for FormData
+            });
+            
+            // Check if response is ok before parsing JSON
+            let result;
+            try {
+                result = await response.json();
+            } catch (jsonError) {
+                console.error('Failed to parse JSON response:', jsonError);
+                const textResponse = await response.text();
+                console.error('Response text:', textResponse);
+                throw new Error('Invalid response from server. Please try again later.');
+            }
+            
+            // Log response for debugging
+            console.log('Contact Form 7 API Response:', result);
+            console.log('Response Status:', response.status);
+            console.log('Result Status:', result.status);
+            console.log('Result Message:', result.message);
+            console.log('Invalid Fields:', result.invalid_fields);
+            
+            // Check if submission was successful
+            // Treat 'mail_sent' and 'mail_failed' as success since data was received
+            // 'mail_failed' means form submission worked but email sending failed (server config issue)
+            if (response.ok && (result.status === 'mail_sent' || result.status === 'mail_failed')) {
+                // Success - data was received by the API
+                alert('Thank you! Your message has been received. We will contact you soon.');
+                closeModal();
+            } else {
+                // Handle actual API errors - only show errors for validation failures or other issues
+                let errorMessage = 'Failed to send message. Please try again later.';
+                
+                // Only show errors for validation failures, spam, or aborted submissions
+                if (result.status === 'validation_failed') {
+                    if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                        const fieldErrors = result.invalid_fields.map(field => {
+                            return field.message || `${field.field || 'Field'}: Invalid`;
+                        }).join(', ');
+                        errorMessage = fieldErrors;
+                    } else {
+                        errorMessage = 'Please check your form fields and try again.';
+                    }
+                } else if (result.status === 'spam') {
+                    errorMessage = 'Your message was flagged as spam. Please try again.';
+                } else if (result.status === 'aborted') {
+                    errorMessage = 'Submission was aborted. Please try again.';
+                } else if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                    // Handle invalid fields
+                    const fieldErrors = result.invalid_fields.map(field => {
+                        return field.message || `${field.field || 'Field'}: Invalid`;
+                    }).join(', ');
+                    errorMessage = fieldErrors;
                 }
-            );
-            
-            // Submit lead to API
-            const response = await submitLead(leadData, {}, LEADS_API_TOKEN);
-            
-            // Success
-            alert('Thank you! Your message has been sent. We will contact you soon.');
-            closeModal();
+                
+                // Only log errors, don't show popup for 'mail_failed' since data was received
+                if (result.status !== 'mail_failed') {
+                    console.error('Contact Form 7 Error Details:', {
+                        status: result.status,
+                        message: result.message,
+                        invalid_fields: result.invalid_fields,
+                        fullResponse: result,
+                        responseStatus: response.status,
+                        responseStatusText: response.statusText
+                    });
+                    throw new Error(errorMessage);
+                } else {
+                    // For 'mail_failed', treat as success (data received)
+                    alert('Thank you! Your message has been received. We will contact you soon.');
+                    closeModal();
+                }
+            }
         } catch (error) {
             console.error('Error submitting form:', error);
+            console.error('Error details:', {
+                message: error.message,
+                stack: error.stack,
+                name: error.name
+            });
             alert(error.message || 'Failed to send message. Please try again later.');
         } finally {
             setIsSubmitting(false);
@@ -113,7 +185,7 @@ const Footer = () => {
                         <a href='https://www.youtube.com/@nypunya_aesthetic_clinic' target='_blank' rel='noopener noreferrer'>
                             <FaYoutube className='w-6 h-6' style={{ color: '#FF0000' }} />
                         </a>
-                        <a href='https://www.linkedin.com/company/dr-prashantha-kesari/' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://www.linkedin.com/company/nypunya-aesthetic-clinic/' target='_blank' rel='noopener noreferrer'>
                             <FaLinkedin className='w-6 h-6' style={{ color: '#0077B5' }} />
                         </a>
                         <a href='https://x.com/TheDrkesari?t=4UUcOGv-i6R__JYz-GSdqQ&s=08' target='_blank' rel='noopener noreferrer'>

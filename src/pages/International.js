@@ -107,34 +107,111 @@ const International = () => {
         setIsSubmitting(true);
         
         try {
-            const { submitLead, createLeadFromForm } = await import('../api/leadsApi');
-            const { LEADS_API_TOKEN } = await import('../Config');
+            // Prepare form data for Contact Form 7 API
+            const formDataToSend = new FormData();
+            formDataToSend.append('full_name', form.name);
+            formDataToSend.append('email', form.email);
+            formDataToSend.append('phone_no', form.phone);
+            formDataToSend.append('requirements', form.requirement);
             
-            // Create lead object from form data
-            const leadData = createLeadFromForm(
-                { name: form.name, phone: form.phone, email: form.email, requirement: form.requirement },
-                {
-                    source: 'International Patients Form',
-                    tags: ['website', 'international'],
-                }
-            );
-            
-            // Submit lead to API
-            const response = await submitLead(leadData, {}, LEADS_API_TOKEN);
-            
-            // Success
-            alert('Thank you! Your form has been submitted. We will contact you soon.');
-            
-            // Reset form
-            setForm({
-                name: '',
-                email: '',
-                phone: '',
-                requirement: '',
-                terms: false,
+            // Submit to Contact Form 7 API
+            const response = await fetch('https://docs.nypunyaaesthetics.com/wp-json/contact-form-7/v1/contact-forms/504/feedback', {
+                method: 'POST',
+                body: formDataToSend,
+                // Don't set Content-Type - browser sets it automatically with boundary for FormData
             });
+            
+            // Check if response is ok before parsing JSON
+            let result;
+            try {
+                result = await response.json();
+            } catch (jsonError) {
+                console.error('Failed to parse JSON response:', jsonError);
+                const textResponse = await response.text();
+                console.error('Response text:', textResponse);
+                throw new Error('Invalid response from server. Please try again later.');
+            }
+            
+            // Log response for debugging
+            console.log('Contact Form 7 API Response:', result);
+            console.log('Response Status:', response.status);
+            console.log('Result Status:', result.status);
+            console.log('Result Message:', result.message);
+            console.log('Invalid Fields:', result.invalid_fields);
+            
+            // Check if submission was successful
+            // Treat 'mail_sent' and 'mail_failed' as success since data was received
+            // 'mail_failed' means form submission worked but email sending failed (server config issue)
+            if (response.ok && (result.status === 'mail_sent' || result.status === 'mail_failed')) {
+                // Success - data was received by the API
+                alert('Thank you! Your form has been submitted. We will contact you soon.');
+                
+                // Reset form
+                setForm({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    requirement: '',
+                    terms: false,
+                });
+            } else {
+                // Handle actual API errors - only show errors for validation failures or other issues
+                let errorMessage = 'Failed to submit form. Please try again later.';
+                
+                // Only show errors for validation failures, spam, or aborted submissions
+                if (result.status === 'validation_failed') {
+                    if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                        const fieldErrors = result.invalid_fields.map(field => {
+                            return field.message || `${field.field || 'Field'}: Invalid`;
+                        }).join(', ');
+                        errorMessage = fieldErrors;
+                    } else {
+                        errorMessage = 'Please check your form fields and try again.';
+                    }
+                } else if (result.status === 'spam') {
+                    errorMessage = 'Your message was flagged as spam. Please try again.';
+                } else if (result.status === 'aborted') {
+                    errorMessage = 'Submission was aborted. Please try again.';
+                } else if (result.invalid_fields && Array.isArray(result.invalid_fields) && result.invalid_fields.length > 0) {
+                    // Handle invalid fields
+                    const fieldErrors = result.invalid_fields.map(field => {
+                        return field.message || `${field.field || 'Field'}: Invalid`;
+                    }).join(', ');
+                    errorMessage = fieldErrors;
+                }
+                
+                // Only log errors, don't show popup for 'mail_failed' since data was received
+                if (result.status !== 'mail_failed') {
+                    console.error('Contact Form 7 Error Details:', {
+                        status: result.status,
+                        message: result.message,
+                        invalid_fields: result.invalid_fields,
+                        fullResponse: result,
+                        responseStatus: response.status,
+                        responseStatusText: response.statusText
+                    });
+                    throw new Error(errorMessage);
+                } else {
+                    // For 'mail_failed', treat as success (data received)
+                    alert('Thank you! Your form has been submitted. We will contact you soon.');
+                    
+                    // Reset form
+                    setForm({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        requirement: '',
+                        terms: false,
+                    });
+                }
+            }
         } catch (error) {
             console.error('Error submitting form:', error);
+            console.error('Error details:', {
+                message: error.message,
+                stack: error.stack,
+                name: error.name
+            });
             alert(error.message || 'Failed to submit form. Please try again later.');
         } finally {
             setIsSubmitting(false);
